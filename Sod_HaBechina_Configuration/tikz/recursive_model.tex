@@ -1,0 +1,14 @@
+\begin{tikzpicture}[node distance=2cm, auto, >=stealth,
+    box/.style={rectangle, draw=indigo!80!black, fill=indigo!5, thick, inner sep=8pt, text width=5cm, align=center, rounded corners=4pt},
+    edge/.style={->, thick, draw=indigo!80!black}]
+
+\node [box] (s0) {\textbf{Level 0 State } $S_0$\\Initial Configuration};
+\node [box, below of=s0] (s1) {\textbf{Level 1 State } $S_1 = F(S_0)$\\$\text{Sub-states } \{S_0^{(1)}, S_0^{(2)}, \ldots\}$};
+\node [box, below of=s1] (s2) {\textbf{Level } $n+1$ State $S_{n+1} = F(S_n)$\\Self-Similar Relational Invariant $\Phi(\mathcal{K}) = \mathcal{K}$};
+
+\draw [edge] (s0) -- node[right, font=\footnotesize] {Recursive Operator $F$} (s1);
+\draw [edge] (s1) -- node[right, font=\footnotesize] {Iterated Self-Similarity $\Sigma(S_n, S_{n+1})$} (s2);
+
+\draw [edge, dashed, draw=emerald!80!black] (s2.west) .. controls +(-2,0) and +(-2,0) .. node[left, font=\footnotesize, text width=2cm, align=right] {Preserved Invariants $\mathcal{K}$} (s0.west);
+
+\end{tikzpicture}
