@@ -1,0 +1,12 @@
+\begin{tikzpicture}[node distance=2.5cm, auto, >=stealth,
+    state/.style={rectangle, draw=purple!80!black, fill=purple!5, thick, inner sep=10pt, text width=4.5cm, align=center, rounded corners=4pt},
+    arrow/.style={->, thick, draw=blue!80!black},
+    proj/.style={->, thick, dashed, draw=amber!80!black}]
+
+\node [state] (om_i) {\textbf{Configuration } $\Omega_i$\\$\Omega_i = (V_i, R_i, S_i, T_i, N_i, G_i, L_i)$\\$\text{Scale } S_i, \text{ Resolution } \rho_i$};
+\node [state, right of=om_i, node distance=6.5cm] (om_i1) {\textbf{Configuration } $\Omega_{i+1}$\\$\Omega_{i+1} = (V_{i+1}, R_{i+1}, S_{i+1}, T_{i+1}, N_{i+1}, G_{i+1}, L_{i+1})$\\$\text{Scale } S_{i+1}, \text{ Resolution } \rho_{i+1}$};
+
+\draw [arrow] (om_i) -- node[above, font=\small] {Generation / Refinement $\Phi_i$} node[below, font=\tiny] {$S_{i+1} = \lambda S_i$} (om_i1);
+\draw [proj] (om_i1) .. controls +(down:2cm) and +(down:2cm) .. node[above, font=\small] {Projection / Coarse-Graining $\Pi_i$} node[below, font=\footnotesize] {Info Loss $\mathcal{L}_n = D(\Omega_{i+1}, \Psi_i(\Omega_i))$} (om_i);
+
+\end{tikzpicture}

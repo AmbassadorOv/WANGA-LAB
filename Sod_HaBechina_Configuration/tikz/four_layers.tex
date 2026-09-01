@@ -1,0 +1,16 @@
+\begin{tikzpicture}[node distance=1.2cm, auto, >=stealth,
+    layer/.style={rectangle, draw=cyan!80!black, fill=cyan!5, thick, inner sep=8pt, text width=7cm, align=center, rounded corners=4pt},
+    edge/.style={->, thick, draw=cyan!80!black}]
+
+\node [layer] (taamim) {\textbf{TA'AMIM} ($T$)\\Syntactic / Prosodic Organization Layer\\$\text{Resolution } \rho_4 \text{ (Global Macro-Structure)}$};
+\node [layer, below of=taamim] (nekudot) {\textbf{NEKUDOT} ($N$)\\Vocalic / Internal-State Specification Layer\\$\text{Resolution } \rho_3 \text{ (Dynamic Internal State)}$};
+\node [layer, below of=nekudot] (tagin) {\textbf{TAGIN} ($G$)\\Graphic / Structural Annotation Layer\\$\text{Resolution } \rho_2 \text{ (Fine Attribute Marks)}$};
+\node [layer, below of=tagin] (otiyot) {\textbf{OTIYOT} ($L$)\\Symbolic Carrier / Letter Layer\\$\text{Resolution } \rho_1 \text{ (Discrete Atomic Carrier)}$};
+
+\draw [edge] (taamim) -- node[right, font=\footnotesize] {Encoding / Synthesis $\Downarrow$} (nekudot);
+\draw [edge] (nekudot) -- (tagin);
+\draw [edge] (tagin) -- (otiyot);
+
+\draw [edge, dashed, draw=emerald!80!black] (otiyot.west) -- ++(-1,0) |- node[left, font=\footnotesize, text width=2cm, align=right] {Decoding / Emergence $\Uparrow$} (taamim.west);
+
+\end{tikzpicture}

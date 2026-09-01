@@ -1,0 +1,36 @@
+\section{Tree of Life Sefirotic Formal Mapping}
+\label{sec:tree_of_life_mapping}
+
+We formalize the classical Sefirotic Tree of Life as a directed graph network $\mathcal{G}_{Tree} = (Q, E_{22})$.
+
+\begin{definition}[Sefirotic Node Object]
+Each node $Q_i$ ($i \in \{1, \dots, 10\}$) is represented by a structured tuple:
+\begin{equation}
+Q_i = (M_i, R_i, S_i, V_i, \Phi_i)
+\end{equation}
+where $M_i$ is station level, $R_i$ is relation set, $S_i$ is scale, $V_i$ is visibility parameter, and $\Phi_i$ is local transition operator.
+\end{definition}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{c l c c l}
+\toprule
+\textbf{Node $Q_i$} & \textbf{Traditional Name} & \textbf{Station $M_i$} & \textbf{Scale $S_i$} & \textbf{Category / Role} \\
+\midrule
+$Q_1$ & Keter & 1 & $1.0$ & Source / Primordial Head \\
+$Q_2$ & Chochmah & 2 & $0.9$ & Primary Differentiation \\
+$Q_3$ & Binah & 2 & $0.9$ & Structural Receptacle \\
+$Q_4$ & Chesed & 3 & $0.7$ & Expansive Flow \\
+$Q_5$ & Gevurah & 3 & $0.7$ & Restrictive Bound \\
+$Q_6$ & Tiferet & 3 & $0.7$ & Central Harmonizer \\
+$Q_7$ & Netzach & 4 & $0.5$ & Active Endurance \\
+$Q_8$ & Hod & 4 & $0.5$ & Reflective Echo \\
+$Q_9$ & Yesod & 4 & $0.5$ & Foundation Channel \\
+$Q_{10}$ & Malchut & 5 & $0.2$ & Physical Manifestation \\
+\bottomrule
+\end{tabular}
+\caption{Mathematical Specification of 10 Sefirotic Nodes}
+\end{table}
+
+The 22 connecting channels correspond to edge set $E_{22}$, forming a closed network topology.
