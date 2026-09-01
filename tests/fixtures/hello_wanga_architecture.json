@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "name": "Hello WANGA Architecture",
+  "description": "Canonical first vertical slice acceptance architecture",
+  "agents": [
+    {
+      "id": "agent-orchestrator-1",
+      "name": "Orchestrator Agent",
+      "role": "orchestrator",
+      "capabilities": ["supervise", "schedule"]
+    }
+  ],
+  "neural_components": [
+    {
+      "id": "neural-mlp-1",
+      "architecture_type": "mlp",
+      "input_dim": 8,
+      "output_dim": 4,
+      "hidden_dims": [16, 16],
+      "learning_rate": 0.01,
+      "device": "cpu",
+      "seed": 42
+    }
+  ],
+  "virtual_nano_processors": [
+    {
+      "id": "vnp-core-1",
+      "registers_count": 8,
+      "memory_size": 256,
+      "clock_speed_mhz": 1.0,
+      "initial_instructions": [
+        {"op": "LOAD_CONST", "r1": 0, "val": 42},
+        {"op": "STORE", "r1": 0, "addr": 10},
+        {"op": "HALT"}
+      ]
+    }
+  ],
+  "fabric": {
+    "connections": [
+      {
+        "source": "vnp-core-1",
+        "target": "neural-mlp-1",
+        "bandwidth": 1000
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "tool-logger",
+      "name": "System Audit Logger",
+      "type": "builtin"
+    }
+  ],
+  "security": {
+    "signature_required": false,
+    "sandbox_required": true,
+    "max_memory_mb": 512,
+    "max_execution_seconds": 60
+  },
+  "experiment": {
+    "id": "exp-hello-42",
+    "seed": 42,
+    "steps": 10,
+    "target_metric": "loss"
+  }
+}

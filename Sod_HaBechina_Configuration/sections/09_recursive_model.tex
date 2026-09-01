@@ -1,0 +1,20 @@
+\section{Recursive Models and Whole-Part Relations}
+\label{sec:recursive_model}
+
+Hierarchy implies recursion. Let $S_n$ denote the state of system $S$ at depth $n$.
+
+\begin{definition}[Recursive System Iteration]
+\begin{equation}
+S_{n+1} = F(S_n)
+\end{equation}
+where $S_n$ contains a set of sub-states:
+\begin{equation}
+S_n = \{ S_{n-1}^{(1)}, S_{n-1}^{(2)}, \ldots, S_{n-1}^{(k)} \}
+\end{equation}
+\end{definition}
+
+In complex relational systems, the whole is not a simple linear sum of isolated parts:
+\begin{equation}
+\operatorname{Whole} = \mathcal{F}(\text{Parts}, \text{Relations}) \neq \sum_{j} \text{Part}_j
+\end{equation}
+Relational structure carries non-additive mutual information $I(X_1; X_2; \dots; X_k)$ that vanishes if parts are evaluated independently.
