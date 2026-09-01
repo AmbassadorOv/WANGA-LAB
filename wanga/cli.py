@@ -8,6 +8,8 @@ import argparse
 from wanga.compiler import WANGACompiler
 from wanga.gemini import GeminiAdapter
 from wanga.validation import WangaValidationPipeline
+from wanga.matrix import OntologicalMatrix, OntologicalNode, OntologicalRelation, OntologicalLayerType
+from wanga.state import OntologicalStateEngine
 
 
 def run_cli():
@@ -25,6 +27,9 @@ def run_cli():
     # Command: validate <file.json>
     val_parser = subparsers.add_parser("validate", help="Validate an architecture specification file")
     val_parser.add_argument("file", type=str, help="Path to architecture JSON file to validate")
+
+    # Command: matrix
+    subparsers.add_parser("matrix", help="Run Ontological Matrix state transition lifecycle and output summary")
 
     args = parser.parse_args()
 
@@ -87,6 +92,29 @@ def run_cli():
             for err in val_res.errors:
                 print(f" - {err}")
             sys.exit(1)
+
+    elif args.command == "matrix":
+        print("ONTOLOGICAL MATRIX LIFECYCLE EXECUTION")
+        matrix = OntologicalMatrix()
+        src_node = matrix.add_node(OntologicalNode(node_id="src-tanakh", layer=OntologicalLayerType.SOURCE, label="Source Text Primaries"))
+        cfg_node = matrix.add_node(OntologicalNode(node_id="cfg-kabbalah", layer=OntologicalLayerType.CONFIGURATION, label="Relational Configuration Space"))
+        matrix.add_relation(OntologicalRelation(relation_id="rel-1", source_node_id="src-tanakh", target_node_id="cfg-kabbalah", relation_type="CONFIGURES", layer_provenance=OntologicalLayerType.CONFIGURATION))
+
+        engine = OntologicalStateEngine(matrix)
+        engine.transition_to_configured({"matrix_id": matrix.matrix_id})
+        engine.generate_candidates([
+            {"id": 1, "quality": 95, "name": "Primary Candidate"},
+            {"id": 2, "quality": 40, "name": "Low Quality Candidate"}
+        ])
+        engine.run_birur_clarification([{"required_key": "quality", "min_value": 50}])
+        resolved = engine.resolve_state()
+        actualized = engine.actualize_state()
+
+        print(f"STAGE: {actualized['stage']}")
+        print(f"RESOLVED ID: {actualized['resolved_id']}")
+        print(f"STATE WITNESS HASH: {actualized['state_witness_hash']}")
+        print("MATRIX SUMMARY:")
+        print(json.dumps(matrix.export_summary(), indent=2))
 
     else:
         parser.print_help()
