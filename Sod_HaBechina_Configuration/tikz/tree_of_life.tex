@@ -1,0 +1,49 @@
+\begin{tikzpicture}[
+    sefira/.style={circle, draw=blue!80!black, fill=blue!10, thick, inner sep=2pt, minimum size=1.1cm, align=center, font=\footnotesize},
+    edge/.style={-, thick, draw=slate!70}
+]
+
+% Nodes
+\node[sefira] (keter) at (0, 4.5) {$Q_1$\\Keter};
+\node[sefira] (chochmah) at (2, 3) {$Q_2$\\Chochmah};
+\node[sefira] (binah) at (-2, 3) {$Q_3$\\Binah};
+\node[sefira] (chesed) at (2, 1) {$Q_4$\\Chesed};
+\node[sefira] (gevurah) at (-2, 1) {$Q_5$\\Gevurah};
+\node[sefira] (tiferet) at (0, 0) {$Q_6$\\Tiferet};
+\node[sefira] (netzach) at (2, -2) {$Q_7$\\Netzach};
+\node[sefira] (hod) at (-2, -2) {$Q_8$\\Hod};
+\node[sefira] (yesod) at (0, -3.5) {$Q_9$\\Yesod};
+\node[sefira] (malchut) at (0, -5.5) {$Q_{10}$\\Malchut};
+
+% Edges (3 Columns / 22 Channels)
+\draw[edge] (keter) -- (chochmah);
+\draw[edge] (keter) -- (binah);
+\draw[edge] (chochmah) -- (binah);
+
+\draw[edge] (chochmah) -- (chesed);
+\draw[edge] (binah) -- (gevurah);
+
+\draw[edge] (keter) -- (tiferet);
+\draw[edge] (chochmah) -- (tiferet);
+\draw[edge] (binah) -- (tiferet);
+
+\draw[edge] (chesed) -- (gevurah);
+\draw[edge] (chesed) -- (tiferet);
+\draw[edge] (gevurah) -- (tiferet);
+
+\draw[edge] (chesed) -- (netzach);
+\draw[edge] (gevurah) -- (hod);
+
+\draw[edge] (tiferet) -- (netzach);
+\draw[edge] (tiferet) -- (hod);
+\draw[edge] (tiferet) -- (yesod);
+
+\draw[edge] (netzach) -- (hod);
+\draw[edge] (netzach) -- (yesod);
+\draw[edge] (hod) -- (yesod);
+
+\draw[edge] (netzach) -- (malchut);
+\draw[edge] (hod) -- (malchut);
+\draw[edge] (yesod) -- (malchut);
+
+\end{tikzpicture}

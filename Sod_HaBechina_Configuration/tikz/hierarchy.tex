@@ -1,0 +1,22 @@
+\begin{tikzpicture}[node distance=1.5cm, auto, >=stealth,
+    block/.style={rectangle, draw=blue!70, fill=blue!5, thick, inner sep=6pt, text width=5cm, align=center, rounded corners=3pt},
+    source/.style={rectangle, draw=amber!80!black, fill=amber!10, thick, inner sep=8pt, text width=5cm, align=center, rounded corners=4pt},
+    info/.style={rectangle, draw=emerald!70, fill=emerald!5, thick, inner sep=6pt, text width=5cm, align=center, rounded corners=3pt},
+    edge/.style={->, thick, draw=slate!80}]
+
+\node [source] (einsof) {\textbf{Ein Sof / Source of Scale}\\$\operatorname{Source}(S)$};
+\node [block, below of=einsof] (scale) {\textbf{Scale Domain} ($S$)\\Resolution \& Normalization};
+\node [block, below of=scale] (relation) {\textbf{Relational Structure} ($R$)\\Dependency \& Ratio};
+\node [block, below of=relation] (bechina) {\textbf{Bechinah Configuration}\\$\boxed{B = \operatorname{Bechina}(V,R,S)}$};
+\node [info, below of=bechina] (info_layer) {\textbf{Information Layer} ($\mathcal{I}$)\\$(T, N, G, L)$};
+\node [block, below of=info_layer] (anb) {\textbf{Configurations}\\$\mathcal{A}_0 \xrightarrow{\Delta} \mathcal{N}_1 \xrightarrow{\mathcal{T}} \mathcal{B}_2$};
+\node [info, below of=anb] (tikun) {\textbf{Tikun / Equilibrium}\\$\Phi(\mathcal{K}) = \mathcal{K}$};
+
+\draw [edge] (einsof) -- (scale);
+\draw [edge] (scale) -- (relation);
+\draw [edge] (relation) -- (bechina);
+\draw [edge] (bechina) -- (info_layer);
+\draw [edge] (info_layer) -- (anb);
+\draw [edge] (anb) -- (tikun);
+
+\end{tikzpicture}

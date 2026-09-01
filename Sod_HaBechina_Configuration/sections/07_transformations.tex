@@ -1,0 +1,25 @@
+\section{Hierarchical Level Transformations and Visibility}
+\label{sec:transformations}
+
+Configurations exist across discrete hierarchical levels $i \in \mathbb{Z}$.
+
+\begin{definition}[Level State Vector]
+A complete level configuration $\Omega_i$ is defined by:
+\begin{equation}
+\Omega_i = (V_i, R_i, S_i, T_i, N_i, G_i, L_i)
+\end{equation}
+\end{definition}
+
+Transition between adjacent levels is governed by a forward refinement map $\Phi_i$ and a reverse projection map $\Pi_i$:
+\begin{equation}
+\boxed{\Omega_i \xrightarrow{\Phi_i} \Omega_{i+1}} \quad \text{(Refinement / Generation)}
+\end{equation}
+\begin{equation}
+\boxed{\Omega_{i+1} \xrightarrow{\Pi_i} \Omega_i} \quad \text{(Projection / Coarse-Graining)}
+\end{equation}
+
+Projection is generally lossy ($\Pi_i \neq \Phi_i^{-1}$). We measure information loss via a divergence metric $\mathcal{L}_i$:
+\begin{equation}
+\mathcal{L}_i = D\left(\Omega_{i+1}, \Psi_i(\Omega_i)\right)
+\end{equation}
+where $\Psi_i$ is a reconstruction estimator.

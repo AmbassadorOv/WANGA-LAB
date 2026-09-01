@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "",
+  "description": "Invalid architecture missing required name and components",
+  "agents": [],
+  "neural_components": [],
+  "virtual_nano_processors": [],
+  "experiment": {
+    "id": "exp-invalid"
+  }
+}
