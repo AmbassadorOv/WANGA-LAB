@@ -26,6 +26,9 @@ class VNPConfig:
     enabled: bool = True
     device: str = "cpu"
     priority: int = 1
+    blueprint_node_id: Optional[int] = None
+    processor_family: Optional[str] = None
+    category: Optional[str] = None
     extra: Dict[str, Any] = field(default_factory=dict)
 
 
@@ -48,6 +51,9 @@ class VirtualNanoProcessor:
     def __init__(self, config: VNPConfig, op_handler: Optional[Callable[[Any], Any]] = None):
         self.config = config
         self.id = config.id
+        self.blueprint_node_id = config.blueprint_node_id
+        self.processor_family = config.processor_family or "virtual_core"
+        self.category = config.category or "General"
         self.state = VNPState.CREATED
         self.memory: Dict[str, Any] = {}
         self.input_buffer: List[ExecutionPacket] = []

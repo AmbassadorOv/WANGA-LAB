@@ -6,6 +6,7 @@ import time
 import uuid
 from typing import Dict, Any, List, Optional, Tuple
 from wanga.vgpu import VirtualNanoProcessor, VNPConfig, VNPState, ExecutionPacket
+from wanga.blueprint import BlueprintRegistry, BlueprintNode, ProcessorProfile
 
 
 class VirtualProcessorFabric:
@@ -49,17 +50,52 @@ class VirtualGPU:
     """
     Virtual GPU resource manager and orchestrator.
     Manages registry, allocation, dispatching, synchronization, and observability metrics.
+    Supports blueprint-driven architecture loading and instantiation.
     """
 
     def __init__(self, vgpu_id: str = "vgpu-0"):
         self.vgpu_id = vgpu_id
         self.fabric = VirtualProcessorFabric()
+        self.blueprint_registry: Optional[BlueprintRegistry] = None
         self.metrics = {
             "registered_processors": 0,
             "dispatches_count": 0,
             "completed_operations": 0,
             "failed_operations": 0
         }
+
+    def load_blueprint(self, config_path: str = "config/photonic_neuromorphic_matrix.json") -> BlueprintRegistry:
+        self.blueprint_registry = BlueprintRegistry(config_path)
+        return self.blueprint_registry
+
+    def instantiate_blueprint(self, blueprint_registry: Optional[BlueprintRegistry] = None) -> List[VirtualNanoProcessor]:
+        registry = blueprint_registry or self.blueprint_registry or BlueprintRegistry()
+        self.blueprint_registry = registry
+
+        instantiated_vnps = []
+        for node in registry.get_nodes():
+            profile = registry.map_node_to_processor_profile(node)
+            vnp_id = f"VNP-{node.id:03d}"
+            cfg = VNPConfig(
+                id=vnp_id,
+                vnp_type=profile.family,
+                blueprint_node_id=node.id,
+                processor_family=profile.family,
+                category=node.category,
+                extra={"role": node.role, "recommended_processor": node.recommended_processor}
+            )
+            vnp = VirtualNanoProcessor(cfg)
+            self.register_processor(vnp)
+            instantiated_vnps.append(vnp)
+
+        # Connect topology if edges exist
+        for conn in registry.topology.connections:
+            src = conn.get("source")
+            tgt = conn.get("target")
+            if src and tgt:
+                self.connect_processors(src, tgt)
+
+        return instantiated_vnps
 
     def register_processor(self, vnp: VirtualNanoProcessor):
         self.fabric.add_processor(vnp)
@@ -136,7 +172,7 @@ class VirtualGPU:
         completed_count = sum(1 for v in self.fabric.nodes.values() if v.state == VNPState.COMPLETED)
         error_count = sum(1 for v in self.fabric.nodes.values() if v.state == VNPState.ERROR)
 
-        return {
+        res = {
             "vgpu_id": self.vgpu_id,
             "processor_count": len(self.fabric.nodes),
             "active_processors": active_count,
@@ -145,3 +181,13 @@ class VirtualGPU:
             "metrics": dict(self.metrics),
             "fabric_topology": self.fabric.get_topology_info()
         }
+
+        if self.blueprint_registry:
+            res["blueprint"] = {
+                "architecture": self.blueprint_registry.raw_config.get("architecture"),
+                "total_vertices": len(self.blueprint_registry.nodes),
+                "epicyclic_gates": self.blueprint_registry.topology.gate_count,
+                "active_blueprint": self.blueprint_registry.active_blueprint_name
+            }
+
+        return res
