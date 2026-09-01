@@ -1,0 +1,28 @@
+\section{Information Layers: Ta'amim, Nekudot, Tagin, Otiyot}
+\label{sec:taamim_nekudot_tagin_otiyot}
+
+Inspired by traditional textual taxonomy, we construct a four-tier computational information encoding model.
+
+\begin{definition}[Information Layers Tuple]
+An information encoding state $\mathcal{I}$ is defined as:
+\begin{equation}
+\mathcal{I} = (T, N, G, L)
+\end{equation}
+where:
+\begin{itemize}
+    \item $T = \text{Ta'amim (Syntactic / Prosodic Master Layer)}$
+    \item $N = \text{Nekudot (Vocalic / Dynamic Internal State Layer)}$
+    \item $G = \text{Tagin (Graphic / Structural Annotation Layer)}$
+    \item $L = \text{Otiyot (Discrete Symbolic Carrier / Letter Layer)}$
+\end{itemize}
+\end{definition}
+
+We map this as an encoding function $\mathcal{E}$ from an abstract state $X$:
+\begin{equation}
+\mathcal{E} : X \longrightarrow (T, N, G, L)
+\end{equation}
+Depending on whether the process represents generation (synthesis) or parsing (analysis), the direction flows as:
+\begin{equation}
+T \xrightarrow{\text{syntactics}} N \xrightarrow{\text{vocalic}} G \xrightarrow{\text{annotations}} L \quad (\text{Encoding})
+\end{equation}
+or $L \to G \to N \to T$ during decoding.

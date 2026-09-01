@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage[svgnames]{xcolor}
+
+\definecolor{navy}{RGB}{15,23,42}
+\definecolor{blueaccent}{RGB}{2,132,199}
+\definecolor{emerald}{RGB}{16,185,129}
+\definecolor{amber}{RGB}{245,158,11}
+\definecolor{slate}{RGB}{100,116,139}
+\definecolor{indigo}{RGB}{79,70,229}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blueaccent,
+    citecolor=emerald,
+    urlcolor=blueaccent
+}
+
+% Theorem Environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{
+    \Huge \textbf{Sod Ha-Bechinah:}\\
+    \Large Formal Configuration of Relation, Value, Scale, Proportion and Hierarchical Revelation\\[0.5em]
+    \large \textbf{סוד הבחינה:}\\
+    \large יחס, ערך, קנה־מידה, פרופורציה וגילוי היררכי
+}
+
+\author{
+    \textbf{WANGA AI Architecture Laboratory}\\
+    \small Computational Formalization Group
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This research preprint formalizes the mathematical and computational framework of \emph{Sod Ha-Bechinah} (סוד הבחינה). We model a \emph{Bechinah} (relational aspect/configuration) not as an isolated static object, but as a dynamic configuration vector $B = \operatorname{Bechina}(V,R,S)$ defined over Value ($V$), Relation ($R$), and Scale ($S$). We construct a complete hierarchical configuration space $\Omega_i = (V_i, R_i, S_i, T_i, N_i, G_i, L_i)$ incorporating four computational information layers modeled after \emph{Ta'amim}, \emph{Nekudot}, \emph{Tagin}, and \emph{Otiyot}. We establish rigorous Category-theoretic transition maps $\Phi_i: \Omega_i \to \Omega_{i+1}$ and projection maps $\Pi_i: \Omega_{i+1} \to \Omega_i$, and map these abstractions onto traditional structures including Adam Kadmon ($\mathcal{H} = \{72, 63, 45, 52\}$), Akudim/Nekudim/Berudim, the 231 relational gates ($G_{231} = \binom{22}{2}$), and a 10-node Sefirotic graph network. This paper explicitly separates mathematical definitions from historical textual interpretation and metaphysical claims.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{Notation Reference Table}
+\addcontentsline{toc}{section}{Notation Reference Table}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Symbol} & \textbf{Formal Definition / Description} \\
+\midrule
+$V$ & Value variable belonging to value space $\mathcal{V}$ \\
+$R$ & Relational operator / dependency structure $R \in \mathcal{R}$ \\
+$S$ & Scale parameter $S \in \mathbb{R}^+$ \\
+$B$ & Bechinah configuration tuple $B = \operatorname{Bechina}(V,R,S)$ \\
+$\mathcal{D}$ & Fundamental dimensional space $(P,C,R,\tau)$ (Purpose, Cause, Relation, Time) \\
+$\mathcal{I}$ & Four information layers tuple $(T, N, G, L)$ \\
+$T, N, G, L$ & Ta'amim, Nekudot, Tagin, Otiyot information resolution layers \\
+$\Omega_i$ & Complete configuration state at hierarchical level $i$ \\
+$\Phi_i$ & Forward generation / refinement transformation map $\Phi_i: \Omega_i \to \Omega_{i+1}$ \\
+$\Pi_i$ & Reverse projection / coarse-graining map $\Pi_i: \Omega_{i+1} \to \Omega_i$ \\
+$\mathcal{H}$ & Adam Kadmon numerical representation set $\{72, 63, 45, 52\}$ \\
+$G_{231}$ & Set of 231 relational gates $\binom{22}{2}$ \\
+$\mathcal{K}$ & Preserved invariant set under scale and structural transformations \\
+$\mathfrak{S}(\Omega)$ & Computational integrity canonical serial cryptographic hash \\
+\bottomrule
+\end{tabularx}
+\caption{Canonical Mathematical Symbols and Definitions}
+\end{table}
+
+\newpage
+
+\include{sections/01_introduction}
+\include{sections/02_bechina_model}
+\include{sections/03_proportion_logic}
+\include{sections/04_four_layers}
+\include{sections/05_taamim_nekudot_tagin_otiyot}
+\include{sections/06_adam_kadmon}
+\include{sections/07_transformations}
+\include{sections/08_akudim_nekudim_berudim}
+\include{sections/09_recursive_model}
+\include{sections/10_finality}
+\include{sections/11_tree_of_life_mapping}
+\include{sections/12_formal_ontology}
+\include{sections/13_conclusion}
+
+\appendix
+\section{TikZ Structural Diagrams}
+\label{appendix:tikz}
+
+\subsection{Master Hierarchy Diagram}
+\begin{figure}[h!]
+\centering
+\input{tikz/hierarchy.tex}
+\caption{Master Hierarchy of Scale, Relation, and Configuration}
+\end{figure}
+
+\subsection{Four Information Layers Diagram}
+\begin{figure}[h!]
+\centering
+\input{tikz/four_layers.tex}
+\caption{Encoding and Decoding Directions across Information Layers}
+\end{figure}
+
+\subsection{Transformation Between Levels}
+\begin{figure}[h!]
+\centering
+\input{tikz/transformations.tex}
+\caption{Forward Refinement $\Phi_i$ and Projection Map $\Pi_i$ with Information Loss}
+\end{figure}
+
+\subsection{Tree of Life Sefirotic Mapping}
+\begin{figure}[h!]
+\centering
+\input{tikz/tree_of_life.tex}
+\caption{Mathematical Graph Topology of Sefirotic Nodes and Channels}
+\end{figure}
+
+\subsection{Recursive Structural Invariance}
+\begin{figure}[h!]
+\centering
+\input{tikz/recursive_model.tex}
+\caption{Recursive Self-Similarity and Preserved Invariant Set $\mathcal{K}$}
+\end{figure}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}

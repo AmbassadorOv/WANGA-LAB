@@ -1,0 +1,31 @@
+\section{The Four Fundamental Dimensions}
+\label{sec:four_layers}
+
+We define the complete dimensional state space of an architectural configuration as a four-tuple.
+
+\begin{definition}[Fundamental Dimensions Space]
+The fundamental dimension space $\mathcal{D}$ is defined as:
+\begin{equation}
+\mathcal{D} = (P, C, R, \tau)
+\end{equation}
+where:
+\begin{itemize}
+    \item $P = \text{Purpose (Finality / Directional Constraint)}$
+    \item $C = \text{Cause (Generative Dependency)}$
+    \item $R = \text{Relation (Structural Topology)}$
+    \item $\tau = \text{Time (Sequential Index)}$
+\end{itemize}
+\end{definition}
+
+The configuration generation pipeline flows as:
+\begin{equation}
+P \longrightarrow C \longrightarrow R \longrightarrow \Omega(\tau)
+\end{equation}
+where $\Omega(\tau)$ represents the system state indexed by sequential time $\tau$.
+
+\begin{proposition}[Finality $\neq$ Temporal Causality]
+Purpose ($P$) provides a directional vector field over the state space rather than an efficient temporal cause acting from past to future:
+\begin{equation}
+\operatorname{Finality}(P) \not\equiv \operatorname{TemporalCause}(C, \tau)
+\end{equation}
+\end{proposition}

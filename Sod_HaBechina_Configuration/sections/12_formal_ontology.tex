@@ -1,0 +1,36 @@
+\section{Formal Ontology, 22 Letters, and 231 Relational Gates}
+\label{sec:formal_ontology}
+
+The symbolic layer of the model incorporates the 22 letters of the Hebrew alphabet as discrete relational generators.
+
+\begin{definition}[22 Symbolic Generators]
+Let $\mathcal{L}_{22} = \{ \ell_1, \ell_2, \dots, \ell_{22} \}$ be a set of 22 discrete symbolic elements. Each element $\ell_i$ is represented by:
+\begin{equation}
+\ell_i = (\sigma_i, \pi_i, \rho_i)
+\end{equation}
+where $\sigma_i$ is symbolic identity, $\pi_i \in \{1, \dots, 22\}$ is positional index, and $\rho_i$ is relational property.
+\end{definition}
+
+\subsection{Combinatorial Derivation of 231 Relational Gates}
+Consider pairwise combinations of elements from $\mathcal{L}_{22}$.
+\begin{itemize}
+    \item Ordered pairs (directed relations): $22 \times 21 = 462$.
+    \item Unordered pairs (symmetric relational gates):
+    \begin{equation}
+    |G_{231}| = \binom{22}{2} = \frac{22 \times 21}{2} = 231
+    \end{equation}
+\end{itemize}
+
+\begin{definition}[231 Relational Gate Set]
+The set of 231 relational gates $G_{231}$ is defined precisely as the set of all unordered 2-element subsets:
+\begin{equation}
+\boxed{g_{ij} = \{ \ell_i, \ell_j \} \quad \text{for } 1 \le i < j \le 22}
+\end{equation}
+\end{definition}
+
+\subsection{Computational Integrity Seal}
+We establish computational verification of a state configuration $\Omega$ via a canonical serialization hash $\mathfrak{S}(\Omega)$:
+\begin{equation}
+\mathfrak{S}(\Omega) = \operatorname{Hash}\Big(\operatorname{CanonicalSerialize}(\Omega)\Big)
+\end{equation}
+This seal verifies computational integrity ($\operatorname{Integrity} \neq \operatorname{Truth}$).
