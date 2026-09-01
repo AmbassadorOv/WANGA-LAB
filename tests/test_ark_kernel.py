@@ -93,3 +93,22 @@ def test_run_tests_utility():
     results = run_tests()
     for test_name, outcome in results.items():
         assert outcome == "PASS"
+
+
+def test_jules_network_reporter():
+    from ark_kernel import JulesNetworkReporter, NetworkMetrics
+    reporter = JulesNetworkReporter()
+    metrics = reporter.get_runtime_metrics()
+    assert isinstance(metrics, NetworkMetrics)
+    assert metrics.total_nodes == 100000
+    assert metrics.active_connections == 100000
+
+    comparison = reporter.runtime_comparison()
+    assert "Jules_Deterministic_Network" in comparison
+    assert "Standard_Probabilistic_NN" in comparison
+
+    report_str = reporter.generate_report()
+    import json
+    parsed = json.loads(report_str)
+    assert "architecture" in parsed
+    assert "runtime_analysis" in parsed
