@@ -1,6 +1,7 @@
 import pytest
 
 from epistemic_frontier import (
+    CategoryAddress,
     EpistemicFrontierEngine,
     EpistemicState,
     FrontierConfig,
@@ -19,6 +20,7 @@ def test_possible_is_active_propagation_state():
     assert result.closed_ids == ["must", "forbidden"]
     assert result.propagated_ids == ["possible"]
     assert "possible" in result.preserved_ids
+    assert result.transitions[0].reason == "POSSIBLE -> PROPAGATE"
 
 
 def test_provisional_and_unresolved_are_not_closed():
@@ -94,3 +96,54 @@ def test_deterministic_replay():
     engine_b = EpistemicFrontierEngine()
 
     assert engine_a.evaluate(propositions).to_dict() == engine_b.evaluate(propositions).to_dict()
+
+
+def test_21_category_address_space_has_9261_states():
+    address = CategoryAddress(21, 21, 21)
+    assert address.cardinality == 9261
+    assert address.index == 9260
+    assert CategoryAddress(1, 1, 1).index == 0
+
+
+def test_category_address_rejects_out_of_range_values():
+    with pytest.raises(ValueError):
+        CategoryAddress(0, 1, 1)
+    with pytest.raises(ValueError):
+        CategoryAddress(1, 22, 1)
+    with pytest.raises(ValueError):
+        Proposition("bad", EpistemicState.POSSIBLE, category=0)
+    with pytest.raises(ValueError):
+        Proposition("bad", EpistemicState.POSSIBLE, category=22)
+
+
+def test_possible_builds_next_cognitive_node_without_closing_source():
+    engine = EpistemicFrontierEngine()
+    source = Proposition("node-1", EpistemicState.POSSIBLE, category=4)
+
+    path = engine.build_cognitive_path([source])
+
+    assert len(path) == 1
+    assert path[0].source_id == "node-1"
+    assert path[0].target_id == "node-1::next"
+    assert path[0].state is EpistemicState.PROVISIONAL
+    assert engine.evaluate([source]).preserved_ids == ["node-1"]
+
+
+def test_propagation_is_not_probability():
+    engine = EpistemicFrontierEngine()
+    possible = Proposition("p", EpistemicState.POSSIBLE)
+    known = Proposition("k", EpistemicState.KNOWN)
+
+    assert engine.propagate([possible, known]) == [possible]
+
+
+def test_no_invented_x_on_contradiction():
+    engine = EpistemicFrontierEngine()
+    a = Proposition("A", EpistemicState.KNOWN)
+    b = Proposition("B", EpistemicState.KNOWN)
+    mapped = engine.map_contradiction(a, b)
+
+    assert mapped.third_state is EpistemicState.UNRESOLVED
+    assert mapped.third_state.value != "X"
+    assert mapped.left_id == "A"
+    assert mapped.right_id == "B"
