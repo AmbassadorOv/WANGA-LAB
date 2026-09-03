@@ -1,25 +1,25 @@
-"""Epistemic Frontier Engine
+"""ARK cognitive propagation / epistemic frontier engine.
 
-A domain-agnostic decision layer for preserving unresolved alternatives.
-This is a computational model; it does not modify or expose foundation-model
-weights.  It operates on an explicit configuration supplied by the caller.
+This is a domain-agnostic computational model. It does not modify or expose
+foundation-model weights; it operates on explicit states and configuration.
 
 Core semantics:
-    MUST       -> constrain
-    FORBIDDEN  -> eliminate
-    POSSIBLE   -> propagate
-    PROVISIONAL-> report without closing
-    UNRESOLVED -> preserve / continue
-    CONTRADICTION -> investigate
+    MUST        -> constrain / close branch
+    FORBIDDEN   -> block / close branch
+    POSSIBLE    -> propagate to the next cognitive node
+    PROVISIONAL -> report without closure
+    UNRESOLVED  -> preserve and expose a search frontier
+    CONTRADICTION -> map the tension instead of selecting a winner
 
 The engine deliberately does not manufacture an explanation for an
-unrepresented X.  It records a search frontier instead.
+unrepresented X. It records a search frontier instead.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
+from itertools import product
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 
@@ -61,17 +61,45 @@ class FrontierConfig:
 
 
 @dataclass(frozen=True)
+class CategoryAddress:
+    """A validated 3-axis address in the 21-category space."""
+
+    x: int
+    y: int
+    z: int
+    category_count: int = 21
+
+    def __post_init__(self) -> None:
+        for value in (self.x, self.y, self.z):
+            if not 1 <= value <= self.category_count:
+                raise ValueError(
+                    f"category coordinate must be in 1..{self.category_count}"
+                )
+
+    @property
+    def index(self) -> int:
+        """Stable zero-based index for the 21^3 address space."""
+        n = self.category_count
+        return ((self.x - 1) * n + (self.y - 1)) * n + (self.z - 1)
+
+    @property
+    def cardinality(self) -> int:
+        return self.category_count ** 3
+
+
+@dataclass(frozen=True)
 class Proposition:
     id: str
     state: EpistemicState
-    category: int = 0
+    category: int = 1
     source: str = "synthetic"
+    address: Optional[CategoryAddress] = None
 
     def __post_init__(self) -> None:
         if not self.id:
             raise ValueError("proposition id cannot be empty")
-        if self.category < 0:
-            raise ValueError("category cannot be negative")
+        if not 1 <= self.category <= 21:
+            raise ValueError("category must be in 1..21")
 
 
 @dataclass(frozen=True)
@@ -80,6 +108,16 @@ class ContradictionMap:
     right_id: str
     relation: str
     third_state: EpistemicState = EpistemicState.UNRESOLVED
+
+
+@dataclass(frozen=True)
+class CognitiveTransition:
+    """One explicit edge in the recursive cognitive path."""
+
+    source_id: str
+    target_id: str
+    state: EpistemicState
+    reason: str
 
 
 @dataclass
@@ -91,6 +129,7 @@ class FrontierResult:
     contradiction_maps: List[ContradictionMap]
     search_frontiers: List[str]
     provisional_ids: List[str]
+    transitions: List[CognitiveTransition]
 
     @property
     def cognitive_preservation(self) -> float:
@@ -103,6 +142,15 @@ class FrontierResult:
         if self.input_count == 0:
             return 0.0
         return len(set(self.closed_ids)) / self.input_count
+
+    @property
+    def frontier_depth(self) -> int:
+        if not self.transitions:
+            return 0
+        return max(
+            max((index for index, _ in enumerate(self.transitions, start=1)), default=0),
+            0,
+        )
 
     def to_dict(self) -> Dict[str, object]:
         return {
@@ -121,8 +169,18 @@ class FrontierResult:
                 }
                 for item in self.contradiction_maps
             ],
+            "transitions": [
+                {
+                    "source_id": item.source_id,
+                    "target_id": item.target_id,
+                    "state": item.state.value,
+                    "reason": item.reason,
+                }
+                for item in self.transitions
+            ],
             "cognitive_preservation": self.cognitive_preservation,
             "closure_efficiency": self.closure_efficiency,
+            "frontier_depth": self.frontier_depth,
         }
 
 
@@ -155,6 +213,7 @@ class EpistemicFrontierEngine:
         propagated: List[str] = []
         provisional: List[str] = []
         frontiers: List[str] = []
+        transitions: List[CognitiveTransition] = []
 
         for proposition in propositions:
             action = self._classify(proposition.state)
@@ -163,6 +222,14 @@ class EpistemicFrontierEngine:
             elif action == "propagate":
                 propagated.append(proposition.id)
                 preserved.append(proposition.id)
+                transitions.append(
+                    CognitiveTransition(
+                        proposition.id,
+                        proposition.id,
+                        EpistemicState.POSSIBLE,
+                        "POSSIBLE -> PROPAGATE",
+                    )
+                )
             elif action == "investigate":
                 preserved.append(proposition.id)
                 frontiers.append(proposition.id)
@@ -181,7 +248,31 @@ class EpistemicFrontierEngine:
             contradiction_maps=[],
             search_frontiers=frontiers,
             provisional_ids=provisional,
+            transitions=transitions,
         )
+
+    def propagate(self, propositions: Sequence[Proposition]) -> List[Proposition]:
+        """Emit only active POSSIBLE nodes as candidates for the next node."""
+        return [p for p in propositions if p.state is EpistemicState.POSSIBLE]
+
+    def build_cognitive_path(
+        self,
+        propositions: Sequence[Proposition],
+        next_state: EpistemicState = EpistemicState.PROVISIONAL,
+    ) -> List[CognitiveTransition]:
+        """Build a deterministic path without collapsing the source options."""
+        path: List[CognitiveTransition] = []
+        for proposition in self.propagate(propositions):
+            target = f"{proposition.id}::next"
+            path.append(
+                CognitiveTransition(
+                    proposition.id,
+                    target,
+                    next_state,
+                    "propagated active possibility",
+                )
+            )
+        return path
 
     def map_contradiction(
         self,
@@ -192,11 +283,7 @@ class EpistemicFrontierEngine:
         """Record tension without selecting A or B as the truth by default."""
         if left.id == right.id:
             raise ValueError("a contradiction requires two distinct propositions")
-        if left.state is EpistemicState.FORBIDDEN and right.state is EpistemicState.FORBIDDEN:
-            third = EpistemicState.UNRESOLVED
-        else:
-            third = EpistemicState.UNRESOLVED
-        return ContradictionMap(left.id, right.id, relation, third)
+        return ContradictionMap(left.id, right.id, relation)
 
     def investigate_contradictions(
         self,
@@ -225,8 +312,16 @@ class EpistemicFrontierEngine:
             "candidate_count": len(all_props),
         }
 
+    def category_addresses(self) -> Iterable[CategoryAddress]:
+        """Enumerate the complete 21^3 routing space deterministically."""
+        n = self.config.category_count
+        return (
+            CategoryAddress(x, y, z, n)
+            for x, y, z in product(range(1, n + 1), repeat=3)
+        )
+
     def final_state(self, result: FrontierResult) -> EpistemicState:
-        """Return a provisional aggregate; never collapse an unresolved frontier."""
+        """Return an aggregate state; never collapse an unresolved frontier."""
         if result.search_frontiers:
             return EpistemicState.SEARCH_FRONTIER
         if result.provisional_ids:
@@ -237,6 +332,8 @@ class EpistemicFrontierEngine:
 
 
 __all__ = [
+    "CategoryAddress",
+    "CognitiveTransition",
     "ContradictionMap",
     "EpistemicFrontierEngine",
     "EpistemicState",
