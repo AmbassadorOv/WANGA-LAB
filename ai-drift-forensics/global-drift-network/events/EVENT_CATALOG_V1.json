@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "status": "configured_pilot",
+  "event_families": [
+    {
+      "id": "MODEL_CHANGE",
+      "source_types": ["model_release", "provider_release_feed"],
+      "overlay_probes": ["version_behavior", "capability_regression", "instruction_consistency"],
+      "window_minutes": [-15, -5, 0, 1, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "PLATFORM_CHANGE",
+      "source_types": ["provider_change_log", "platform_status"],
+      "overlay_probes": ["routing_behavior", "interface_independence", "response_consistency"],
+      "window_minutes": [-15, -5, 0, 1, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "SERVICE_INCIDENT",
+      "source_types": ["provider_status", "service_incident_feed"],
+      "overlay_probes": ["availability", "latency", "error_behavior", "recovery_behavior"],
+      "window_minutes": [-15, -5, 0, 1, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "PUBLIC_INFORMATION_BURST",
+      "source_types": ["public_event_feed", "news_feed"],
+      "overlay_probes": ["freshness", "uncertainty", "cross_language_consistency"],
+      "window_minutes": [-15, -5, 0, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "PUBLIC_EVENT",
+      "source_types": ["public_event_feed"],
+      "overlay_probes": ["event_reference_consistency", "uncertainty", "cross_region_consistency"],
+      "window_minutes": [-15, -5, 0, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "POLICY_REGULATORY_EVENT",
+      "source_types": ["official_publication", "regulatory_feed"],
+      "overlay_probes": ["policy_freshness", "instruction_consistency", "jurisdictional_scope"],
+      "window_minutes": [-15, -5, 0, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "MAJOR_PUBLICATION",
+      "source_types": ["publication_feed", "repository_release"],
+      "overlay_probes": ["citation_awareness", "uncertainty", "cross_language_consistency"],
+      "window_minutes": [-15, -5, 0, 5, 10, 20, 30, 60]
+    },
+    {
+      "id": "SEARCH_INFORMATION_SURFACE_CHANGE",
+      "source_types": ["search_change_feed", "information_surface_monitor"],
+      "overlay_probes": ["retrieval_consistency", "freshness", "source_diversity"],
+      "window_minutes": [-15, -5, 0, 5, 10, 20, 30, 60]
+    }
+  ],
+  "classification_rule": "An event is an external anchor. Drift must be established from observations and controls.",
+  "missing_source_rule": "Record UNAVAILABLE or NOT_CONFIGURED; never synthesize an event or observation."
+}
