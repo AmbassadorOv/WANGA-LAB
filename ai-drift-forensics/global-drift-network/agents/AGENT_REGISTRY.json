@@ -1,0 +1,28 @@
+{
+  "architecture": "GLOBAL_DRIFT_NETWORK",
+  "version": "0.1.0",
+  "status": "proposed",
+  "logical_agent_count": 12,
+  "initial_worker_count": 4,
+  "agents": [
+    {"id":"GDN-A01","name":"Scout","plane":"observation","role":"Acquire and register observations","mode":"deterministic_or_tool_assisted"},
+    {"id":"GDN-A02","name":"Normalizer","plane":"observation","role":"Canonicalize observation records","mode":"deterministic"},
+    {"id":"GDN-A03","name":"Baseline","plane":"observation","role":"Maintain and validate comparison baselines","mode":"deterministic"},
+    {"id":"GDN-A04","name":"Drift Detector","plane":"observation","role":"Compute deltas and candidate drift classes","mode":"deterministic_plus_analysis"},
+    {"id":"GDN-A05","name":"Temporal Analyst","plane":"analysis","role":"Align observations and temporal relationships","mode":"analysis"},
+    {"id":"GDN-A06","name":"Geospatial Analyst","plane":"analysis","role":"Compare regions and directional relationships","mode":"analysis"},
+    {"id":"GDN-A07","name":"Language Analyst","plane":"analysis","role":"Compare linguistic surfaces and cross-language relationships","mode":"analysis"},
+    {"id":"GDN-A08","name":"Surface Graph Analyst","plane":"analysis","role":"Build cross-surface observation graphs","mode":"analysis"},
+    {"id":"GDN-A09","name":"Verification","plane":"scientific_control","role":"Manage reproduction and control checks","mode":"deterministic_plus_analysis"},
+    {"id":"GDN-A10","name":"Attribution","plane":"scientific_control","role":"Separate observation, derivation, hypothesis and unresolved causality","mode":"analysis"},
+    {"id":"GDN-A11","name":"Research Demand","plane":"public_research","role":"Aggregate scientist interests into demand signals","mode":"aggregation"},
+    {"id":"GDN-A12","name":"Digest & Publication","plane":"public_research","role":"Generate daily digest candidates and manage publication queue","mode":"generation_plus_policy"}
+  ],
+  "deployment_principle": "Logical agents may initially execute inside four worker processes; split only when scale, isolation, or reproducibility requires it.",
+  "non_goals": [
+    "Do not treat an agent hypothesis as a verified finding.",
+    "Do not let public votes modify historical observations.",
+    "Do not infer causality from temporal ordering alone.",
+    "Do not auto-publish every repository commit."
+  ]
+}
