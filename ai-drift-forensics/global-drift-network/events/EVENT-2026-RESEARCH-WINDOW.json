@@ -1,0 +1,13 @@
+{
+  "event_id": "EVT-GDN-2026-RESEARCH-WINDOW",
+  "event_type": "PUBLIC_EVENT",
+  "title": "Global Drift Network Research Observation Window",
+  "start_utc": "2026-09-16T00:00:00Z",
+  "end_utc": null,
+  "regions": ["ISRAEL", "UNITED_STATES", "EUROPE", "MIDDLE_EAST", "OTHER"],
+  "languages": ["he", "en", "ar", "other"],
+  "source_refs": [],
+  "status": "ACTIVE",
+  "causal_claim": "NONE",
+  "notes": "Research window anchor only. It does not assert that any election, institution, region, language, or public event caused measured drift. Specific event anchors should be added separately when documented."
+}
