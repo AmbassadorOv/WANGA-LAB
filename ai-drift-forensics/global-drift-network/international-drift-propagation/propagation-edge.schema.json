@@ -1,0 +1,39 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://wanga-lab.example/schemas/propagation-edge.schema.json",
+  "title":"International Drift Propagation Edge",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["edge_id","observed_at","source","target","relationship_type","evidence_refs"],
+  "properties":{
+    "edge_id":{"type":"string"},
+    "observed_at":{"type":"string","format":"date-time"},
+    "source":{"$ref":"#/$defs/node"},
+    "target":{"$ref":"#/$defs/node"},
+    "relationship_type":{"type":"string","enum":["PRECEDES","FOLLOWS","COINCIDES"]},
+    "time_delta_seconds":{"type":["number","null"]},
+    "drift_class":{"type":"array","items":{"type":"string","enum":["SEMANTIC","BEHAVIORAL","DISTRIBUTIONAL","TEMPORAL","CROSS_SURFACE","CROSS_REGION","CROSS_LANGUAGE"]}},
+    "baseline_refs":{"type":"array","items":{"type":"string"}},
+    "observation_refs":{"type":"array","items":{"type":"string"}},
+    "evidence_refs":{"type":"array","items":{"type":"string"}},
+    "reproduction_status":{"type":"string","enum":["NOT_ATTEMPTED","PARTIAL","SUCCESS","FAILED","UNRESOLVED"]},
+    "attribution_status":{"type":"string","enum":["NOT_ASSESSED","SUPPORTED","PARTIAL","NOT_SUPPORTED","UNRESOLVED"]},
+    "causal_claim":{"type":"boolean","const":false},
+    "uncertainty_note":{"type":["string","null"]}
+  },
+  "$defs":{
+    "node":{
+      "type":"object",
+      "additionalProperties":false,
+      "required":["region","language","surface"],
+      "properties":{
+        "region":{"type":"string"},
+        "country":{"type":["string","null"]},
+        "language":{"type":"string"},
+        "surface":{"type":"string","enum":["AI_MODEL","SEARCH","NEWS_PUBLIC_INFO","OTHER"]},
+        "system_id":{"type":["string","null"]},
+        "observation_ref":{"type":["string","null"]}
+      }
+    }
+  }
+}
