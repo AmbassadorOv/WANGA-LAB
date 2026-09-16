@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schema/global-drift-event.schema.json",
+  "title": "Global Drift Network Event",
+  "description": "Schema for an event anchor used to align observations in time. An event anchor is contextual metadata and is not itself a causal explanation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "title", "start_utc", "status"],
+  "properties": {
+    "event_id": { "type": "string", "pattern": "^EVT-GDN-[0-9]{4}-[A-Z0-9-]+$" },
+    "event_type": {
+      "type": "string",
+      "enum": ["ELECTION", "PUBLIC_EVENT", "PLATFORM_CHANGE", "MODEL_CHANGE", "PUBLICATION", "UNKNOWN"]
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "start_utc": { "type": "string", "format": "date-time" },
+    "end_utc": { "type": ["string", "null"], "format": "date-time" },
+    "regions": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "languages": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "source_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "status": { "type": "string", "enum": ["PLANNED", "ACTIVE", "COMPLETED", "UNRESOLVED"] },
+    "causal_claim": { "type": "string", "enum": ["NONE", "HYPOTHESIS_ONLY", "NOT_ASSESSED"] },
+    "notes": { "type": ["string", "null"] }
+  }
+}
