@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Neural Thinking Machine State V1",
+  "version": "1.0.0",
+  "status": "INITIAL_EXPERIMENTAL",
+  "type": "object",
+  "required": ["run_id", "source_version", "input_refs", "analysis_mode", "status"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "source_version": {"type": "string", "minLength": 1},
+    "comparison_versions": {"type": "array", "items": {"type": "string"}},
+    "input_refs": {"type": "array", "items": {"type": "string"}},
+    "analysis_mode": {
+      "type": "string",
+      "enum": ["HIGH_LOGIC", "VERSION_DIFF", "SEMANTIC_DRIFT", "STRUCTURAL_DRIFT", "INTENT_RECOVERY", "FULL_NTM"]
+    },
+    "tracked_symbolic_positions": {"type": "integer", "minimum": 0},
+    "drift_classes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["LETTER_DRIFT", "POSITION_DRIFT", "SEQUENCE_DRIFT", "WORD_DRIFT", "SEMANTIC_DRIFT", "STRUCTURAL_DRIFT", "VERSION_DIRECTION_DRIFT", "INTENT_RECOVERY_CANDIDATE", "UNAVAILABLE", "REVIEW"]
+      }
+    },
+    "reasoning_status": {
+      "type": "string",
+      "enum": ["OBSERVATION", "DIFFERENCE", "CANDIDATE", "VERIFIED_FINDING", "ARCHITECTURAL_CHANGE"]
+    },
+    "historical_intent_recovery_used": {"type": "boolean"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "repair_candidate": {"type": ["object", "null"]},
+    "verification_status": {"type": "string", "enum": ["NOT_RUN", "PENDING", "PASSED", "FAILED", "INCONCLUSIVE"]},
+    "status": {"type": "string", "enum": ["OPEN", "PROCESSING", "REVIEW", "COMPLETED", "BLOCKED"]}
+  },
+  "additionalProperties": false
+}
