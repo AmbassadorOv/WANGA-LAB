@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/research-group.schema.json",
+  "title": "WANGA Research Group",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["group_id", "name", "mission", "status", "agent_roles", "allowed_task_types"],
+  "properties": {
+    "group_id": {"type": "string", "pattern": "^RG-[A-Z0-9-]+$"},
+    "name": {"type": "string"},
+    "mission": {"type": "string"},
+    "status": {"type": "string", "enum": ["ACTIVE", "PLANNED", "PAUSED"]},
+    "agent_roles": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "allowed_task_types": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "inputs": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "requires_verification": {"type": "boolean", "default": true}
+  }
+}
