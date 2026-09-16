@@ -1,8 +1,48 @@
 # GLOBAL DRIFT NETWORK
 
-## Election-Linked 30-Day / 72-Hour Observation Program
+## Global Science Network architecture
 
-This workspace is a research container for measuring time-varying changes across AI and information surfaces in multiple regions and languages during a high-intensity public event.
+This workspace is the AI-drift evidence and forensic branch of a broader Global Science Network: a modular scientific commons for research discovery, evidence, verification, computation, collaboration, publication, and future institutional research nodes.
+
+### Architecture index
+
+- [Master Architecture Registry](./MASTER_ARCHITECTURE_REGISTRY.md) — canonical architecture and status map.
+- [Architecture Map](./ARCHITECTURE_MAP.md) — system relationships and data/compute flows.
+- [Site Integration Registry](./SITE_INTEGRATION_REGISTRY.md) — maps current web properties into the network.
+- [Roadmap](./ROADMAP.md) — staged implementation plan.
+- [Evidence Register Schema](./publication/GOVERNMENT_EVIDENCE_REGISTER.schema.json) — machine-readable evidence contract.
+- [Quality Gate](./orchestrator/QUALITY_GATE.md) — publication barrier.
+- [Queue Protocol](./orchestrator/QUEUE_PROTOCOL.md) — execution boundary.
+
+## Scientific town-square model
+
+```text
+                    GLOBAL SCIENCE NETWORK
+                             │
+       ┌─────────────────────┼─────────────────────┐
+       │                     │                     │
+ Discover Research      Find Scientists       Find Funding
+       │                     │                     │
+       └──────────── Projects · Methods · Evidence ─┘
+                             │
+                     Research Workspace
+                             │
+                  Verification / Replication
+                             │
+                       Compute Fabric
+                             │
+                       Publication
+                             │
+                     Knowledge Graph
+                             │
+                    New Research / Funding
+```
+
+The public layer is the common entry point. Specialized systems remain modular children of the network.
+
+## Existing research program
+
+This workspace is also a research container for measuring time-varying changes across AI and information surfaces in multiple regions and languages during a high-intensity public event.
 
 The project is observational. It does not assume that an election, publication, institution, or public figure caused any measured change.
 
@@ -46,3 +86,9 @@ Raw observations, derived metrics, and interpretations must remain separate. A t
 - `analysis/` — derived drift and propagation analysis
 - `reports/` — daily and final reports
 - `visualization/` — timelines, matrices, and network graphs
+- `orchestrator/` — deterministic execution and worker layer
+- `publication/` — evidence packages and document control
+
+## Architectural boundary
+
+The broader Global Science Network is staged. Existing implementation, planned components, concepts, and future extensions are explicitly distinguished in the registry. The repository should not present conceptual hardware, Quantic OS, AI²³¹, or future economic layers as already deployed systems.
