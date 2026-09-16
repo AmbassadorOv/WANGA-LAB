@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "status": "INITIAL_MAPPING",
+  "purpose": "Map existing WANGA-LAB research assets into the current Research Group architecture without deleting or rewriting historical work.",
+  "initial_version_policy": {
+    "meaning": "This registry is an initial architectural mapping, not a final classification.",
+    "preserve_original_direction": true,
+    "historical_artifacts_are_reference_points": true,
+    "if_current_architecture_is_unclear": "Return to the earliest available version of the relevant artifact to recover the original research direction before deciding how it should evolve.",
+    "do_not_treat_legacy_as_current_truth": true,
+    "classification_can_change": true
+  },
+  "architecture": {
+    "flow": "DOMAIN -> SUBDOMAIN -> RESEARCH_GROUP -> PROJECT -> AGENT -> EXPERIMENT -> ARTIFACT -> EVIDENCE -> VERIFICATION -> INTEGRATION",
+    "groups": [
+      "RG-NEURAL-CORE",
+      "RG-NEURAL-OS",
+      "RG-MODEL-RUNTIME",
+      "RG-NODE-NETWORK",
+      "RG-MEMORY-KNOWLEDGE",
+      "RG-ARCHITECT-INTERFACE"
+    ]
+  },
+  "assets": [
+    {"id":"ASSET-001","name":"Neural Network Research Core","path":"ai-drift-forensics/global-drift-network/neural-network-research-core","primary_group":"RG-NEURAL-CORE","secondary_groups":["RG-MEMORY-KNOWLEDGE"],"role":"measurement, representation, state, transition and behavior research","status":"EXISTING"},
+    {"id":"ASSET-002","name":"WANGA OS Architecture","path":"ai-drift-forensics/global-drift-network/neural-network-research-core/WANGA_OS_ARCHITECTURE_V1.md","primary_group":"RG-NEURAL-OS","secondary_groups":["RG-NEURAL-CORE","RG-ARCHITECT-INTERFACE"],"role":"Neural-Native OS architecture","status":"EXISTING"},
+    {"id":"ASSET-003","name":"WANGA Boot Protocol","path":"ai-drift-forensics/global-drift-network/neural-network-research-core/WANGA_OS_BOOT_PROTOCOL_V1.md","primary_group":"RG-NEURAL-OS","secondary_groups":["RG-NODE-NETWORK"],"role":"boot and initialization protocol","status":"EXISTING"},
+    {"id":"ASSET-004","name":"ARK Kernel","path":"ark_kernel.py","primary_group":"RG-NEURAL-CORE","secondary_groups":["RG-NEURAL-OS"],"role":"experimental computational kernel","status":"EXPERIMENTAL"},
+    {"id":"ASSET-005","name":"AI Drift Forensics","path":"ai-drift-forensics","primary_group":"RG-MEMORY-KNOWLEDGE","secondary_groups":["RG-NEURAL-CORE","RG-NODE-NETWORK"],"role":"drift measurement, reconstruction, provenance and verification","status":"EXISTING"},
+    {"id":"ASSET-006","name":"Forensic Card / Case Engine","path":"ai-drift-forensics/CASE_ENGINE.md","primary_group":"RG-MEMORY-KNOWLEDGE","secondary_groups":["RG-ARCHITECT-INTERFACE"],"role":"case and evidence representation","status":"EXISTING"},
+    {"id":"ASSET-007","name":"International Drift Propagation","path":"ai-drift-forensics/global-drift-network/international-drift-propagation","primary_group":"RG-NODE-NETWORK","secondary_groups":["RG-NEURAL-CORE","RG-MEMORY-KNOWLEDGE"],"role":"temporal/geospatial propagation research","status":"EXISTING"},
+    {"id":"ASSET-008","name":"Event Response System","path":"ai-drift-forensics/global-drift-network/events","primary_group":"RG-NODE-NETWORK","secondary_groups":["RG-MEMORY-KNOWLEDGE"],"role":"event-triggered measurement and temporal sampling","status":"EXISTING"},
+    {"id":"ASSET-009","name":"Daily Scientific Digest","path":"ai-drift-forensics/global-drift-network/daily-digest","primary_group":"RG-MEMORY-KNOWLEDGE","secondary_groups":["RG-ARCHITECT-INTERFACE"],"role":"research synthesis and publication pipeline","status":"EXISTING"},
+    {"id":"ASSET-010","name":"Research Architecture Map","path":"RESEARCH_ARCHITECTURE_MAP.md","primary_group":"RG-ARCHITECT-INTERFACE","secondary_groups":["RG-MEMORY-KNOWLEDGE"],"role":"global research architecture and domain map","status":"EXISTING"},
+    {"id":"ASSET-011","name":"Research Subdomain Groups","path":"research-architecture/SUBDOMAIN_GROUPS.md","primary_group":"RG-ARCHITECT-INTERFACE","secondary_groups":["RG-NEURAL-CORE","RG-MEMORY-KNOWLEDGE"],"role":"subdomain taxonomy and research grouping","status":"EXISTING"},
+    {"id":"ASSET-012","name":"WANGA Work Manager","path":"ai-drift-forensics/global-drift-network/orchestrator/WANGA_WORK_MANAGER_V1.md","primary_group":"RG-ARCHITECT-INTERFACE","secondary_groups":["RG-NODE-NETWORK","RG-MEMORY-KNOWLEDGE"],"role":"bounded task orchestration and escalation","status":"EXISTING"},
+    {"id":"ASSET-013","name":"Agent Bridge","path":"ai-drift-forensics/global-drift-network/orchestrator/WANGA_AGENT_BRIDGE.schema.json","primary_group":"RG-NODE-NETWORK","secondary_groups":["RG-MEMORY-KNOWLEDGE"],"role":"agent messaging and artifact/evidence routing","status":"EXISTING"},
+    {"id":"ASSET-014","name":"Model Runtime Layer","path":"wanga-research-groups/model-runtime","primary_group":"RG-MODEL-RUNTIME","secondary_groups":["RG-NODE-NETWORK","RG-NEURAL-CORE"],"role":"local/remote model runtime abstraction","status":"FOUNDATION"},
+    {"id":"ASSET-015","name":"WANGA Research Groups","path":"wanga-research-groups","primary_group":"RG-ARCHITECT-INTERFACE","secondary_groups":["RG-MEMORY-KNOWLEDGE"],"role":"research organization and agent grouping","status":"FOUNDATION"}
+  ],
+  "legacy_handling": {
+    "rule": "Never discard an older architecture merely because a newer architecture exists.",
+    "workflow": ["LOCATE_ORIGINAL", "READ_ORIGINAL", "COMPARE_WITH_CURRENT", "RECOVER_INTENT", "CLASSIFY", "INTEGRATE_OR_ARCHIVE"],
+    "archive_is_not_deletion": true,
+    "historical_direction_can_inform_new_design": true
+  }
+}
