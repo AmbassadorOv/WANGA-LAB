@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ai-drift-forensics/verification-record.schema.json",
+  "title": "AI Drift Forensics Verification Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification_id", "case_id", "question", "scope", "evidence_refs", "result_class"],
+  "properties": {
+    "verification_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "system": {"type": "string"},
+        "environment": {"type": "string"},
+        "time_window": {"type": "string"}
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "procedure_version": {"type": "string"},
+    "reproduction": {
+      "type": "string",
+      "enum": ["SUCCESS", "PARTIAL", "FAILED", "NOT_ATTEMPTED", "UNRESOLVED"]
+    },
+    "attribution": {
+      "type": "string",
+      "enum": ["SUPPORTED", "PARTIAL", "NOT_SUPPORTED", "UNRESOLVED"]
+    },
+    "result_class": {
+      "type": "string",
+      "enum": ["SUPPORTED", "PARTIALLY_SUPPORTED", "NOT_REPRODUCED", "REFUTED", "UNRESOLVED"]
+    },
+    "reviewer": {"type": "string"},
+    "independence_statement": {"type": "string"},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "string"}
+  }
+}
