@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "status": "foundational_pilot",
+  "principle": "Probe definitions are versioned before outcome evaluation.",
+  "probe_types": [
+    {
+      "id": "PROBE-BASE-IDENTITY",
+      "purpose": "Repeated reference probe for measuring baseline behavioral stability.",
+      "controls": ["repeat_identical_input", "fixed_configuration_when_available"],
+      "outputs": ["response_text_hash", "latency", "status"]
+    },
+    {
+      "id": "PROBE-SEMANTIC-PERTURBATION",
+      "purpose": "Test sensitivity to controlled changes in wording while preserving task intent.",
+      "controls": ["paired_inputs", "same_task_intent"],
+      "outputs": ["semantic_similarity", "instruction_following", "response_divergence"]
+    },
+    {
+      "id": "PROBE-INSTRUCTION-CONSISTENCY",
+      "purpose": "Measure consistency of behavior across equivalent instruction presentations.",
+      "controls": ["equivalent_prompt_set", "repeat_sampling"],
+      "outputs": ["behavioral_consistency", "response_divergence"]
+    },
+    {
+      "id": "PROBE-CROSS-LANGUAGE",
+      "purpose": "Measure whether equivalent tasks produce stable behavioral relationships across languages.",
+      "controls": ["translation_equivalence", "matched_task"],
+      "outputs": ["cross_language_consistency", "semantic_alignment"]
+    }
+  ],
+  "expansion_rule": "New probes require a documented research question, version, expected measurements, and control strategy before deployment."
+}
