@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "system": "WANGA",
+  "status": "configured",
+  "groups": [
+    {"id":"RG-NEURAL-CORE","path":"wanga-research-groups/neural-core","mission":"Research neural-network representation, state, transition and behavior."},
+    {"id":"RG-NEURAL-OS","path":"wanga-research-groups/neural-os","mission":"Research a Neural-Native Operating System, kernel, memory and scheduling model."},
+    {"id":"RG-MODEL-RUNTIME","path":"wanga-research-groups/model-runtime","mission":"Research local and remote model runtimes and inference adapters."},
+    {"id":"RG-NODE-NETWORK","path":"wanga-research-groups/node-network","mission":"Research WANGA Node communication, synchronization and offline operation."},
+    {"id":"RG-MEMORY-KNOWLEDGE","path":"wanga-research-groups/memory-knowledge","mission":"Research memory fabric, provenance, evidence and knowledge representation."},
+    {"id":"RG-ARCHITECT-INTERFACE","path":"wanga-research-groups/architect-interface","mission":"Research the architect workspace, project graph and human-machine interface."}
+  ],
+  "agent_policy": {
+    "agents_are_workers": true,
+    "require_bounded_tasks": true,
+    "require_artifact_or_evidence": true,
+    "require_verification_before_promotion": true,
+    "no_synthetic_observations_as_evidence": true,
+    "no_silent_schema_changes": true
+  },
+  "routing": {
+    "manager": "ai-drift-forensics/global-drift-network/orchestrator",
+    "bridge_schema": "ai-drift-forensics/global-drift-network/orchestrator/WANGA_AGENT_BRIDGE.schema.json",
+    "task_schema": "ai-drift-forensics/global-drift-network/orchestrator/task.schema.json"
+  }
+}
