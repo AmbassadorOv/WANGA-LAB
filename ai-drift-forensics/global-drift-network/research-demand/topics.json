@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "topics": [
+    {"id":"MODEL_DRIFT","label":"Model Drift"},
+    {"id":"AI_RELIABILITY","label":"AI Reliability & Evaluation"},
+    {"id":"INFORMATION_SYSTEMS","label":"AI, Search & Information Systems"},
+    {"id":"ELECTION_INFORMATION","label":"Election & Information-System Drift"},
+    {"id":"FINANCIAL_AI","label":"Financial AI Risk"},
+    {"id":"HEALTHCARE_AI","label":"Healthcare AI"},
+    {"id":"INFRASTRUCTURE","label":"AI Infrastructure & Dependencies"},
+    {"id":"MULTILINGUAL_DRIFT","label":"Multilingual / Cross-Language Drift"},
+    {"id":"GEOGRAPHIC_DRIFT","label":"Geographic Drift & Propagation"},
+    {"id":"CROSS_SURFACE","label":"Cross-Surface Interaction"},
+    {"id":"AI_GOVERNANCE","label":"AI Governance & Technical Criteria"},
+    {"id":"OTHER","label":"Other Research Question"}
+  ]
+}
