@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "schedule_id": "gdnn-whitepaper-daily-v1",
+  "enabled": true,
+  "timezone": "Asia/Jerusalem",
+  "local_target_time": "20:00",
+  "github_actions_cron_utc": "0 17 * * *",
+  "max_run_minutes": 120,
+  "stages": [
+    {"id": "snapshot", "timeout_minutes": 10},
+    {"id": "change_scan", "timeout_minutes": 15},
+    {"id": "demand_sync", "timeout_minutes": 10},
+    {"id": "route", "timeout_minutes": 10},
+    {"id": "worker_execution", "timeout_minutes": 45},
+    {"id": "verification", "timeout_minutes": 20},
+    {"id": "quality_gate", "timeout_minutes": 10}
+  ]
+}
