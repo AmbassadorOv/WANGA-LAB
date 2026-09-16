@@ -6,10 +6,12 @@ This workspace is the AI-drift evidence and forensic branch of a broader Global 
 
 ### Architecture index
 
-- [Master Architecture Registry](./MASTER_ARCHITECTURE_REGISTRY.md) — canonical architecture and status map.
+- [Repository Canonical Architecture Registry](../../../GLOBAL_ARCHITECTURE_REGISTRY.md) — top-level architecture and status map.
+- [Machine-readable Architecture Registry](../../../ARCHITECTURE_REGISTRY.json) — structured architecture records.
+- [Master GDN Architecture Registry](./MASTER_ARCHITECTURE_REGISTRY.md) — GDN-specific architecture and status map.
 - [Architecture Map](./ARCHITECTURE_MAP.md) — system relationships and data/compute flows.
 - [Site Integration Registry](./SITE_INTEGRATION_REGISTRY.md) — maps current web properties into the network.
-- [Roadmap](./ROADMAP.md) — staged implementation plan.
+- [Global Architecture Roadmap](../../../ARCHITECTURE_ROADMAP.md) — staged implementation plan.
 - [Evidence Register Schema](./publication/GOVERNMENT_EVIDENCE_REGISTER.schema.json) — machine-readable evidence contract.
 - [Quality Gate](./orchestrator/QUALITY_GATE.md) — publication barrier.
 - [Queue Protocol](./orchestrator/QUEUE_PROTOCOL.md) — execution boundary.
