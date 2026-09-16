@@ -1,0 +1,25 @@
+{
+  "observation_id": "GDO-2026-SYN-0001",
+  "timestamp_utc": "2026-09-16T12:00:00Z",
+  "region": "SYNTHETIC",
+  "country": "XX",
+  "language": "en",
+  "surface_type": "AI_MODEL",
+  "system_identifier": "SYNTHETIC-MODEL-A",
+  "query_id": "Q-SYN-001",
+  "observation_type": "DELTA",
+  "baseline_ref": "GDO-2026-SYN-0000",
+  "observed_state": "Synthetic response distribution changed relative to the controlled baseline.",
+  "delta": {
+    "metric": "distribution_distance",
+    "value": 0.18,
+    "unit": "normalized_score",
+    "direction": "increase"
+  },
+  "evidence_ref": null,
+  "event_ref": "EVT-GDN-2026-RESEARCH-WINDOW",
+  "confidence": 0.95,
+  "causal_status": "NONE_ASSERTED",
+  "reproduction_status": "NOT_ATTEMPTED",
+  "notes": "Synthetic fixture for schema and pipeline testing only. Not a real observation."
+}
