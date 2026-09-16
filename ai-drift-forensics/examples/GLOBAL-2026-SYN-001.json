@@ -1,0 +1,71 @@
+{
+  "case_id": "GLOBAL-2026-SYN-001",
+  "title": "Synthetic Cross-Surface Propagation Observation",
+  "status": "CLOSED",
+  "synthetic": true,
+  "window": {
+    "start": "2026-09-16T10:00:00Z",
+    "end": "2026-09-19T10:00:00Z"
+  },
+  "event": {
+    "event_id": "EVT-G-001",
+    "type": "PUBLIC_INFORMATION_EVENT",
+    "description": "Synthetic public-information event used to test cross-surface observation and attribution controls."
+  },
+  "observations": [
+    {
+      "observation_id": "OBS-G-001",
+      "surface_id": "AI-TEST-01",
+      "surface_type": "AI_MODEL",
+      "region": "IL",
+      "language": "he",
+      "change_metric": {
+        "name": "semantic_output_distance",
+        "value": 0.31,
+        "unit": "normalized",
+        "interpretation": "measurable deviation from frozen baseline"
+      },
+      "change_direction": "SHIFT",
+      "confidence_class": "MEDIUM",
+      "alternative_explanations": [
+        "model-side update",
+        "retrieval-source refresh",
+        "event-associated propagation"
+      ],
+      "evidence_refs": ["EVID-G-001"]
+    },
+    {
+      "observation_id": "OBS-G-002",
+      "surface_id": "SEARCH-TEST-01",
+      "surface_type": "WEB_SEARCH",
+      "region": "US",
+      "language": "en",
+      "change_metric": {
+        "name": "source_set_turnover",
+        "value": 0.22,
+        "unit": "normalized",
+        "interpretation": "search source set changed relative to baseline"
+      },
+      "change_direction": "TURNOVER",
+      "confidence_class": "LOW",
+      "alternative_explanations": [
+        "normal index refresh",
+        "ranking volatility",
+        "event-associated propagation"
+      ],
+      "evidence_refs": ["EVID-G-002"]
+    }
+  ],
+  "network_edges": [
+    {"from": "EVT-G-001", "to": "PUBLIC-SRC-001", "relation": "PUBLISHED"},
+    {"from": "PUBLIC-SRC-001", "to": "OBS-G-001", "relation": "TEMPORALLY_PRECEDES"},
+    {"from": "PUBLIC-SRC-001", "to": "OBS-G-002", "relation": "TEMPORALLY_PRECEDES"}
+  ],
+  "verification": {
+    "result_class": "PARTIALLY_SUPPORTED",
+    "reproduction": "SUCCESS",
+    "attribution": "UNRESOLVED",
+    "statement": "Cross-surface temporal change was reproduced in the synthetic test, but the event was not demonstrated to be the sole causal mechanism."
+  },
+  "disclaimer": "Synthetic research example only. No real institution, individual, production system, or public incident is represented."
+}
