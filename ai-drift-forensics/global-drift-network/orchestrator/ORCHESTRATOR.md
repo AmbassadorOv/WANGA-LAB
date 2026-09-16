@@ -6,7 +6,7 @@ The Orchestrator is the control plane for the Global Drift Network. It coordinat
 
 ## Daily cycle
 
-`TRIGGER → SNAPSHOT → CHANGE_SCAN → DEMAND_SYNC → ROUTE → ANALYZE → VERIFY → DIGEST → QUALITY_GATE → PUBLICATION_QUEUE`
+`TRIGGER → SNAPSHOT → CHANGE_SCAN → DEMAND_SYNC → ROUTE → ANALYZE → VERIFY → DIGEST → EVIDENCE_RECORD → QUALITY_GATE → PUBLICATION_QUEUE`
 
 ## Routing logic
 
@@ -16,7 +16,25 @@ The Orchestrator is the control plane for the Global Drift Network. It coordinat
 - Evidence or attribution question → Verification Worker
 - New scientist-interest signal → Demand Worker
 - Validated daily state → Digest Worker
+- Daily evidence package → White Paper Evidence Registry
 - Passing public-output gate → Publication Worker
+
+## Evidence integration
+
+Every completed daily run should produce or reference:
+
+1. a run record;
+2. observation and analysis IDs;
+3. verification results and unresolved alternatives;
+4. a state snapshot with content hash;
+5. evidence-registry entries for material findings;
+6. claim IDs only when a substantive claim is actually supported by the recorded evidence.
+
+The White Paper evidence layer is located at:
+
+`publication/whitepaper-evidence/`
+
+The evidence layer separates measured observations from external support and hypotheses. It must never be used to manufacture evidence for an intended conclusion.
 
 ## Agent/worker separation
 
@@ -49,14 +67,14 @@ To avoid premature agent proliferation, run these as four Workers:
 
 - `WORKER_OBSERVATION`: roles 4–5
 - `WORKER_RELATIONSHIP`: roles 6–9
-- `WORKER_VERIFICATION`: roles 10 plus control roles 2–3
+- `WORKER_VERIFICATION`: role 10 plus control roles 2–3
 - `WORKER_PUBLICATION`: roles 11–12
 
 The Orchestrator itself remains a separate control process.
 
 ## State machine
 
-`IDLE → SNAPSHOTTING → ANALYZING → VERIFYING → GENERATING → GATED → QUEUED → COMPLETE`
+`IDLE → SNAPSHOTTING → ANALYZING → VERIFYING → GENERATING → EVIDENCE_RECORDED → GATED → QUEUED → COMPLETE`
 
 Failure states:
 
@@ -77,6 +95,8 @@ Every task records:
 - output references
 - status
 - error or unresolved reason when applicable
+
+Every evidence-bearing run additionally records the run ID, baseline ID, configuration hash where available, snapshot ID, and evidence IDs.
 
 ## Operating principle
 
