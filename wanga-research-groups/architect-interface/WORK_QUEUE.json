@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-ARCHITECT-INTERFACE-001",
+  "group_id":"RG-ARCHITECT-INTERFACE",
+  "tasks":[
+    {"task_id":"AI-001","objective":"Define a neural-native project workspace that navigates state, relations and evidence instead of folders as the primary mental model.","status":"QUEUED","owner_role":"Interface Architect","dependencies":[],"inputs":["WANGA_OS_ARCHITECTURE_V1.md"],"expected_artifacts":["architect-workspace-model.md"],"acceptance_checks":["Project context can be reconstructed from graph relations","Unverified findings are visibly distinct from validated knowledge"],"risk_level":"MEDIUM"},
+    {"task_id":"AI-002","objective":"Define an interface for Work Manager queues, agent status, research runs and verification gates.","status":"QUEUED","owner_role":"Project Graph Worker","dependencies":["AI-001"],"inputs":[],"expected_artifacts":["work-manager-interface-spec.md"],"acceptance_checks":["Task state is inspectable","Human review points are explicit"],"risk_level":"LOW"}
+  ]
+}
