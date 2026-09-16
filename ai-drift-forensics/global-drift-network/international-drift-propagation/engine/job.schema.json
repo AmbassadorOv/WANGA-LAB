@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://wanga-lab.example/schemas/drift-job.schema.json",
+  "title":"Global Drift Observation Job",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["job_id","event_instance_id","worker","phase","target","probe_id","status","provenance"],
+  "properties":{
+    "job_id":{"type":"string","pattern":"^GDJ-[A-Z0-9-]+$"},
+    "event_instance_id":{"type":"string"},
+    "worker":{"enum":["WORKER_OBSERVATION","WORKER_RELATIONSHIP","WORKER_VERIFICATION","WORKER_PUBLICATION"]},
+    "phase":{"enum":["BASELINE","PRE_EVENT","HIGH_RESOLUTION","POST_EVENT","PERSISTENCE","RELATIONSHIP_SCAN","REPRODUCTION","ATTRIBUTION","VERIFICATION","DIGEST"]},
+    "target":{"type":"object","additionalProperties":false,"required":["region","language","surface","probe_id"],"properties":{"region":{"type":"string"},"country":{"type":["string","null"]},"language":{"type":"string"},"surface":{"enum":["AI_MODEL","SEARCH","NEWS_PUBLIC_INFO","OTHER"]},"system_id":{"type":["string","null"]},"probe_id":{"type":"string"}}},
+    "window":{"type":"object","additionalProperties":false,"properties":{"start":{"type":"string","format":"date-time"},"end":{"type":"string","format":"date-time"},"resolution_seconds":{"type":"integer","minimum":1}}},
+    "status":{"enum":["PENDING","RUNNING","SUCCEEDED","BLOCKED","FAILED","UNRESOLVED"]},
+    "input_refs":{"type":"array","items":{"type":"string"}},
+    "output_refs":{"type":"array","items":{"type":"string"}},
+    "provenance":{"type":"object","additionalProperties":false,"required":["protocol_version","source_commit"],"properties":{"protocol_version":{"type":"string"},"source_commit":{"type":"string"},"created_at":{"type":"string","format":"date-time"}}}
+  }
+}
