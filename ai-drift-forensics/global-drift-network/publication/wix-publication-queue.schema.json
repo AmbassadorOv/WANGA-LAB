@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://wanga-lab.example/schemas/wix-publication-queue.schema.json",
+  "title":"Wix Publication Queue Item",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["publication_id","report_id","status","target","source_commits","content_hash"],
+  "properties":{
+    "publication_id":{"type":"string"},
+    "report_id":{"type":"string"},
+    "status":{"type":"string","enum":["DRAFT","QUALITY_REVIEW","APPROVED","PUBLISHED","REJECTED"]},
+    "target":{"type":"string","enum":["WIX_BLOG"]},
+    "source_commits":{"type":"array","items":{"type":"string"}},
+    "content_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "generated_at":{"type":"string","format":"date-time"},
+    "approved_at":{"type":["string","null"],"format":"date-time"},
+    "published_at":{"type":["string","null"],"format":"date-time"},
+    "published_url":{"type":["string","null"],"format":"uri"},
+    "quality_gate":{"type":"object"},
+    "error":{"type":["string","null"]}
+  }
+}
