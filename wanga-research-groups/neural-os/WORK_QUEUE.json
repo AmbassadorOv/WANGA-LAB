@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-NEURAL-OS-001",
+  "group_id":"RG-NEURAL-OS",
+  "tasks":[
+    {"task_id":"OS-001","objective":"Map the minimum kernel boundary required for a neural-native research computer.","status":"QUEUED","owner_role":"Kernel Architect","dependencies":[],"inputs":["WANGA_OS_ARCHITECTURE_V1.md"],"expected_artifacts":["kernel-boundary.md"],"acceptance_checks":["Kernel responsibilities are separated from user-space research services","Memory, scheduling, I/O and security boundaries are explicit"],"risk_level":"LOW"},
+    {"task_id":"OS-002","objective":"Compare candidate scheduling models for neural and conventional workloads.","status":"QUEUED","owner_role":"Scheduler Researcher","dependencies":["OS-001"],"inputs":[],"expected_artifacts":["scheduler-comparison.md"],"acceptance_checks":["Comparison criteria are explicit","Claims are sourced or experimentally testable"],"risk_level":"MEDIUM"}
+  ]
+}
