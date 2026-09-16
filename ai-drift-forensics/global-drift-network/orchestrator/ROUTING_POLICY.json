@@ -1,0 +1,20 @@
+{
+  "version":"0.1",
+  "default_mode":"draft_first",
+  "routes":[
+    {"trigger":"new_observation","worker":"WORKER_OBSERVATION","tasks":["SNAPSHOT","CHANGE_SCAN","OBSERVATION"]},
+    {"trigger":"new_drift_delta","worker":"WORKER_RELATIONSHIP","tasks":["DRIFT_ANALYSIS","RELATIONSHIP_ANALYSIS"]},
+    {"trigger":"cross_region_or_language_signal","worker":"WORKER_RELATIONSHIP","tasks":["RELATIONSHIP_ANALYSIS"]},
+    {"trigger":"verification_required","worker":"WORKER_VERIFICATION","tasks":["VERIFICATION","QUALITY_GATE"]},
+    {"trigger":"new_research_demand","worker":"WORKER_PUBLICATION","tasks":["DEMAND_SYNC"]},
+    {"trigger":"daily_cycle","worker":"WORKER_PUBLICATION","tasks":["DIGEST","QUALITY_GATE","PUBLICATION"]}
+  ],
+  "blocking_conditions":[
+    "missing_source_reference",
+    "schema_validation_failure",
+    "unsupported_causal_claim",
+    "unresolved_required_verification",
+    "missing_content_hash"
+  ],
+  "publication_policy":"Only reports that pass the quality gate enter the Wix publication queue."
+}
