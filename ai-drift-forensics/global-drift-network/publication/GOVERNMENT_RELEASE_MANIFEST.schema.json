@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/government-release-manifest.schema.json",
+  "title": "Government Release Manifest",
+  "description": "Machine-readable release-control manifest for government-facing publications and evidence packages. This schema records release state and provenance; it is not a certification standard.",
+  "type": "object",
+  "required": [
+    "document_id",
+    "version",
+    "status",
+    "evidence_package_id",
+    "source_commit",
+    "generated_at",
+    "content_hash",
+    "schema_version",
+    "quality_gate_decision",
+    "claims_count",
+    "evidence_count",
+    "unresolved_items"
+  ],
+  "properties": {
+    "document_id": { "type": "string", "minLength": 1 },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "INTERNAL_REVIEW",
+        "TECHNICAL_REVIEW",
+        "EVIDENCE_REVIEW",
+        "POLICY_REVIEW",
+        "APPROVED_FOR_RELEASE",
+        "PUBLISHED",
+        "SUPERSEDED",
+        "WITHDRAWN"
+      ]
+    },
+    "evidence_package_id": { "type": "string", "minLength": 1 },
+    "source_commit": { "type": "string", "minLength": 7 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "schema_version": { "type": "string", "minLength": 1 },
+    "quality_gate_decision": {
+      "type": "string",
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "claims_count": { "type": "integer", "minimum": 0 },
+    "evidence_count": { "type": "integer", "minimum": 0 },
+    "unresolved_items": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "reviewers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role"],
+        "properties": {
+          "role": { "type": "string", "minLength": 1 },
+          "identifier": { "type": "string" },
+          "reviewed_at": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "enum": ["APPROVED_FOR_RELEASE", "PUBLISHED"] }
+        }
+      },
+      "then": {
+        "properties": {
+          "quality_gate_decision": { "const": "PASS" },
+          "unresolved_items": { "maxItems": 0 }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}
