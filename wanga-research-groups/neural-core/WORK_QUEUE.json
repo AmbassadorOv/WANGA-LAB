@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-NEURAL-CORE-001",
+  "group_id":"RG-NEURAL-CORE",
+  "tasks":[
+    {"task_id":"NC-001","objective":"Define the minimum neural-native state and transition representation for a WANGA research process.","status":"QUEUED","owner_role":"Representation Analyst","dependencies":[],"inputs":["WANGA_OS_ARCHITECTURE_V1.md"],"expected_artifacts":["neural-state-model.md"],"acceptance_checks":["State, transition and provenance are explicitly represented","No dependence on an LLM vendor"],"risk_level":"LOW"},
+    {"task_id":"NC-002","objective":"Specify reproducible behavioral evaluation boundaries for neural research components.","status":"QUEUED","owner_role":"Reproducibility Worker","dependencies":["NC-001"],"inputs":[],"expected_artifacts":["behavior-evaluation-protocol.md"],"acceptance_checks":["Inputs and outputs are versioned","Negative and inconclusive results are retained"],"risk_level":"MEDIUM"}
+  ]
+}
