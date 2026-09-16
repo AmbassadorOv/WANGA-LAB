@@ -2,6 +2,10 @@
 
 This repository is the computational workspace for a broader research architecture. A researcher contributes within a specialized domain; connections between domains are explicit and evidence-based.
 
+## Canonical architecture registry
+
+The repository-level system hierarchy is defined in [`GLOBAL_ARCHITECTURE_REGISTRY.md`](./GLOBAL_ARCHITECTURE_REGISTRY.md). The machine-readable registry is [`ARCHITECTURE_REGISTRY.json`](./ARCHITECTURE_REGISTRY.json). This document focuses on the research-domain layer beneath that global architecture.
+
 ## Researcher Types
 
 | Researcher type | Architectural node | Typical contribution | Suitable funding class |
