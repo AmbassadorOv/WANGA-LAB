@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-MEMORY-KNOWLEDGE-001",
+  "group_id":"RG-MEMORY-KNOWLEDGE",
+  "tasks":[
+    {"task_id":"MK-001","objective":"Define provenance objects linking observations, artifacts, methods, runs and verification status.","status":"QUEUED","owner_role":"Provenance Worker","dependencies":[],"inputs":["WANGA_AGENT_BRIDGE.schema.json"],"expected_artifacts":["provenance-model.md"],"acceptance_checks":["Every promoted claim can trace to declared evidence","Unverified outputs remain distinguishable"],"risk_level":"HIGH"},
+    {"task_id":"MK-002","objective":"Define the minimum knowledge-graph relations for WANGA projects, agents, tasks, evidence and artifacts.","status":"QUEUED","owner_role":"Knowledge Graph Researcher","dependencies":["MK-001"],"inputs":[],"expected_artifacts":["knowledge-graph-core.md"],"acceptance_checks":["Relations have explicit semantics","Historical observations are immutable by default"],"risk_level":"MEDIUM"}
+  ]
+}
