@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.org/schemas/neural-network-research-core/observation-v1.json",
+  "title": "Neural Network Research Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_id",
+    "probe_id",
+    "timestamp",
+    "method_version",
+    "condition",
+    "measurement"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string",
+      "pattern": "^NOBS-[A-Z0-9-]+$"
+    },
+    "probe_id": {
+      "type": "string",
+      "pattern": "^PROBE-[A-Z0-9-]+$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "method_version": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["model_or_system"],
+      "properties": {
+        "provider": {"type": ["string", "null"]},
+        "model_or_system": {"type": "string"},
+        "model_version": {"type": ["string", "null"]},
+        "runtime": {"type": ["string", "null"]},
+        "sampling": {"type": ["object", "null"]},
+        "seed": {"type": ["integer", "null"]}
+      }
+    },
+    "input_snapshot": {
+      "type": ["object", "null"],
+      "properties": {
+        "snapshot_id": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["layer", "values"],
+      "properties": {
+        "layer": {
+          "type": "string",
+          "enum": ["INPUT", "PROCESSING", "REPRESENTATION", "OUTPUT", "BEHAVIOR"]
+        },
+        "values": {
+          "type": "object"
+        },
+        "units": {
+          "type": "object"
+        },
+        "uncertainty": {
+          "type": ["object", "null"]
+        }
+      }
+    },
+    "provenance": {
+      "type": ["object", "null"],
+      "additionalProperties": true
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": ["OBSERVED", "DERIVED", "CANDIDATE", "VALIDATED", "DISPUTED"]
+    }
+  }
+}
