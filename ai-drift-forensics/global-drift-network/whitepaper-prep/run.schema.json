@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Global Drift Network White Paper Run",
+  "type": "object",
+  "required": ["run_id", "schedule_id", "status", "stage", "snapshot_id", "tasks", "quality_gate"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "schedule_id": {"type": "string"},
+    "status": {"enum": ["CREATED", "SNAPSHOTTED", "EXECUTING", "QUALITY_CHECKED", "COMPLETED", "FAILED", "BLOCKED"]},
+    "stage": {"type": "string"},
+    "snapshot_id": {"type": "string"},
+    "tasks": {"type": "array", "items": {"type": "string"}},
+    "results": {"type": "array", "items": {"type": "object"}},
+    "quality_gate": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["PASS", "REVIEW_REQUIRED", "BLOCK"]},
+        "reason": {"type": "string"}
+      }
+    }
+  }
+}
