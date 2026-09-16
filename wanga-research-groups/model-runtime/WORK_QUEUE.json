@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-MODEL-RUNTIME-001",
+  "group_id":"RG-MODEL-RUNTIME",
+  "tasks":[
+    {"task_id":"MR-001","objective":"Define a vendor-neutral inference runtime adapter contract for local and remote models.","status":"QUEUED","owner_role":"Runtime Adapter Engineer","dependencies":[],"inputs":[],"expected_artifacts":["runtime-adapter-contract.md"],"acceptance_checks":["Local and remote execution share one contract","Credentials are never stored in research artifacts"],"risk_level":"MEDIUM"},
+    {"task_id":"MR-002","objective":"Define benchmark fields needed to compare inference runtimes without selecting a model prematurely.","status":"QUEUED","owner_role":"Inference Benchmark Worker","dependencies":["MR-001"],"inputs":[],"expected_artifacts":["runtime-benchmark-schema.md"],"acceptance_checks":["Latency, memory, throughput and reproducibility are represented","Hardware context is recorded"],"risk_level":"LOW"}
+  ]
+}
