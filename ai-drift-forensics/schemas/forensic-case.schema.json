@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AmbassadorOv/WANGA-LAB/blob/main/ai-drift-forensics/schemas/forensic-case.schema.json",
+  "title": "AI Drift Forensic Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "title", "status", "scope", "cards"],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[0-9]{4}-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "ACTIVE",
+        "PRESERVED",
+        "VERIFICATION",
+        "CLOSED",
+        "DISPUTED"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject", "observation_window"],
+      "properties": {
+        "subject": {
+          "type": "string"
+        },
+        "observation_window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start"],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "chain_of_custody": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/custodyEvent"
+      }
+    }
+  },
+  "$defs": {
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["card_id", "card_type", "status", "source"],
+      "properties": {
+        "card_id": {
+          "type": "string"
+        },
+        "card_type": {
+          "type": "string",
+          "enum": [
+            "SYSTEM",
+            "MODEL",
+            "ENVIRONMENT",
+            "DATA",
+            "CONFIGURATION",
+            "EVENT",
+            "TIMELINE",
+            "EVIDENCE",
+            "ATTRIBUTION",
+            "INTERVENTION",
+            "VERIFICATION"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "DRAFT",
+            "OBSERVED",
+            "PRESERVED",
+            "VERIFIED",
+            "DISPUTED",
+            "SUPERSEDED"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "observed_at": {
+          "type": "string"
+        },
+        "provenance_ref": {
+          "type": "string"
+        },
+        "content_hash": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "statement", "status", "evidence_refs"],
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "OBSERVED",
+            "SUPPORTED",
+            "CONSISTENT",
+            "UNRESOLVED",
+            "REFUTED"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "custodyEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timestamp", "action", "actor", "artifact_ref"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "type": "string"
+        },
+        "actor": {
+          "type": "string"
+        },
+        "artifact_ref": {
+          "type": "string"
+        },
+        "content_hash": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
