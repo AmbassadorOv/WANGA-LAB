@@ -1,0 +1,61 @@
+name: Daily Scientific Digest
+
+on:
+  schedule:
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+
+      - name: Build daily research digest
+        shell: bash
+        run: |
+          mkdir -p publications/daily
+          DATE="$(date -u +%Y-%m-%d)"
+          FILE="publications/daily/${DATE}.md"
+          {
+            echo "# Global Drift Network — Daily Research Update"
+            echo
+            echo "**UTC date:** ${DATE}"
+            echo
+            echo "## Repository changes"
+            echo
+            git log --since='24 hours ago' --pretty=format:'- `%h` %s (%an)' -- ai-drift-forensics/global-drift-network ai-drift-forensics
+            echo
+            echo
+            echo "## Scientific status"
+            echo
+            echo "This automated digest reports repository changes. A change is not itself a scientific finding. Findings must be supported by observations, analysis, and the project's verification rules."
+            echo
+            echo "## Source revision"
+            echo
+            echo "`$(git rev-parse HEAD)`"
+          } > "${FILE}"
+
+      - name: Validate publication payload
+        shell: bash
+        run: |
+          test -s publications/daily/$(date -u +%Y-%m-%d).md
+          grep -q 'Global Drift Network' publications/daily/$(date -u +%Y-%m-%d).md
+
+      - name: Wix publication adapter status
+        shell: bash
+        run: |
+          if [[ -z "${WIX_API_TOKEN:-}" ]]; then
+            echo "WIX_API_TOKEN is not configured; digest remains a repository artifact."
+            exit 0
+          fi
+          echo "Wix credentials detected. The Wix publication adapter is intentionally kept as a separate integration step."
+          echo "No credentials are printed and no publication endpoint is guessed."
+        env:
+          WIX_API_TOKEN: ${{ secrets.WIX_API_TOKEN }}
