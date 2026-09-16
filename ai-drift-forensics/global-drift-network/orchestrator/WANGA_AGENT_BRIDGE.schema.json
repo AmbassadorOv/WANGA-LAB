@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Agent Bridge Message",
+  "type": "object",
+  "required": ["message_id", "run_id", "sender", "message_type", "created_at", "payload"],
+  "properties": {
+    "message_id": {"type": "string", "pattern": "^MSG-[A-Z0-9-]+$"},
+    "run_id": {"type": "string"},
+    "sender": {"type": "string"},
+    "recipient": {"type": "string"},
+    "message_type": {"enum": ["TASK", "RESULT", "REQUEST_REVIEW", "SPECIALIST_REQUIRED", "ARCHITECTURE_FINDING", "DRIFT_SIGNAL"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "payload": {"type": "object"},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "artifact_refs": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["OPEN", "ACKNOWLEDGED", "COMPLETED", "BLOCKED", "REVIEW"]}
+  },
+  "additionalProperties": false
+}
