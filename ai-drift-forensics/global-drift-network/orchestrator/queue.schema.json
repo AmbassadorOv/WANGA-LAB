@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/global-drift-task-queue.schema.json",
+  "title": "Global Drift Task Queue Item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "run_id", "worker", "operation", "status", "attempt", "priority", "idempotency_key"],
+  "properties": {
+    "task_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "worker": {"type": "string", "minLength": 1},
+    "operation": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PENDING", "CLAIMED", "RUNNING", "SUCCEEDED", "RETRY", "FAILED", "DEAD_LETTER", "CANCELLED"]},
+    "attempt": {"type": "integer", "minimum": 0},
+    "max_attempts": {"type": "integer", "minimum": 1},
+    "priority": {"type": "integer"},
+    "idempotency_key": {"type": "string", "minLength": 1},
+    "input_snapshot_id": {"type": ["string", "null"]},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "lease_expires_at": {"type": ["string", "null"], "format": "date-time"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "started_at": {"type": ["string", "null"], "format": "date-time"},
+    "finished_at": {"type": ["string", "null"], "format": "date-time"},
+    "result_ref": {"type": ["string", "null"]},
+    "error": {"type": ["string", "null"]}
+  }
+}
