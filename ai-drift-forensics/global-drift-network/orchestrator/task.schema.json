@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://wanga-lab.example/schemas/orchestrator-task.schema.json",
+  "title":"Research Orchestrator Task",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["task_id","task_type","worker","status","inputs"],
+  "properties":{
+    "task_id":{"type":"string"},
+    "task_type":{"type":"string","enum":["SNAPSHOT","CHANGE_SCAN","DEMAND_SYNC","OBSERVATION","DRIFT_ANALYSIS","RELATIONSHIP_ANALYSIS","VERIFICATION","DIGEST","QUALITY_GATE","PUBLICATION"]},
+    "worker":{"type":"string","enum":["ORCHESTRATOR","WORKER_OBSERVATION","WORKER_RELATIONSHIP","WORKER_VERIFICATION","WORKER_PUBLICATION"]},
+    "status":{"type":"string","enum":["QUEUED","RUNNING","COMPLETE","BLOCKED","UNRESOLVED","RETRY_PENDING"]},
+    "inputs":{"type":"array","items":{"type":"string"}},
+    "outputs":{"type":"array","items":{"type":"string"}},
+    "source_commit":{"type":"string"},
+    "protocol_version":{"type":"string"},
+    "started_at":{"type":["string","null"],"format":"date-time"},
+    "completed_at":{"type":["string","null"],"format":"date-time"},
+    "error":{"type":["string","null"]}
+  }
+}
