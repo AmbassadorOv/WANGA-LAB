@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/government-claim-register.schema.json",
+  "title": "Government Claim Register",
+  "description": "Machine-readable claim ledger for government-facing AI drift evidence packages. This schema defines traceability and status controls; it is not a certification standard.",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "statement",
+    "classification",
+    "status",
+    "evidence_refs",
+    "jurisdiction",
+    "scope",
+    "method_ref"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "pattern": "^CLM-[A-Z0-9-]+$"
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["OBSERVED", "SUPPORTED", "HYPOTHESIS", "REFUTED"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "UNDER_REVIEW", "VERIFIED", "DISPUTED", "REJECTED", "SUPERSEDED"]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^EVD-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "jurisdiction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "snapshot_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "verification": {
+      "type": "string",
+      "enum": ["UNVERIFIED", "PARTIALLY_VERIFIED", "VERIFIED", "DISPUTED"]
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "classification": { "enum": ["OBSERVED", "SUPPORTED"] }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence_refs": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}
