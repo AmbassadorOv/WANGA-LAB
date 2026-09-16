@@ -11,7 +11,7 @@ from pathlib import Path
 
 RUNTIME = Path(__file__).resolve().parent
 sys.path.insert(0, str(RUNTIME))
-from state import connect, init_db, create_run, snapshot, enqueue, claim, complete, fail, append_event
+from state import connect, init_db, create_run, snapshot, enqueue, claim, complete, fail, append_event, now
 
 SCHEDULE = RUNTIME.parent / "schedule.json"
 
@@ -57,8 +57,8 @@ def main():
     snap = snapshot(db, run_id, state, snap)
 
     while True:
-        task = claim(db, "daily-runner")
-        if task is None or task["run_id"] != run_id:
+        task = claim(db, run_id, "daily-runner")
+        if task is None:
             break
         try:
             result = mock_worker(task)
@@ -78,7 +78,7 @@ def main():
         "reason": "Mock workers produced no evidentiary findings. No publication permitted."
     }
     snapshot(db, run_id, state, snap)
-    db.execute("UPDATE runs SET status=?, updated_at=? WHERE run_id=?", ("COMPLETED", __import__('state').now(), run_id))
+    db.execute("UPDATE runs SET status=?, updated_at=? WHERE run_id=?", ("COMPLETED", now(), run_id))
     db.commit()
     print(json.dumps({"run_id": run_id, "status": "COMPLETED", "quality_gate": state["quality_gate"]}, ensure_ascii=False))
 
