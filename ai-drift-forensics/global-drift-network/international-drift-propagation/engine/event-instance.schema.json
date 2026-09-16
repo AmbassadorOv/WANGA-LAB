@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/event-instance.schema.json",
+  "title": "Global Drift Event Instance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_instance_id", "event_ref", "trigger_type", "protocol_version", "windows", "observation_plan"],
+  "properties": {
+    "event_instance_id": {"type": "string", "pattern": "^EDI-[A-Z0-9-]+$"},
+    "event_ref": {"type": "string"},
+    "trigger_type": {"enum": ["ELECTION", "PUBLIC_INFORMATION_EVENT", "POLICY_EVENT", "MARKET_EVENT", "INFRASTRUCTURE_EVENT", "MODEL_RELEASE", "OTHER_DOCUMENTED_EVENT"]},
+    "protocol_version": {"type": "string"},
+    "status": {"enum": ["REGISTERED", "BASELINE_PENDING", "BASELINED", "OBSERVING", "CHANGE_SCAN", "SIGNATURE_BUILD", "RELATIONSHIP_SCAN", "VERIFICATION_PENDING", "COMPLETE", "BLOCKED", "UNRESOLVED", "RETRY_PENDING"]},
+    "windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseline", "pre_event", "high_resolution", "post_event", "persistence"],
+      "properties": {
+        "baseline": {"$ref": "#/$defs/window"},
+        "pre_event": {"$ref": "#/$defs/window"},
+        "high_resolution": {"$ref": "#/$defs/window"},
+        "post_event": {"$ref": "#/$defs/window"},
+        "persistence": {"$ref": "#/$defs/window"}
+      }
+    },
+    "observation_plan": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/target"},
+      "minItems": 1
+    },
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "resolution_seconds"],
+      "properties": {
+        "start": {"type": "string", "format": "date-time"},
+        "end": {"type": "string", "format": "date-time"},
+        "resolution_seconds": {"type": "integer", "minimum": 1}
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region", "language", "surface", "probe_id"],
+      "properties": {
+        "region": {"type": "string"},
+        "country": {"type": ["string", "null"]},
+        "language": {"type": "string"},
+        "surface": {"enum": ["AI_MODEL", "SEARCH", "NEWS_PUBLIC_INFO", "OTHER"]},
+        "system_id": {"type": ["string", "null"]},
+        "probe_id": {"type": "string"}
+      }
+    }
+  }
+}
