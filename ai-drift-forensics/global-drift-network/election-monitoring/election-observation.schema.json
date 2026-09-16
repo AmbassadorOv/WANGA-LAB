@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://wanga-lab.example/schemas/election-observation.schema.json",
+  "title":"Election-Linked Drift Observation",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["observation_id","timestamp_utc","event_id","surface_type","region","language","probe_id","observation_status"],
+  "properties":{
+    "observation_id":{"type":"string"},
+    "timestamp_utc":{"type":"string","format":"date-time"},
+    "event_id":{"type":"string"},
+    "event_phase":{"type":"string","enum":["PRE_EVENT_BASELINE","PRE_EVENT_MONITORING","HIGH_RESOLUTION_EVENT","POST_EVENT_MONITORING","FOLLOW_UP"]},
+    "surface_type":{"type":"string","enum":["AI_MODEL","SEARCH","NEWS_PUBLIC_INFORMATION","OTHER_INFORMATION_SYSTEM"]},
+    "region":{"type":["string","null"]},
+    "language":{"type":["string","null"]},
+    "model_or_system_id":{"type":["string","null"]},
+    "probe_id":{"type":"string"},
+    "baseline_ref":{"type":["string","null"]},
+    "measured_delta":{"type":["number","null"]},
+    "delta_type":{"type":["string","null"],"enum":["SEMANTIC","BEHAVIORAL","DISTRIBUTIONAL","TEMPORAL","REGIONAL","LANGUAGE","CROSS_SURFACE",null]},
+    "observation_status":{"type":"string","enum":["OBSERVED","MISSING","UNAVAILABLE","INVALIDATED","PENDING_REVIEW"]},
+    "source_refs":{"type":"array","items":{"type":"string"}},
+    "notes":{"type":["string","null"]}
+  }
+}
