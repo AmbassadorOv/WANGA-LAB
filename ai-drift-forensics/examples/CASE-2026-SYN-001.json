@@ -1,0 +1,69 @@
+{
+  "case_id": "CASE-2026-SYN-001",
+  "title": "Synthetic Dependency Drift Demonstration",
+  "status": "CLOSED",
+  "synthetic": true,
+  "scope": {
+    "system": "SYNTHETIC-AI-DECISION-SERVICE",
+    "environment": "CONTROLLED-TEST",
+    "time_window": "2026-09-16T10:00:00Z/2026-09-16T13:00:00Z"
+  },
+  "claims": [
+    {
+      "claim_id": "CLM-001",
+      "text": "A controlled dependency version change coincided with a measurable output-distribution change.",
+      "fact_class": "OBSERVED"
+    },
+    {
+      "claim_id": "CLM-002",
+      "text": "The dependency change caused the measured behavioral change.",
+      "fact_class": "HYPOTHESIS"
+    }
+  ],
+  "cards": [
+    {
+      "card_id": "SYS-001",
+      "type": "SYSTEM",
+      "state": "CAPTURED",
+      "summary": "Synthetic decision service under controlled test."
+    },
+    {
+      "card_id": "ENV-001",
+      "type": "ENVIRONMENT",
+      "state": "CAPTURED",
+      "summary": "Controlled environment with fixed test dataset and recorded configuration."
+    },
+    {
+      "card_id": "DEP-001",
+      "type": "DEPENDENCY",
+      "state": "PRESERVED",
+      "summary": "Synthetic dependency changed from v1 to v2 during controlled exercise."
+    },
+    {
+      "card_id": "EVT-001",
+      "type": "EVENT",
+      "state": "PRESERVED",
+      "summary": "Controlled dependency update at the exercise transition point."
+    },
+    {
+      "card_id": "OBS-001",
+      "type": "EVIDENCE",
+      "state": "REPRODUCED",
+      "summary": "Output distribution changed after the controlled dependency update and returned toward baseline after rollback."
+    }
+  ],
+  "verification": {
+    "verification_id": "VER-001",
+    "question": "Can the observed behavioral deviation be reproduced after the controlled dependency change?",
+    "evidence_refs": ["SYS-001", "ENV-001", "DEP-001", "EVT-001", "OBS-001"],
+    "reproduction": "SUCCESS",
+    "attribution": "PARTIAL",
+    "result_class": "PARTIALLY_SUPPORTED",
+    "independence_statement": "Synthetic demonstration; independent review not yet performed.",
+    "unresolved_questions": [
+      "Whether the dependency change is the sole causal mechanism.",
+      "Whether the result generalizes beyond the controlled test environment."
+    ]
+  },
+  "disclaimer": "Synthetic research example. No real institution, customer, financial loss, or production incident is represented."
+}
