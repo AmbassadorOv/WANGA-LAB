@@ -1,145 +1,65 @@
 # Global Science Network — Master Architecture Registry
 
 Status: ARCHITECTURE BASELINE
-Version: 0.1.0
+Version: 0.2.0
 
-## Purpose
+## Canonical position
 
-This registry is the canonical map of the Global Science Network architecture. It separates existing implementation from planned architecture, concepts, and future extensions so that new systems can be added without restructuring the core.
+The repository-level canonical architecture is [`/GLOBAL_ARCHITECTURE_REGISTRY.md`](../../../GLOBAL_ARCHITECTURE_REGISTRY.md). This file is the domain-specific registry for Global Drift Network and must remain consistent with the repository-level registry.
 
 ## System hierarchy
 
 ```text
 GLOBAL SCIENCE NETWORK
 │
-├── 01 SCIENTIFIC COMMONS
-│   ├── Scientists / Contributors
-│   ├── Research Projects
-│   ├── Methods
-│   ├── Data / Datasets
-│   ├── Evidence
-│   ├── Publications
-│   └── Knowledge Graph
-│
-├── 02 IDENTITY & INSTITUTIONAL LAYER
-│   ├── Scientific Identity
-│   ├── Laboratory / Research Group
-│   ├── University / Institute
-│   ├── Government / Public Research Node
-│   └── Organizational Roles
-│
-├── 03 RESEARCH WORKSPACE
-│   ├── Project State
-│   ├── Experiments
-│   ├── Notebooks
-│   ├── Models
-│   ├── Code
-│   ├── Compute Requests
-│   └── Reproducibility Package
-│
-├── 04 EVIDENCE COMMONS
-│   ├── Evidence Register
-│   ├── Provenance
-│   ├── Snapshots
-│   ├── Hash / Integrity Records
-│   ├── Verification
-│   ├── Replication
-│   └── Limitations / Disputes
-│
-├── 05 AI DRIFT FORENSICS
+├── SCIENTIFIC COMMONS
+├── RESEARCH ARCHITECTURE
+├── GLOBAL DRIFT NETWORK
 │   ├── Observation
-│   ├── Relationship Analysis
-│   ├── Verification
+│   ├── Normalization
 │   ├── Drift Detection
-│   ├── Cross-Model Comparison
-│   ├── Event / Propagation Analysis
-│   └── Forensic Report
-│
-├── 06 COMPUTE FABRIC
-│   ├── Research Nodes
-│   ├── GSRC Concept
-│   ├── AI²³¹ Core
-│   ├── EAQP
-│   ├── Quantic Memory
-│   ├── Multi-Agent Fabric
-│   ├── Scientific Compute Jobs
-│   └── Future Hardware Extensions
-│
-├── 07 EXECUTION & ORCHESTRATION
-│   ├── Task Queue
-│   ├── Workers
-│   ├── Worker Contracts
-│   ├── Run State
-│   ├── Leases / Retries
-│   ├── Audit Events
-│   └── Quality Gate
-│
-├── 08 KNOWLEDGE & PUBLICATION
-│   ├── Claims
-│   ├── Findings
-│   ├── Evidence-to-Claim Traceability
-│   ├── Government Document Control
-│   ├── Evidence Packages
-│   └── Publication Pipeline
-│
-├── 09 FUNDING & COLLABORATION
-│   ├── Research Funding
-│   ├── Donors / Funders
-│   ├── Research Requests
-│   ├── Collaborator Discovery
-│   └── Resource Matching
-│
-├── 10 NETWORK GOVERNANCE
-│   ├── Scientific Governance
-│   ├── Verification Roles
-│   ├── Institutional Participation
-│   ├── Data / Evidence Policies
-│   └── Future Commons Governance
-│
-└── 11 FUTURE EXTENSIONS
-    ├── Private Research Architectures
-    ├── Specialized Scientific Networks
-    ├── New Compute Architectures
-    ├── Digital Asset Layer (optional)
-    └── Additional Domain Networks
+│   ├── Cross-Surface Analysis
+│   ├── Verification
+│   ├── Evidence Commons
+│   └── Daily Scientific Publication
+├── RESEARCH EXECUTION FABRIC
+├── COMPUTE FABRIC
+├── KNOWLEDGE & PUBLICATION
+├── FUNDING & COLLABORATION
+├── INSTITUTIONAL NETWORK
+├── PUBLIC SCIENTIFIC TOWN SQUARE
+└── FUTURE / PRIVATE / EXPERIMENTAL EXTENSIONS
 ```
 
-## Architecture status
+## Global Drift Network components
 
-| Layer | Status | Role |
+| Component | Status | Function |
 |---|---|---|
-| Global Drift Network | EXISTING / BUILDING | Shared AI-drift evidence infrastructure |
-| Evidence Register | EXISTING / BUILDING | Machine-readable evidence identity and provenance |
-| Verification / Replication | PLANNED / BUILDING | Scientific validation lifecycle |
-| Orchestrator / Queue | EXISTING / BUILDING | Deterministic research execution |
-| Worker Fabric | EXISTING / BUILDING | Modular execution agents |
-| Quality Gate | EXISTING / BUILDING | Barrier between analysis and publication |
-| Government Document Control | EXISTING | Controlled publication metadata |
-| Scientific Commons | ARCHITECTURE | Public discovery and collaboration layer |
-| Scientific Identity | ARCHITECTURE | Identity of researchers and institutions |
-| Research Workspace | ARCHITECTURE | Project-centered scientific work |
-| Knowledge Graph | PLANNED | Relationships among people, projects, evidence, methods and findings |
-| Funding Engine | PLANNED | Connect research needs with funders and resources |
-| University Research Nodes | FUTURE | Distributed institutional compute and evidence nodes |
-| GSRC | CONCEPT | Global Scientific Research Computer architecture |
-| Quantic OS | CONCEPT | Research-computing runtime / operating layer |
-| AI²³¹ / EAQP stack | CONCEPT / RESEARCH | Experimental research architecture |
-| Future digital asset | FUTURE / OPTIONAL | Separate governance and economic architecture; not required by the core network |
+| Observation Plane | BUILDING | Capture and normalize observations |
+| Analysis Plane | BUILDING | Temporal, geographic, language and surface analysis |
+| Scientific Control Plane | BUILDING | Verification and attribution discipline |
+| Public Research Plane | BUILDING | Demand signals and publication bridge |
+| Evidence Register | BUILDING | Stable evidence identity and provenance |
+| Orchestrator / Queue | BUILDING | Persistent task execution |
+| Worker Fabric | BUILDING | Modular observation, analysis, verification and publication responsibilities |
+| Quality Gate | EXISTING | Barrier between analysis and release |
+| Government Document Control | EXISTING | Controlled document metadata |
+| International Drift Propagation | BUILDING | Cross-region and cross-language propagation research |
 
-## Core scientific lifecycle
+## Scientific lifecycle
 
 ```text
-Identity
+Observation
   ↓
-Research Project
+Normalization
   ↓
-Experiment / Observation
+Analysis
   ↓
 Evidence
   ↓
 Verification
   ↓
-Replication
+Replication / Dispute
   ↓
 Finding
   ↓
@@ -148,18 +68,47 @@ Claim
 Quality Gate
   ↓
 Publication
-  ↓
-Knowledge Graph
-  ↓
-New Research
 ```
 
-## Design rule
+## Twelve logical agent roles
 
-The public Global Science Network is the broad integration layer. Specialized systems such as AI Drift Forensics, Research Core, and future private or experimental architectures remain modular children of the network rather than competing top-level systems.
+1. Scout
+2. Normalizer
+3. Baseline
+4. Drift Detector
+5. Temporal
+6. Geospatial
+7. Language
+8. Surface Graph
+9. Verification
+10. Attribution
+11. Demand
+12. Digest & Publication
 
-The architecture must support expansion without requiring a rewrite of the evidence, identity, provenance, or execution foundations.
+These roles are architectural responsibilities. The initial implementation may execute them through fewer worker processes.
 
-## Separation principle
+## Evidence discipline
 
-Open scientific infrastructure, professional services, institutional/private systems, experimental architectures, and any future economic mechanism must remain separately identifiable. A future digital asset is an optional extension and must not be represented as the scientific evidence layer itself.
+Raw observations, derived metrics, interpretations, and hypotheses remain distinct. Temporal association is not automatically causal attribution. Missing data, failed reproductions, rejected evidence, and unresolved questions must remain visible in the research record.
+
+## Publication boundary
+
+```text
+GitHub research record
+        ↓
+Evidence / finding selection
+        ↓
+Quality Gate
+        ↓
+Wix draft
+        ↓
+Authorized release
+        ↓
+Public publication
+```
+
+The public Wix layer is a dissemination interface, not the scientific source of truth.
+
+## Scope boundary
+
+Global Drift Network is a specialized child architecture of the broader Global Science Network. It must not absorb institutional identity, funding, general research discovery, or future compute architectures into its own namespace. Those capabilities belong to their respective parent layers and should connect through explicit interfaces.
