@@ -1,0 +1,27 @@
+name: WANGA Research Groups
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  queue-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Audit research queues
+        run: python3 wanga-research-groups/runtime/queue_audit.py
+
+  research-dispatch:
+    needs: queue-audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Record execution boundary
+        run: |
+          echo "WANGA research-group runtime is ready for bounded worker execution."
+          echo "This phase audits and dispatches queue structure only; it does not fabricate research observations."
