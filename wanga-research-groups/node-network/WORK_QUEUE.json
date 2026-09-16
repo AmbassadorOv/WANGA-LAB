@@ -1,0 +1,8 @@
+{
+  "queue_id":"Q-NODE-NETWORK-001",
+  "group_id":"RG-NODE-NETWORK",
+  "tasks":[
+    {"task_id":"NN-001","objective":"Specify WANGA node identity, registration and handshake states for local and remote nodes.","status":"QUEUED","owner_role":"Protocol Researcher","dependencies":[],"inputs":["WANGA_OS_BOOT_PROTOCOL_V1.md"],"expected_artifacts":["node-handshake-state-machine.md"],"acceptance_checks":["Offline and online states are explicit","Identity and authorization boundaries are explicit"],"risk_level":"MEDIUM"},
+    {"task_id":"NN-002","objective":"Define offline queue and later synchronization semantics for research tasks and artifacts.","status":"QUEUED","owner_role":"Offline/Online Systems Worker","dependencies":["NN-001"],"inputs":[],"expected_artifacts":["offline-sync-protocol.md"],"acceptance_checks":["No data loss is assumed","Conflicts have explicit states"],"risk_level":"MEDIUM"}
+  ]
+}
