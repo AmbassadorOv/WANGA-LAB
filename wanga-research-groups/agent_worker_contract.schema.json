@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/agent-worker-contract.schema.json",
+  "title": "WANGA Agent Worker Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["worker_id", "group_id", "role", "task_id", "input_refs", "output_refs", "result_status"],
+  "properties": {
+    "worker_id": {"type": "string"},
+    "group_id": {"type": "string", "pattern": "^RG-[A-Z0-9-]+$"},
+    "role": {"type": "string"},
+    "task_id": {"type": "string"},
+    "input_refs": {"type": "array", "items": {"type": "string"}},
+    "output_refs": {"type": "array", "items": {"type": "string"}},
+    "result_status": {"type": "string", "enum": ["COMPLETE", "BLOCKED", "REVIEW", "FAILED"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "verification_required": {"type": "boolean"},
+    "notes": {"type": "string"}
+  }
+}
