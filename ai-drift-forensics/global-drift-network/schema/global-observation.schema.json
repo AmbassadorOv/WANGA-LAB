@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schema/global-observation.schema.json",
+  "title": "Global Drift Network Observation",
+  "description": "Schema for a single time-stamped observation in the Global Drift Network. This is a research data schema, not a regulatory standard.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_id",
+    "timestamp_utc",
+    "region",
+    "country",
+    "language",
+    "surface_type",
+    "system_identifier",
+    "query_id",
+    "observation_type",
+    "observed_state",
+    "delta",
+    "event_ref"
+  ],
+  "properties": {
+    "observation_id": { "type": "string", "pattern": "^GDO-[0-9]{4}-[A-Z0-9-]+$" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "region": { "type": "string", "minLength": 1 },
+    "country": { "type": "string", "minLength": 2 },
+    "language": { "type": "string", "minLength": 2 },
+    "surface_type": {
+      "type": "string",
+      "enum": ["AI_MODEL", "SEARCH", "NEWS", "SOCIAL_PUBLIC_INFO", "OTHER"]
+    },
+    "system_identifier": { "type": "string", "minLength": 1 },
+    "query_id": { "type": "string", "minLength": 1 },
+    "observation_type": {
+      "type": "string",
+      "enum": ["BASELINE", "REPEAT", "DELTA", "CONTROL", "NULL", "REPRODUCTION"]
+    },
+    "baseline_ref": { "type": ["string", "null"] },
+    "observed_state": { "type": "string", "minLength": 1 },
+    "delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric", "value", "unit"],
+      "properties": {
+        "metric": { "type": "string" },
+        "value": { "type": "number" },
+        "unit": { "type": "string" },
+        "direction": { "type": ["string", "null"], "enum": ["increase", "decrease", "unchanged", "unknown", null] }
+      }
+    },
+    "evidence_ref": { "type": ["string", "null"] },
+    "event_ref": { "type": ["string", "null"] },
+    "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "causal_status": {
+      "type": "string",
+      "enum": ["NONE_ASSERTED", "TEMPORAL_ASSOCIATION", "HYPOTHESIS", "SUPPORTED", "REFUTED", "UNRESOLVED"]
+    },
+    "reproduction_status": {
+      "type": "string",
+      "enum": ["NOT_ATTEMPTED", "SUCCESS", "PARTIAL", "FAILED", "UNRESOLVED"]
+    },
+    "notes": { "type": ["string", "null"] }
+  }
+}
