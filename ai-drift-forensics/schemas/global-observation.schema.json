@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/ai-drift-forensics/schemas/global-observation.schema.json",
+  "title": "Global Network Drift Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_id",
+    "case_id",
+    "surface_id",
+    "surface_type",
+    "region",
+    "language",
+    "baseline_timestamp",
+    "observation_timestamp",
+    "baseline_artifact_ref",
+    "observation_artifact_ref",
+    "change_metric",
+    "confidence_class",
+    "alternative_explanations",
+    "evidence_refs"
+  ],
+  "properties": {
+    "observation_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "surface_id": {"type": "string", "minLength": 1},
+    "surface_type": {
+      "type": "string",
+      "enum": [
+        "AI_MODEL",
+        "AI_SEARCH",
+        "WEB_SEARCH",
+        "PUBLIC_WEB",
+        "PUBLIC_SOCIAL",
+        "SYNTHETIC_CONTROL",
+        "OTHER_OBSERVABLE"
+      ]
+    },
+    "region": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "minLength": 1},
+    "baseline_timestamp": {"type": "string", "format": "date-time"},
+    "observation_timestamp": {"type": "string", "format": "date-time"},
+    "baseline_artifact_ref": {"type": "string", "minLength": 1},
+    "observation_artifact_ref": {"type": "string", "minLength": 1},
+    "change_metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value", "interpretation"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "value": {"type": ["number", "string"]},
+        "unit": {"type": "string"},
+        "interpretation": {"type": "string", "minLength": 1}
+      }
+    },
+    "change_direction": {
+      "type": "string",
+      "enum": ["INCREASE", "DECREASE", "TURNOVER", "SHIFT", "NO_MATERIAL_CHANGE", "UNKNOWN"]
+    },
+    "confidence_class": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "UNRESOLVED"]
+    },
+    "alternative_explanations": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "notes": {"type": "string"}
+  }
+}
