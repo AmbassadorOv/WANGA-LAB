@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/daily-report.schema.json",
+  "title": "Daily Scientific Digest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["report_id", "report_date", "source_commits", "sections", "publication_status"],
+  "properties": {
+    "report_id": {"type":"string"},
+    "report_date": {"type":"string","format":"date"},
+    "generated_at": {"type":"string","format":"date-time"},
+    "source_commits": {"type":"array","items":{"type":"string"}},
+    "sections": {
+      "type":"object",
+      "additionalProperties": false,
+      "required":["observed_changes","derived_findings","verified_findings","unresolved_questions","research_demand","next_actions"],
+      "properties": {
+        "observed_changes":{"type":"array","items":{"type":"object"}},
+        "derived_findings":{"type":"array","items":{"type":"object"}},
+        "verified_findings":{"type":"array","items":{"type":"object"}},
+        "unresolved_questions":{"type":"array","items":{"type":"object"}},
+        "research_demand":{"type":"array","items":{"type":"object"}},
+        "next_actions":{"type":"array","items":{"type":"object"}}
+      }
+    },
+    "quality_gate": {"type":"object"},
+    "publication_status": {"type":"string","enum":["DRAFT","QUALITY_REVIEW","APPROVED","PUBLISHED","REJECTED"]}
+  }
+}
