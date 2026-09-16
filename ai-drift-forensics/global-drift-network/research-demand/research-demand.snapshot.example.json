@@ -1,0 +1,13 @@
+{
+  "snapshot_id":"RDS-2026-09-16-001",
+  "generated_at":"2026-09-16T15:00:00Z",
+  "aggregation_period":"2026-09-09/2026-09-16",
+  "topic_registry_version":"0.1",
+  "synthetic":true,
+  "topics":[
+    {"topic_id":"MODEL_DRIFT","vote_count":12,"demand":1.0,"importance":0.9,"measurability":0.95,"data_availability":0.9,"urgency":0.7,"priority_signal":0.54},
+    {"topic_id":"MULTILINGUAL_DRIFT","vote_count":8,"demand":0.67,"importance":0.8,"measurability":0.85,"data_availability":0.8,"urgency":0.6,"priority_signal":0.22}
+  ],
+  "recommended_queue":["MODEL_DRIFT","MULTILINGUAL_DRIFT"],
+  "limitations":["Synthetic example; not a real scientist survey."]
+}
