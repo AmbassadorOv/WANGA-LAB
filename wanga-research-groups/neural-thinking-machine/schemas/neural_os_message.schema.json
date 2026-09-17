@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wanga://neural-thinking-machine/neural-os-message/v1",
+  "title": "Neural OS ↔ Neural Thinking Machine Message",
+  "type": "object",
+  "required": ["message_id", "message_type", "source", "timestamp", "sequence", "context", "payload", "provenance"],
+  "properties": {
+    "message_id": {"type": "string"},
+    "message_type": {
+      "type": "string",
+      "enum": ["OBSERVE", "STATE", "EVENT", "INTENT", "ACTION", "RESULT", "ERROR", "CONFLICT", "DRIFT", "VERIFY", "ESCALATE", "DECISION", "COMMAND"]
+    },
+    "source": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "sequence": {"type": "integer", "minimum": 0},
+    "context": {
+      "type": "object",
+      "required": ["project", "component", "version"],
+      "properties": {
+        "project": {"type": "string"},
+        "component": {"type": "string"},
+        "version": {"type": "string"},
+        "process": {"type": "string"},
+        "session": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "payload": {"type": "object"},
+    "provenance": {
+      "type": "object",
+      "required": ["origin", "chain_id"],
+      "properties": {
+        "origin": {"type": "string"},
+        "chain_id": {"type": "string"},
+        "parent_message_id": {"type": ["string", "null"]},
+        "source_hash": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  },
+  "additionalProperties": false
+}
