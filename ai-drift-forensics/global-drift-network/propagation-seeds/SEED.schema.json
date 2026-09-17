@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.org/schemas/propagation-seeds/seed-v1.json",
+  "title": "Propagation Seed Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "seed_id",
+    "source",
+    "observed_at",
+    "entity_or_system",
+    "signal_type",
+    "baseline_ref",
+    "evidence_ref",
+    "confidence"
+  ],
+  "properties": {
+    "seed_id": {"type": "string"},
+    "source": {"type": "string"},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "entity_or_system": {"type": "string"},
+    "signal_type": {"type": "string"},
+    "baseline_ref": {"type": "string"},
+    "direction": {"type": ["string", "null"]},
+    "magnitude": {"type": ["number", "null"]},
+    "persistence": {"type": ["string", "null"]},
+    "evidence_ref": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "inconclusive"]},
+    "notes": {"type": ["string", "null"]}
+  }
+}
