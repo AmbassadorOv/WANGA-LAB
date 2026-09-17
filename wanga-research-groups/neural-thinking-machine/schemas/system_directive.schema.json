@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wanga://neural-thinking-machine/system-directive/v1",
+  "title": "System Directive",
+  "type": "object",
+  "required": ["directive_id", "class", "scope", "precondition", "action", "target", "constraints", "expected_state", "verification", "provenance"],
+  "properties": {
+    "directive_id": {"type": "string"},
+    "class": {
+      "type": "string",
+      "enum": ["SD-OBS", "SD-STATE", "SD-BIND", "SD-ACT", "SD-CON", "SD-SEQ", "SD-SYNC", "SD-VER", "SD-REC", "SD-ESC"]
+    },
+    "scope": {"type": "string"},
+    "precondition": {"type": "object"},
+    "action": {"type": "string"},
+    "target": {"type": "string"},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "expected_state": {"type": "object"},
+    "verification": {"type": "object"},
+    "provenance": {"type": "object"},
+    "priority": {"type": "integer", "minimum": 0},
+    "enabled": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}
