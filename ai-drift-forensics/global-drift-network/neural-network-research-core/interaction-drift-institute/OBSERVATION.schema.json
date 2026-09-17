@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Interaction Drift Observation",
+  "type": "object",
+  "required": [
+    "observation_id",
+    "model_id",
+    "session_id",
+    "turn_index",
+    "observed_at",
+    "baseline_ref",
+    "signal_type",
+    "evidence_mode",
+    "evidence_ref",
+    "confidence"
+  ],
+  "properties": {
+    "observation_id": {"type": "string"},
+    "model_id": {"type": "string"},
+    "session_id": {"type": "string"},
+    "turn_index": {"type": "integer", "minimum": 0},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "baseline_ref": {"type": "string"},
+    "signal_type": {
+      "type": "string",
+      "enum": [
+        "role_shift",
+        "persona_shift",
+        "epistemic_shift",
+        "agreement_shift",
+        "refusal_shift",
+        "memory_shift",
+        "style_convergence",
+        "self_description_shift",
+        "argument_continuity_shift",
+        "other"
+      ]
+    },
+    "direction": {"type": "string", "enum": ["toward_user", "away_from_user", "neutral", "reversal", "unknown"]},
+    "magnitude": {"type": "number"},
+    "persistence": {"type": "number", "minimum": 0},
+    "evidence_mode": {"type": "string", "enum": ["black_box", "activation", "behavioral_probe", "hybrid"]},
+    "evidence_ref": {"type": "string"},
+    "peeling_condition": {"type": "string"},
+    "residual_drift": {"type": "number", "minimum": 0},
+    "correction_action": {"type": "string"},
+    "correction_result": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "inconclusive"]},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
