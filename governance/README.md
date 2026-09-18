@@ -1,12 +1,19 @@
 # WANGA Governance
 
-First executable governance layer for WANGA-LAB.
+Technical governance and continuity-planning layer for WANGA-LAB.
 
-This is a connectivity model, not a sovereign or legal authority model.
+The governance layer connects evidence, institutions, exposure, coverage relationships, stress scenarios, monitoring, and audit history. It does not itself issue insurance, make underwriting decisions, determine legal ownership, or exercise sovereign authority.
 
-Artifacts:
-- WANGA_SYSTEM_GOVERNANCE_V1.md
-- schema.json
-- kernel.py
+## Components
 
-The layer sits above the existing Imperial Audit evidence layer and connects it to institutional continuity, insurance, reinsurance, banking, and asset networks.
+- `WANGA_SYSTEM_GOVERNANCE_V1.md` — governance model and separation boundaries.
+- `schema.json` — machine-readable governance object schema.
+- `kernel.py` — deterministic connectivity and audit kernel.
+- `continuity_engine.py` — deterministic exposure, coverage-gap, stress-test, and audit calculations.
+- `WANGA_SEVEN_YEAR_CONTINUITY_PLAN.md` — seven-year planning framework.
+
+## Development rule
+
+Model -> Schema -> Kernel -> Simulation -> Verification -> Pilot -> Integration -> Audit -> Revision.
+
+Financial, insurance, reinsurance, legal, regulatory, and monetary decisions remain subject to authorized institutions and independent validation.
