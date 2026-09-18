@@ -1,35 +1,112 @@
-# Foundation Architecture — Global Algorithmic Governance
+# Foundation Architecture — Global Algorithmic Governance Institute
 
 ## Purpose
 
-This document establishes the top-level order of the Global Algorithmic Governance (GAG) program. It is the organizational layer above individual technical projects.
+The institute is the research and systems-design center for a proposed global algorithmic governance architecture.
 
-## Hierarchy
+Its subject is not a single government. Its subject is the **operating architecture connecting knowledge, computation, institutions, assets, transactions, risk, verification, and continuity**.
 
-1. **Umbrella Organization / Association** — legal and institutional home, subject to applicable registration and approval.
-2. **Global Algorithmic Governance Institute** — international governance, research, coordination, and participation framework.
-3. **Online Governance Platform** — the public and operational online environment for human participants, departments, research activity, and AI agents.
-4. **Departments** — functional units with defined mandates and accountable human oversight.
-5. **AI Agent Network** — disclosed computational agents assigned to departments and tasks; agents are not legal persons or substitutes for human accountability.
-6. **Research and technical programs** — including AI Drift Forensics, financial/monetary systems research, global network research, standards/verification, evidence, and computational systems.
-7. **External channels** — Facebook, LinkedIn, websites, publications, and other services are communication/recruitment interfaces, not the institutional control plane.
+## System hierarchy
 
-## Core separation
+1. Umbrella Organization — legal/administrative home, subject to registration.
+2. Global Algorithmic Governance Institute — research, standards, coordination, and system design.
+3. Online Governance Platform — participation and operational interface.
+4. Departments — accountable functional units.
+5. AI Agent Network — disclosed computational workstreams with permissions.
+6. Technical Programs — specialized implementations and research.
+7. External Institutions — banks, insurers, reinsurers, companies, academic bodies, public institutions, and other participants.
 
-GAG is distinct from WANGA-LAB. WANGA-LAB can supply research and computational infrastructure. AI Drift Forensics is a distinct technical verification/forensic capability that can operate within the wider ecosystem without becoming the definition of the umbrella organization.
+## Engine architecture
 
-## Online Governance objective
+The institute models the economic system as three interacting layers:
 
-The online platform is intended to demonstrate governance as an operating system for participation: people can join voluntarily; participation carries defined rules, evidence, transparency, verification, correction, and accountability requirements.
+**CORE / CAPACITY**
+- knowledge
+- capital
+- reserves
+- productive capacity
+- assets and rights
+- institutional capacity
+- computation
+- infrastructure
 
-## 100,000-agent demonstration
+**FLOW / COORDINATION**
+- trade
+- transactions
+- financing
+- insurance
+- reinsurance
+- settlement
+- information
+- risk transfer
+- contractual obligations
 
-A large agent population may be demonstrated computationally without creating artificial human accounts on third-party social networks. Agents should be explicitly identified as AI, assigned stable IDs, permissions, departments, tasks, provenance, and audit trails.
+**CONTINUITY / CONTROL**
+- evidence
+- verification
+- dependency mapping
+- state management
+- monitoring
+- audit
+- correction
+- continuity planning
 
-## Public communication
+The three layers form a hybrid operating engine rather than three isolated departments.
 
-Third-party social networks may be used to explain the project and recruit human participants. Automated or deceptive account activity on those services is outside this architecture and must comply with each platform's rules.
+## Logical method
 
-## Decision rule
+The system applies three analytical operations:
 
-No lower-level technical project becomes the organizational center merely because it is technically mature. The umbrella organization and institute define the order; departments and programs execute within that order.
+1. **Classification** — establish what an object is.
+2. **Relation / proposition** — establish what is connected and what is asserted.
+3. **Inference** — derive only what follows from verified premises.
+
+The computational sequence is:
+
+**OBJECT → RELATION → VERIFIED PREMISES → INFERENCE → AUTHORIZED ACTION → OBSERVATION → CORRECTION**
+
+## Mathematical method
+
+Every important state is analyzed through:
+
+**Function (F) + Relation (R) + Scale (S)**
+
+A coordinate without its function is incomplete; a function without its relations is incomplete; a ratio or measurement without scale is not sufficient to describe the system state.
+
+## Control invariants
+
+- Evidence != legal ownership
+- Evidence != coverage
+- Integrity != truth
+- Scenario != fact
+- Technical assessment != regulated decision
+- Algorithmic recommendation != human authority
+- Customer-declared != independently verified
+- Unknown != verified
+- Participation != governmental recognition
+- WANGA != sovereign authority
+
+## Institutional objective
+
+The institute creates a common technical language through which independent institutions can exchange:
+
+- objects;
+- evidence;
+- relations;
+- states;
+- risk;
+- decisions;
+- audit records;
+- continuity requirements.
+
+This common language is intended to make complex systems more observable, interoperable, and testable.
+
+## Development order
+
+**Define → Formalize → Implement → Simulate → Verify → Pilot → Integrate → Audit → Revise**
+
+No layer is treated as operational merely because it has been described.
+
+## Status boundary
+
+This repository describes a proposed architecture. It does not itself establish incorporation, governmental recognition, regulatory authority, financial licensing, insurance licensing, or ownership rights.
