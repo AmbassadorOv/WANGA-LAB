@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: autonomous-architecture-builder
+  group: wanga-autonomous-build
   cancel-in-progress: false
 
 jobs:
@@ -30,6 +30,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch --all --prune
 
+      - name: Validate master project instructions
+        run: test -f docs/MASTER_PROJECT_INSTRUCTIONS_V1.md
+
       - name: Run architecture integrator
         env:
           BUILD_BRANCH: autobuild/architecture-construction
@@ -37,6 +40,9 @@ jobs:
 
       - name: Validate Python
         run: python -m compileall -q .
+
+      - name: Run discovery contract tests
+        run: python -m unittest discover -s tests -p "test_architecture_discovery.py"
 
       - name: Commit builder state
         run: |
