@@ -1,0 +1,41 @@
+version: "1.0"
+status: "TARGET_ARCHITECTURE"
+principle: "Research requirements drive perspectives, collaboration, and model assignment."
+
+layers:
+  - id: AGI-CORE
+    name: "AGI Cognitive Architecture"
+    role: "Cognitive functions, memory, reasoning, planning, epistemic state, verification, self-monitoring."
+  - id: RESEARCH
+    name: "Research Architecture"
+    role: "Research questions, domains, instruments, evidence requirements, dependencies and outputs."
+  - id: COLLABORATION
+    name: "Scientific Collaboration Architecture"
+    role: "Specialist roles, research-group interfaces, handoffs, synthesis and escalation."
+  - id: MODELS
+    name: "Model and Agent Architecture"
+    role: "Model families, capabilities, runtime adapters, bounded digital model agents and health/policy state."
+  - id: VITRUVIUS
+    name: "Vitruvius Index and Interface"
+    role: "Canonical index and relationship graph connecting all layers without making the index itself a scientific authority."
+
+routing:
+  flow: "RESEARCH -> PERSPECTIVE -> COGNITIVE_CAPABILITY -> SPECIALIST/COLLABORATION -> MODEL_AGENT -> EVIDENCE -> VERIFICATION -> KNOWLEDGE"
+  authority: "Evidence and verification determine promotion; models and agents do not self-promote claims."
+
+existing_components:
+  work_manager: "ai-drift-forensics/global-drift-network/orchestrator/WANGA_WORK_MANAGER_V1.md"
+  agent_bridge: "ai-drift-forensics/global-drift-network/orchestrator/WANGA_AGENT_BRIDGE.schema.json"
+  research_groups: "wanga-research-groups/AGENT_GROUP_REGISTRY.json"
+  research_assets: "wanga-research-groups/RESEARCH_ASSET_INTEGRATION_REGISTRY_V1.json"
+  model_runtime: "wanga-research-groups/model-runtime"
+  perspective_layer: "MASTER_PROJECT_INSTRUCTIONS_V1.md"
+  verification: "ai-drift-forensics/VERIFICATION_PROTOCOL.md"
+
+constraints:
+  - "Do not create a second global work manager."
+  - "Do not treat an architectural model slot as a live model."
+  - "Do not promote unverified research output."
+  - "Preserve historical research direction and provenance."
+  - "No credentials in generated indexes, queues, or evidence."
+  - "GitHub remains technical source of truth."
