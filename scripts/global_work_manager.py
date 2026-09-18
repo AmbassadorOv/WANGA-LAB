@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "docs" / "WORK_MEMORY_STATE.json"
+MASTER = ROOT / "docs" / "MASTER_PROJECT_INSTRUCTIONS_V1.md"
 OUT = ROOT / "docs" / "GLOBAL_WORK_PLAN.json"
 
 SUBSYSTEMS = [
@@ -29,6 +30,18 @@ SUBSYSTEMS = [
     ("WIX", "PUBLICATION", "Prepare validated publication/integration work."),
     ("AUTOBUILD", "AUTOBUILD", "Continue deterministic architecture construction."),
     ("WORK-MEMORY", "MAINTENANCE", "Checkpoint current state and next actions."),
+]
+
+MASTER_INSTRUCTION = "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md"
+PRIORITY_ORDER = [
+    "P0_SYSTEM_INTEGRITY",
+    "P1_RATIONAL_LOGIC",
+    "P2_VERIFICATION",
+    "P3_NTM_RATIONAL_LOGIC_EVIDENCE",
+    "P4_MODEL_FABRIC",
+    "P5_PERSPECTIVE_LAYER",
+    "P6_COMMERCIALIZATION",
+    "P7_PRESENTATION",
 ]
 
 GUARDRAILS = [
@@ -93,6 +106,8 @@ def build_plan(state: dict) -> dict:
         "version": 2,
         "manager": "WANGA_GLOBAL_WORK_MANAGER_V2",
         "mode": "deterministic-plan",
+        "master_project_instructions": MASTER_INSTRUCTION,
+        "priority_order": PRIORITY_ORDER,
         "pattern_profile": "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1",
         "repository": state.get("repository", "AmbassadorOv/WANGA-LAB"),
         "build_branch": state.get("build_branch"),
@@ -115,6 +130,7 @@ def build_plan(state: dict) -> dict:
             "no_duplicate_global_orchestrator",
             "verification_before_enablement",
             "final_review_separate",
+            "master_project_instructions_inherited",
         ],
     }
 
