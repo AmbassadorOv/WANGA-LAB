@@ -2,6 +2,10 @@
 
 Status: ACTIVE BUILD CONTROL PLANE
 
+## Master instruction inheritance
+
+Bridge events are interpreted under `docs/MASTER_PROJECT_INSTRUCTIONS_V1.md`. The bridge is a handoff mechanism, not a new authority and not persistent ChatGPT memory.
+
 ## Purpose
 
 Provide a durable, structured inbox from the GitHub WANGA control plane to the ChatGPT working session without automatically promoting every update into persistent ChatGPT memory.
@@ -21,7 +25,6 @@ GitHub remains the source of repository state. ChatGPT receives bridge events wh
 ## Significance classes
 
 ### S1 — operationally significant
-
 Examples:
 - verified model connection/verification counts change;
 - a new BLOCKED or CONFLICT state appears;
@@ -30,23 +33,23 @@ Examples:
 - a new architectural artifact reaches VERIFIED_RESULT.
 
 ### S2 — architectural significant
-
 Examples:
 - architecture core flow changes;
 - a hard authority boundary or invariant changes;
 - a new subsystem or global interface is introduced;
 - the single-global-orchestrator rule changes;
 - WANGA/GAG boundary changes;
-- the 5,000-slot model-fabric semantics change.
+- the 5,000-slot model-fabric semantics change;
+- the master project instruction contract changes.
 
 ### S3 — foundational-assumption change
-
 Examples:
 - a fundamental working assumption used across the project is replaced;
 - a core definition, invariant, threshold, authority boundary, or source-of-truth rule changes;
-- the architecture's basic decomposition changes.
+- the architecture's basic decomposition changes;
+- the master project instructions materially change.
 
-S3 events must include a `memory_proposal` field set to true. This is a proposal for the ChatGPT user to decide whether the persistent memory should be updated; it is not an automatic memory write.
+S3 events must include a `memory_proposal` field set to true. This is a proposal for the ChatGPT user to decide whether persistent memory should be updated; it is not an automatic memory write.
 
 ## Non-significant updates
 
@@ -71,7 +74,7 @@ Each bridge event contains:
 - memory_reason
 - recommended_next_action
 
-The bridge must never invent evidence, model endpoints, capabilities, credentials, or verification results.
+The bridge must never invent evidence, model endpoints, capabilities, credentials, verification results, valuations, revenue, or financing outcomes.
 
 ## ChatGPT-side handling
 
