@@ -1,0 +1,65 @@
+name: Autonomous Architecture Builder
+
+on:
+  push:
+    branches: [autobuild/architecture-construction]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: autonomous-architecture-builder
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout complete repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "wanga-architecture-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch --all --prune
+
+      - name: Run architecture integrator
+        env:
+          BUILD_BRANCH: autobuild/architecture-construction
+        run: python scripts/architecture_builder.py
+
+      - name: Validate Python
+        run: python -m compileall -q .
+
+      - name: Commit builder state
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add docs/AUTOBUILD_STATE.json docs/WIX_ARCHITECTURE_SNAPSHOT.json
+            git commit -m "autobuild: record architecture integration state"
+          fi
+
+      - name: Push build branch
+        run: git push origin HEAD:autobuild/architecture-construction
+
+      - name: Create or refresh final review PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing="$(gh pr list --head autobuild/architecture-construction --base main --state open --json number --jq '.[0].number')"
+          if [ -z "$existing" ]; then
+            gh pr create --draft --base main --head autobuild/architecture-construction               --title "autobuild: complete WANGA architecture integration"               --body "Automated architecture-construction branch. Source branches remain preserved. Review is intentionally deferred until the build controller reaches a stable state. Conflicts are recorded in docs/AUTOBUILD_STATE.json; the controller never guesses through a conflict and never merges to main."
+          else
+            echo "Existing final review PR: #$existing"
+          fi
+
+      - name: Publish machine-readable summary
+        run: |
+          echo "=== AUTOBUILD STATE ==="
+          cat docs/AUTOBUILD_STATE.json
