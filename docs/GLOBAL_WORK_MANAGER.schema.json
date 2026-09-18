@@ -23,6 +23,7 @@
       "type": "string",
       "enum": [
         "ARCHITECTURE",
+        "ARCHITECTURE_DISCOVERY",
         "RESEARCH",
         "MODEL_DISCOVERY",
         "MODEL_BINDING",
