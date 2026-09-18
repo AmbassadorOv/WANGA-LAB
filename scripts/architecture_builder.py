@@ -39,6 +39,16 @@ def now() -> str:
 def parse_sources(text: str):
     return re.findall(r"^\s*- id: ([^\n]+)\n\s+branch: ([^\n]+)\n\s+layer: ([^\n]+)", text, re.M)
 
+def assert_build_branch():
+    """Fail closed unless the builder is running on the dedicated build branch."""
+    actual = sh("git", "branch", "--show-current")
+    if actual != BUILD_BRANCH:
+        raise SystemExit(
+            f"refusing architecture build on unexpected branch: {actual!r}; expected {BUILD_BRANCH!r}"
+        )
+    if BUILD_BRANCH == "main":
+        raise SystemExit("refusing architecture build on main")
+
 def load_state():
     if STATE.exists():
         return json.loads(STATE.read_text(encoding="utf-8"))
@@ -94,6 +104,7 @@ def write_wix_snapshot():
     )
 
 def main():
+    assert_build_branch()
     state = load_state()
     state["runs"].append({"started_at": now(), "head_before": sh("git","rev-parse","HEAD")})
     for c in FOUNDATION_COMMITS:
