@@ -30,6 +30,7 @@ SUBSYSTEMS = [
     ("WIX", "PUBLICATION", "Prepare validated publication/integration work."),
     ("AUTOBUILD", "AUTOBUILD", "Continue deterministic architecture construction."),
     ("WORK-MEMORY", "MAINTENANCE", "Checkpoint current state and next actions."),
+    ("ARCHITECTURE-DISCOVERY", "ARCHITECTURE_DISCOVERY", "Coordinate three architecture scouts that discover, compare and verify reusable public GitHub patterns."),
 ]
 
 MASTER_INSTRUCTION = "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md"
@@ -101,6 +102,7 @@ def build_plan(state: dict) -> dict:
     by_id["WGM-10-WIX"]["dependencies"] = ["WGM-07-EVIDENCE"]
     by_id["WGM-11-AUTOBUILD"]["dependencies"] = ["WGM-01-WANGA-OS", "WGM-07-EVIDENCE"]
     by_id["WGM-12-WORK-MEMORY"]["dependencies"] = ["WGM-07-EVIDENCE"]
+    by_id["WGM-13-ARCHITECTURE-DISCOVERY"]["dependencies"] = ["WGM-02-RESEARCH-GROUPS", "WGM-07-EVIDENCE"]
 
     return {
         "version": 2,
