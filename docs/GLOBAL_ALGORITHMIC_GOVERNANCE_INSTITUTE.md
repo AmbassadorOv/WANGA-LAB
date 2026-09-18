@@ -30,7 +30,21 @@ The architecture is designed to protect the citizen from becoming the primary be
 
 The citizen remains the rights-holder and decision-maker. The institute does not create political authority over citizens and does not replace elected institutions, courts, or lawful governmental authority.
 
-### Rights in operation
+## From the rights revolution to rights fulfillment without revolution
+
+The institute defines WANGA as a continuation and operational fulfillment of the human-centered aims expressed in the modern rights tradition, rather than as a call for another political revolution.
+
+The Declaration of the Rights of Man and of the Citizen of 1789 articulated principles including liberty, equality before the law, security, participation, accountability of public administration, and separation of powers. Those principles became part of the continuing French constitutional tradition. citeturn0search0turn0search2
+
+WANGA does not replace those political achievements or claim authority above constitutional institutions. Its proposed contribution is to supply an architectural mechanism through which rights can become continuously operational: measurable, traceable, accessible, resilient, and protected when institutional systems fail.
+
+The architectural progression is:
+
+**Declaration → institutionalization → operationalization → continuity of rights.**
+
+The transformation is therefore intended to occur without requiring the destruction or replacement of existing lawful political institutions. Governments, legislatures, courts, and citizens retain their respective authority; the organizational architecture connecting their systems is what changes.
+
+## Rights in operation
 
 The architecture is intended to support measurable practical capabilities:
 
