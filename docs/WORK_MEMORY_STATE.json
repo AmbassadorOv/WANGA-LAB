@@ -57,6 +57,26 @@
     "full_content_audit": false,
     "github_is_source_of_code_contracts": true
   },
+  "external_agent_pattern_integration": {
+    "status": "IMPLEMENTED_PATTERN_LEVEL",
+    "profile": "docs/EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md",
+    "adopted": [
+      "explicit graph task dependencies",
+      "bounded agent handoffs",
+      "pre-execution guardrails",
+      "durable checkpoint/resume metadata",
+      "trace identifiers",
+      "bounded evaluator-optimizer loop",
+      "review interrupt state"
+    ],
+    "source_frameworks": [
+      "OpenAI Agents SDK",
+      "Google ADK",
+      "Microsoft AutoGen",
+      "LangGraph"
+    ],
+    "implementation_policy": "pattern-level integration; no third-party source copied; no framework becomes global orchestrator"
+  },
   "completed": {
     "MODEL_AGENT_ARCHITECTURE_V1.md": "Digital Model Agent architecture and NTM boundary defined",
     "MODEL_FAMILY_REGISTRY.yml": "25 model families allocated to exactly 5,000 target slots",
@@ -74,13 +94,14 @@
     "NTM_MODEL_AGENT_ENVELOPE.schema.json": "bounded handoff contract to NTM",
     "WANGA_GLOBAL_WORK_MANAGER_V2.md": "repository-wide supervisory control-plane contract extending the existing Work Manager / Orchestrator",
     "GLOBAL_WORK_MANAGER.schema.json": "machine-readable global task contract",
-    "global_work_manager.py": "deterministic repository-wide work planner",
-    "test_global_work_manager.py": "planner validation tests",
+    "global_work_manager.py": "deterministic work planner with graph/checkpoint/guardrail/handoff/evaluator controls",
+    "test_global_work_manager.py": "planner and external-pattern integration tests",
     "global-work-manager.yml": "serialized GitHub Actions planning/validation workflow",
     "CHATGPT_BRIDGE_PROTOCOL_V1.md": "GitHub-to-ChatGPT significant-update handoff protocol; no automatic persistent memory",
     "CHATGPT_BRIDGE.schema.json": "machine-readable bridge event contract",
     "chatgpt_bridge.py": "deterministic S1/S2/S3 significance gate",
-    "test_chatgpt_bridge.py": "bridge significance tests"
+    "test_chatgpt_bridge.py": "bridge significance tests",
+    "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md": "open-source agent architecture pattern integration record"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -92,10 +113,12 @@
     "full_wix_content_audit": false,
     "global_work_manager_runtime": "workflow execution pending",
     "global_work_manager_merge_to_main": false,
-    "chatgpt_bridge_runtime": "implemented on autobuild/architecture-construction; scheduled execution not yet verified"
+    "chatgpt_bridge_runtime": "implemented on autobuild/architecture-construction; scheduled execution not yet verified",
+    "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
   },
   "next_actions": [
     "verify hourly workflow execution and first bridge event",
+    "verify global work manager plan generation with integrated runtime controls",
     "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
     "connect global task plan to existing Work Manager / Agent Bridge without creating a second global queue",
     "add real execution adapters only behind verified provider/runtime contracts",
@@ -111,17 +134,6 @@
     "model_slots_allocated": 5000,
     "model_slots_connected": 0,
     "model_slots_verified": 0,
-    "new_commits": [
-      "3d81f810654af506b4b679aa40eb4c2c31900b3e",
-      "555270cac075d60c18bbb4328b9c40d776a2c885",
-      "c4db6095c667588bd07fb649335550091b4155cf",
-      "83d4941d5f4fa78353291ac8e9068c5dd4760486",
-      "00f982cda547f57d3427665982b2ae62ade2d3ab",
-      "96b7769249597898f40e4a972144ff97316f9e7f",
-      "8b37f869d7c8a4a55d03f73226950d70c1c9f409",
-      "f9dbf874a62f0d53946f17b142b31a146e392552"
-    ],
-    "global_work_manager": "implemented; hourly bridge added; runtime execution still pending verification",
-    "chatgpt_bridge": "implemented on autobuild/architecture-construction; no automatic persistent ChatGPT memory"
+    "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified"
   }
 }
