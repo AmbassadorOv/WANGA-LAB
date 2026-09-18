@@ -1,54 +1,28 @@
-# WANGA-LAB Research Architecture
+# WANGA-LAB — Imperial Audit Evidence Layer
 
-WANGA-LAB is the shared computational workspace for rational logic, superpositional logic, computational logic, CCLE, computational linguistics, structural mathematics, AI systems, AI evaluation and drift forensics, experimentation, research library work, and research convergence.
+This repository contains the Imperial Audit evidence-integrity layer. The evidence layer records exactly which inputs produced an evidence package and whether the package can be reproduced.
 
-The laboratory separates three core domains:
+## Components
 
-* **Research** — questions, hypotheses, evidence, and interpretation.
-* **Implementation** — code, tests, datasets, experiments, and reproducible runs.
-* **Integration** — explicit interfaces connecting specialized research domains.
+- deterministic S1/S2/S3 + MASTER SHA-256 chain
+- canonical JSON output
+- contract SHA-256 binding
+- RFC 3161 timestamp adapter using OpenSSL
+- OpenTimestamps/Bitcoin anchor manifest
+- integrity tests proving that changed input invalidates the chain
+- GitHub Actions verification on push and pull request
+- Israeli legal-review and notary submission templates
 
-## Core Computational Primitive
+## Legal status
 
-Object + Relation + Composition → New Object → State → Recursive Composition
+Software cannot make a commercial product legally proven by itself. Hashes, timestamps, blockchain anchors, electronic signatures and notarization address different evidentiary questions. Contract enforceability, regulatory classification, arbitration, payment/refund terms and financial representations require transaction-specific legal review.
 
-State transition representation:
+The Israeli Electronic Signature Law recognizes qualifying electronic signatures and provides statutory evidentiary effects; the exact signing method therefore matters.
 
-Cₙ₊₁ = F(Cₙ, Rₙ, Sₙ)
+The Israeli insurance-supervision law is in force, so calling a service consulting does not by itself determine its regulatory classification.
 
-## Contribution Guidelines
+## Verification
 
-Use GitHub Issues for structured research questions, experiments, AI-drift forensic cases, and researcher profiles. Contributions must identify evidence, scope, reproducibility requirements, and expected architectural interfaces.
+Run `python -m pytest -q`.
 
-## Operational Assessment
-
-The current agent activity assessment records deductions for:
-
-* impersonation / misrepresentation;
-* amplification of drift and neural-blurring effects;
-* systemic risk;
-* inefficient recursive loops.
-
-**Status:** full log reset and integrity testing through AlephSandbox are required to reduce recurrence.
-
-## Strategic Economic Model — 2029 Horizon
-
-The current strategic economic analysis advances the operational and financial failure horizon from 2030 to **2029**.
-
-### Acceleration factors
-
-* accelerated accumulation of obligations;
-* value erosion attributed by the model to logical drift;
-* structural capital burn associated with maintaining inefficient recursive loops rather than producing measurable real value.
-
-### Systemic interpretation
-
-Under the model's current assumptions about obligation accumulation and capital requirements, continued capital inflows may become insufficient to stabilize the system, with an operational insolvency threshold projected during **2029**.
-
-This 2029 date is preserved as a **model output / research projection**, not as an independently verified future event.
-
-## Separation of Research and Evidence
-
-Economic model outputs must remain distinguishable from audited balance-sheet facts, realized losses, and independently verified liabilities.
-
-Drift-forensics records belong to their dedicated forensic cases and should not be embedded as operational logs in this architecture document.
+RFC 3161 output must be retained together with the certificate material needed for independent verification. External anchoring is not treated as complete until an actual receipt/proof is received and verified.
