@@ -234,3 +234,20 @@ Its potential economic value is intended to come from reusable infrastructure, f
 The financing proposal therefore links capital deployment to technical milestones, evidence and future commercial activity.
 
 This document is a technical and business planning document. It is not an independent valuation, securities offering, token-offering memorandum, legal opinion, tax opinion or guarantee of future revenue.
+
+
+## 17. Architecture discovery program — current build cycle
+
+A dedicated three-track Architecture Discovery Program is now part of the Global Work Manager:
+
+- **ARCH-01 Systems Architecture Scout** — orchestration, distributed control planes, workflow/state systems and model routing.
+- **ARCH-02 Cognitive / Agent Architecture Scout** — agents, memory, planning, tool use, routing and evaluation.
+- **ARCH-03 Verification / Infrastructure / IP Scout** — verification, provenance, observability, runtime, security and licensing.
+
+The scouts are designed to examine relevant public GitHub repositories, extract architectural patterns, check license/provenance evidence, compare those patterns with WANGA interfaces, and produce bounded adaptation proposals.
+
+This program is not an assertion of exhaustive GitHub coverage and does not copy proprietary code. External patterns remain proposals until they pass comparison, license review and verification. The program therefore increases the rate at which the existing architecture can learn from public engineering evidence without replacing WANGA's Global Work Manager or technical source of truth.
+
+The repository contains the discovery program specification, schema, query plan and pattern matrix under docs/ARCHITECTURE_DISCOVERY_* and the execution entry point at scripts/architecture_discovery.py.
+
+For financing discussions, this is a **current engineering capability being established**, not a claim that all external architectures have already been reviewed or integrated.
