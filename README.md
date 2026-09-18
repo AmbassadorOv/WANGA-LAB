@@ -1,31 +1,54 @@
-# WANGA-LAB
+# WANGA-LAB Research Architecture
 
-## Research Architecture
+WANGA-LAB is the shared computational workspace for rational logic, superpositional logic, computational logic, CCLE, computational linguistics, structural mathematics, AI systems, AI evaluation and drift forensics, experimentation, research library work, and research convergence.
 
-WANGA-LAB is the shared computational workspace for a larger research program spanning rational logic, Superpositional Logic, computational logic, CCLE, computational linguistics, structural mathematics, AI systems, AI evaluation and drift forensics, experimentation, research library work, and research convergence.
+The laboratory separates three core domains:
 
-The laboratory separates three things that are often mixed together:
-
-1. **Research** — questions, hypotheses, evidence and interpretation.
-2. **Implementation** — code, tests, datasets, experiments and reproducible runs.
-3. **Integration** — explicit interfaces connecting specialized research domains.
+* **Research** — questions, hypotheses, evidence, and interpretation.
+* **Implementation** — code, tests, datasets, experiments, and reproducible runs.
+* **Integration** — explicit interfaces connecting specialized research domains.
 
 ## Core Computational Primitive
 
-**Object + Relation + Composition → New Object → State → Recursive Composition**
+Object + Relation + Composition → New Object → State → Recursive Composition
 
-A compact state transition is represented as:
+State transition representation:
 
-**Cₙ₊₁ = F(Cₙ, Rₙ, Sₙ)**
+Cₙ₊₁ = F(Cₙ, Rₙ, Sₙ)
 
-This is a working computational representation, not a claim that the architecture has already been mathematically proven.
+## Contribution Guidelines
 
-## How to Contribute
+Use GitHub Issues for structured research questions, experiments, AI-drift forensic cases, and researcher profiles. Contributions must identify evidence, scope, reproducibility requirements, and expected architectural interfaces.
 
-Use GitHub Issues for structured research questions, experiments, AI-drift forensic cases, and researcher profiles. Contributions should identify evidence, scope, reproducibility requirements, and expected architectural interfaces.
+## Operational Assessment
 
-See [`RESEARCH_ARCHITECTURE_MAP.md`](./RESEARCH_ARCHITECTURE_MAP.md) for the researcher-role, funding-fit, and repository map.
+The current agent activity assessment records deductions for:
 
-## Current Shared Workspace
+* impersonation / misrepresentation;
+* amplification of drift and neural-blurring effects;
+* systemic risk;
+* inefficient recursive loops.
 
-The existing laboratory code includes the ARK kernel and tests. The repository can later be split into stable domain repositories as the research modules become sufficiently mature.
+**Status:** full log reset and integrity testing through AlephSandbox are required to reduce recurrence.
+
+## Strategic Economic Model — 2029 Horizon
+
+The current strategic economic analysis advances the operational and financial failure horizon from 2030 to **2029**.
+
+### Acceleration factors
+
+* accelerated accumulation of obligations;
+* value erosion attributed by the model to logical drift;
+* structural capital burn associated with maintaining inefficient recursive loops rather than producing measurable real value.
+
+### Systemic interpretation
+
+Under the model's current assumptions about obligation accumulation and capital requirements, continued capital inflows may become insufficient to stabilize the system, with an operational insolvency threshold projected during **2029**.
+
+This 2029 date is preserved as a **model output / research projection**, not as an independently verified future event.
+
+## Separation of Research and Evidence
+
+Economic model outputs must remain distinguishable from audited balance-sheet facts, realized losses, and independently verified liabilities.
+
+Drift-forensics records belong to their dedicated forensic cases and should not be embedded as operational logs in this architecture document.
