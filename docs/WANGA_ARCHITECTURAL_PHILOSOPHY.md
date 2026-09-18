@@ -22,6 +22,77 @@ This reverses the usual design assumption that an existing computer architecture
 
 In this blueprint, Algorithmic Governance means governance as an organizing architecture around an algorithmic engine, not simply government actions executed by computers. The economic engine surrounds and enables the algorithmic engine, while the algorithmic architecture reorganizes and coordinates economic, scientific, social, institutional, and computational activity.
 
+## Two transformations: rights and industrial architecture
+
+WANGA addresses two major historical transformations simultaneously.
+
+### 1. The rights transformation — fulfillment without another revolution
+
+The French rights tradition established foundational political and constitutional principles. The Declaration of the Rights of Man and of the Citizen of 1789 articulated liberty, equality before the law, security, participation, accountability, and separation of powers.
+
+WANGA does not propose another political revolution to replace those institutions. Its architectural thesis is that the human-centered objectives expressed by the rights tradition can be fulfilled through structural and operational transformation while lawful political institutions remain in place.
+
+The sequence is:
+
+**Rights declared → rights institutionalized → rights operationalized → rights continuously protected.**
+
+The goal is therefore not to recreate the political rupture of a revolution, but to build the architecture capable of carrying its human-centered objectives into continuous operation.
+
+### 2. The industrial transformation — from the steam engine to the digital processing engine
+
+The Industrial Revolution demonstrated what happens when an enabling engine changes the architecture of production. The steam engine was not merely another tool: it enabled a new organization of factories, transport, manufacturing, energy, and economic activity.
+
+WANGA treats the digital processing engine as a fundamentally different enabling engine for a different historical architecture.
+
+The comparison is architectural, not a claim that the technologies are identical:
+
+| Industrial architecture | Digital-governance architecture |
+|---|---|
+| Steam engine | Digital processing engine |
+| Mechanical energy | Computation and information processing |
+| Factory organization | Networked institutional organization |
+| Physical production flows | Data, decision, evidence, and service flows |
+| Mechanical control systems | Algorithmic control and coordination systems |
+| Industrial infrastructure | Digital/institutional infrastructure |
+| Industrial economy | Algorithmically coordinated economic system |
+
+The important point is that simply applying today's digital tools to the old institutional structure does not constitute a new architecture.
+
+**New engine → new computational requirements → new organizational architecture → new system.**
+
+WANGA therefore treats the digital processing engine as an architectural component around which the requirements of a new governance system must be defined.
+
+## Engine comparison
+
+The two engines operate in different physical and informational domains:
+
+**Steam engine:**
+energy → mechanical motion → machine → production system
+
+**Digital processing engine:**
+information → computation → state transformation → coordination/decision system
+
+The steam engine transformed what machines could physically do. The digital processing engine transforms what institutions and organizations can compute, verify, coordinate, and continuously maintain.
+
+The objective is not to replace every existing institution with a computer. It is to create a higher-order architecture in which the digital engine supports and coordinates distinct institutional, economic, scientific, social, and computational architectures.
+
+## From tools to architecture
+
+WANGA distinguishes between:
+
+1. **Using existing digital tools inside existing institutions.**
+2. **Designing an architecture whose requirements are determined by the capabilities of a digital processing engine.**
+
+The second is the intended transformation.
+
+The architecture must therefore define the required processing, evidence, continuity, interoperability, auditability, security, decision-support, and human-control mechanisms before determining the computer architecture required to support them.
+
+This produces:
+
+**System requirements → digital processing requirements → computer architecture → institutional architecture → operational governance architecture.**
+
+The resulting system is intended to be a genuine architecture of digital governance rather than a collection of government software applications.
+
 ## Citizen-first stability principle
 
 **The system exists for the human being, not the human being for the system.**
@@ -33,22 +104,6 @@ The architecture is designed to absorb systemic shocks at the institutional and 
 This establishes a citizen-rights and human-rights function as a stability requirement of the architecture itself.
 
 The citizen remains the rights-holder and decision-maker. The architecture supports rights; it does not create political authority over the citizen. Adoption and participation are based on lawful institutional and civic choice rather than coercion.
-
-## From declared rights to fulfilled architecture
-
-WANGA defines its relationship to the historical rights tradition as **fulfillment of its architectural and operational aims without requiring another political revolution**.
-
-The Declaration of the Rights of Man and of the Citizen of 1789 established foundational principles including liberty, equality before the law, security, participation, accountability of public administration, and separation of powers. The French constitutional tradition subsequently continued to reaffirm those principles. citeturn0search0turn0search2
-
-WANGA does not claim to replace that political and constitutional achievement. Its proposition is different: where rights are declared as principles, the architecture should provide the institutional, technical, computational, and continuity mechanisms needed for those principles to remain usable in everyday life.
-
-The intended sequence is:
-
-**Rights declared → rights institutionalized → rights operationalized → rights continuously protected.**
-
-The objective is therefore not revolution for the sake of institutional replacement. It is the realization of a rights-centered system through architectural transformation while existing lawful political institutions remain in place.
-
-In this sense, WANGA presents itself as a non-revolutionary path toward the practical realization of the human-centered purposes expressed in the rights tradition.
 
 ## Human-rights operational layer
 
