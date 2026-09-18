@@ -1,0 +1,39 @@
+name: WANGA-LAB POC CI
+
+on:
+  push:
+    branches: ["main", "poc-autonomous-build"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect committed secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE --exclude-dir=.git --exclude='*.lock' \
+            '(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY)' .; then
+            echo "Potential credential material detected."
+            exit 1
+          fi
+      - name: Python syntax check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m compileall -q . -x '(^|/)\.git(/|$)'
+      - name: Verify required architecture documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f POC_EXECUTION_PLAN_V1.md
+          test -f wanga-research-groups/neural-thinking-machine/NTM_ORCHESTRATOR_V1.md
+          test -f wanga-research-groups/neural-thinking-machine/ORCHESTRATION_MODEL_V1.md
+          test -f ai-drift-forensics/VERIFICATION_PROTOCOL.md
