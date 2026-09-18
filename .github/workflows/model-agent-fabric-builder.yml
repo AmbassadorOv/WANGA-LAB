@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: model-agent-fabric-builder
+  group: wanga-autonomous-build
   cancel-in-progress: false
 
 jobs:
