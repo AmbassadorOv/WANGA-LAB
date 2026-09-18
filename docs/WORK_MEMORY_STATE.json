@@ -62,9 +62,16 @@
     "MODEL_FAMILY_REGISTRY.yml": "25 model families allocated to exactly 5,000 target slots",
     "MODEL_AGENT_REGISTRY.schema.json": "registry contract created",
     "model_agent_allocator.py": "deterministic 5,000-slot scaffold generator created",
-    "model-agent-fabric-builder.yml": "automated allocation validation/commit workflow created",
+    "model-agent-fabric-builder.yml": "serialized concurrency with architecture builder",
     "ARCHITECTURE_BUILD_MANIFEST.yml": "ordered source integration manifest created",
-    "WIX_ARCHITECTURE_SNAPSHOT.json": "21 Wix contexts captured as architecture evidence"
+    "WIX_ARCHITECTURE_SNAPSHOT.json": "21 Wix contexts captured as architecture evidence",
+    "WORK_MEMORY_PROTOCOL_V1.md": "durable work-memory rules and authority boundaries",
+    "WORK_MEMORY_STATE.json": "persistent current-state checkpoint",
+    "MODEL_DISCOVERY_AND_BINDING_V1.md": "discovery/binding lifecycle and failure semantics",
+    "MODEL_CANDIDATE_REGISTRY.schema.json": "machine-readable candidate contract",
+    "MODEL_ADAPTER_CONTRACT_V1.md": "provider/runtime adapter boundary",
+    "MODEL_CAPABILITY_PROBE_V1.md": "bounded capability and health verification contract",
+    "NTM_MODEL_AGENT_ENVELOPE.schema.json": "bounded handoff contract to NTM"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -76,13 +83,13 @@
     "full_wix_content_audit": false
   },
   "next_actions": [
-    "build deterministic model discovery contract and candidate registry",
-    "build provider/runtime adapter contract without storing credentials",
-    "build capability and health probe contract",
-    "build NTM envelope contract and verification handoff",
-    "serialize each construction step into work-memory state",
-    "unify builder concurrency so multiple autonomous writers cannot race on the same build branch",
-    "continue source-branch integration and record conflicts without guessing"
+    "implement deterministic candidate discovery scaffold that produces no invented endpoints",
+    "implement adapter registry and normalized adapter-result envelope",
+    "implement capability/health probe runner in dry-run mode until real provider bindings exist",
+    "implement NTM envelope emission from VERIFIED model-agent records",
+    "add schema validation for model-agent allocation, candidates, and NTM envelopes",
+    "integrate existing source branches in dependency order and record conflicts without guessing",
+    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
   ],
   "last_verification": {
     "date": "2026-09-18",
@@ -93,6 +100,16 @@
     "source_history_rewritten": false,
     "model_slots_allocated": 5000,
     "model_slots_connected": 0,
-    "model_slots_verified": 0
+    "model_slots_verified": 0,
+    "new_commits": [
+      "3d81f810654af506b4b679aa40eb4c2c31900b3e",
+      "555270cac075d60c18bbb4328b9c40d776a2c885",
+      "c4db6095c667588bd07fb649335550091b4155cf",
+      "83d4941d5f4fa78353291ac8e9068c5dd4760486",
+      "00f982cda547f57d3427665982b2ae62ade2d3ab",
+      "96b7769249597898f40e4a972144ff97316f9e7f",
+      "8b37f869d7c8a4a55d03f73226950d70c1c9f409",
+      "f9dbf874a62f0d53946f17b142b31a146e392552"
+    ]
   }
 }
