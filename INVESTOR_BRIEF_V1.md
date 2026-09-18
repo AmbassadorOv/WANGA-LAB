@@ -27,3 +27,28 @@ Any future digital-asset or token mechanism is a separate financing and legal wo
 ## Investment thesis
 
 The investment focus is the underlying research, software architecture and orchestration technology. The immediate objective is to move from the current implementation into a funded scientific and engineering program with stronger validation, compute capacity and research personnel.
+
+
+---
+
+## Alignment update — September 2026
+
+The investor brief is now aligned with the bank-facing financing architecture and the current WANGA-LAB White Paper.
+
+The current architecture is described as:
+
+**WANGA OS → Global Work Manager → Model Fabric → Digital Model Agents → Providers/Runtimes → Evidence/Drift/Verification → Rational Logic → NTM → Work Memory**
+
+The long-term scaling target is up to **5,000 model slots**, plus a future Perspective Layer of approximately **1,000 perspective nodes**. These are architectural targets, not claims of current live deployment.
+
+The economic model is based on reusable AI infrastructure, orchestration, verification, drift forensics, provenance, formal reasoning, licensing, enterprise deployment and research/technology services.
+
+The current financing discussion uses a staged initial infrastructure frame of up to **NIS 20 million**.
+
+A long-term scenario for a token issuance of up to **USD 1 trillion nominal target scale** is documented only as a future financing scenario. It is not current cash, collateral, profit or a guaranteed fundraising outcome.
+
+For investor and bank discussions, future actual financing proceeds may be contractually allocated, where lawful and agreed, toward debt repayment and continued growth.
+
+See:
+- `docs/WHITEPAPER_BANK_INVESTOR_V2.md`
+- `docs/BANK_FINANCING_ALIGNMENT_V1.md`
