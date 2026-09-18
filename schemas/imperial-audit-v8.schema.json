@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Imperial Audit Evidence Package",
+  "type": "object",
+  "required": ["schema_version", "audit", "integrity"],
+  "properties": {
+    "schema_version": {"const": "8.0"},
+    "audit": {"type": "object", "required": ["exposure","screw","recovery"]},
+    "integrity": {
+      "type": "object",
+      "required": ["S1","S2","S3","timestamp","MASTER_CHAIN_HASH"],
+      "properties": {
+        "S1": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+        "S2": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+        "S3": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+        "timestamp": {"type":"string"},
+        "MASTER_CHAIN_HASH": {"type":"string","pattern":"^[a-f0-9]{64}$"}
+      }
+    },
+    "legal_binding": {"type":["object","null"]}
+  }
+}
