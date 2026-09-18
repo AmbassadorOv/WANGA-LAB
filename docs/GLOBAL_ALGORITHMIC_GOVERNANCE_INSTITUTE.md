@@ -4,104 +4,187 @@
 
 The Global Institute for Algorithmic Governance is a non-political, non-partisan architectural institute. It is not a political party, government, or political authority. It does not determine political outcomes.
 
-Its purpose is to develop the architecture that organizes and connects scientific, economic, social, institutional, algorithmic, and computational systems.
+Its purpose is to develop an Architecture of Architectures that organizes and connects scientific, economic, social, institutional, algorithmic, computational, evidence, and resilience systems.
 
 ## Institutional position
 
-The institute is conceived as a technical architectural layer operating within the insurance/resilience framework of governmental and institutional systems. Its role is continuity, evidence, coordination, architectural standards, systemic resilience, and protection of the practical ability of people to exercise their rights.
+The institute is conceived as a technical architectural layer operating within the resilience and institutional-insurance framework of governmental and institutional systems.
 
-It does not itself provide insurance or make a financial guarantee. Its architecture can support the institutional mechanisms that provide continuity and risk management.
+Its role is continuity, evidence, coordination, architectural standards, systemic resilience, and protection of the practical ability of people to exercise their rights.
+
+It does not itself provide an insurance guarantee, make political decisions, or replace lawful institutions.
 
 ## Architecture of Architectures
 
-The institute treats the world system as a system of interacting architectures. Each internal architecture retains its own function while communicating through the higher-order architecture.
+The institute treats the world system as a system of interacting architectures. Each internal architecture retains its own function while communicating through a higher-order architecture.
 
-Architecture of Architectures → scientific + economic + social + institutional + algorithmic + computational architectures
+**Architecture of Architectures → scientific + economic + social + institutional + algorithmic + computational + resilience architectures**
 
-## Citizen Rights and Human Rights
+The purpose of the higher-order layer is not to erase these distinctions but to define how they interact, exchange evidence, preserve continuity, and contain failures.
 
-The institute adopts a foundational principle:
+## The human-centered principle
 
 **The system exists for the human being; the human being does not exist for the system.**
 
-Human rights and citizen rights are therefore treated as an operational stability requirement, not merely as statements of principle.
+This principle is both a philosophical foundation and a stability requirement.
 
-The architecture is designed to protect the citizen from becoming the primary bearer of institutional failure. When a government agency, service, data interface, or institutional connection is disrupted, the architecture should contain and absorb the disruption at the organizational layer whenever possible, preserving continuity for the people who depend on the system.
+A system becomes unstable when institutional complexity, failure, or administrative burden is transferred directly to the person who depends on it.
 
-The citizen remains the rights-holder and decision-maker. The institute does not create political authority over citizens and does not replace elected institutions, courts, or lawful governmental authority.
+WANGA therefore places the burden of coordination and failure containment primarily at the architectural and institutional layer whenever technically and legally possible.
+
+The citizen remains the rights-holder and decision-maker.
 
 ## Fulfillment of the rights vision without another revolution
 
-WANGA defines its role as the architectural fulfillment of human-centered objectives expressed in the modern rights tradition, without requiring another political revolution.
+WANGA defines a historical function beyond ordinary digitalization: it seeks an architectural means of carrying forward the human-centered objectives of the modern rights tradition without requiring another political revolution.
 
-The Declaration of the Rights of Man and of the Citizen of 1789 established principles including liberty, equality before the law, security, participation, accountability of public administration, and separation of powers. These principles subsequently remained part of French constitutional development.
+The 1789 Declaration of the Rights of Man and of the Citizen established principles including liberty, equality before the law, security, accountability of public administration, and separation of powers.
 
-WANGA does not seek to replace those political achievements. It changes the organizational and operational architecture through which such principles can be carried into continuous practice.
+WANGA does not propose to replace those political achievements.
 
-The progression is:
+Its proposition is architectural:
 
 **Rights declared → rights institutionalized → rights operationalized → rights continuously protected.**
 
-The intended transformation is therefore a structural transformation without political revolution: existing lawful political institutions remain, while the architecture connecting institutions, information, computation, economic systems, and citizens is redesigned around human needs.
+The objective is therefore **fulfillment of the vision without another revolution**.
+
+In this model, a historical political transformation establishes principles and institutions; a subsequent architectural transformation can address the practical problem of making those principles continuously operable, observable, resilient, and accessible.
+
+This is not a claim that WANGA replaces history or political institutions. It is a definition of the additional architectural role WANGA assigns itself.
 
 ## The second transformation: industrial architecture
 
 WANGA also addresses the transformation associated with the Industrial Revolution.
 
-The steam engine represents a useful architectural model: a new enabling engine changed the requirements and organization of production, transportation, factories, energy systems, and economic activity.
+The steam engine is treated as an example of an enabling engine that changed the architecture around production. It enabled new requirements and organizations for factories, transportation, manufacturing, energy, and economic activity.
 
-WANGA argues that the digital processing engine should be treated as a comparable architectural transition in a different domain.
+WANGA treats the digital processing engine as a different enabling engine for a different domain.
 
-The comparison is:
+### Steam engine architecture
 
-**Industrial system**
-- Steam engine
-- Mechanical energy
-- Physical production
-- Factory organization
-- Industrial infrastructure
-- Mechanical control
+**energy → mechanical motion → machine → production system**
 
-**Digital governance system**
-- Digital processing engine
-- Computation and information processing
-- Information, decision, evidence, and service flows
-- Networked institutional organization
-- Digital and institutional infrastructure
-- Algorithmic coordination with human control
+### Digital processing engine architecture
 
-The important distinction is that putting existing digital tools inside an unchanged institutional structure is not, by itself, a new architecture.
+**information → computation → state transformation → coordination and decision-support system**
+
+The comparison is architectural rather than technological equivalence.
+
+| Industrial system | Digital governance system |
+|---|---|
+| Steam engine | Digital processing engine |
+| Mechanical energy | Computation and information processing |
+| Physical production | Information, decision, evidence, and service flows |
+| Factory organization | Networked institutional organization |
+| Industrial infrastructure | Digital and institutional infrastructure |
+| Mechanical control | Algorithmic coordination with human oversight |
+| Industrial economy | Algorithmically coordinated economic and financial system |
+
+## From digitalization to digital governance
+
+WANGA distinguishes two different transformations:
+
+**Digitalization of government**
+- add software;
+- digitize records;
+- add portals;
+- automate existing procedures;
+- add AI to existing institutional structures.
+
+**Architecture of digital governance**
+- define the requirements of the digital processing engine;
+- derive new computational requirements;
+- derive organizational requirements;
+- redesign institutional interfaces;
+- establish evidence and continuity paths;
+- derive the computer architecture needed to support the complete system.
 
 The intended sequence is:
 
 **New enabling engine → new computational requirements → new organizational requirements → new institutional architecture → new digital governance architecture.**
 
-## The two engines
+The second is the WANGA objective.
 
-WANGA therefore defines two fundamentally different enabling-engine architectures:
+## Two historical transformations, one architectural program
 
-**Steam engine:**
-energy → mechanical motion → machine → production system
+WANGA therefore looks backward at two major transformations and forward to the architecture that can follow them.
 
-**Digital processing engine:**
-information → computation → state transformation → coordination and decision-support system
+### Rights transformation
 
-The steam engine expanded the physical capabilities of machines and reorganized industrial production.
+**Political and constitutional transformation → rights and institutions → operational architecture → continuous practical protection**
 
-The digital processing engine expands the computational capabilities of institutions and organizations: processing information, maintaining evidence, coordinating systems, detecting failures, supporting decisions, and preserving continuity.
+### Industrial transformation
 
-The engines are not technologically identical. Their significance is architectural: each becomes meaningful when the surrounding system is redesigned around the capabilities and requirements of the enabling engine.
+**Steam engine → industrial architecture → digital processing engine → digital-governance architecture**
 
-## Toward a genuine digital governance architecture
+The combined model is:
 
-The institute therefore distinguishes between:
+**Historical transformation → enabling principle or engine → institutionalization → architectural requirements → operational system.**
 
-1. **Digitalization of an existing government** — adding software, databases, portals, automation, and AI to existing structures.
-2. **Architecture of digital governance** — defining the organizational system around the capabilities of a digital processing engine and then deriving the required computing architecture.
+WANGA's additional role is to build the architectural layer that can carry historical objectives into continuous operation rather than treating every unresolved implementation problem as a reason for another revolution.
 
-WANGA is concerned with the second.
+## Citizen rights as architecture
 
-Its architecture must therefore define requirements for:
+Human rights and citizen rights are treated as operational requirements.
+
+The architecture is intended to support:
+
+1. **Continuity** — essential services and institutional functions remain available through disruption where technically and legally possible.
+2. **Accessibility** — people can reach systems through understandable and usable interfaces.
+3. **Accountability** — actions can be traced to responsible systems and authorities.
+4. **Transparency** — relevant records, evidence, and decision processes can be inspected according to applicable law.
+5. **Participation** — people retain meaningful avenues to participate, review, question, and challenge decisions affecting them.
+6. **Remedy** — mechanisms for correction, review, appeal, and lawful redress remain available.
+7. **Information protection** — personal information is handled according to applicable rights, law, and security requirements.
+8. **Resilience** — institutional failures are contained so their consequences are not unnecessarily transferred to citizens.
+
+The architecture does not grant rights. The citizen remains the rights-holder.
+
+## Preservation of existing institutions
+
+WANGA does not require the disappearance of governments, courts, legislatures, public agencies, economic institutions, or existing lawful political structures.
+
+Its intended transformation is primarily organizational and computational:
+
+**existing political authority remains → organizational architecture changes → institutional interfaces become structured → evidence and continuity become explicit → digital governance becomes operational.**
+
+This is why the framework can be understood as an architecture of preservation as well as transformation.
+
+The existing systems remain in place while a higher-order architecture works to preserve continuity between them.
+
+## Citizen protection and failure containment
+
+The architecture is designed around a simple operational objective:
+
+**Institutional failure should be contained at the institutional layer before it becomes unnecessary citizen-level failure.**
+
+This means that when a service, data connection, institutional interface, or administrative process fails, the architecture should attempt to preserve continuity and provide evidence, fallback paths, review, and lawful remedy rather than transferring the entire burden to the individual.
+
+The citizen is therefore removed from the position of being the primary absorber of systemic failure.
+
+## Economic architecture
+
+Economic organization is an internal architecture, not an external accessory.
+
+The economic engine surrounds and enables the algorithmic engine through financial continuity, resource allocation, accounting, incentives, and institutional sustainability.
+
+The algorithmic architecture must therefore coordinate with, rather than ignore, economic and financial requirements.
+
+## Institutional adoption
+
+WANGA is not presented as something imposed on citizens because existing governments are considered incapable.
+
+The intended model is lawful institutional and civic choice.
+
+People and institutions can adopt the architecture because it demonstrates measurable protection of rights, continuity, accessibility, accountability, evidence, resilience, and service quality.
+
+The architecture must earn adoption through performance rather than claim authority through imposition.
+
+## Genuine digital governance architecture
+
+The institute therefore defines digital governance as an architectural system, not a collection of government applications.
+
+The required architecture includes:
 
 - computation;
 - evidence and provenance;
@@ -116,39 +199,39 @@ Its architecture must therefore define requirements for:
 - economic and financial continuity;
 - resilience under systemic disruption.
 
-The resulting architecture is not intended to eliminate governments or human institutions. It is intended to provide an architectural system through which those institutions can operate with a new computational substrate while retaining lawful human authority.
+The computer is derived from these requirements rather than determining them in advance.
 
-## Rights in operation
+## Architectural hierarchy
 
-The architecture is intended to support measurable practical capabilities:
+The core hierarchy is:
 
-1. **Continuity** — essential services and institutional functions remain available through disruption where technically and legally possible.
-2. **Accessibility** — citizens can reach the systems and services through understandable interfaces.
-3. **Accountability** — institutional actions can be traced to responsible systems and authorities.
-4. **Transparency** — relevant decisions, records, and evidence can be inspected according to applicable law.
-5. **Participation** — people retain meaningful avenues to participate, review, question, and challenge decisions affecting them.
-6. **Remedy** — systems preserve mechanisms for correction, review, appeal, and lawful redress.
-7. **Information protection** — personal information is handled according to applicable rights, law, and security requirements.
-8. **Resilience** — institutional failures are contained so their consequences are not unnecessarily transferred to citizens.
+**World/System Requirements**
+→ **Architecture of Architectures**
+→ **Internal Architectures**
+→ **Computational Requirements**
+→ **Computer Architecture**
+→ **Operational Digital Governance**
 
-This creates a citizen-first architecture: institutional complexity is carried by the system rather than being unnecessarily transferred to the person using it.
-
-## Adoption principle
-
-The architecture is not presented as something imposed on citizens because existing institutions are incapable of functioning. It is designed as an optional and institutionally lawful architecture that people and institutions can choose to adopt.
-
-The objective is to earn adoption through demonstrable protection of rights, continuity, accessibility, accountability, and service quality.
-
-## Long-term objective
-
-1. Scientific knowledge can be organized by structural position and relationships.
-2. Economic and financial continuity can be represented within the same architecture.
-3. Institutional systems can coordinate through defined interfaces.
-4. Algorithmic systems can operate as an organizing engine rather than only as administrative tools.
-5. Computer architecture can be derived from the requirements of the complete system.
-6. Human and citizen rights can be represented as explicit architectural requirements and tested through operational evidence.
-7. The digital processing engine can serve as the computational substrate of a new architecture of digital governance rather than merely as another tool inside an unchanged institutional structure.
+A computer architecture that cannot support the requirements of the larger system is therefore an architectural mismatch.
 
 ## Scope boundary
 
-The institute's scope is architectural and institutional. It does not claim authority over states, citizens, elections, political parties, or political decisions. The framework is intended to support human and institutional authority rather than replace it.
+The institute's scope is architectural and institutional.
+
+It does not claim authority over states, citizens, elections, political parties, or political decisions.
+
+It does not replace courts, legislatures, governments, or human judgment.
+
+Its role is to provide the architectural framework through which existing institutions can become more continuous, evidence-based, interoperable, resilient, and human-centered.
+
+## Core institutional thesis
+
+WANGA is an **Architecture of Architectures for human-centered digital governance**.
+
+Its additional historical role is:
+
+**not another revolution, but the architecture for realizing and maintaining the objectives of earlier transformations.**
+
+Or, more simply:
+
+**Fulfill the vision without another revolution.**
