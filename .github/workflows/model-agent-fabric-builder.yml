@@ -1,0 +1,52 @@
+name: Model Agent Fabric Builder
+
+on:
+  push:
+    branches: [autobuild/architecture-construction]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: model-agent-fabric-builder
+  cancel-in-progress: false
+
+jobs:
+  allocate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout build branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: \${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate and allocate
+        run: |
+          python -m compileall -q scripts
+          python scripts/model_agent_allocator.py
+
+      - name: Validate generated allocation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("docs/MODEL_AGENT_ALLOCATION.json").read_text())
+          assert d["target_model_slots"] == 5000
+          assert d["allocated_slots"] == 5000
+          assert d["connected_slots"] == 0
+          assert d["verified_slots"] == 0
+          print("MODEL_AGENT_ALLOCATION: structurally valid")
+          PY
+
+      - name: Commit allocation state
+        run: |
+          git config user.name "wanga-architecture-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/MODEL_AGENT_ALLOCATION.json
+          if ! git diff --cached --quiet; then
+            git commit -m "autobuild: allocate digital model agent fabric"
+            git push origin HEAD:autobuild/architecture-construction
+          fi
