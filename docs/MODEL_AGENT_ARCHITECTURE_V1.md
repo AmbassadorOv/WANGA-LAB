@@ -8,9 +8,10 @@ System position:
 WANGA OS -> Model Fabric -> Digital Model Agents -> Model Providers/Runtimes
 Model Fabric -> existing Work Manager / Orchestrator
 Model Fabric -> Evidence / Drift Forensics
-Model Fabric -> Neural Thinking Machine
+Model Fabric -> Rational Logic -> Neural Thinking Machine
+Rational Logic -> Evidence / Verification
 
-The Neural Thinking Machine (NTM) remains the high-level cognitive CPU. It receives bounded representations, evidence, conflicts, and verified findings; it does not become an unrestricted executor.
+The Neural Thinking Machine (NTM) remains the high-level cognitive CPU. Rational Logic is a complementary formal reasoning layer; it is not an executor and does not replace NTM. It receives bounded representations, evidence, conflicts, and verified findings; it does not become an unrestricted executor.
 
 Agent lifecycle:
 DISCOVER -> CLASSIFY -> ASSIGN_GENERAL_ROLE -> ASSIGN_PRIVATE_ROLES -> ADAPTER_BIND -> CAPABILITY_PROBE -> POLICY_BIND -> REGISTER -> HEALTH_CHECK -> ENABLE
@@ -25,7 +26,7 @@ Private roles:
 Each model agent receives a bounded set derived from declared capabilities: task decomposition, hypothesis generation, evidence extraction, source comparison, code synthesis, code review, test generation, semantic normalization, structural comparison, contradiction detection, drift classification, retrieval query planning, provenance packaging, confidence estimation, output formatting, escalation to NTM, verification request, tool invocation, latency fallback, context compression, multimodal alignment, embedding generation, reranking, and translation normalization.
 
 Routing:
-task -> capability match -> policy filter -> model-agent selection -> execution -> evidence envelope -> verification -> NTM escalation when required
+task -> capability match -> policy filter -> model-agent selection -> execution -> evidence envelope -> Rational Logic check when required -> verification -> NTM escalation when required
 
 The existing WANGA Work Manager / Orchestrator remains the coordination layer. This fabric does not create a second global task manager.
 
