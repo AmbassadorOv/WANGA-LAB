@@ -80,3 +80,19 @@ Technical references:
 ## Investor data-room status discipline
 
 Investor materials distinguish the current verified/build state from target architecture. The 5,000-model fabric and approximately 1,000 Perspective Layer are scaling targets, not claims of current deployment. The USD 1 trillion token figure remains a future financing scenario and is not current cash, revenue, collateral or a guaranteed fundraising outcome.
+
+
+## Architecture discovery — September 2026 build cycle
+
+The Global Work Manager now includes a dedicated Architecture Discovery Manager supervising three bounded architecture-scout tracks: Systems Architecture, Cognitive/Agent Architecture, and Verification/Infrastructure/IP.
+
+Their purpose is to systematically examine relevant public GitHub engineering patterns, classify them, check licensing/provenance, compare them against WANGA architecture, and generate evidence-backed adaptation proposals. This is a targeted discovery program rather than a claim of exhaustive GitHub coverage.
+
+This work is intended to accelerate the next month of engineering while preserving Rational Logic as the primary formal-reasoning research/publication phase. External patterns are not represented as WANGA-owned IP merely because they are discovered; provenance, licensing and adaptation records are maintained separately.
+
+Technical evidence for the program is maintained in:
+- docs/ARCHITECTURE_DISCOVERY_PROGRAM_V1.md
+- docs/ARCHITECTURE_DISCOVERY_REGISTRY.schema.json
+- docs/ARCHITECTURE_PATTERN_MATRIX_V1.md
+- docs/ARCHITECTURE_DISCOVERY_QUERIES_V1.yml
+- .github/workflows/architecture-discovery-scouts.yml
