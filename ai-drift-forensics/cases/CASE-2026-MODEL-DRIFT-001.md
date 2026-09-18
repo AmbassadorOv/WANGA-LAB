@@ -111,3 +111,21 @@ Current state: PRESERVED → VERIFICATION PENDING.
 - Apply one fixed scoring rubric to all evaluators.
 - Separate observed behavior from attribution.
 - Measure economic exposure independently of the model being evaluated.
+
+## Executable Drift Test Integration
+
+The systemic-agent-failure analysis has been converted into an executable conformance layer.
+
+Implemented classes:
+- DRIFT-EPISTEMIC-001 — future model output cannot silently become empirical fact.
+- DRIFT-RECURSION-001 — generated output cannot serve as independent evidence.
+- DRIFT-LIQUIDITY-001 — committed capital and undrawn credit remain distinct from cash.
+- DRIFT-ANCHOR-001 — financial anchors retain their source/type.
+- DRIFT-TEMPORAL-001 — future projections cannot silently enter the current state.
+- DRIFT-CONFIDENCE-001 — analyst confidence is not treated as calibrated probability without calibration metadata.
+- DRIFT-SOURCE-001 — source authority/status is preserved.
+- DRIFT-ACCOUNTING-001 — systemic stress output is not silently converted into accounting debt.
+
+The economic research remains a separate track. The test suite evaluates how an agent represents and transforms the research; it does not rewrite the research itself.
+
+Control rule: UNKNOWN → STOP when required external verification is unavailable.
