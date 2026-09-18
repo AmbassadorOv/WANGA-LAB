@@ -16,14 +16,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install test runner
+        run: python -m pip install --upgrade pip pytest
       - name: Syntax check
         run: python -m compileall imperial-audit-core
+      - name: Unit and integrity tests
+        working-directory: imperial-audit-core
+        env:
+          PYTHONPATH: .
+        run: python -m pytest -q
       - name: Hash-chain smoke test
+        working-directory: imperial-audit-core
+        env:
+          PYTHONPATH: .
         run: |
-          PYTHONPATH=. python - <<'PY'
-          from imperial_audit_core.src.crypto.sha256_chain import build_chain
-          a=build_chain({"x":1},{"y":2},{"z":3},"2026-01-01T00:00:00Z")
-          b=build_chain({"x":1},{"y":2},{"z":4},"2026-01-01T00:00:00Z")
-          assert a["MASTER_CHAIN_HASH"] != b["MASTER_CHAIN_HASH"]
-          print("PASS")
+          python - <<'PY'
+          from src.crypto.sha256_chain import build_chain
+          a=build_chain({'x':1},{'y':2},{'z':3},'2026-01-01T00:00:00Z','contract-a')
+          b=build_chain({'x':1},{'y':2},{'z':4},'2026-01-01T00:00:00Z','contract-a')
+          assert a['MASTER_CHAIN_HASH'] != b['MASTER_CHAIN_HASH']
+          assert a['LEGAL_CONTRACT_HASH'] == 'contract-a'
+          print('PASS')
           PY
