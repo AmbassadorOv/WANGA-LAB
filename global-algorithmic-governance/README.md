@@ -1,225 +1,424 @@
 # Global Algorithmic Governance Institute
 
-## Definition
+## Introduction — the complete architecture
 
-The **Global Algorithmic Governance Institute (GAGI)** is the proposed international research, standards, coordination, and systems-design institute for an algorithmic economic and institutional operating architecture.
+The **Global Algorithmic Governance Institute (GAGI)** is proposed as the research, systems-design, standards, and coordination center for a new hybrid layer of economic and institutional organization.
 
-It is not defined here as a sovereign government, regulator, bank, insurer, or court. Its function is to design the rules, models, evidence standards, interfaces, and coordination mechanisms by which complex institutions can operate together.
+The architecture begins from a simple observation: modern economic activity is no longer a single mechanism. It is a network of knowledge, science, computation, production, capital, assets, banking, trade, insurance, reinsurance, law, verification, information, and institutional decision-making.
 
-The institute treats governance as an executable system:
+The purpose of the institute is therefore not to create another isolated institution. It is to define the **operating architecture that connects these existing functions into an observable, interoperable, continuously verified system**.
 
-**OBSERVE → CLASSIFY → RELATE → VERIFY → REASON → DECIDE → EXECUTE → MONITOR → CORRECT → AUDIT**
+The model can be understood as a second economic operating engine alongside existing economic mechanisms. It does not require the existing engine to disappear. It adds a computational and coordination layer capable of connecting functions that are normally separated across institutions.
 
-The objective is not to replace existing institutions, but to provide an additional interoperable layer for coordinating information, decisions, risk, assets, contracts, verification, and continuity across them.
+### The complete architecture
 
-## The global algorithmic economic engine
+**KNOWLEDGE → SCIENCE → COMPUTATION → CAPABILITY → PRODUCTION → ASSETS / RIGHTS → CAPITAL → TRANSACTIONS / TRADE → BANKING → INSURANCE → REINSURANCE / RISK TRANSFER → RESERVES / CONTINUITY**
 
-The institute's central systems thesis is that the next economic operating layer can be hybrid: it combines human institutions, formal rules, computation, evidence, networks, and continuous verification.
+Across the entire chain runs a common control layer:
 
-The engine has two complementary domains:
+**EVIDENCE → RELATIONS → VERIFICATION → STATE → MONITORING → AUDIT**
 
-### 1. Core / Capacity
+The institute defines the architecture and standards.
 
-This domain represents what the system can hold, produce, govern, verify, or deploy:
+**WANGA** provides the technical evidence, asset-linking, verification, and continuity infrastructure.
+
+**AI and computational systems** provide classification, relationship analysis, deterministic processing, simulation, monitoring, and bounded execution.
+
+**Participating institutions** retain their own legal, financial, commercial, and operational responsibilities.
+
+The result is a **hybrid system**:
+
+**Human institutions + formal logic + computation + evidence + networks + independent verification + continuous audit**
+
+---
+
+## 1. The global algorithmic economic engine
+
+The central research object of the institute is the **Global Algorithmic Economic Engine**.
+
+It has three interacting domains.
+
+### A. Core / Capacity
+
+This represents what the system can know, hold, produce, finance, verify, or deploy:
 
 - knowledge and research;
+- scientific and technical capability;
 - productive capacity;
 - capital and reserves;
 - assets and rights;
-- institutional capacity;
-- computing capacity;
+- institutions;
 - infrastructure;
+- computing capacity;
 - strategic dependencies.
 
-### 2. Flow / Coordination
+### B. Flow / Coordination
 
-This domain represents what moves through the system:
+This represents what moves through the system:
 
+- information;
 - transactions;
 - trade;
 - financing;
+- settlement;
+- contractual obligations;
 - insurance;
 - reinsurance and risk transfer;
-- settlement;
-- verification;
-- information;
-- contractual obligations;
-- exposure and risk.
+- exposure;
+- capital and value flows.
 
-### 3. Continuity / Control
+### C. Continuity / Control
 
-The third layer continuously connects core and flow:
+This connects Core and Flow:
 
-**asset → evidence → claimant → right → transaction → risk → coverage → verification → audit → continuity**
+**asset → evidence → claimant → right → transaction → exposure → risk → coverage → verification → audit → continuity**
 
-This layer does not create legal truth by itself. It records evidence, provenance, verification state, dependencies, changes, and accountable decisions.
+The continuity layer makes changes visible and creates a persistent record of how a system state was established.
 
-## What makes the engine algorithmic
+---
 
-The system is algorithmic because every important object can be represented as a defined state with:
+## 2. Why the engine is hybrid
 
-- identity;
-- type;
-- source evidence;
-- relations;
-- verification references;
-- current status;
-- permitted transitions;
-- responsible actor;
-- timestamp;
-- audit record.
+The proposed architecture is neither purely centralized nor purely decentralized.
 
-The system therefore does not treat an institution as a single opaque object. It models the relationships between its assets, claims, obligations, transactions, risks, counterparties, evidence, and continuity dependencies.
+It is:
 
-## The hybrid operating model
+**distributed in participation + standardized in representation + algorithmic in coordination + human in accountability**
 
-The engine is neither purely centralized nor purely decentralized.
+A bank remains a bank.
 
-It is **distributed in participation** and **structured in rules**.
+An insurer remains an insurer.
 
-Different institutions retain their own legal authority and operational responsibilities, while the shared layer provides common schemas, verification protocols, interoperability, auditability, and continuity mechanisms.
+A reinsurer remains a reinsurer.
 
-The resulting model is:
+A court remains a court.
 
-**many institutions + common protocol + independent verification + algorithmic coordination + human accountability**
+A regulator remains a regulator.
 
-## Classical logical foundation
+A research institution remains a research institution.
 
-The institute uses a classical analytical structure inspired by Aristotelian logic as an engineering discipline, not as a claim that ancient logic alone solves modern systems.
+The common algorithmic layer does not erase these roles. It provides a shared language through which their relevant objects, relations, evidence, decisions, and dependencies can be connected.
 
-### Definition and classification
+---
 
-Every object must first be identified by what it is and what class it belongs to.
+## 3. The institute as the architecture center
 
-**What is it?**
+The institute is responsible for the layer above individual implementations.
+
+It researches and defines:
+
+- system architecture;
+- formal models;
+- common schemas;
+- interoperability;
+- verification protocols;
+- algorithmic governance;
+- economic-system interfaces;
+- continuity architecture;
+- AI-agent governance;
+- standards;
+- audit methodology;
+- experimental implementations.
+
+The institute therefore functions as an **architecture and standards center**, not as a replacement for existing legal institutions.
+
+---
+
+## 4. Classical logical foundation
+
+The architecture uses classical analytical methods as an engineering foundation.
+
+The basic sequence is:
+
+### Classification
+
+**What is the object?**
+
+An asset, document, institution, transaction, contract, risk, claim, event, or other defined object must first be classified.
 
 ### Relation and proposition
 
-Objects are then connected through explicit relations and propositions.
+**What is connected to what, and what is being asserted?**
 
-**What is it related to, and what is asserted about that relation?**
+Relations are explicit rather than assumed.
 
-### Inference and decision
+### Inference
 
-Only after classification and relation are established may the system derive a conclusion according to explicit rules.
+**What follows from the established premises?**
 
-**What follows from the verified premises?**
+A conclusion may only be derived according to defined rules from the available premises.
 
-This gives the basic computational chain:
+Thus:
 
 **OBJECT → RELATION → PREMISES → INFERENCE → ACTION**
 
-Unknown information is not silently converted into a fact.
+Unknown information is never silently converted into verified fact.
 
-## Function, relation, and scale
+---
 
-The institute's mathematical governance model treats every significant process through three coordinates:
+## 5. Function, Relation, Scale
 
-- **Function (F):** what the object or process does;
-- **Relation (R):** how it is connected to other objects;
-- **Scale (S):** at what level, quantity, or scope it operates.
+The mathematical representation uses three fundamental dimensions:
 
-A valid system state therefore requires more than an isolated number or label. It requires the coordinate, the function, and the relation to remain interpretable together.
+**F = Function** — what an object or process does.
 
-## Evidence and truth boundaries
+**R = Relation** — how it connects to other objects.
 
-The institute maintains strict separations:
+**S = Scale** — the level, quantity, scope, or magnitude at which it operates.
 
-- evidence ≠ legal ownership;
-- integrity ≠ truth;
-- technical assessment ≠ underwriting decision;
-- scenario ≠ fact;
-- customer declaration ≠ independent verification;
-- verification ≠ governmental recognition;
-- algorithmic recommendation ≠ human/legal decision.
+The system therefore does not treat a number, coordinate, or label as meaningful in isolation.
 
-Every state transition must identify its evidence and responsible authority.
+**Coordinate + Function + Relation + Scale**
 
-## Governance cycle
+form a contextual representation of system state.
 
-The operational cycle is:
+---
 
-1. **Capture** — register an object or event.
-2. **Classify** — determine its type and scope.
-3. **Link** — connect it to related objects.
-4. **Verify** — establish the verification status of evidence.
-5. **Assess** — compute technical relationships, exposure, dependencies, or scenarios.
-6. **Route** — send the matter to the institution authorized to act.
-7. **Execute** — perform the authorized action.
-8. **Monitor** — observe changes.
-9. **Reverify** — test changed or expiring evidence.
-10. **Audit** — preserve the complete decision trail.
+## 6. The complete governance cycle
 
-## Economic continuity architecture
+Every important object or event can move through a controlled lifecycle:
 
-The proposed engine can support a continuous economic chain:
+**CAPTURE → CLASSIFY → LINK → VERIFY → ASSESS → ROUTE → EXECUTE → MONITOR → REVERIFY → AUDIT**
 
-**KNOWLEDGE → CAPABILITY → PRODUCTION → ASSETS / RIGHTS → TRANSACTIONS → RISK TRANSFER → RESERVES / CAPITAL → CONTINUITY**
+### Capture
+Register the object or event.
 
-The institute does not assume that this chain is automatically economically viable. Economic viability, capital adequacy, pricing, underwriting, monetary design, and legal authorization require independent analysis and appropriately authorized institutions.
+### Classify
+Determine its type and scope.
 
-## Role of WANGA
+### Link
+Connect it to related objects.
 
-WANGA is the technical continuity and evidence infrastructure inside this architecture.
+### Verify
+Establish the evidence and verification state.
 
-Its role is to connect and audit:
+### Assess
+Calculate relationships, exposure, dependencies, or scenarios.
 
-**ASSET → OWNER/CLAIMANT → DOCUMENTS → RIGHTS → TRANSACTIONS → INSURANCE → VERIFICATION → AUDIT HISTORY → CONTINUITY STATUS**
+### Route
+Send the matter to the institution authorized to act.
 
-WANGA does not claim ownership and does not become a sovereign authority through this architecture.
+### Execute
+Perform the authorized action.
 
-## Role of the institute
+### Monitor
+Observe subsequent changes.
 
-The institute defines and researches:
+### Reverify
+Test changed, expired, or disputed information.
 
-- system architecture;
-- governance models;
-- interoperability;
-- standards;
-- verification protocols;
-- algorithmic decision frameworks;
-- economic-system interfaces;
-- continuity models;
-- AI-agent governance;
-- audit and evidence standards;
-- experimental implementations.
+### Audit
+Preserve the complete evidence and decision trail.
 
-The institute does not silently convert research into legal authority.
+---
 
-## Institutional architecture
+## 7. Evidence architecture
+
+The entire system depends on maintaining explicit boundaries.
+
+**Evidence ≠ legal ownership**
+
+**Integrity ≠ truth**
+
+**Scenario ≠ fact**
+
+**Technical assessment ≠ underwriting decision**
+
+**Customer declaration ≠ independent verification**
+
+**Verification ≠ governmental recognition**
+
+**Algorithmic recommendation ≠ human/legal authority**
+
+**Unknown ≠ verified**
+
+These boundaries are part of the architecture itself.
+
+---
+
+## 8. Economic continuity architecture
+
+The economic engine creates a continuous systems chain:
+
+**KNOWLEDGE**
+↓
+**CAPABILITY**
+↓
+**PRODUCTION**
+↓
+**ASSETS / RIGHTS**
+↓
+**ECONOMIC ACTIVITY**
+↓
+**TRANSACTIONS / TRADE**
+↓
+**RISK TRANSFER**
+↓
+**CAPITAL / RESERVES**
+↓
+**CONTINUITY**
+↓
+**NEW CAPABILITY**
+
+The purpose is to make the relationships in this chain observable and continuously testable.
+
+Economic viability, pricing, capital adequacy, underwriting, monetary design, legal authorization, and regulatory compliance remain subjects for independent analysis and authorized institutions.
+
+---
+
+## 9. WANGA inside the architecture
+
+WANGA is the technical continuity and evidence layer.
+
+Its principal chain is:
+
+**ASSET → CLAIMANT → DOCUMENTS → RIGHTS → TRANSACTIONS → INSURANCE → VERIFICATION → AUDIT HISTORY → CONTINUITY STATUS**
+
+WANGA connects the relevant evidence and relationships without claiming ownership or sovereign authority.
+
+It can therefore serve as infrastructure between otherwise separate institutional systems.
+
+---
+
+## 10. AI and computational layer
+
+AI agents are treated as bounded computational components.
+
+They may perform:
+
+- classification;
+- extraction;
+- relationship analysis;
+- deterministic checks;
+- simulation;
+- monitoring;
+- anomaly detection;
+- routing;
+- documentation;
+- audit preparation.
+
+They do not receive legal authority merely because they are computational agents.
+
+Every agent requires:
+
+**ROLE → PERMISSION → INPUT → PROCESS → OUTPUT → REVIEW → AUDIT**
+
+---
+
+## 11. Institutional architecture
+
+The complete proposed structure is:
 
 **Umbrella Organization**
 → legal and administrative home, subject to actual registration.
 
 **Global Algorithmic Governance Institute**
-→ research, standards, coordination, system design.
+→ research, architecture, standards, coordination.
 
 **Online Governance Platform**
 → participation and operational interface.
 
 **Departments**
-→ specialized mandates.
+→ specialized research and operational mandates.
 
 **AI Agent Network**
-→ disclosed computational execution under permissions and human accountability.
+→ bounded computational workstreams.
 
 **Technical Programs**
-→ WANGA, AI Drift Forensics, computational systems, standards, evidence, network, and economic-system research.
+→ WANGA, AI Drift Forensics, computational systems, evidence, standards, network, and economic-system research.
 
-## Non-sovereignty and accountability
+**External Institutional Network**
+→ banks, insurers, reinsurers, companies, research organizations, public institutions, and other participants.
 
-Participation is voluntary. The architecture does not claim authority over states, courts, banks, insurers, or other institutions merely because they interact with it.
+---
 
-Human institutions remain accountable for legal and regulated decisions.
+## 12. What the architecture produces
 
-The algorithmic layer provides structure, reproducibility, evidence, coordination, and monitoring.
+The objective is a system in which an institution can move from:
 
-## Development objective
+**DATA → EVIDENCE → STRUCTURE → VERIFICATION → ANALYSIS → DECISION → ACTION → MONITORING → AUDIT**
 
-The practical objective is to build a working prototype of the hybrid engine before making institutional claims about its final form.
+instead of treating each stage as an isolated process.
 
-Development proceeds through:
+The resulting system is intended to improve:
 
-**MODEL → SCHEMA → KERNEL → SIMULATION → VERIFICATION → PILOT → INSTITUTIONAL INTEGRATION**
+- observability;
+- interoperability;
+- reproducibility;
+- institutional coordination;
+- evidence continuity;
+- risk visibility;
+- decision traceability;
+- system resilience.
 
-Every stage must produce inspectable evidence before the next stage is treated as complete.
+---
+
+## 13. Development architecture
+
+The institute develops the system in a strict sequence:
+
+**MODEL**
+→ define the conceptual system.
+
+**SCHEMA**
+→ define the objects and relationships.
+
+**KERNEL**
+→ implement the deterministic rules.
+
+**SIMULATION**
+→ test the behavior.
+
+**VERIFICATION**
+→ independently reproduce the results.
+
+**PILOT**
+→ test with real institutional workflows.
+
+**INTEGRATION**
+→ connect authorized external systems.
+
+**AUDIT**
+→ continuously test the implementation.
+
+**REVISION**
+→ update the architecture from verified findings.
+
+No component is considered operational merely because it has been described.
+
+---
+
+## 14. Accountability boundary
+
+This repository defines a proposed research and engineering architecture.
+
+It does not itself establish:
+
+- sovereign authority;
+- governmental status;
+- court authority;
+- banking authority;
+- insurance or reinsurance licensing;
+- monetary issuance authority;
+- ownership rights;
+- regulatory recognition.
+
+Those functions remain subject to the institutions and jurisdictions legally responsible for them.
+
+The institute's role is to create the **architecture, language, standards, computational mechanisms, evidence structures, and verification processes** that can allow complex institutions to operate as a more coherent system.
+
+---
+
+## Core formula
+
+The architecture can be summarized as:
+
+**KNOWLEDGE + COMPUTATION + INSTITUTIONS + CAPITAL + ASSETS + FLOW + VERIFICATION + CONTINUITY**
+
+connected through:
+
+**LOGIC + RELATIONS + FUNCTION + SCALE + AUDIT**
+
+to produce:
+
+**A HYBRID, INTEROPERABLE, ALGORITHMIC ECONOMIC AND INSTITUTIONAL OPERATING LAYER.**
