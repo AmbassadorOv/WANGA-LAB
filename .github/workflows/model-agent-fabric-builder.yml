@@ -20,8 +20,11 @@ jobs:
       - name: Checkout build branch
         uses: actions/checkout@v4
         with:
+          ref: autobuild/architecture-construction
           fetch-depth: 0
-          token: \${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate master project instructions
+        run: test -f docs/MASTER_PROJECT_INSTRUCTIONS_V1.md
 
       - name: Validate and allocate
         run: |
