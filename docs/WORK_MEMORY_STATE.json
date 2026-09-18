@@ -26,7 +26,35 @@
     ],
     "ntm_role": "high-level cognitive CPU and escalation/verification layer",
     "wix_role": "architecture evidence and publication/external integration surface",
-    "gag_boundary": "GAG remains distinct from WANGA; integration only through explicit interfaces"
+    "gag_boundary": "GAG remains distinct from WANGA; integration only through explicit interfaces",
+    "rational_logic_role": "planned first-class formal reasoning layer; not yet implemented or formalized; next-month primary work",
+    "integrated_planes": {
+      "operational": [
+        "WANGA OS",
+        "Global Work Manager",
+        "Model Fabric",
+        "Digital Model Agents",
+        "Providers / Runtimes"
+      ],
+      "epistemic_verification": [
+        "Evidence",
+        "Drift Forensics",
+        "Verification",
+        "Rational Logic"
+      ],
+      "cognitive": [
+        "Rational Logic",
+        "Neural Thinking Machine"
+      ],
+      "memory": [
+        "Work Memory",
+        "provenance",
+        "ChatGPT bridge events"
+      ],
+      "publication": [
+        "Wix"
+      ]
+    }
   },
   "model_fabric": {
     "target_model_slots": 5000,
@@ -117,6 +145,7 @@
     "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
   },
   "next_actions": [
+    "formalize Rational Logic as the primary next-month reasoning layer without creating a second global orchestrator",
     "verify hourly workflow execution and first bridge event",
     "verify global work manager plan generation with integrated runtime controls",
     "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
