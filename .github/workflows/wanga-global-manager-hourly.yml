@@ -31,6 +31,7 @@ jobs:
           python -m compileall -q scripts
           python -m unittest discover -s tests -p "test_global_work_manager.py"
           python -m unittest discover -s tests -p "test_hourly_manager_signal.py"
+          python -m unittest discover -s tests -p "test_chatgpt_bridge.py"
 
       - name: Detect actionable state
         id: action
