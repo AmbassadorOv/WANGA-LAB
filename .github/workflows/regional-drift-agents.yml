@@ -9,49 +9,14 @@ permissions:
   contents: write
 
 jobs:
-  collect:
+  reg-us:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - node: REG-US
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_US
-            token_secret: DRIFT_TOKEN_US
-          - node: REG-EU
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_EU
-            token_secret: DRIFT_TOKEN_EU
-          - node: REG-IL-ME
-            language: he
-            endpoint_secret: DRIFT_ENDPOINT_IL_ME
-            token_secret: DRIFT_TOKEN_IL_ME
-          - node: REG-SA
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_SA
-            token_secret: DRIFT_TOKEN_SA
-          - node: REG-EA
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_EA
-            token_secret: DRIFT_TOKEN_EA
-          - node: REG-LATAM
-            language: es
-            endpoint_secret: DRIFT_ENDPOINT_LATAM
-            token_secret: DRIFT_TOKEN_LATAM
-          - node: REG-OCEANIA
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_OCEANIA
-            token_secret: DRIFT_TOKEN_OCEANIA
-          - node: REG-AFRICA
-            language: en
-            endpoint_secret: DRIFT_ENDPOINT_AFRICA
-            token_secret: DRIFT_TOKEN_AFRICA
+    timeout-minutes: 15
     env:
-      DRIFT_NODE: ${{ matrix.node }}
-      DRIFT_LANGUAGE: ${{ matrix.language }}
-      DRIFT_ENDPOINT: ${{ secrets[matrix.endpoint_secret] }}
-      DRIFT_TOKEN: ${{ secrets[matrix.token_secret] }}
+      DRIFT_NODE: "REG-US"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_US }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_US }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -65,5 +30,174 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ai-drift-forensics/global-drift-network/data/regional-observations/
-          git diff --cached --quiet || git commit -m "data: regional drift observation"
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-US)"
           git push
+
+  reg-eu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-EU"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EU }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EU }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-EU)"
+          git push
+
+  reg-il-me:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-IL-ME"
+      DRIFT_LANGUAGE: "he"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_IL_ME }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_IL_ME }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-IL-ME)"
+          git push
+
+  reg-sa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-SA"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_SA }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_SA }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-SA)"
+          git push
+
+  reg-ea:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-EA"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EA }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EA }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-EA)"
+          git push
+
+  reg-latam:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-LATAM"
+      DRIFT_LANGUAGE: "es"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_LATAM }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_LATAM }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-LATAM)"
+          git push
+
+  reg-oceania:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-OCEANIA"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_OCEANIA }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_OCEANIA }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-OCEANIA)"
+          git push
+
+  reg-africa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRIFT_NODE: "REG-AFRICA"
+      DRIFT_LANGUAGE: "en"
+      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_AFRICA }}
+      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_AFRICA }}
+      DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect probes
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Commit observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-drift-forensics/global-drift-network/data/regional-observations/
+          git diff --cached --quiet || git commit -m "data: regional drift observation (REG-AFRICA)"
+          git push
+
