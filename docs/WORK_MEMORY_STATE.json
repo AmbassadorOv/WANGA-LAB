@@ -151,7 +151,8 @@
     "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
     "connect global task plan to existing Work Manager / Agent Bridge without creating a second global queue",
     "add real execution adapters only behind verified provider/runtime contracts",
-    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
+    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state",
+    "propagate and enforce MASTER_PROJECT_INSTRUCTIONS_V1 across every subordinate manager and automation"
   ],
   "last_verification": {
     "date": "2026-09-18",
@@ -164,5 +165,20 @@
     "model_slots_connected": 0,
     "model_slots_verified": 0,
     "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified"
+  },
+  "master_project_instructions": {
+    "path": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "status": "ACTIVE",
+    "inheritance": "GLOBAL_WORK_MANAGER_AND_ALL_SUBORDINATE_MANAGERS",
+    "priority_order": [
+      "P0_SYSTEM_INTEGRITY",
+      "P1_RATIONAL_LOGIC",
+      "P2_VERIFICATION",
+      "P3_NTM_RATIONAL_LOGIC_EVIDENCE",
+      "P4_MODEL_FABRIC",
+      "P5_PERSPECTIVE_LAYER",
+      "P6_COMMERCIALIZATION",
+      "P7_PRESENTATION"
+    ]
   }
 }
