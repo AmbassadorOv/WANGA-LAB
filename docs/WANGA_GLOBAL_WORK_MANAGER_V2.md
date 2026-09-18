@@ -9,7 +9,9 @@ Extend the existing WANGA Work Manager and Global Drift Research Orchestrator in
 
 The manager coordinates the complete WANGA architecture:
 
-WANGA OS -> Global Work Manager -> subsystem workers / Model Fabric / Digital Model Agents / Research Groups / Runtime -> Evidence & Drift Forensics -> Verification -> NTM -> publication / review queues.
+WANGA OS -> Global Work Manager -> subsystem workers / Model Fabric / Digital Model Agents / Research Groups / Runtime -> Evidence & Drift Forensics -> Rational Logic (when required) -> Verification -> NTM -> publication / review queues.
+
+Rational Logic is a first-class reasoning/consistency layer reserved for formalization; it is not a second orchestrator.
 
 ## Scope
 
@@ -82,6 +84,12 @@ The 5,000 model slots are architectural identities. The manager may route only t
 DISCOVERED -> CONFIGURED -> VERIFIED -> ENABLED
 
 An UNBOUND or unverified slot cannot receive production work.
+
+## Rational Logic integration
+
+The manager may route work through the Rational Logic layer when a task requires formal premise/rule/relation evaluation. Rational Logic does not replace the manager, DMA, Evidence, or NTM. It receives declared evidence/context and returns explicit reasoning status, contradiction findings, missing-premise findings, and verification requirements. A task may explicitly record Rational Logic as NOT_REQUIRED.
+
+The manager must not treat a model-generated answer as a proof merely because an agent framework executed successfully.
 
 ## NTM integration
 
