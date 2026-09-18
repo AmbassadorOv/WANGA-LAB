@@ -96,7 +96,34 @@ The Institute must therefore distinguish:
 
 **Hypothesis** from **observed effect** from **causal conclusion**.
 
-## 6. Historical governance transition
+## 6. Positive resilience feedback hypothesis
+
+The Institute's long-term objective is to test a **positive resilience feedback loop**:
+
+**Distributed continuity network**
+→ **lower concentration of institutional/economic failure risk**
+→ **fewer severe continuity shocks and less economic friction**
+→ **greater capacity for institutions and economies to absorb disputes and disruptions**
+→ **lower conditions that can contribute to escalation**
+→ **greater economic and institutional stability**
+→ **more investment in continuity infrastructure**
+→ **stronger distributed continuity network**.
+
+This is a research hypothesis, not a claim that WANGA can by itself prevent wars.
+
+The underlying rationale is consistent with established research showing that fragility, economic shocks, weak institutions, and conflict can reinforce one another, while stronger institutional capacity and resilience can improve the ability to absorb shocks. citeturn0search0turn0search1turn0search6
+
+The Institute's intended global objective can therefore be stated as:
+
+**Build economic and institutional resilience first, so that fewer local failures become systemic crises; if the mechanism is validated empirically, the resulting resilience may contribute to a more stable international environment.**
+
+The measurable research chain is:
+
+**Continuity Capacity → Shock Absorption → Economic Friction → Institutional Stress → Escalation Indicators → Recovery → Stability**
+
+Each arrow must be tested separately. No reduction in wars or geopolitical conflict should be claimed without longitudinal evidence and appropriate causal identification.
+
+## 7. Historical governance transition
 
 The Institute may describe the broader technological transition as:
 
@@ -107,7 +134,7 @@ The historical analogy is structural, not ideological.
 
 The claim is not that algorithms should replace democracy, law, courts, or governments. The claim is that modern institutions increasingly require computational systems to monitor, verify, coordinate, preserve state, and maintain continuity at global scale.
 
-## 7. Public service scope
+## 8. Public service scope
 
 The framework is intended to support:
 
@@ -120,7 +147,7 @@ The framework is intended to support:
 - cross-border economic networks;
 - public and private continuity programs.
 
-## 8. One-system acceptance case
+## 9. One-system acceptance case
 
 The complete architecture should eventually be demonstrated through one controlled transaction/event:
 
@@ -141,7 +168,7 @@ The complete architecture should eventually be demonstrated through one controll
 → **Audit Result**
 → **Authorized Continuity / Recovery / Risk-Transfer Interface**
 
-## 9. Boundaries
+## 10. Boundaries
 
 WANGA does not currently claim to be:
 
@@ -154,10 +181,13 @@ WANGA does not currently claim to be:
 
 Production claims require implementation, regulated counterparties where applicable, contracts, capital/risk-bearing structures, legal recognition, operational controls, and empirical testing.
 
-## 10. Master statement
+## 11. Master statement
 
 **The Global Algorithmic Governance Institute develops a non-political computational governance infrastructure whose engine is WANGA. Its purpose is to provide a distributed economic and institutional continuity layer: preserving verified evidence and economic state, detecting change, mapping exposure and network movement, and connecting continuity infrastructure with authorized risk-transfer and recovery systems across jurisdictions.**
 
 **The intended result is not political control. It is systemic resilience.**
 
 **The Institute's four-layer architecture is: Forensics → Economic Network → Institutional Continuity → Economic Risk/Insurance Interface.**
+
+**The long-term research objective is a positive resilience feedback loop: stronger distributed continuity → greater shock absorption → lower systemic amplification → greater stability → stronger continuity capacity.**
+
