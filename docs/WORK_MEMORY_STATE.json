@@ -150,6 +150,7 @@
     "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
   },
   "next_actions": [
+    "Run three architecture-scout tracks, classify public GitHub patterns, verify licenses, and produce adaptation proposals before next-month Rational Logic publication.",
     "run and verify the first architecture-discovery workflow cycle",
     "read and classify discovered repositories with license evidence before proposing adaptations",
     "build the Architecture Pattern Matrix from verified discovery records",
@@ -189,29 +190,24 @@
     ]
   },
   "architecture_discovery": {
-    "status": "ACTIVE_BUILD",
-    "control": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
-    "window": "September 2026 build cycle -> October 2026 Rational Logic publication/research phase",
-    "agents": [
+    "status": "ACTIVE_BUILD_PROGRAM",
+    "manager": "MGR-ARCH-DISCOVERY",
+    "scouts": [
       "ARCH-01",
       "ARCH-02",
       "ARCH-03"
     ],
-    "lifecycle": [
-      "DISCOVER",
-      "READ",
-      "CLASSIFY",
-      "LICENSE_CHECK",
-      "COMPARE",
-      "EXTRACT_PATTERN",
-      "ADAPT",
-      "TEST",
-      "VERIFY",
-      "RECORD"
+    "scope": "targeted public GitHub architecture discovery; not exhaustive",
+    "license_review_required": true,
+    "code_copying": false,
+    "control": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "artifacts": [
+      "docs/ARCHITECTURE_DISCOVERY_PROGRAM_V1.md",
+      "docs/ARCHITECTURE_DISCOVERY_REGISTRY.schema.json",
+      "docs/ARCHITECTURE_PATTERN_MATRIX_V1.md",
+      "docs/ARCHITECTURE_DISCOVERY_QUERIES_V1.yml",
+      ".github/workflows/architecture-discovery-scouts.yml"
     ],
-    "exhaustive_github_claim": false,
-    "source_code_copying": false,
-    "license_check_required": true,
-    "registry": "docs/ARCHITECTURE_DISCOVERY_REGISTRY.json"
+    "next_phase": "Rational Logic formalization/publication next month"
   }
 }
