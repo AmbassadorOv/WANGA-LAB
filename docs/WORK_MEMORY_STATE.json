@@ -71,7 +71,12 @@
     "MODEL_CANDIDATE_REGISTRY.schema.json": "machine-readable candidate contract",
     "MODEL_ADAPTER_CONTRACT_V1.md": "provider/runtime adapter boundary",
     "MODEL_CAPABILITY_PROBE_V1.md": "bounded capability and health verification contract",
-    "NTM_MODEL_AGENT_ENVELOPE.schema.json": "bounded handoff contract to NTM"
+    "NTM_MODEL_AGENT_ENVELOPE.schema.json": "bounded handoff contract to NTM",
+    "WANGA_GLOBAL_WORK_MANAGER_V2.md": "repository-wide supervisory control-plane contract extending the existing Work Manager / Orchestrator",
+    "GLOBAL_WORK_MANAGER.schema.json": "machine-readable global task contract",
+    "global_work_manager.py": "deterministic repository-wide work planner",
+    "test_global_work_manager.py": "planner validation tests",
+    "global-work-manager.yml": "serialized GitHub Actions planning/validation workflow"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -80,15 +85,14 @@
     "adapter_runtime": false,
     "ntm_runtime_binding": false,
     "persistent_autonomous_loop": false,
-    "full_wix_content_audit": false
+    "full_wix_content_audit": false,
+    "global_work_manager_runtime": "workflow execution pending",
+    "global_work_manager_merge_to_main": false
   },
   "next_actions": [
-    "implement deterministic candidate discovery scaffold that produces no invented endpoints",
-    "implement adapter registry and normalized adapter-result envelope",
-    "implement capability/health probe runner in dry-run mode until real provider bindings exist",
-    "implement NTM envelope emission from VERIFIED model-agent records",
-    "add schema validation for model-agent allocation, candidates, and NTM envelopes",
-    "integrate existing source branches in dependency order and record conflicts without guessing",
+    "verify Global Work Manager workflow execution and generated GLOBAL_WORK_PLAN.json",
+    "connect global task plan to existing Work Manager / Agent Bridge without creating a second global queue",
+    "add real execution adapters only behind verified provider/runtime contracts",
     "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
   ],
   "last_verification": {
@@ -110,6 +114,7 @@
       "96b7769249597898f40e4a972144ff97316f9e7f",
       "8b37f869d7c8a4a55d03f73226950d70c1c9f409",
       "f9dbf874a62f0d53946f17b142b31a146e392552"
-    ]
+    ],
+    "global_work_manager": "implemented on autobuild/architecture-construction; execution not yet verified"
   }
 }
