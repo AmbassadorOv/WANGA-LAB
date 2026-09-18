@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Deterministic repository-wide WANGA work planner.
 
-Plans and records bounded work. It does not execute arbitrary commands,
-access secrets, or merge code.
+The planner incorporates open agent-system patterns at the contract level:
+explicit task graphs, bounded handoffs, guardrails, checkpoint/resume metadata,
+trace identifiers, and bounded evaluator loops. It does not execute arbitrary
+commands, access secrets, or merge code.
 """
 
 from __future__ import annotations
@@ -29,14 +31,24 @@ SUBSYSTEMS = [
     ("WORK-MEMORY", "MAINTENANCE", "Checkpoint current state and next actions."),
 ]
 
+GUARDRAILS = [
+    "no_secrets",
+    "no_unverified_model_execution",
+    "no_direct_main_changes",
+    "no_invented_endpoints_or_capabilities",
+    "no_evidence_free_promotion",
+    "no_policy_boundary_bypass",
+]
+
 def load_state() -> dict:
     return json.loads(STATE.read_text(encoding="utf-8"))
 
 def build_plan(state: dict) -> dict:
     tasks = []
     for i, (name, cls, objective) in enumerate(SUBSYSTEMS, 1):
+        task_id = f"WGM-{i:02d}-{name}"
         tasks.append({
-            "task_id": f"WGM-{i:02d}-{name}",
+            "task_id": task_id,
             "task_class": cls,
             "objective": objective,
             "owner": "GLOBAL_WORK_MANAGER",
@@ -47,8 +59,26 @@ def build_plan(state: dict) -> dict:
             "evidence_policy": "REQUIRED",
             "verification_required": True,
             "risk_level": "MEDIUM",
-            "provenance": ["docs/WORK_MEMORY_STATE.json"]
+            "provenance": ["docs/WORK_MEMORY_STATE.json"],
+            "execution": {
+                "run_id": f"run-{task_id.lower()}",
+                "state_model": "GRAPH_STATE_V1",
+                "checkpoint_policy": "BEFORE_AND_AFTER_SIDE_EFFECT",
+                "resume_policy": "RESUME_FROM_LAST_VERIFIED_CHECKPOINT",
+                "idempotency_required": True,
+                "trace_required": True,
+                "guardrails": GUARDRAILS,
+                "handoff_policy": "BOUNDED_CAPABILITY_HANDOFF",
+                "max_handoffs": 3,
+                "evaluation_loop": {
+                    "enabled": True,
+                    "pattern": "PRODUCE_EVALUATE_REVISE_VERIFY",
+                    "max_iterations": 3,
+                    "acceptance_criteria_locked": True,
+                },
+            },
         })
+
     by_id = {t["task_id"]: t for t in tasks}
     by_id["WGM-03-MODEL-FABRIC"]["dependencies"] = ["WGM-01-WANGA-OS"]
     by_id["WGM-04-DIGITAL-MODEL-AGENTS"]["dependencies"] = ["WGM-03-MODEL-FABRIC"]
@@ -58,15 +88,24 @@ def build_plan(state: dict) -> dict:
     by_id["WGM-10-WIX"]["dependencies"] = ["WGM-07-EVIDENCE"]
     by_id["WGM-11-AUTOBUILD"]["dependencies"] = ["WGM-01-WANGA-OS", "WGM-07-EVIDENCE"]
     by_id["WGM-12-WORK-MEMORY"]["dependencies"] = ["WGM-07-EVIDENCE"]
+
     return {
-        "version": 1,
+        "version": 2,
         "manager": "WANGA_GLOBAL_WORK_MANAGER_V2",
         "mode": "deterministic-plan",
+        "pattern_profile": "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1",
         "repository": state.get("repository", "AmbassadorOv/WANGA-LAB"),
         "build_branch": state.get("build_branch"),
         "main_branch": state.get("main_branch"),
         "review_policy": state.get("review_policy"),
         "task_count": len(tasks),
+        "graph_policy": {
+            "explicit_dependencies": True,
+            "bounded_loops": True,
+            "checkpoint_resume": True,
+            "human_review_state": "REVIEW_REQUIRED",
+            "verification_is_promotion_gate": True,
+        },
         "tasks": tasks,
         "invariants": [
             "no_direct_main_changes",
@@ -75,8 +114,8 @@ def build_plan(state: dict) -> dict:
             "no_invented_endpoints_or_capabilities",
             "no_duplicate_global_orchestrator",
             "verification_before_enablement",
-            "final_review_separate"
-        ]
+            "final_review_separate",
+        ],
     }
 
 def main() -> int:
@@ -84,8 +123,17 @@ def main() -> int:
     parser.add_argument("--output", default=str(OUT))
     args = parser.parse_args()
     plan = build_plan(load_state())
-    Path(args.output).write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps({"status":"PLANNED","manager":plan["manager"],"task_count":plan["task_count"],"output":args.output,"main_changes":False}, ensure_ascii=False))
+    Path(args.output).write_text(
+        json.dumps(plan, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(json.dumps({
+        "status": "PLANNED",
+        "manager": plan["manager"],
+        "task_count": plan["task_count"],
+        "pattern_profile": plan["pattern_profile"],
+        "main_changes": False,
+    }, ensure_ascii=False))
     return 0
 
 if __name__ == "__main__":
