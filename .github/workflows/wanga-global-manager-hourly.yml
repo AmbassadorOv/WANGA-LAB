@@ -7,9 +7,10 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
-  group: wanga-global-manager-hourly
+  group: wanga-autonomous-build
   cancel-in-progress: false
 
 jobs:
@@ -23,13 +24,13 @@ jobs:
           fetch-depth: 0
 
       - name: Run global manager cycle
-        run: |
-          python scripts/global_work_manager.py
+        run: python scripts/global_work_manager.py
 
       - name: Run manager tests
         run: |
           python -m compileall -q scripts
-          python -m unittest discover -s tests -p 'test_global_work_manager.py'
+          python -m unittest discover -s tests -p "test_global_work_manager.py"
+          python -m unittest discover -s tests -p "test_hourly_manager_signal.py"
 
       - name: Detect actionable state
         id: action
@@ -41,24 +42,58 @@ jobs:
           actionable=False
           if os.path.exists(p):
               d=json.load(open(p, encoding="utf-8"))
-              tasks=d.get("tasks", [])
-              actionable=any(t.get("status") in {"READY","RUNNING","REVIEW_REQUIRED","BLOCKED","CONFLICT"} for t in tasks)
+              actionable=any(t.get("status") in {"READY","RUNNING","REVIEW_REQUIRED","BLOCKED","CONFLICT"} for t in d.get("tasks", []))
           print(f"actionable={str(actionable).lower()}")
           with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
               f.write(f"actionable={str(actionable).lower()}\n")
           PY
 
-      - name: Commit manager state
+      - name: Evaluate ChatGPT bridge significance
+        id: bridge
+        shell: bash
+        run: |
+          python scripts/chatgpt_bridge.py > /tmp/chatgpt_bridge_result.json
+          cat /tmp/chatgpt_bridge_result.json
+          python - <<'PY'
+          import json, os
+          d=json.load(open("/tmp/chatgpt_bridge_result.json", encoding="utf-8"))
+          with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
+              f.write(f"emit={str(d.get('emit', False)).lower()}\n")
+              f.write(f"significance={d.get('significance','NONE')}\n")
+              f.write(f"event_id={d.get('event_id','NONE')}\n")
+          PY
+
+      - name: Commit manager and bridge state
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/GLOBAL_WORK_PLAN.json docs/WORK_MEMORY_STATE.json
-          git diff --cached --quiet || git commit -m "chore: checkpoint hourly global manager state"
-          git push origin autobuild/architecture-construction
+          if [ "${{ steps.bridge.outputs.emit }}" = "true" ]; then
+            git add docs/CHATGPT_BRIDGE_STATE.json docs/CHATGPT_BRIDGE_EVENT.json
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: checkpoint hourly global manager and bridge state"
+            git push origin autobuild/architecture-construction
+          fi
 
-      - name: Publish manager signal
+      - name: Update ChatGPT bridge inbox
+        if: steps.bridge.outputs.emit == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          e=json.load(open("docs/CHATGPT_BRIDGE_EVENT.json", encoding="utf-8"))
+          body = "# ChatGPT Bridge Event\n\n" + f"**Event:** `{e['event_id']}`\n" + f"**Significance:** `{e['significance']}`\n" + f"**Generated:** `{e['generated_at']}`\n" + f"**Verification:** `{e['verification_status']}`\n" + f"**Persistent-memory proposal:** `{e['memory_proposal']}`\n\n" + "## Summary\n" + e["summary"] + "\n\n## Changed dimensions\n" + "\n".join("- "+x for x in e["changed_dimensions"]) + "\n\n## Evidence\n" + "\n".join("- "+x for x in e["evidence_refs"]) + "\n\n## Next action\n" + e["recommended_next_action"] + "\n\nPersistent ChatGPT memory is **not** updated automatically."
+          open("/tmp/chatgpt_bridge_issue.md","w",encoding="utf-8").write(body)
+          PY
+          gh issue edit 16 --body-file /tmp/chatgpt_bridge_issue.md
+
+      - name: Publish manager action signal
         if: steps.action.outputs.actionable == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue create             --title "GLOBAL MANAGER ACTION REQUIRED — ${{ github.run_id }}"             --body "Hourly global-manager cycle detected actionable work. Review docs/GLOBAL_WORK_PLAN.json and docs/WORK_MEMORY_STATE.json. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             --label "global-manager"
+          gh issue create --title "GLOBAL MANAGER ACTION REQUIRED — ${{ github.run_id }}" --body "Hourly global-manager cycle detected actionable work. Review docs/GLOBAL_WORK_PLAN.json and docs/WORK_MEMORY_STATE.json. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
