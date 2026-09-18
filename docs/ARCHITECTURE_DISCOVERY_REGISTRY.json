@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "master_project_instructions": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+  "program": "docs/ARCHITECTURE_DISCOVERY_PROGRAM_V1.md",
+  "status": "ACTIVE",
+  "search_policy": {
+    "scope": "targeted systematic public GitHub discovery across declared architecture domains",
+    "exhaustive_claim_allowed": false,
+    "license_check_required": true,
+    "source_code_copying_allowed": false
+  },
+  "agents": [
+    {
+      "agent_id": "ARCH-01",
+      "scope": "orchestration, control planes, distributed systems, workflow graphs, state machines"
+    },
+    {
+      "agent_id": "ARCH-02",
+      "scope": "agents, memory, planning, routing, tools, evaluation, model context systems"
+    },
+    {
+      "agent_id": "ARCH-03",
+      "scope": "verification, provenance, observability, security, deployment, licensing, IP-relevant architecture"
+    }
+  ],
+  "records": []
+}
