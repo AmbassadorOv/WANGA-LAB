@@ -95,4 +95,4 @@ Technical evidence for the program is maintained in:
 - docs/ARCHITECTURE_DISCOVERY_REGISTRY.schema.json
 - docs/ARCHITECTURE_PATTERN_MATRIX_V1.md
 - docs/ARCHITECTURE_DISCOVERY_QUERIES_V1.yml
-- .github/workflows/architecture-discovery-scouts.yml
+- .github/workflows/architecture-discovery.yml
