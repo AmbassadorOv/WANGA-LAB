@@ -1,104 +1,158 @@
-# WANGA — Independent Continuity & Insurance Layer
+# WANGA — Independent Continuity, Cross-Border Resilience & Risk Layer
 
 ## Architectural designation
 
-This component is a distinctive architectural element of WANGA:
+This component extends the WANGA Independent Continuity & Insurance Layer (ICIL) into a **cross-border continuity network**.
 
-**WANGA Independent Continuity & Insurance Layer (ICIL)**
-
-The layer is designed to operate **outside and independently of the ordinary financial execution systems** while not replacing them.
+The objective is operational independence: if one institution, jurisdiction, registry, infrastructure provider, or national system becomes unavailable, independently preserved records in other network nodes can support reconstruction, verification, continuity, recovery, resolution, and authorized risk-transfer processes.
 
 ## Core principle
 
-WANGA is not intended to become the bank, exchange, payment system, insurer, reinsurer, or financial market infrastructure.
+WANGA does not replace banks, insurers, courts, governments, payment systems, exchanges, or financial-market infrastructures.
 
-Instead, it provides an independent continuity/evidence layer that can preserve and reconstruct relevant economic state when an underlying financial system is disrupted.
+Instead, WANGA provides an independent evidence/state continuity substrate across multiple jurisdictions.
 
-Conceptual flow:
+Conceptual model:
 
-**Financial System**
-→ bank / insurer / market / FMI / government system
-
-**Independent WANGA Layer**
+**State / Institution A**
+→ Asset
 → Evidence
-→ Asset / Right Registry
-→ Transaction State
+→ Rights
+→ Transaction
 → Exposure
 → Baseline
 → Drift
-→ Network Change
-→ Verification
-→ Continuity / Risk Transfer Interface
 
-## Failure model
+**Cross-Border WANGA Network**
+→ independently preserved evidence
+→ provenance and integrity
+→ replicated state
+→ reconstruction
+→ verification
+→ continuity interface
 
-The architectural question is not:
+**State / Institution B, C, D...**
+→ independent network nodes capable of preserving and validating relevant records
 
-> How does WANGA replace a failed financial system?
+A failure in one node therefore does not imply loss of the complete evidentiary state.
 
-It is:
+## Cross-border continuity scenario
 
-> Can an operationally separate layer preserve evidence, state, rights, exposures and relationships so that continuity, recovery, resolution or risk-transfer mechanisms can operate after partial failure of an underlying financial system?
+Example:
 
-## Separation requirement
+**Jurisdiction A**
+→ records a legally relevant asset, right, contract, or transaction
+→ WANGA records provenance, time, integrity, and state
 
-The WANGA layer should be designed so that:
+**Jurisdiction B**
+→ independently preserves the corresponding evidence/state
 
-1. Failure of one connected financial institution does not automatically destroy WANGA's preserved evidence.
-2. WANGA does not depend on a single financial institution as the sole source of truth.
-3. Evidence has provenance and integrity metadata.
-4. Economic state can be reconstructed from independently preserved records.
-5. Correlation, temporal sequence and causation remain explicitly separated.
-6. Insurance/reinsurance or other risk-transfer mechanisms are interfaces to the layer, not assumed to be created by WANGA itself.
-7. WANGA does not automatically execute financial transactions or transfer funds merely because a drift or failure signal is detected.
+**Jurisdiction A becomes unavailable**
+→ WANGA network retains the independently preserved record
+→ authorized parties can reconstruct the relevant state
+→ competent institutions can evaluate the evidence under applicable law
+→ continuity, recovery, resolution, or insurance processes can proceed where legally and operationally supported.
 
-## Insurance interpretation
+The network is therefore designed as a **distributed continuity substrate**, not as a replacement government.
 
-The phrase **"insurance layer"** refers architecturally to a continuity and risk-transfer support layer.
+## Security and resilience calculation
 
-It does **not** mean that WANGA is already an insurance company, provides a legally enforceable insurance contract, guarantees losses, or has regulatory authorization.
+For architecture and testing, resilience should be evaluated against:
 
-Any actual insurance, guarantee, reinsurance, compensation, or claims-paying mechanism requires separate legal, financial, regulatory and underwriting infrastructure.
+- number of independent jurisdictions/nodes;
+- independence of evidence sources;
+- geographic separation;
+- institutional diversity;
+- provenance completeness;
+- integrity verification;
+- reconstruction success;
+- dependency concentration;
+- time-to-recovery;
+- failure scenarios and partial-network availability.
 
-## Relationship to the rest of WANGA
+A central design objective is to reduce **single-jurisdiction and single-institution dependency**.
 
-This layer extends the existing chain:
+More nodes do not automatically mean more security: independence, evidence quality, legal recognition, operational availability, and governance must be measured separately.
 
-**Asset → Evidence → Ownership/Rights → Transaction → Institution → Exposure → Risk → Insurance/Reinsurance → Continuity → Economic Response → Drift → Verification**
+## Economic insurance interpretation
 
-The independent layer is primarily concerned with preserving the state needed to understand and reconstruct this chain during disruption.
+WANGA can provide infrastructure supporting continuity and risk-transfer arrangements across:
+
+- smart cities and planned developments;
+- special economic or sustainability zones;
+- financial institutions;
+- insurers and reinsurers;
+- infrastructure operators;
+- institutional asset registries;
+- cross-border economic networks.
+
+The architecture can support insurance, guarantee, compensation, recovery, and reinsurance workflows, but WANGA itself is not thereby an insurer or a guarantee fund.
+
+Actual coverage requires a separately authorized risk-bearing entity, contracts, capital/reserves, underwriting, claims processes, and applicable regulation.
+
+## Algorithmic governance interface
+
+The broader institutional framework can use algorithmic governance as the coordination and verification layer:
+
+**Governance Rules**
+→ **WANGA Computational Engine**
+→ **Evidence / State**
+→ **Baseline**
+→ **Drift**
+→ **Economic Exposure**
+→ **Network Change**
+→ **Verification**
+→ **Continuity Decision Support**
+
+Algorithmic governance here means computationally defined rules, evidence handling, verification, monitoring, and coordination. It does not mean that an algorithm automatically acquires sovereign authority.
+
+## Relation to historical governance models
+
+For public positioning, WANGA may be described as a transition from governance primarily organized around physical/industrial infrastructure toward governance increasingly organized around computational systems, verified data, distributed records, and algorithmic coordination.
+
+The phrase **"algorithmic governance"** describes the operating model of the computational layer; it does not assert that WANGA replaces existing constitutional, legal, or governmental institutions.
 
 ## One-transaction acceptance case
 
-A future implementation should demonstrate one complete controlled case:
+A production-oriented test should demonstrate:
 
 **Transaction**
 → **Asset**
 → **Evidence**
+→ **Ownership/Rights**
 → **Institution**
 → **Baseline**
 → **Drift**
 → **Economic Exposure**
 → **Network Moves**
 → **Propagation**
+→ **Cross-Border Replication**
+→ **Partial Jurisdiction Failure**
+→ **Reconstruction**
 → **Verification**
 → **Audit Result**
-→ **Continuity/Recovery Interface**
+→ **Continuity / Recovery / Risk-Transfer Interface**
 
-Success means the relevant state and evidence remain reconstructible even when the simulated underlying system is partially unavailable.
+Success requires reproducible reconstruction from independently preserved evidence after simulated failure of one or more network nodes.
 
 ## Non-claims
 
-This document does not claim that WANGA currently provides financial-system independence, insurance coverage, guaranteed recovery, or regulatory recognition.
+This architecture does not claim:
 
-Those are validation and implementation questions.
+- that WANGA currently insures the global economy;
+- that WANGA is a government or sovereign authority;
+- that records automatically retain legal validity across borders;
+- that network replication automatically creates insurance coverage;
+- that a project, company, state, or financial institution is protected merely by being connected.
+
+Legal recognition, contracts, regulatory authorization, capital, underwriting, and operational implementation remain separate requirements.
 
 ## Architectural status
 
-**Status:** Architecture component defined.
+**Status:** Cross-border extension defined.
 
 **Production status:** Not yet proven.
 
-**Scientific test:** Demonstrate reproducible state preservation and reconstruction under controlled partial-system failure.
+**Scientific validation:** Controlled multi-node failure and reconstruction tests are required.
 
-**Key distinction:** WANGA supplements the financial system with an independent continuity/evidence layer; it does not replace the financial system.
+**Primary architectural objective:** Preserve evidence and economic state independently enough that continuity and authorized risk-transfer mechanisms can continue operating when individual systems fail.
