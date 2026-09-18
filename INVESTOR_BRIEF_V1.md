@@ -1,57 +1,40 @@
-# Investor Brief — WANGA / Neural Thinking Machine
+# Investor Brief — WANGA-LAB Institutional AI Architecture
 
 ## Project
 
-WANGA is being organized around WANGA OS and the Neural Thinking Machine (NTM) as the main cognitive CPU / Logic Anchor. The NTM coordinates high-level reasoning while research groups, runtime nodes and network nodes provide distributed computation.
+WANGA-LAB is being developed as an institutional AI architecture combining a global work-control layer, a scalable model fabric, Digital Model Agents, evidence/provenance, drift-forensics, verification, Rational Logic and the Neural Thinking Machine (NTM).
 
 ## Current architecture
 
-The current engineering direction includes a 28-mode reasoning/orchestration taxonomy, adaptive inference-time computation, task/result envelopes, a scalable machine registry, verification gates, audit/provenance recording, model-provider abstraction, and drift/recovery controls.
+**WANGA OS → Global Work Manager → Model Fabric → Digital Model Agents → Providers/Runtimes → Evidence/Drift/Verification → Rational Logic → NTM → Work Memory**
 
-The M100+ machine registry is an architectural scaling target, not a claim that 100 live model connections are already deployed.
+The Perspective Layer spans the system as a future analytical layer of up to approximately 1,000 defined perspective nodes.
 
-## Working valuation range
+## Current engineering status
 
-For investor discussions, the current internal working estimate is **USD 20–50 million** for the technology architecture as presently defined.
+The repository currently contains implemented or formally specified architecture for the core control plane, 5,000 model-slot allocation, Digital Model Agent lifecycle, discovery/binding contracts, adapters, capability probes, NTM handoff, evidence/drift/verification, Work Memory, ChatGPT Bridge, autonomous construction, manager governance and the three-track Architecture Discovery Program.
 
-A longer-term production-platform scenario has previously been framed at **USD 50–150 million** if the full orchestration stack, infrastructure, observability, permissions, memory/context systems and a large connected model fleet are built and validated.
+The 5,000 model slots are architectural identities, not 5,000 live verified connections.
 
-These are internal working estimates for discussion, not an independent valuation, audited appraisal or guaranteed transaction price.
+## Investment framing
+
+The investment case is based on development of reusable AI infrastructure and IP: orchestration, verification, provenance, drift analysis, model-agent integration, formal reasoning and enterprise deployment.
+
+Potential revenue channels include enterprise AI infrastructure, verification/audit services, drift-forensics, Digital Model Agent infrastructure, technology licensing, research services, enterprise deployments and strategic partnerships, subject to technical validation and commercial contracts.
+
+## Valuation discipline
+
+Any valuation figures used in discussion are project planning scenarios, not independent appraisals, market valuations, guaranteed transaction prices or forecasts. The principal near-term objective is to convert specified architecture into tested, verified and commercially deployed capability.
 
 ## Funding objective
 
-Initial financing is intended to fund the next scientific and engineering phase: compute, infrastructure, AI evaluation and reliability research, drift forensics, formal verification, reproducibility, and qualified scientists and technical researchers.
+Initial financing is intended to fund the next engineering and research phase: compute, infrastructure, evidence and verification systems, architecture discovery, Rational Logic research, qualified engineering/research personnel, security and institutional IP development.
 
-Any future digital-asset or token mechanism is a separate financing and legal workstream and is not represented here as an already-launched financial product.
+A future digital-asset or token mechanism is a separate legal and financing workstream and is not represented as current revenue, cash, collateral or guaranteed funding.
 
-## Investment thesis
+## Investor evidence rule
 
-The investment focus is the underlying research, software architecture and orchestration technology. The immediate objective is to move from the current implementation into a funded scientific and engineering program with stronger validation, compute capacity and research personnel.
-
-
----
-
-## Alignment update — September 2026
-
-The investor brief is now aligned with the bank-facing financing architecture and the current WANGA-LAB White Paper.
-
-The current architecture is described as:
-
-**WANGA OS → Global Work Manager → Model Fabric → Digital Model Agents → Providers/Runtimes → Evidence/Drift/Verification → Rational Logic → NTM → Work Memory**
-
-The long-term scaling target is up to **5,000 model slots**, plus a future Perspective Layer of approximately **1,000 perspective nodes**. These are architectural targets, not claims of current live deployment.
-
-The economic model is based on reusable AI infrastructure, orchestration, verification, drift forensics, provenance, formal reasoning, licensing, enterprise deployment and research/technology services.
-
-The current financing discussion uses a staged initial infrastructure frame of up to **NIS 20 million**.
-
-A long-term scenario for a token issuance of up to **USD 1 trillion nominal target scale** is documented only as a future financing scenario. It is not current cash, collateral, profit or a guaranteed fundraising outcome.
-
-For investor and bank discussions, future actual financing proceeds may be contractually allocated, where lawful and agreed, toward debt repayment and continued growth.
-
-See:
-- `docs/WHITEPAPER_BANK_INVESTOR_V2.md`
-- `docs/BANK_FINANCING_ALIGNMENT_V1.md`
+Investor claims must remain traceable to repository evidence and explicitly classified as BUILT, SPECIFIED, PROTOTYPED, TESTED, VERIFIED, PLANNED or HYPOTHETICAL.
 
 
 ## Architecture Discovery Program — September 2026
