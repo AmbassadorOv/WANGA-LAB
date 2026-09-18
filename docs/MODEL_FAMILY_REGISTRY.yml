@@ -1,0 +1,112 @@
+version: 1
+status: architecture-catalog
+target_model_slots: 5000
+allocation_mode: capability-driven
+unverified_models_are_disabled: true
+
+families:
+  - id: reasoning
+    target_slots: 500
+    general_role: reasoner
+    private_roles: [logical_reasoning, hypothesis_generation, contradiction_detection, escalation_to_ntm]
+  - id: planning
+    target_slots: 250
+    general_role: planner
+    private_roles: [task_decomposition, dependency_planning, route_selection, execution_planning]
+  - id: general-language
+    target_slots: 400
+    general_role: language_generalist
+    private_roles: [drafting, summarization, semantic_normalization, synthesis]
+  - id: coding
+    target_slots: 450
+    general_role: coder
+    private_roles: [code_generation, refactoring, test_generation, code_review, repository_analysis]
+  - id: research
+    target_slots: 350
+    general_role: researcher
+    private_roles: [retrieval_planning, source_comparison, evidence_extraction, provenance_packaging]
+  - id: vision
+    target_slots: 250
+    general_role: perception
+    private_roles: [visual_extraction, object_reasoning, document_vision, multimodal_alignment]
+  - id: audio
+    target_slots: 150
+    general_role: speech_processor
+    private_roles: [speech_recognition, audio_classification, transcription_normalization, temporal_alignment]
+  - id: embedding
+    target_slots: 300
+    general_role: embedder
+    private_roles: [representation_generation, similarity_mapping, clustering_support, semantic_indexing]
+  - id: reranking
+    target_slots: 150
+    general_role: reranker
+    private_roles: [relevance_scoring, candidate_ordering, retrieval_refinement]
+  - id: classification
+    target_slots: 200
+    general_role: classifier
+    private_roles: [labeling, extraction, routing_features, confidence_estimation]
+  - id: translation
+    target_slots: 150
+    general_role: translator
+    private_roles: [translation, terminology_alignment, multilingual_normalization, language_detection]
+  - id: mathematics
+    target_slots: 180
+    general_role: mathematician
+    private_roles: [formal_reasoning, symbolic_transformation, numerical_checking, proof_candidate_generation]
+  - id: science
+    target_slots: 180
+    general_role: scientist
+    private_roles: [technical_analysis, literature_comparison, hypothesis_testing, evidence_structuring]
+  - id: long-context
+    target_slots: 250
+    general_role: document_analyst
+    private_roles: [long_document_analysis, cross_document_comparison, timeline_extraction, context_compression]
+  - id: tool-use
+    target_slots: 250
+    general_role: tool_operator
+    private_roles: [tool_selection, argument_validation, execution_request, result_normalization]
+  - id: safety-policy
+    target_slots: 180
+    general_role: safety_analyst
+    private_roles: [policy_check, constraint_check, risk_classification, escalation]
+  - id: evaluation
+    target_slots: 180
+    general_role: evaluator
+    private_roles: [benchmarking, regression_detection, output_comparison, acceptance_testing]
+  - id: drift
+    target_slots: 200
+    general_role: drift_analyst
+    private_roles: [drift_detection, version_comparison, structural_diff, evidence_linking]
+  - id: knowledge-graph
+    target_slots: 150
+    general_role: knowledge_builder
+    private_roles: [entity_extraction, relation_extraction, graph_updates, consistency_checking]
+  - id: image-generation
+    target_slots: 100
+    general_role: visual_generator
+    private_roles: [image_generation, transformation, prompt_structuring, visual_quality_check]
+  - id: video
+    target_slots: 80
+    general_role: temporal_analyst
+    private_roles: [temporal_reasoning, scene_analysis, sequence_extraction, multimodal_alignment]
+  - id: domain-specialist
+    target_slots: 180
+    general_role: domain_specialist
+    private_roles: [domain_analysis, terminology_control, specialist_review, escalation]
+  - id: local-open-weight
+    target_slots: 300
+    general_role: local_runtime
+    private_roles: [local_inference, offline_processing, privacy_boundary, resource_optimization]
+  - id: edge
+    target_slots: 100
+    general_role: edge_runtime
+    private_roles: [low_latency_inference, local_preprocessing, fallback_execution, telemetry]
+  - id: router-ensemble
+    target_slots: 100
+    general_role: router
+    private_roles: [model_selection, ensemble_composition, load_balancing, disagreement_detection]
+
+provider_namespace_policy:
+  examples: [commercial-api, open-weight, local-runtime, research-runtime, internal]
+  exact_provider_and_model_ids_must_be_discovered: true
+  credentials_from_registry: false
