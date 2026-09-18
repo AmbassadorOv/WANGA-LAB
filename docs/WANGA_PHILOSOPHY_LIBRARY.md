@@ -402,3 +402,20 @@ The final principle is:
 **Global Architecture without World Government.**
 
 That is the WANGA position on the question: build the architecture openly and documentably, while preserving human authority, institutional plurality, and lawful political structures.
+
+
+---
+
+## About the Author and the Intellectual Development of the Framework
+
+The WANGA philosophical framework is authored by a researcher with approximately **30 years of experience in the development and examination of policy frameworks and philosophical frameworks, and in translating such frameworks into concepts appropriate to the digital era**.
+
+This background is important to the interpretation of WANGA. The framework is not presented as a collection of ideas assembled solely from contemporary technology. Its method begins with the examination of established philosophical, institutional, economic, political, and technological frameworks, identifies their underlying principles and unresolved implementation requirements, and then examines how those principles can be expressed as architectures for the digital age.
+
+The author's work therefore operates across three connected activities:
+
+- **development of frameworks** — constructing coherent conceptual and policy architectures;
+- **examination of frameworks** — testing their internal relationships, assumptions, boundaries, and practical implications;
+- **translation into the digital era** — converting principles that were historically expressed through philosophy, law, institutions, economics, and industrial organization into requirements that can be represented computationally and architecturally.
+
+WANGA is the result of this longer development process. Its claim of originality should therefore be understood primarily as a claim about the **specific synthesis, architectural direction, and digital-era formulation developed by the author**, rather than as a claim that every individual concept within it has no historical precedent.
