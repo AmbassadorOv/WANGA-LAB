@@ -90,3 +90,12 @@ The technical architecture, contracts, schemas and implementation history are ma
 This document is intended to be read together with the investor brief and technical White Paper.
 
 It is a planning document and not a commitment to lend, an investment prospectus, securities offering, legal opinion or guarantee of repayment.
+
+
+## Architecture discovery in the funded work program
+
+The current build cycle also establishes a three-track architecture discovery capability. Financing may support the engineering and infrastructure required to run controlled public-repository discovery, comparative architecture analysis, license/provenance review, testing and integration of verified patterns.
+
+This work is intended to accelerate architecture development during the current build window while preserving the planned next-month Rational Logic research/publication boundary.
+
+The discovery program does not represent exhaustive GitHub coverage and does not treat external repositories as owned assets. Any external pattern must pass license review, architectural compatibility analysis and verification before adoption.
