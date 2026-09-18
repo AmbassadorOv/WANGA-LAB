@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "status": "ACTIVE_BUILD",
+  "project": "WANGA-LAB",
+  "repository": "AmbassadorOv/WANGA-LAB",
+  "build_branch": "autobuild/architecture-construction",
+  "main_branch": "main",
+  "review_policy": "review-at-end",
+  "source_history_policy": {
+    "preserve_existing_branches": true,
+    "delete_branches": false,
+    "disable_branches": false,
+    "rewrite_history": false,
+    "direct_main_changes": false
+  },
+  "architecture": {
+    "core_flow": [
+      "WANGA OS",
+      "Work Manager / Orchestrator",
+      "Model Fabric",
+      "Digital Model Agents",
+      "Providers / Runtimes",
+      "Evidence / Drift Forensics",
+      "Verification",
+      "Neural Thinking Machine"
+    ],
+    "ntm_role": "high-level cognitive CPU and escalation/verification layer",
+    "wix_role": "architecture evidence and publication/external integration surface",
+    "gag_boundary": "GAG remains distinct from WANGA; integration only through explicit interfaces"
+  },
+  "model_fabric": {
+    "target_model_slots": 5000,
+    "allocated_slots": 5000,
+    "connected_slots": 0,
+    "verified_slots": 0,
+    "slot_semantics": "architectural identity, not a live endpoint",
+    "lifecycle": [
+      "DISCOVER",
+      "CLASSIFY",
+      "ASSIGN_GENERAL_ROLE",
+      "ASSIGN_PRIVATE_ROLES",
+      "ADAPTER_BIND",
+      "CAPABILITY_PROBE",
+      "POLICY_BIND",
+      "REGISTER",
+      "HEALTH_CHECK",
+      "ENABLE"
+    ]
+  },
+  "autonomy": {
+    "requested_mode": "no manual intervention during construction; final review/fine-tuning after build",
+    "current_automation": "event-driven deterministic builders; persistent bounded loop pending",
+    "external_provider_credentials_in_registry": false
+  },
+  "wix": {
+    "inventory_contexts": 21,
+    "full_content_audit": false,
+    "github_is_source_of_code_contracts": true
+  },
+  "completed": {
+    "MODEL_AGENT_ARCHITECTURE_V1.md": "Digital Model Agent architecture and NTM boundary defined",
+    "MODEL_FAMILY_REGISTRY.yml": "25 model families allocated to exactly 5,000 target slots",
+    "MODEL_AGENT_REGISTRY.schema.json": "registry contract created",
+    "model_agent_allocator.py": "deterministic 5,000-slot scaffold generator created",
+    "model-agent-fabric-builder.yml": "automated allocation validation/commit workflow created",
+    "ARCHITECTURE_BUILD_MANIFEST.yml": "ordered source integration manifest created",
+    "WIX_ARCHITECTURE_SNAPSHOT.json": "21 Wix contexts captured as architecture evidence"
+  },
+  "verified_limits": {
+    "live_model_connections": false,
+    "provider_discovery": false,
+    "capability_probe": false,
+    "adapter_runtime": false,
+    "ntm_runtime_binding": false,
+    "persistent_autonomous_loop": false,
+    "full_wix_content_audit": false
+  },
+  "next_actions": [
+    "build deterministic model discovery contract and candidate registry",
+    "build provider/runtime adapter contract without storing credentials",
+    "build capability and health probe contract",
+    "build NTM envelope contract and verification handoff",
+    "serialize each construction step into work-memory state",
+    "unify builder concurrency so multiple autonomous writers cannot race on the same build branch",
+    "continue source-branch integration and record conflicts without guessing"
+  ],
+  "last_verification": {
+    "date": "2026-09-18",
+    "pr": 15,
+    "pr_state": "OPEN_DRAFT",
+    "main_merge": false,
+    "branches_deleted": false,
+    "source_history_rewritten": false,
+    "model_slots_allocated": 5000,
+    "model_slots_connected": 0,
+    "model_slots_verified": 0
+  }
+}
