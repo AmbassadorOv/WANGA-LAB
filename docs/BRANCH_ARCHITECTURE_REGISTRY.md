@@ -1,70 +1,109 @@
 # WANGA-LAB Branch & Architecture Registry
 
-Status: proposed operational registry
+Status: active reconciliation registry — 2026-09-18
 
-## Canonical ownership map
+## Canonical architecture map
 
-| Architecture | Canonical repository area | Branch/PR candidates | Status |
+| Architecture | Repository area | Canonical branch path | Existing source branch(es) |
 |---|---|---|---|
-| Control Plane / Agent Governance | `.github/`, `docs/` | `agent/codex-002/control-plane-governance-hardening`, `agent/codex-002/repository-hygiene-ci` | Active |
-| Global Algorithmic Governance | `ai-drift-forensics/global-algorithmic-governance-institute/` | `codex/algorithmic-governance-standard-v0-1` | Active |
-| Global Drift Network / Evidence | `ai-drift-forensics/global-drift-network/` | `whitepaper-evidence-infrastructure`, PR #9 | Security review required |
-| Epistemic Frontier | repository root implementation | `feature/epistemic-frontier-baseline` | Candidate |
-| ARK / SL compiler-runtime | repository root / WANGA implementation | `feat/ark-sl-compiler-runtime-binding-6185253793362141196` | Candidate |
-| Autonomous knowledge connector | WANGA implementation | `jules-16755109129419681351-0b3755ec` | Candidate |
-| Virtual GPU / nano fabric | WANGA implementation | `jules-2742570839290368558-84513077` | Candidate |
-| Hello/connection tests | historical test artifacts | PR #1 / PR #2 | Superseded candidates |
-| Distributed evidence branch family | historical/duplicate family | 20 branches at one identical SHA | Requires cleanup audit |
+| Control Plane / Agent Governance | `.github/`, `docs/` | `agent/codex-002/control-plane/* ` | `agent/codex-002/control-plane-governance-hardening`, `agent/codex-002/repository-hygiene-ci` |
+| Global Algorithmic Governance | `ai-drift-forensics/global-algorithmic-governance-institute/` | `governance/algorithmic-governance/standard-v0-1` | `codex/algorithmic-governance-standard-v0-1` |
+| Global Drift Network / Evidence | `ai-drift-forensics/global-drift-network/` | `drift/global-network/evidence-infrastructure` | `whitepaper-evidence-infrastructure`, distributed-evidence family |
+| Global Drift Network Security | `.github/workflows/regional-drift-agents.yml` | `drift/global-network/secret-hardening` | `agent/codex-002/drift-network-secret-hardening` |
+| Drift Whitepaper Pipeline | `ai-drift-forensics/global-drift-network/whitepaper-prep/` | `drift/global-network/whitepaper-pipeline` | `feature/global-drift-whitepaper-pipeline` |
+| Epistemic Frontier | root implementation | `research/epistemic-frontier/baseline` | `feature/epistemic-frontier-baseline` |
+| ARK / SL compiler-runtime | WANGA root implementation | `runtime/ark-sl/compiler-runtime-binding` | `feat/ark-sl-compiler-runtime-binding-6185253793362141196` |
+| Autonomous knowledge connector | WANGA runtime | `runtime/ark/autonomous-knowledge-connector` | `jules-16755109129419681351-0b3755ec` |
+| Virtual GPU / nano fabric | WANGA runtime | `runtime/nano/virtual-gpu-fabric` | `jules-2742570839290368558-84513077` |
+| Historical / unresolved | historical evidence | `legacy/*` | stale, superseded, unknown, and temporary branches |
 
-## Rules
+## Branch reconciliation policy
 
-1. `main` is the integration base, not a development workspace.
-2. Each architecture gets one canonical implementation path.
-3. A branch is not an architecture; the branch carries a change toward an existing responsibility.
-4. Historical branches remain evidence until classified.
-5. Duplicate branches are not merged merely because they exist.
-6. WANGA-LAB and Global Algorithmic Governance remain distinct responsibilities connected by explicit interfaces.
-7. Wix/site delivery is treated as an external publication/integration surface, not as a second GitHub orchestration plane.
+1. `main` remains the integration base.
+2. Branches are organized by responsibility; a branch is not itself an architecture.
+3. Existing branches are preserved. This pass does **not** delete or disable branches.
+4. Where GitHub connector capabilities do not expose an in-place branch rename, a canonical architecture-aligned branch is created from the exact existing branch head; the original branch remains intact as a historical/source reference.
+5. No branch is merged merely because it has been aligned.
+6. Historical work remains evidence until reviewed.
+7. WANGA-LAB and the Global Algorithmic Governance Institute remain distinct responsibilities connected through explicit interfaces.
+8. Wix remains a publication/integration surface, not a second GitHub orchestration plane.
 
-## Next classification pass
+## Canonical aligned branches created in this pass
 
-Classify every non-main branch as ACTIVE, HISTORICAL, DUPLICATE, SUPERSEDED, or UNKNOWN before destructive branch deletion.
-
-
-## Complete current branch inventory
-
-| Branch | Disposition | Architecture / reason |
+| New aligned branch | Source branch | Purpose |
 |---|---|---|
-| `agent/codex-002/control-plane-governance-hardening` | ACTIVE | Control-plane governance; PR #12 |
-| `agent/codex-002/control-plane-mvp` | HISTORICAL-CANDIDATE | Earlier control-plane implementation; stale relative to main, inspect before reuse |
-| `agent/codex-002/repository-hygiene-ci` | ACTIVE | Repository governance/CI repair; PR #13 |
-| `codex/algorithmic-governance-standard-v0-1` | ACTIVE | Global Algorithmic Governance standard; PR #11 |
-| `whitepaper-evidence-infrastructure` | ACTIVE-BLOCKED | Global Drift Network / evidence; PR #9 has security findings |
-| `feature/global-drift-whitepaper-pipeline` | CANDIDATE | Global Drift publication/evidence pipeline |
-| `feature/epistemic-frontier-baseline` | CANDIDATE | Epistemic Frontier |
-| `feat/ark-sl-compiler-runtime-binding-6185253793362141196` | CANDIDATE | ARK / SL compiler-runtime |
-| `jules-16755109129419681351-0b3755ec` | CANDIDATE | Autonomous knowledge connector |
-| `jules-2742570839290368558-84513077` | CANDIDATE | Virtual GPU / nano processor fabric |
-| `jules-93324678969383236-63b1c010` | UNKNOWN | Requires content audit |
-| `jules-14645773145571184025-42db8e24` | SUPERSEDED | PR #1 closed; duplicate hello test |
-| `jules-11016927793168577821-b6767505` | SUPERSEDED | PR #2 closed; duplicate hello test |
-| `distributed-evidence-network` | DUPLICATE-FAMILY | Same SHA as 19 other distributed-evidence branches; audit before deletion |
-| `distributed-evidence-network-2` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-3` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-4` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-5` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-6` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-active` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-dev` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-final` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-impl` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-live` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-main` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-ready` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-v2` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-v3` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-v4` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-v5` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-work` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `distributed-evidence-network-x` | DUPLICATE-FAMILY | Same SHA; audit before deletion |
-| `tmp-check` | DUPLICATE-FAMILY | Same SHA; temporary branch, audit before deletion |
+| `agent/codex-002/control-plane/governance-hardening` | `agent/codex-002/control-plane-governance-hardening` | control-plane governance |
+| `agent/codex-002/control-plane/repository-hygiene-ci` | `agent/codex-002/repository-hygiene-ci` | CI/repository hygiene |
+| `governance/algorithmic-governance/standard-v0-1` | `codex/algorithmic-governance-standard-v0-1` | governance standard |
+| `drift/global-network/evidence-infrastructure` | `whitepaper-evidence-infrastructure` | global drift evidence |
+| `drift/global-network/secret-hardening` | `agent/codex-002/drift-network-secret-hardening` | regional secret isolation |
+| `drift/global-network/whitepaper-pipeline` | `feature/global-drift-whitepaper-pipeline` | publication pipeline |
+| `drift/global-network/distributed-evidence` | `distributed-evidence-network` | canonical representative of duplicate family |
+| `research/epistemic-frontier/baseline` | `feature/epistemic-frontier-baseline` | epistemic frontier |
+| `runtime/ark-sl/compiler-runtime-binding` | `feat/ark-sl-compiler-runtime-binding-6185253793362141196` | ARK-SL runtime |
+| `runtime/ark/autonomous-knowledge-connector` | `jules-16755109129419681351-0b3755ec` | knowledge connector |
+| `runtime/nano/virtual-gpu-fabric` | `jules-2742570839290368558-84513077` | nano/virtual GPU |
+| `legacy/stale/control-plane-mvp` | `agent/codex-002/control-plane-mvp` | preserved stale branch |
+| `legacy/unclassified/jules-93324678969383236-63b1c010` | `jules-93324678969383236-63b1c010` | preserved unknown branch |
+| `legacy/superseded/jules-11016927793168577821-b6767505` | `jules-11016927793168577821-b6767505` | preserved historical hello test |
+| `legacy/superseded/jules-14645773145571184025-42db8e24` | `jules-14645773145571184025-42db8e24` | preserved historical hello test |
+| `legacy/audit/distributed-evidence-tmp-check` | `tmp-check` | preserved temporary audit branch |
+
+## Complete branch inventory
+
+### Control / governance
+- `agent/codex-002/control-plane-governance-hardening` → ACTIVE; PR #12.
+- `agent/codex-002/control-plane/repository-hygiene-ci` → ALIGNED; source has PR #13.
+- `agent/codex-002/repository-hygiene-ci` → ACTIVE source; PR #13.
+- `agent/codex-002/control-plane-mvp` → STALE/HISTORICAL; 143 commits behind `main`.
+
+### Governance
+- `codex/algorithmic-governance-standard-v0-1` → ACTIVE; PR #11.
+- `governance/algorithmic-governance/standard-v0-1` → ALIGNED canonical branch.
+
+### Drift / evidence
+- `whitepaper-evidence-infrastructure` → ACTIVE-BLOCKED; PR #9; security remediation separated into PR #14.
+- `agent/codex-002/drift-network-secret-hardening` → ACTIVE SECURITY; PR #14.
+- `drift/global-network/evidence-infrastructure` → ALIGNED canonical branch.
+- `drift/global-network/secret-hardening` → ALIGNED security branch.
+- `feature/global-drift-whitepaper-pipeline` → CANDIDATE/ALIGNED.
+- `drift/global-network/whitepaper-pipeline` → ALIGNED.
+- `distributed-evidence-network` and `distributed-evidence-network-{2,3,4,5,6,active,dev,final,impl,live,main,ready,v2,v3,v4,v5,work,x}` → DUPLICATE-FAMILY; same 33-commit architecture payload and same historical merge base; preserved, not deleted.
+- `tmp-check` → DUPLICATE-FAMILY/AUDIT; preserved.
+- `drift/global-network/distributed-evidence` → ALIGNED representative.
+
+### Research / runtime
+- `feature/epistemic-frontier-baseline` → CANDIDATE; 4 commits ahead of its historical merge base.
+- `research/epistemic-frontier/baseline` → ALIGNED.
+- `feat/ark-sl-compiler-runtime-binding-6185253793362141196` → CANDIDATE; PR #5.
+- `runtime/ark-sl/compiler-runtime-binding` → ALIGNED.
+- `jules-16755109129419681351-0b3755ec` → CANDIDATE; PR #6.
+- `runtime/ark/autonomous-knowledge-connector` → ALIGNED.
+- `jules-2742570839290368558-84513077` → CANDIDATE; PR #3.
+- `runtime/nano/virtual-gpu-fabric` → ALIGNED.
+- `jules-93324678969383236-63b1c010` → UNKNOWN; preserved under legacy mapping.
+- `legacy/unclassified/jules-93324678969383236-63b1c010` → ALIGNED legacy reference.
+
+### Historical
+- `jules-11016927793168577821-b6767505` → SUPERSEDED; PR #2 previously closed.
+- `jules-14645773145571184025-42db8e24` → SUPERSEDED; PR #1 previously closed.
+- Corresponding `legacy/superseded/*` aligned branches preserve their exact heads.
+
+## Current open PR relationships
+
+| PR | Branch | Role | State |
+|---|---|---|---|
+| #14 | `agent/codex-002/drift-network-secret-hardening` | regional secret isolation | Draft/Open |
+| #13 | `agent/codex-002/repository-hygiene-ci` | repository integrity baseline | Draft/Open |
+| #12 | `agent/codex-002/control-plane-governance-hardening` | agent/control-plane governance | Draft/Open |
+| #11 | `codex/algorithmic-governance-standard-v0-1` | governance standard seed | Draft/Open |
+| #9 | `whitepaper-evidence-infrastructure` | global drift network | Draft/Open; security review required |
+| #6 | `jules-16755109129419681351-0b3755ec` | autonomous knowledge connector | Draft/Open; non-mergeable |
+| #5 | `feat/ark-sl-compiler-runtime-binding-6185253793362141196` | ARK-SL compiler/runtime | Draft/Open; non-mergeable |
+| #3 | `jules-2742570839290368558-84513077` | virtual GPU/nano fabric | Draft/Open; non-mergeable |
+
+## Verification note
+
+The branch comparisons were performed against `main`. The large distributed-evidence family resolves to the same historical 33-commit payload and is therefore treated as a single architecture family for mapping purposes, while each original branch remains preserved.
+
+No branch deletion, branch disabling, or merge was performed in this reconciliation pass.
