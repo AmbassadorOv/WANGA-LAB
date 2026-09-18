@@ -23,6 +23,9 @@ jobs:
           ref: autobuild/architecture-construction
           fetch-depth: 0
 
+      - name: Validate master project instructions
+        run: test -f docs/MASTER_PROJECT_INSTRUCTIONS_V1.md
+
       - name: Validate Python
         run: python -m compileall -q scripts
 
