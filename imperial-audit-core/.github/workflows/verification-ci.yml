@@ -1,0 +1,29 @@
+name: Imperial Audit Verification
+
+on:
+  push:
+    paths:
+      - "imperial-audit-core/**"
+  pull_request:
+    paths:
+      - "imperial-audit-core/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax check
+        run: python -m compileall imperial-audit-core
+      - name: Hash-chain smoke test
+        run: |
+          PYTHONPATH=. python - <<'PY'
+          from imperial_audit_core.src.crypto.sha256_chain import build_chain
+          a=build_chain({"x":1},{"y":2},{"z":3},"2026-01-01T00:00:00Z")
+          b=build_chain({"x":1},{"y":2},{"z":4},"2026-01-01T00:00:00Z")
+          assert a["MASTER_CHAIN_HASH"] != b["MASTER_CHAIN_HASH"]
+          print("PASS")
+          PY
