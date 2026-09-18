@@ -19,7 +19,7 @@
     },
     "managers": {
       "type": "array",
-      "minItems": 12,
+      "minItems": 13,
       "items": {
         "type": "object",
         "additionalProperties": false,
