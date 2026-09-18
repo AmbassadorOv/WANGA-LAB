@@ -1,0 +1,38 @@
+{
+  "tracker": {
+    "pre_window_hours": 168,
+    "post_window_hours": 168,
+    "temporal_half_life_hours": 48,
+    "minimum_confidence": 0.70,
+    "butterfly_threshold": 0.65
+  },
+  "tracked_lines": [
+    {
+      "id": "DESTINY",
+      "label": "Destiny",
+      "role": "institutional_market_sensor"
+    },
+    {
+      "id": "SCHWAB_WEF",
+      "label": "Klaus Schwab / WEF network",
+      "role": "institutional_network_sensor"
+    }
+  ],
+  "outreach": {
+    "record_every_outbound_message": true,
+    "never_resend_automatically": true,
+    "email_is_t0_anchor": true
+  },
+  "analysis": {
+    "compare_against_baseline": true,
+    "require_provenance": true,
+    "separate_correlation_from_causation": true,
+    "unverified_relationship_status": "POSSIBLE_PROPAGATION",
+    "missing_data_status": "INSUFFICIENT_EVIDENCE"
+  },
+  "election_window": {
+    "enabled": true,
+    "end_date_source": "configured_election_registry",
+    "hardcode_date": false
+  }
+}
