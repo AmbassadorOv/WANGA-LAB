@@ -1,0 +1,120 @@
+# WANGA Global Work Manager / Orchestrator V2
+
+Status: BUILD SPECIFICATION
+Version: 2.0.0
+
+## Purpose
+
+Extend the existing WANGA Work Manager and Global Drift Research Orchestrator into one repository-wide supervisory control plane. This is an extension of the existing orchestration layer, not a competing orchestrator.
+
+The manager coordinates the complete WANGA architecture:
+
+WANGA OS -> Global Work Manager -> subsystem workers / Model Fabric / Digital Model Agents / Research Groups / Runtime -> Evidence & Drift Forensics -> Verification -> NTM -> publication / review queues.
+
+## Scope
+
+The manager coordinates:
+- WANGA OS and runtime
+- Research Groups and specialized workers
+- Model Fabric and Digital Model Agents
+- NTM routing/escalation
+- Drift Forensics and evidence
+- Knowledge connectors and ARK runtime
+- Virtual GPU / nano runtime
+- Algorithmic Governance interfaces
+- Wix publication/integration queues
+- autonomous architecture construction
+- durable Work Memory
+
+It does not replace domain logic inside these systems.
+
+## Single coordination rule
+
+There is one global work-management authority: the existing WANGA Work Manager / Orchestrator, extended by this V2 contract.
+
+Domain orchestrators may remain as bounded local coordinators, but they must expose work through the global task envelope and cannot create an independent global queue or authority.
+
+## Work lifecycle
+
+INTAKE -> NORMALIZE -> DECOMPOSE -> DEPENDENCY_SCAN -> PRIORITIZE -> ROUTE -> EXECUTE -> COLLECT -> VERIFY -> UPDATE_MEMORY -> FOLLOW_UP
+
+Terminal states:
+COMPLETE | BLOCKED | CONFLICT | REVIEW_REQUIRED
+
+No failed task is converted into COMPLETE without verification.
+
+## Task classes
+
+ARCHITECTURE, RESEARCH, MODEL_DISCOVERY, MODEL_BINDING, RUNTIME, DRIFT_FORENSICS, EVIDENCE, VERIFICATION, NTM_ESCALATION, GOVERNANCE_INTERFACE, PUBLICATION, MAINTENANCE, AUTOBUILD.
+
+## Dependency policy
+
+A task is dependency-ready only when all declared prerequisites are COMPLETE or explicitly accepted as non-blocking.
+
+Priority considers:
+1. blocking impact
+2. architecture criticality
+3. evidence quality
+4. verification readiness
+5. regression risk
+6. age / retry count
+
+Priority is a routing signal, not a scientific conclusion.
+
+## Authority boundaries
+
+The manager may inspect state, create bounded task plans, route work, collect results, record failures, and request verification.
+
+The manager must not:
+- push directly to main
+- delete, disable, or rewrite preserved branches
+- invent models, endpoints, capabilities, evidence, or credentials
+- silently modify schemas or thresholds
+- bypass verification
+- merge its own pull requests
+- replace the NTM decision gate
+- replace the existing Work Manager with another global orchestrator
+
+## Model Fabric integration
+
+The 5,000 model slots are architectural identities. The manager may route only to candidates that satisfy the Model Agent lifecycle and verification contracts.
+
+DISCOVERED -> CONFIGURED -> VERIFIED -> ENABLED
+
+An UNBOUND or unverified slot cannot receive production work.
+
+## NTM integration
+
+The manager routes bounded tasks and verified evidence to the NTM. The NTM is the high-level cognitive CPU and escalation/verification layer; it is not an unrestricted executor.
+
+## Work Memory integration
+
+Every cycle records:
+- observed state
+- selected work
+- dependencies
+- changes
+- tests
+- verification
+- blocked/conflict state
+- next action
+
+Work Memory is the resume point, not an authority that overrides repository evidence.
+
+## Failure and conflict handling
+
+FAIL -> RECORD -> RETRY or ALTERNATE_ROUTE -> VERIFY
+
+CONFLICT -> PRESERVE_BOTH_STATES -> BLOCK_PROMOTION -> REVIEW_REQUIRED
+
+The manager never guesses through an architectural conflict.
+
+## Global cycle
+
+SNAPSHOT -> HEALTH_SCAN -> WORK_MEMORY_SYNC -> DEPENDENCY_GRAPH -> PRIORITY_QUEUE -> ROUTE -> EXECUTE -> EVIDENCE -> VERIFY -> MEMORY_CHECKPOINT -> NEXT_QUEUE
+
+The cycle may be run in dry-run mode. Execution adapters remain separate from planning.
+
+## Final review
+
+Autonomous construction may prepare and validate changes, but final architecture review remains outside the autonomous manager.
