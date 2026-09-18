@@ -134,7 +134,10 @@
     "ARCHITECTURE_DISCOVERY_REGISTRY.json": "machine-readable discovery candidate registry",
     "github_architecture_scout.py": "controlled public-GitHub candidate discovery with license metadata",
     "architecture-discovery.yml": "serialized scheduled discovery workflow",
-    "test_architecture_discovery.py": "discovery contract tests"
+    "test_architecture_discovery.py": "discovery contract tests",
+    "ARCHITECTURE_DISCOVERY_PROGRAM_V1.md": "three bounded architecture scouts, discovery lifecycle and investor boundary",
+    "ARCHITECTURE_PATTERN_MATRIX_V1.md": "pattern comparison and acceptance matrix",
+    "ARCHITECTURE_DISCOVERY_QUERIES_V1.yml": "declared public GitHub discovery domains"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -171,7 +174,7 @@
     "model_slots_connected": 0,
     "model_slots_verified": 0,
     "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
-    "discovery_program": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
+    "discovery_program": "implemented on autobuild/architecture-construction; runtime execution not yet verified",
     "master_instructions_propagation": "manager and subordinate build workflows reference canonical master instructions; runtime execution pending"
   },
   "master_project_instructions": {
@@ -206,7 +209,7 @@
       "docs/ARCHITECTURE_DISCOVERY_REGISTRY.schema.json",
       "docs/ARCHITECTURE_PATTERN_MATRIX_V1.md",
       "docs/ARCHITECTURE_DISCOVERY_QUERIES_V1.yml",
-      ".github/workflows/architecture-discovery-scouts.yml"
+      ".github/workflows/architecture-discovery.yml"
     ],
     "next_phase": "Rational Logic formalization/publication next month"
   }
