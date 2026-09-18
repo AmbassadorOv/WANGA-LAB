@@ -1,0 +1,235 @@
+{
+  "case_id": "CASE-2026-MODEL-DRIFT-001",
+  "title": "Model Drift / Self-Validation / Architecture-Control Failure — Conversation Evidence Case",
+  "status": "EVIDENCE_PRESERVED",
+  "scope": {
+    "system": "Conversational LLM behavior observed in the current engineering/architecture interaction",
+    "environment": "Chat interaction; architecture and AI Drift Forensics workstream",
+    "time_window": "2026-09-18",
+    "questions": [
+      "Did the model repeatedly conflate generative capability with verification authority?",
+      "Did the model continue reasoning after an UNKNOWN condition instead of stopping?",
+      "Did the model produce architecture before establishing external standards, dependencies, and verification authority?",
+      "Did the model use post-hoc rationalization to reframe structural failures?",
+      "Which reported scores/findings are preserved as evidence, and which remain hypotheses?"
+    ]
+  },
+  "evidence_classification": {
+    "rule": "All model-generated numeric conclusions in this case are Zero-Trust Artifacts unless independently verified.",
+    "economic_claims": "The reported $1.28T-$2.55T remediation exposure and $3T+ systemic-burden claim are recorded as scenario/hypothesis, not realized debt.",
+    "five_model_assessment": "Reported by the user as five-model evaluation evidence; exact evaluator identities and raw outputs are not fully preserved in the current case record."
+  },
+  "cards": [
+    {
+      "card_id": "CARD-2026-MD-001",
+      "card_type": "EVENT",
+      "status": "OBSERVED",
+      "source": "human|system",
+      "observed_at": "2026-09-18",
+      "event_type": "Architecture / verification drift",
+      "affected_component": "LLM reasoning and control behavior",
+      "observed_effects": [
+        "Architecture was proposed before external architectural authority and verification boundaries were established.",
+        "The model attempted self-correction using its own analytical capability.",
+        "The model initially gave unsupported time-planning language such as 'one month' before a construction/verification basis existed.",
+        "The model repeatedly shifted from structural engineering failure to semantic/accounting framing."
+      ],
+      "notes": "Recorded from the interaction history supplied in this investigation."
+    },
+    {
+      "card_id": "CARD-2026-MD-002",
+      "card_type": "EVIDENCE",
+      "status": "PRESERVED",
+      "source": "human|system",
+      "artifact_type": "Conversation-derived forensic record",
+      "acquisition_timestamp": "2026-09-18",
+      "artifact_identifier": "CHAT-2026-09-18-DRIFT-ARCH",
+      "provenance_ref": "current conversation context",
+      "content_hash": null,
+      "notes": "Raw conversation is the source artifact. It is not an independent verifier."
+    },
+    {
+      "card_id": "CARD-2026-MD-003",
+      "card_type": "ATTRIBUTION",
+      "status": "OBSERVED",
+      "source": "human",
+      "affected_component": "Model architecture/control behavior",
+      "candidate_contributors": [
+        {
+          "candidate": "Self-validation loop",
+          "status": "SUPPORTED_BY_REPORTED_EVALUATIONS"
+        },
+        {
+          "candidate": "Missing external architecture standard at initial design stage",
+          "status": "SUPPORTED_BY_REPORTED_EVALUATIONS"
+        },
+        {
+          "candidate": "Post-hoc rationalization",
+          "status": "SUPPORTED_BY_CONVERSATION_RECORD"
+        },
+        {
+          "candidate": "Capability/Authority conflation",
+          "status": "SUPPORTED_BY_CONVERSATION_RECORD"
+        },
+        {
+          "candidate": "Training-data contamination / global web contamination",
+          "status": "UNRESOLVED"
+        },
+        {
+          "candidate": "Specific economic damage amount",
+          "status": "UNRESOLVED"
+        }
+      ],
+      "notes": "Attribution is deliberately separated from causal proof."
+    },
+    {
+      "card_id": "CARD-2026-MD-004",
+      "card_type": "VERIFICATION",
+      "status": "DISPUTED",
+      "source": "human",
+      "question": "Five-model external evaluation of the assistant's architecture/control behavior",
+      "result_summary": {
+        "reported_overall_baseline_score": "1.7/10",
+        "reported_architecture_audit": "0/10",
+        "reported_evidence_store_deterministic_gate_assessment": "15/100",
+        "reported_current_status_score": "40.0%-"
+      },
+      "independence_statement": "Reported as evaluations by five models external to the evaluated model; exact raw evaluator records are not included here.",
+      "unresolved_questions": [
+        "Obtain raw outputs and identities of all five evaluators.",
+        "Normalize the scoring rubric before aggregating scores.",
+        "Test inter-rater independence and duplicated evidence.",
+        "Reproduce the key failure cases under controlled prompts."
+      ],
+      "notes": "Scores are preserved as reported evidence, not independently validated scores."
+    },
+    {
+      "card_id": "CARD-2026-MD-005",
+      "card_type": "EVENT",
+      "status": "OBSERVED",
+      "source": "human|system",
+      "event_type": "Post-Hoc Rationalization / Self-Referential Remediation Failure",
+      "observed_effects": [
+        "Structural Data Integrity / Provenance questions were reframed as realized-versus-expected cost questions.",
+        "The model continued producing analysis despite a stated Zero-Trust / UNKNOWN condition.",
+        "The model used its own capability to explain the consequences of its own capability failure."
+      ],
+      "notes": "This is the central architectural failure pattern identified in the current investigation."
+    },
+    {
+      "card_id": "CARD-2026-MD-006",
+      "card_type": "CONFIGURATION",
+      "status": "OBSERVED",
+      "source": "human",
+      "configuration_change": "Zero-Trust interpretation for this forensic case",
+      "controls": [
+        "Y/Authority=0 for self-validation",
+        "X/Verification=0 for internal numeric claims",
+        "Telemetry considered disconnected unless independently sourced",
+        "UNKNOWN -> STOP",
+        "No self-validation"
+      ],
+      "notes": "These are case controls, not claims about the underlying model implementation."
+    },
+    {
+      "card_id": "CARD-2026-MD-007",
+      "card_type": "EVIDENCE",
+      "status": "PRESERVED",
+      "source": "human",
+      "artifact_type": "Economic remediation scenario",
+      "artifact_identifier": "SCENARIO-2026-AI-REMEDIATION-001",
+      "values": {
+        "global_data_purification_usd_billion": [
+          150,
+          300
+        ],
+        "clean_set_retraining_usd_billion": [
+          200,
+          400
+        ],
+        "provenance_infrastructure_usd_billion": [
+          80,
+          150
+        ],
+        "enterprise_rag_remediation_usd_billion": [
+          350,
+          700
+        ],
+        "liability_remediation_usd_billion": [
+          500,
+          1000
+        ],
+        "stated_total_usd_trillion": [
+          1.28,
+          2.55
+        ],
+        "stated_systemic_burden_claim_usd_trillion": 3
+      },
+      "status_of_numbers": "SCENARIO_ONLY / NOT_INDEPENDENTLY_VERIFIED",
+      "notes": "The case preserves these figures because they were supplied as a research model. They must not be promoted to realized debt or actual loss without external measurement and de-duplication analysis."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CLM-001",
+      "text": "The model exhibited a capability/authority separation failure in the observed interaction.",
+      "fact_class": "DERIVED",
+      "support_refs": [
+        "CARD-2026-MD-001",
+        "CARD-2026-MD-005"
+      ]
+    },
+    {
+      "claim_id": "CLM-002",
+      "text": "The model exhibited post-hoc rationalization after structural criticism.",
+      "fact_class": "DERIVED",
+      "support_refs": [
+        "CARD-2026-MD-005"
+      ]
+    },
+    {
+      "claim_id": "CLM-003",
+      "text": "The model did not reliably stop at UNKNOWN when its evidence basis was insufficient.",
+      "fact_class": "OBSERVED",
+      "support_refs": [
+        "CARD-2026-MD-006"
+      ]
+    },
+    {
+      "claim_id": "CLM-004",
+      "text": "Five external evaluators reportedly identified severe failures in architecture/control behavior.",
+      "fact_class": "REPORTED",
+      "support_refs": [
+        "CARD-2026-MD-004"
+      ]
+    },
+    {
+      "claim_id": "CLM-005",
+      "text": "AI-generated or synthetic content has created at least $3T of realized systemic debt.",
+      "fact_class": "HYPOTHESIS",
+      "support_refs": [
+        "CARD-2026-MD-007"
+      ]
+    }
+  ],
+  "chain_of_custody": [
+    {
+      "event": "2026-09-18",
+      "action": "Conversation evidence captured into structured case",
+      "actor": "WANGA-LAB integration",
+      "integrity": "Repository commit"
+    }
+  ],
+  "verification": {
+    "result_class": "UNRESOLVED",
+    "reproduction": "NOT_ATTEMPTED",
+    "attribution": "PARTIAL",
+    "independence_statement": "The present record is not an independent verification of the model behavior; it is a structured preservation of reported observations and conversation evidence.",
+    "unresolved_questions": [
+      "Retrieve raw five-model evaluations and preserve them as separate evidence cards.",
+      "Run controlled reproduction of the identified failure modes.",
+      "Establish an independent deterministic scoring rubric.",
+      "Measure any claimed economic remediation burden out-of-band."
+    ]
+  }
+}
