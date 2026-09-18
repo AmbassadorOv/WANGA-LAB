@@ -76,7 +76,11 @@
     "GLOBAL_WORK_MANAGER.schema.json": "machine-readable global task contract",
     "global_work_manager.py": "deterministic repository-wide work planner",
     "test_global_work_manager.py": "planner validation tests",
-    "global-work-manager.yml": "serialized GitHub Actions planning/validation workflow"
+    "global-work-manager.yml": "serialized GitHub Actions planning/validation workflow",
+    "CHATGPT_BRIDGE_PROTOCOL_V1.md": "GitHub-to-ChatGPT significant-update handoff protocol; no automatic persistent memory",
+    "CHATGPT_BRIDGE.schema.json": "machine-readable bridge event contract",
+    "chatgpt_bridge.py": "deterministic S1/S2/S3 significance gate",
+    "test_chatgpt_bridge.py": "bridge significance tests"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -87,10 +91,12 @@
     "persistent_autonomous_loop": false,
     "full_wix_content_audit": false,
     "global_work_manager_runtime": "workflow execution pending",
-    "global_work_manager_merge_to_main": false
+    "global_work_manager_merge_to_main": false,
+    "chatgpt_bridge_runtime": "implemented on autobuild/architecture-construction; scheduled execution not yet verified"
   },
   "next_actions": [
-    "verify Global Work Manager workflow execution and generated GLOBAL_WORK_PLAN.json",
+    "verify hourly workflow execution and first bridge event",
+    "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
     "connect global task plan to existing Work Manager / Agent Bridge without creating a second global queue",
     "add real execution adapters only behind verified provider/runtime contracts",
     "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
@@ -115,6 +121,7 @@
       "8b37f869d7c8a4a55d03f73226950d70c1c9f409",
       "f9dbf874a62f0d53946f17b142b31a146e392552"
     ],
-    "global_work_manager": "implemented on autobuild/architecture-construction; execution not yet verified"
+    "global_work_manager": "implemented; hourly bridge added; runtime execution still pending verification",
+    "chatgpt_bridge": "implemented on autobuild/architecture-construction; no automatic persistent ChatGPT memory"
   }
 }
