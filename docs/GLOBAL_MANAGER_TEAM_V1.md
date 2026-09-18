@@ -2,6 +2,10 @@
 
 This registry defines the manager layer supervised by WANGA Global Work Manager V2. It is a repository-level architectural team, not a claim that GitHub has created an organization/team object or that these roles are human appointments.
 
+## Master instruction inheritance
+
+Every manager in this registry inherits and must operate under `docs/MASTER_PROJECT_INSTRUCTIONS_V1.md`. The Global Work Manager enforces the common contract; subordinate managers do not create alternative policy, memory, evidence, or orchestration authorities.
+
 ## Hierarchy
 
 GLOBAL WORK MANAGER
@@ -21,6 +25,14 @@ GLOBAL WORK MANAGER
 
 The Global Work Manager is the single cross-system coordinator.
 
+## Shared manager operating loop
+
+Every manager follows:
+
+CONTEXT -> INSPECT -> CLASSIFY -> PRIORITIZE -> PLAN -> EXECUTE -> TEST -> VERIFY -> RECORD -> INTEGRATE -> SELF-AUDIT -> NEXT ACTION
+
+Every manager must separate VERIFIED SYSTEM from TARGET ARCHITECTURE.
+
 ## Manager roster
 
 | ID | Manager | Scope | Primary daily question |
@@ -38,6 +50,34 @@ The Global Work Manager is the single cross-system coordinator.
 | MGR-AUTOBUILD | Autonomous Build Manager | autonomous construction branch | What verified change can safely be built next? |
 | MGR-MEMORY | Work Memory Manager | durable work memory | What must be checkpointed so work can resume correctly? |
 
+## Manager-specific mandatory concerns
+
+- MGR-OS: preserve architecture and runtime contracts before replacement.
+- MGR-RESEARCH: classify claims and hypotheses; Rational Logic becomes the primary next-month formalization stream.
+- MGR-MODEL: never treat a 5,000-slot allocation as 5,000 live models.
+- MGR-DMA: preserve stable agent identity and provenance.
+- MGR-ADAPTER: keep credentials outside registries and fail closed on verification failure.
+- MGR-DRIFT: never convert temporal correlation into causal proof.
+- MGR-EVIDENCE: require provenance and evidence before promotion.
+- MGR-NTM: use NTM for cognitive escalation, not unrestricted execution.
+- MGR-GOV: preserve WANGA/GAG separation and explicit interfaces.
+- MGR-WIX: publish validated material only; do not turn plans into production claims.
+- MGR-AUTOBUILD: isolated branch only; no autonomous merge to main.
+- MGR-MEMORY: record observed/changed/tested/verified/pending/next state.
+
+## Shared priority
+
+P0 SYSTEM INTEGRITY
+P1 RATIONAL LOGIC
+P2 VERIFICATION
+P3 NTM + RATIONAL LOGIC + EVIDENCE
+P4 MODEL FABRIC
+P5 PERSPECTIVE SCALE
+P6 COMMERCIALIZATION
+P7 PRESENTATION
+
+This is a project routing priority, not a valuation or scientific ranking.
+
 ## Reporting contract
 
 Each manager reports:
@@ -47,11 +87,11 @@ No manager may silently promote a proposal to a verified result.
 
 ## Daily assignment rule
 
-The Global Work Manager compares manager reports with Work Memory, Global Work Plan, repository state, open PRs, CI results, model verification state, evidence/drift records, and validated external research. It then creates the next bounded work queue.
+The Global Work Manager compares manager reports with Work Memory, Global Work Plan, repository state, open PRs, CI results, model verification state, evidence/drift records, validated external research, and the master project instructions. It then creates the next bounded work queue.
 
 ## Independence boundaries
 
-Managers own bounded domains only. They do not create competing global queues, bypass verification, change main, delete preserved branches, store secrets, or invent external model/provider facts.
+Managers own bounded domains only. They do not create competing global queues, bypass verification, change main, delete preserved branches, store secrets, invent external model/provider facts, or make unsupported financial/valuation claims.
 
 ## Final review
 
