@@ -22,6 +22,7 @@ GLOBAL WORK MANAGER
 +-- Publication / Wix Manager
 +-- Autonomous Build Manager
 +-- Work Memory Manager
++-- Architecture Discovery Manager
 
 The Global Work Manager is the single cross-system coordinator.
 
@@ -49,6 +50,7 @@ Every manager must separate VERIFIED SYSTEM from TARGET ARCHITECTURE.
 | MGR-WIX | Publication / Wix Manager | publication and external integration | What validated material is ready for publication? |
 | MGR-AUTOBUILD | Autonomous Build Manager | autonomous construction branch | What verified change can safely be built next? |
 | MGR-MEMORY | Work Memory Manager | durable work memory | What must be checkpointed so work can resume correctly? |
+| MGR-ARCH-DISCOVERY | Architecture Discovery Manager | three architecture scouts and GitHub pattern discovery | What reusable, license-compatible architecture evidence can be verified this cycle? |
 
 ## Manager-specific mandatory concerns
 
@@ -64,6 +66,7 @@ Every manager must separate VERIFIED SYSTEM from TARGET ARCHITECTURE.
 - MGR-WIX: publish validated material only; do not turn plans into production claims.
 - MGR-AUTOBUILD: isolated branch only; no autonomous merge to main.
 - MGR-MEMORY: record observed/changed/tested/verified/pending/next state.
+- MGR-ARCH-DISCOVERY: maintain targeted public GitHub discovery, license/provenance evidence, pattern extraction and adaptation proposals; never claim exhaustive GitHub coverage.
 
 ## Shared priority
 
