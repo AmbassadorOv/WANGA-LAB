@@ -1,0 +1,44 @@
+name: WANGA Architecture Discovery
+
+on:
+  schedule:
+    - cron: "41 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wanga-autonomous-build
+  cancel-in-progress: false
+
+jobs:
+  architecture-discovery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout architecture branch
+        uses: actions/checkout@v4
+        with:
+          ref: autobuild/architecture-construction
+          fetch-depth: 0
+
+      - name: Run controlled GitHub discovery
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/github_architecture_scout.py
+
+      - name: Validate discovery contract
+        run: |
+          python -m compileall -q scripts
+          python -m unittest discover -s tests -p "test_architecture_discovery.py"
+
+      - name: Commit discovery registry
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/ARCHITECTURE_DISCOVERY_REGISTRY.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: checkpoint architecture discovery candidates"
+            git push origin autobuild/architecture-construction
+          fi
