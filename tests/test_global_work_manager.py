@@ -38,7 +38,7 @@ class GlobalWorkManagerTests(unittest.TestCase):
             out = Path(d) / "plan.json"
             out.write_text(json.dumps(module.build_plan(state)), encoding="utf-8")
             loaded = json.loads(out.read_text(encoding="utf-8"))
-            self.assertEqual(loaded["task_count"], 12)
+            self.assertEqual(loaded["task_count"], len(module.SUBSYSTEMS))
             self.assertEqual(loaded["pattern_profile"], "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1")
 
 if __name__ == "__main__":
