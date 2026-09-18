@@ -1,23 +1,15 @@
-"""RFC 3161 integration boundary.
-
-A real RFC 3161 implementation must construct a standards-compliant
-TimeStampReq (ASN.1/DER) and validate the returned TimeStampResp.
-This module intentionally does not treat an arbitrary HTTP response as a
-valid timestamp token.
-"""
-
+"""RFC 3161 verification boundary; no fabricated success."""
 from __future__ import annotations
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
-class TimestampResult:
-    token: bytes
-    tsa_url: str
+class TimestampVerification:
+    status: str
+    tsa_url: str | None
+    reason: str | None = None
 
-def require_rfc3161_token(token: bytes) -> TimestampResult:
+
+def verify_rfc3161_token(token: bytes | None, *, tsa_url: str | None = None) -> TimestampVerification:
     if not token:
-        raise ValueError("Empty timestamp token")
-    raise NotImplementedError(
-        "RFC 3161 ASN.1 request/response validation must be implemented "
-        "with a standards-compliant TSP library before production use."
-    )
+        return TimestampVerification("UNKNOWN", tsa_url, "TIMESTAMP_TOKEN_MISSING")
+    return TimestampVerification("UNKNOWN", tsa_url, "RFC3161_TOKEN_PARSER_NOT_CONFIGURED")
