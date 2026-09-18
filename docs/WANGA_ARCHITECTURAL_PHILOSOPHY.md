@@ -1,0 +1,33 @@
+# WANGA Architectural Philosophy
+
+## Architectural Blueprint
+
+WANGA is an architectural philosophy for designing systems from the requirements of the world and the system they are intended to operate, rather than starting from an existing computer and fitting the system to its capabilities.
+
+The blueprint is an Architecture of Architectures: a higher-order architecture contains, coordinates, and provides interfaces between distinct internal architectures while preserving their distinct roles.
+
+## Unified system
+
+The blueprint connects scientific organization and knowledge; economic organization and financial continuity; social organization; institutional and governmental organization; algorithmic systems and AI; and a new computing architecture derived from the requirements of the whole system.
+
+The algorithmic engine is not merely a computer performing governmental tasks. It is conceived as a common operating engine across economic, scientific, social, institutional, and computational domains.
+
+## Architectural direction
+
+World/System Requirements → Architecture of Architectures → Internal Architectures → Computational Requirements → Computer Architecture
+
+This reverses the usual design assumption that an existing computer architecture determines what the larger system can become.
+
+## Algorithmic Governance
+
+In this blueprint, Algorithmic Governance means governance as an organizing architecture around an algorithmic engine, not simply government actions executed by computers. The economic engine surrounds and enables the algorithmic engine, while the algorithmic architecture reorganizes and coordinates economic, scientific, social, institutional, and computational activity.
+
+## Global institutional purpose
+
+The Global Institute for Algorithmic Governance is defined in this blueprint as a non-political, non-partisan institutional architecture. Its purpose is not to govern political choices or act as a political authority. Its role is to develop and maintain the architectural framework through which governmental and institutional systems can be organized, coordinated, documented, and made resilient.
+
+The institute is conceived as operating within the institutional insurance/resilience layer of governments: a technical and architectural layer concerned with continuity, evidence, coordination, and systemic resilience rather than political control.
+
+## Design principle
+
+A computer architecture that cannot support the requirements of the larger architecture is an architectural mismatch. Therefore computing architecture is derived from system requirements, not selected first and imposed on the system.
