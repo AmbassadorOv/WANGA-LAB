@@ -1,0 +1,45 @@
+name: WANGA Global Work Manager
+
+on:
+  push:
+    branches:
+      - autobuild/architecture-construction
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wanga-autonomous-build
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout build branch
+        uses: actions/checkout@v4
+        with:
+          ref: autobuild/architecture-construction
+          fetch-depth: 0
+
+      - name: Validate Python
+        run: python -m compileall -q scripts
+
+      - name: Run global work manager
+        run: python scripts/global_work_manager.py
+
+      - name: Run manager tests
+        run: python -m unittest discover -s tests -p 'test_global_work_manager.py'
+
+      - name: Commit generated work plan
+        run: |
+          if git diff --quiet -- docs/GLOBAL_WORK_PLAN.json; then
+            echo "No work-plan change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/GLOBAL_WORK_PLAN.json
+          git commit -m "chore: refresh global work plan"
+          git push origin HEAD:autobuild/architecture-construction
