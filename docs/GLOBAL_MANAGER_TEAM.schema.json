@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"WANGA Global Manager Team",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["team_id","global_manager","managers","report_contract"],
+  "properties":{
+    "team_id":{"const":"WANGA-MANAGER-TEAM-V1"},
+    "global_manager":{"const":"WANGA_GLOBAL_WORK_MANAGER_V2"},
+    "managers":{"type":"array","minItems":12,"items":{"type":"object","additionalProperties":false,"required":["manager_id","scope","reports_to","status"],"properties":{"manager_id":{"type":"string","pattern":"^MGR-[A-Z0-9-]+$"},"scope":{"type":"string","minLength":1},"reports_to":{"const":"WANGA_GLOBAL_WORK_MANAGER_V2"},"status":{"enum":["ACTIVE","PLANNED","BLOCKED","REVIEW_REQUIRED"]}}}},
+    "report_contract":{"const":"STATUS -> NEW_EVIDENCE -> METRICS -> DRIFT/CHANGE -> REQUIRED_WORK -> PROPOSED_ACTION -> TESTS -> VERIFIED -> BLOCKED/CONFLICT -> NEXT_ACTION"}
+  }
+}
