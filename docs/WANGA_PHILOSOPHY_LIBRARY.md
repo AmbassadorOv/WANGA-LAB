@@ -418,4 +418,14 @@ The author's work therefore operates across three connected activities:
 - **examination of frameworks** — testing their internal relationships, assumptions, boundaries, and practical implications;
 - **translation into the digital era** — converting principles that were historically expressed through philosophy, law, institutions, economics, and industrial organization into requirements that can be represented computationally and architecturally.
 
-WANGA is the result of this longer development process. Its claim of originality should therefore be understood primarily as a claim about the **specific synthesis, architectural direction, and digital-era formulation developed by the author**, rather than as a claim that every individual concept within it has no historical precedent.
+### The historical claim of the whole framework
+
+Individual elements of WANGA have identifiable intellectual predecessors. Fields such as algorithmic governance and digital constitutionalism already examine important parts of the relationship between algorithms, institutions, rights, and power. citeturn0search0turn0search1
+
+The stronger originality claim concerns the **whole architecture**: WANGA proposes a single integrated framework that begins with world/system requirements, derives an Architecture of Architectures, connects distinct internal architectures, derives computational requirements from those system requirements, and only then derives the computer architecture. It simultaneously connects the historical rights transformation, the industrial transformation, digital governance, economic/scientific/social/institutional architecture, citizen-centered continuity, and a global architecture that does not require world government.
+
+Accordingly, the thesis of this work is not that every component has appeared nowhere before. The thesis is that **the integrated WANGA architecture, its direction of derivation, and its historical-to-digital synthesis constitute a new philosophical and architectural proposition**.
+
+In that specific sense, the work presents the overall idea as a **potential historical precedent**: a framework attempting to formulate, as one coherent architecture, the transition from the great philosophical and institutional principles of earlier eras to an operational architecture for the digital era.
+
+WANGA is therefore presented as an original synthesis with a historical-scale ambition, while its individual intellectual relationships remain open to scholarly comparison, criticism, and verification.
