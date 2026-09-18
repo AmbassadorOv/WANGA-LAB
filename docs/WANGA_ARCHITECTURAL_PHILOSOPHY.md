@@ -24,7 +24,7 @@ In this blueprint, Algorithmic Governance means governance as an organizing arch
 
 ## Citizen-first stability principle
 
-The system exists for the human being, not the human being for the system.
+**The system exists for the human being, not the human being for the system.**
 
 The purpose of the architectural layer is therefore not merely to make institutions more efficient. It is to preserve the practical ability of people to exercise their rights, receive essential services, maintain continuity, and remain protected when institutions or interfaces between them experience failure.
 
@@ -33,6 +33,22 @@ The architecture is designed to absorb systemic shocks at the institutional and 
 This establishes a citizen-rights and human-rights function as a stability requirement of the architecture itself.
 
 The citizen remains the rights-holder and decision-maker. The architecture supports rights; it does not create political authority over the citizen. Adoption and participation are based on lawful institutional and civic choice rather than coercion.
+
+## From declared rights to fulfilled architecture
+
+WANGA defines its relationship to the historical rights tradition as **fulfillment of its architectural and operational aims without requiring another political revolution**.
+
+The Declaration of the Rights of Man and of the Citizen of 1789 established foundational principles including liberty, equality before the law, security, participation, accountability of public administration, and separation of powers. The French constitutional tradition subsequently continued to reaffirm those principles. citeturn0search0turn0search2
+
+WANGA does not claim to replace that political and constitutional achievement. Its proposition is different: where rights are declared as principles, the architecture should provide the institutional, technical, computational, and continuity mechanisms needed for those principles to remain usable in everyday life.
+
+The intended sequence is:
+
+**Rights declared → rights institutionalized → rights operationalized → rights continuously protected.**
+
+The objective is therefore not revolution for the sake of institutional replacement. It is the realization of a rights-centered system through architectural transformation while existing lawful political institutions remain in place.
+
+In this sense, WANGA presents itself as a non-revolutionary path toward the practical realization of the human-centered purposes expressed in the rights tradition.
 
 ## Human-rights operational layer
 
