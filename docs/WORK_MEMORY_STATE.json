@@ -129,7 +129,12 @@
     "CHATGPT_BRIDGE.schema.json": "machine-readable bridge event contract",
     "chatgpt_bridge.py": "deterministic S1/S2/S3 significance gate",
     "test_chatgpt_bridge.py": "bridge significance tests",
-    "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md": "open-source agent architecture pattern integration record"
+    "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md": "open-source agent architecture pattern integration record",
+    "ARCHITECTURE_AGENT_CONTRACT_V1.md": "three bounded architecture-agent roles and authority boundaries",
+    "ARCHITECTURE_DISCOVERY_REGISTRY.json": "machine-readable discovery candidate registry",
+    "github_architecture_scout.py": "controlled public-GitHub candidate discovery with license metadata",
+    "architecture-discovery.yml": "serialized scheduled discovery workflow",
+    "test_architecture_discovery.py": "discovery contract tests"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -145,14 +150,14 @@
     "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
   },
   "next_actions": [
+    "run and verify the first architecture-discovery workflow cycle",
+    "read and classify discovered repositories with license evidence before proposing adaptations",
+    "build the Architecture Pattern Matrix from verified discovery records",
     "formalize Rational Logic as the primary next-month reasoning layer without creating a second global orchestrator",
-    "verify hourly workflow execution and first bridge event",
-    "verify global work manager plan generation with integrated runtime controls",
+    "verify hourly global manager and ChatGPT bridge execution",
     "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
-    "connect global task plan to existing Work Manager / Agent Bridge without creating a second global queue",
     "add real execution adapters only behind verified provider/runtime contracts",
-    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state",
-    "propagate and enforce MASTER_PROJECT_INSTRUCTIONS_V1 across every subordinate manager and automation"
+    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
   ],
   "last_verification": {
     "date": "2026-09-18",
@@ -164,7 +169,9 @@
     "model_slots_allocated": 5000,
     "model_slots_connected": 0,
     "model_slots_verified": 0,
-    "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified"
+    "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
+    "discovery_program": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
+    "master_instructions_propagation": "manager and subordinate build workflows reference canonical master instructions; runtime execution pending"
   },
   "master_project_instructions": {
     "path": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
@@ -180,5 +187,31 @@
       "P6_COMMERCIALIZATION",
       "P7_PRESENTATION"
     ]
+  },
+  "architecture_discovery": {
+    "status": "ACTIVE_BUILD",
+    "control": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "window": "September 2026 build cycle -> October 2026 Rational Logic publication/research phase",
+    "agents": [
+      "ARCH-01",
+      "ARCH-02",
+      "ARCH-03"
+    ],
+    "lifecycle": [
+      "DISCOVER",
+      "READ",
+      "CLASSIFY",
+      "LICENSE_CHECK",
+      "COMPARE",
+      "EXTRACT_PATTERN",
+      "ADAPT",
+      "TEST",
+      "VERIFY",
+      "RECORD"
+    ],
+    "exhaustive_github_claim": false,
+    "source_code_copying": false,
+    "license_check_required": true,
+    "registry": "docs/ARCHITECTURE_DISCOVERY_REGISTRY.json"
   }
 }
