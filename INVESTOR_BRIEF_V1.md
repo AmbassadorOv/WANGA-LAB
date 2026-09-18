@@ -52,3 +52,31 @@ For investor and bank discussions, future actual financing proceeds may be contr
 See:
 - `docs/WHITEPAPER_BANK_INVESTOR_V2.md`
 - `docs/BANK_FINANCING_ALIGNMENT_V1.md`
+
+
+## Architecture Discovery Program — September 2026
+
+A controlled three-agent Architecture Discovery Program is now part of the build branch. The program systematically searches relevant public GitHub architecture domains and records candidates for orchestration, agent systems, memory, routing, evaluation, verification, provenance, observability, security, infrastructure and formal-reasoning patterns.
+
+The three bounded architecture agents are:
+- ARCH-01 — Systems Architecture Scout
+- ARCH-02 — Cognitive / Agent Architecture Scout
+- ARCH-03 — Verification / Infrastructure / IP Scout
+
+The discovery process is:
+**DISCOVER → READ → CLASSIFY → LICENSE CHECK → COMPARE → EXTRACT PATTERN → ADAPT → TEST → VERIFY → RECORD**
+
+This program does not claim exhaustive coverage of all GitHub repositories and does not copy source code. License/provenance evidence is required before a discovered pattern can be considered for adoption. Discovery proposals remain subordinate to the Global Work Manager and the final verification/review gates.
+
+The September build window is being used to increase architectural evidence and identify reusable patterns before the planned October 2026 Rational Logic publication/research phase. Rational Logic itself remains a protected research priority; its unpublished internal architecture is not being prematurely disclosed through the discovery program.
+
+Technical references:
+- `docs/MASTER_PROJECT_INSTRUCTIONS_V1.md`
+- `docs/ARCHITECTURE_DISCOVERY_PROGRAM_V1.md`
+- `docs/ARCHITECTURE_AGENT_CONTRACT_V1.md`
+- `docs/ARCHITECTURE_DISCOVERY_REGISTRY.json`
+- `docs/ARCHITECTURE_PATTERN_MATRIX_V1.md`
+
+## Investor data-room status discipline
+
+Investor materials distinguish the current verified/build state from target architecture. The 5,000-model fabric and approximately 1,000 Perspective Layer are scaling targets, not claims of current deployment. The USD 1 trillion token figure remains a future financing scenario and is not current cash, revenue, collateral or a guaranteed fundraising outcome.
