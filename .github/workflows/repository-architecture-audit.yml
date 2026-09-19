@@ -1,0 +1,67 @@
+name: Repository Architecture Audit
+
+on:
+  push:
+    paths:
+      - 'docs/ARCHITECTURE/**'
+      - '.github/workflows/repository-architecture-audit.yml'
+  pull_request:
+    paths:
+      - 'docs/ARCHITECTURE/**'
+      - '.github/workflows/repository-architecture-audit.yml'
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-atlas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository atlas
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("docs/ARCHITECTURE/REPOSITORY_ATLAS_2026-09-19.json")
+          data = json.loads(p.read_text())
+
+          required = {
+              "CORE",
+              "RESEARCH",
+              "AI_INFRA",
+              "SOURCE_UPSTREAM",
+              "GOVERNANCE_AND_INSTITUTIONAL",
+              "LEGACY_OR_EXPERIMENTAL",
+              "UNKNOWN_REQUIRES_REVIEW",
+          }
+
+          groups = set(data["groups"])
+          missing = required - groups
+          if missing:
+              raise SystemExit(f"Missing groups: {sorted(missing)}")
+
+          repos = []
+          for group, items in data["groups"].items():
+              for repo in items:
+                  if repo in repos:
+                      raise SystemExit(f"Duplicate repository classification: {repo}")
+                  repos.append(repo)
+
+          if not repos:
+              raise SystemExit("Repository atlas is empty")
+
+          print(f"Validated {len(repos)} repository classifications.")
+          for group, items in data["groups"].items():
+              print(f"{group}: {len(items)}")
+          PY
+
+      - name: Check governance document
+        run: test -s docs/ARCHITECTURE/REPOSITORY_GOVERNANCE.md
