@@ -42,6 +42,22 @@ The architectural requirement is platform-independent: the substrate must preser
                               WANGA COMPUTING SYSTEM
 ```
 
+## What I am building — WANGA Neural Algorithmic Governance Computer
+
+I am developing **WANGA as a proposed new neural computer architecture for algorithmic governance**: a recursive computational system designed to organize computation, reasoning, evidence, verification, provenance, and governance as one machine-traversable architecture.
+
+At its architectural core is the **Vitruvian Architecture Engine**. It converts heterogeneous systems from repository-level structures into a recursive architecture graph:
+
+**Architecture → Family → Subfamily → Child → Family Atom → Subatom → Neural Endpoint → Global Computational Graph**
+
+The defining property is that an atomic component does not have to belong to only one family. Vitruvius can discover cross-family relationships and construct a larger computational topology around them. Governance, provenance, lineage, evidence state, and verification constraints are attached at the atomic level.
+
+The resulting system is intended as a **neural algorithmic-governance computer**, not merely as a GitHub automation tool or an LLM wrapper.
+
+GitHub is currently one implementation and evidence surface. The intended architecture is platform-independent and is designed ultimately to operate on a persistent graph and orchestration substrate capable of connecting repositories, research data, computational agents, evidence systems, governance controls, and external platforms.
+
+In practical terms, my work is the design and construction of the architecture that can turn a collection of separate computational systems into a **recursive, governed, evidence-aware neural computing network**.
+
 ## WANGA and Rational Logic
 
 WANGA is treated in this research as a distinct computing architecture, not simply as a wrapper around a language model.
