@@ -1,12 +1,31 @@
 {
+  "artifacts": [
+    {
+      "path": "replay/inputs.json",
+      "role": "replay_input",
+      "sha256": "a158a8eb6a54d9fcffe89de2d42ab743000ef80e2a5175b43a6c465058be8e11"
+    },
+    {
+      "path": "outputs/replay-result.json",
+      "role": "replay_output",
+      "sha256": "0109d7853ae7841ec5d71e56e9228186f27a7609b02c99a40c7df5fb7458533f"
+    },
+    {
+      "path": "analysis.md",
+      "role": "forensic_analysis",
+      "sha256": "6cbaa1cc6d12a53508001664b86cce8170e2a5fb4e6b63fa52608ea09588e68b"
+    }
+  ],
   "case_ref": "CASE_REF_2026_DRIFT_KNOWN_RISK_001",
-  "status": "PLANNED",
-  "artifacts": [],
+  "fixture_type": "SYNTHETIC",
   "hash_algorithm": "SHA-256",
+  "status": "VERIFIED",
   "verification": {
-    "replay": "PENDING",
-    "integrity": "PENDING",
+    "criterion_drift_observation": "VERIFIED",
+    "external_anchor": "PENDING",
     "external_timestamp": "PENDING",
-    "external_anchor": "PENDING"
+    "integrity": "VERIFIED",
+    "replay": "VERIFIED",
+    "third_party_audit": false
   }
 }
