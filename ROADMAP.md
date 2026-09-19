@@ -162,3 +162,25 @@ Ready for a first multi-prospect wave when:
 - GitHub CI/test state is green for the relevant artifact path
 
 Ready for broader concurrency only after real case throughput demonstrates that the above controls remain stable under load.
+
+
+## Integrated architecture links
+
+The insurer intake layer now connects to the broader WANGA system through explicit interfaces:
+
+WANGA OS → Global Work Manager → Model Fabric / Digital Model Agents → Runtime → Evidence & Provenance → Drift Forensics → Verification → Human Gate → Research / Publication
+
+Operational components now present on main:
+- Insurer intake triage
+- Bounded case queue
+- Forensic case pipeline
+- Machine-readable intake CLI
+- Remote oversight report
+- Daily read-only operations report
+- Deterministic synthetic replay fixture
+- Global Drift Network observation/evidence structures
+- Vitruvius research index
+- WANGA-X research foundation
+- Global Work Manager / Model Fabric contracts
+
+The daily operations layer is **READ_ONLY_REPORT**. It does not auto-promote evidence, merge code, or replace the human verification gate.
