@@ -230,6 +230,14 @@
       "scope": "PUBLIC",
       "status": "SPECIFIED",
       "source": "docs/ARCHITECTURE/EXTERNAL_ARCHITECTURE_LINEAGE_INTEGRATION.md"
+    },
+    {
+      "id": "ARCHITECTURE-INTEGRATION-MATRIX",
+      "name": "Global Architecture Integration Matrix",
+      "parent": "WANGA-COMPUTER",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/ARCHITECTURE_INTEGRATION_MATRIX.md"
     }
   ]
 }
