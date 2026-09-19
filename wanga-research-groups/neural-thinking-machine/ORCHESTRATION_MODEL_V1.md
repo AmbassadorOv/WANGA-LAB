@@ -178,3 +178,18 @@ Build a provider-neutral Python orchestrator that:
 7. synthesizes a result;
 8. writes an auditable run record;
 9. returns the result to the HIG.
+
+
+## WANGA-X architecture-generation route
+
+The orchestration layer treats architecture generation as a first-class reasoning route rather than a fixed post-processing step.
+
+`DISCOVERY / INTENT -> REQUIREMENT -> ARCHITECTURE REASONING -> BLUEPRINT / IR -> MATERIALIZATION -> EXECUTION -> EVIDENCE -> VERIFICATION`
+
+The architecture reasoning route is informed by established foundations including HLS, SODA-style accelerator synthesis, requirement-to-architecture synthesis, and adaptive/runtime architecture. These are starting mechanisms, not claims that WANGA-X is already implemented by them.
+
+The `architect` and `blueprint_reasoner` nodes may generate multiple candidates. The verifier evaluates them against the computational requirement and explicit constraints. A changed requirement may re-enter the route and generate a new architecture candidate:
+
+`CHANGED REQUIREMENT -> REASON -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
+
+The materializer remains a separate execution boundary. NTM reasoning proposes and verifies; the materializer constructs the selected virtual architecture.
