@@ -53,3 +53,10 @@ The actual GitHub account currently exposes `AmbassadorOv/WANGA-LAB`; additional
 ## Integration Rule
 
 A researcher should not be required to understand every other field. The contribution should be locally rigorous, documented, reproducible, and connected through explicit interfaces. Cross-domain researchers are responsible for building and testing the links between specialized nodes.
+
+
+## Dynamic Architecture Generation
+
+WANGA-LAB also includes a research direction in which computational demand can determine the architecture to be materialized. A Blueprint is treated as the central representation from which an executable architecture can be generated, with the possibility of replacing an active architecture or assembling a new architecture from reusable parts when no existing architecture is suitable.
+
+This is a research hypothesis/design direction, not a claim that the complete mechanism has already been implemented or verified. Related technologies include high-level synthesis, runtime reconfiguration, virtual processors and programmable accelerators; the WANGA-LAB work concerns their proposed system-level unification around compute-demand-driven architecture generation and materialization.
