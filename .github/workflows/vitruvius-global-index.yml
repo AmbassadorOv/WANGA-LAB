@@ -1,0 +1,30 @@
+name: Vitruvius Global Architecture Index
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * 0"
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Vitruvius indexer syntax
+        run: python3 -m py_compile vitruvius/architecture_indexer.py
+      - name: Run Vitruvius indexer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 vitruvius/architecture_indexer.py
+      - name: Commit observed architecture book
+        run: |
+          git config user.name "WANGA-Vitruvius"
+          git config user.email "wanga-vitruvius@users.noreply.github.com"
+          git add vitruvius/data/architecture_book.json
+          git diff --cached --quiet && exit 0
+          git commit -m "vitruvius: update observed architecture book"
+          git push

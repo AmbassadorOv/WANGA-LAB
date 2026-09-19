@@ -46,6 +46,28 @@ The key transformation is:
     systemic knowledge layer reconstructing the whole
     from the histories and relations of participating lineages
 
+## Translation-governance criterion
+
+For the unified WANGA Computer architecture, Politeia operates before the translation layer. Its selection criterion is not an abstract ranking of models or a presumption that one model contains the best logic.
+
+The reference is the supplied logical structure. Politeia uses lineage knowledge to select and compose computational structures according to their demonstrated ability to carry that logic into derivations with controlled error, distortion, and information loss.
+
+```text
+LINEAGE KNOWLEDGE
+        ↓
+WANGA POLITEIA
+        ↓
+TRANSLATION CONFIGURATION
+        ↓
+RATIONAL LOGIC
+        ↓
+DERIVATION
+        ↓
+VERIFICATION
+```
+
+This makes Politeia a governance layer for translation capability and composition, while Rational Logic remains the canonical logical reference.
+
 ## Architectural position
 
 WANGA Politeia sits above the lineage and family registries.

@@ -1,0 +1,171 @@
+{
+  "version": "0.1.0",
+  "status": "ACTIVE_DEVELOPMENT",
+  "nodes": [
+    {
+      "id": "FAMILY-NEURAL",
+      "type": "FAMILY",
+      "name": "NEURAL",
+      "targets": [
+        "MODEL_FABRIC",
+        "NTM",
+        "TRANSLATION",
+        "COMPUTATIONAL_ENGINE"
+      ]
+    },
+    {
+      "id": "FAMILY-LOGIC",
+      "type": "FAMILY",
+      "name": "LOGIC",
+      "targets": [
+        "RATIONAL_LOGIC_BOUNDARY",
+        "TRANSLATION",
+        "VERIFICATION"
+      ]
+    },
+    {
+      "id": "FAMILY-SYSTEMS",
+      "type": "FAMILY",
+      "name": "SYSTEMS",
+      "targets": [
+        "COMPUTATIONAL_ENGINE",
+        "WANGA_OS",
+        "VITRUVIUS"
+      ]
+    },
+    {
+      "id": "FAMILY-GOVERNANCE",
+      "type": "FAMILY",
+      "name": "GOVERNANCE",
+      "targets": [
+        "POLITEIA",
+        "WANGA_OS",
+        "VITRUVIUS"
+      ]
+    },
+    {
+      "id": "FAMILY-MEMORY",
+      "type": "FAMILY",
+      "name": "MEMORY",
+      "targets": [
+        "LINEAGE_KNOWLEDGE",
+        "WORK_MEMORY",
+        "EVIDENCE_PROVENANCE",
+        "MODEL_FABRIC"
+      ]
+    },
+    {
+      "id": "FAMILY-ORCHESTRATION",
+      "type": "FAMILY",
+      "name": "ORCHESTRATION",
+      "targets": [
+        "WANGA_OS",
+        "DIGITAL_MODEL_AGENTS",
+        "NTM",
+        "VITRUVIUS"
+      ]
+    },
+    {
+      "id": "VITRUVIUS",
+      "type": "WANGA_NODE",
+      "name": "Vitruvius"
+    },
+    {
+      "id": "POLITEIA",
+      "type": "WANGA_NODE",
+      "name": "WANGA Politeia"
+    },
+    {
+      "id": "TRANSLATION",
+      "type": "WANGA_NODE",
+      "name": "Logic-to-Derivation Translation"
+    },
+    {
+      "id": "RATIONAL_LOGIC",
+      "type": "WANGA_NODE",
+      "name": "Rational Logic"
+    },
+    {
+      "id": "DERIVATION",
+      "type": "WANGA_NODE",
+      "name": "Derivation"
+    },
+    {
+      "id": "VERIFICATION",
+      "type": "WANGA_NODE",
+      "name": "Verification"
+    },
+    {
+      "id": "EVIDENCE",
+      "type": "WANGA_NODE",
+      "name": "Evidence / Provenance"
+    }
+  ],
+  "edges": [
+    [
+      "FAMILY-NEURAL",
+      "MAPS_TO",
+      "VITRUVIUS"
+    ],
+    [
+      "FAMILY-LOGIC",
+      "MAPS_TO",
+      "RATIONAL_LOGIC"
+    ],
+    [
+      "FAMILY-SYSTEMS",
+      "MAPS_TO",
+      "VITRUVIUS"
+    ],
+    [
+      "FAMILY-GOVERNANCE",
+      "MAPS_TO",
+      "POLITEIA"
+    ],
+    [
+      "FAMILY-MEMORY",
+      "MAPS_TO",
+      "EVIDENCE"
+    ],
+    [
+      "FAMILY-ORCHESTRATION",
+      "MAPS_TO",
+      "VITRUVIUS"
+    ],
+    [
+      "VITRUVIUS",
+      "ROUTES_TO",
+      "POLITEIA"
+    ],
+    [
+      "POLITEIA",
+      "CONFIGURES",
+      "TRANSLATION"
+    ],
+    [
+      "TRANSLATION",
+      "REFERENCES",
+      "RATIONAL_LOGIC"
+    ],
+    [
+      "RATIONAL_LOGIC",
+      "PRODUCES_REFERENCE_FOR",
+      "DERIVATION"
+    ],
+    [
+      "DERIVATION",
+      "ASSESSED_BY",
+      "VERIFICATION"
+    ],
+    [
+      "VERIFICATION",
+      "PRESERVES_IN",
+      "EVIDENCE"
+    ],
+    [
+      "EVIDENCE",
+      "FEEDS_BACK_TO",
+      "VITRUVIUS"
+    ]
+  ]
+}

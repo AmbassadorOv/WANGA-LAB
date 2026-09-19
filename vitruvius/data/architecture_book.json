@@ -1,0 +1,182 @@
+{
+  "version": "0.1.0",
+  "generated_state": "INITIAL_SEED",
+  "entries": [
+    {
+      "repository": "AmbassadorOv/WANGA-LAB",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "WANGA_COMPUTER",
+      "wanga_target": "WANGA-LAB",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "RESEARCH_PROFILE",
+      "wanga_target": "RESEARCH_INDEX",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "AmbassadorOv/AI231.meta.io",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "LOGIC",
+      "wanga_target": "RATIONAL_LOGIC",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "AmbassadorOv/ai-agent-terraform",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "ORCHESTRATION",
+      "wanga_target": "WANGA_OS",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "AmbassadorOv/multi-agent-orchestator",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "ORCHESTRATION",
+      "wanga_target": "WANGA_OS",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "source": "INTERNAL",
+      "family": "NEURAL",
+      "wanga_target": "MODEL_FABRIC",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "IBM/neuro-symbolic-ai",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "NEURAL",
+      "wanga_target": "TRANSLATION",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "stepfun-ai/StepFun-Prover-Preview",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "LOGIC",
+      "wanga_target": "VERIFICATION",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "vercel/workflow",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "ORCHESTRATION",
+      "wanga_target": "WANGA_OS",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "microsoft/agent-framework",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "ORCHESTRATION",
+      "wanga_target": "DIGITAL_MODEL_AGENTS",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "GovernanceAISystems/AI-Governance-Architecture",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "GOVERNANCE",
+      "wanga_target": "POLITEIA",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "delorenj/mcp-qdrant-memory",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "MEMORY",
+      "wanga_target": "WORK_MEMORY",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "openlineage/OpenLineage",
+      "default_branch": "main",
+      "source": "EXTERNAL",
+      "family": "MEMORY",
+      "wanga_target": "EVIDENCE_PROVENANCE",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "milvus-io/milvus",
+      "default_branch": "master",
+      "source": "EXTERNAL",
+      "family": "MEMORY",
+      "wanga_target": "WORK_MEMORY",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "Developer-Y/Scalable-Software-Architecture",
+      "default_branch": "master",
+      "source": "EXTERNAL",
+      "family": "SYSTEMS",
+      "wanga_target": "VITRUVIUS",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    },
+    {
+      "repository": "theanalyst/awesome-distributed-systems",
+      "default_branch": "master",
+      "source": "EXTERNAL",
+      "family": "SYSTEMS",
+      "wanga_target": "COMPUTATIONAL_ENGINE",
+      "status": "OBSERVED_SEED",
+      "evidence_state": "UNVERIFIED",
+      "architecture_properties": [],
+      "license_status": "REQUIRES_REVIEW"
+    }
+  ]
+}

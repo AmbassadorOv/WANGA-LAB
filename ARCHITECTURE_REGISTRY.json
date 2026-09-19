@@ -198,6 +198,71 @@
       "scope": "INSTITUTIONAL",
       "status": "BUILDING",
       "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md"
+    },
+    {
+      "id": "WANGA-COMPUTER",
+      "name": "WANGA Computer Architecture",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/WANGA_COMPUTER_ARCHITECTURE.md"
+    },
+    {
+      "id": "LOGIC-TRANSLATION-ARCH",
+      "name": "Logic-to-Derivation Translation Architecture",
+      "parent": "WANGA-COMPUTER",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/LOGIC_TRANSLATION_ARCHITECTURE.md"
+    },
+    {
+      "id": "VITRUVIUS-INDEX",
+      "name": "Vitruvius — Dynamic Architecture Intelligence Layer",
+      "parent": "WANGA-COMPUTER",
+      "scope": "ARCHITECTURE_INTELLIGENCE",
+      "status": "SPECIFIED",
+      "source": "vitruvius/README.md",
+      "description": "Dynamic measurement, relationship mapping, dependency resolution, lineage mapping, architecture composition and coordination layer."
+    },
+    {
+      "id": "EXTERNAL-ARCHITECTURE-LINEAGES",
+      "name": "External Architecture Lineage Integration",
+      "parent": "WANGA-COMPUTER",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/EXTERNAL_ARCHITECTURE_LINEAGE_INTEGRATION.md"
+    },
+    {
+      "id": "ARCHITECTURE-INTEGRATION-MATRIX",
+      "name": "Global Architecture Integration Matrix",
+      "parent": "WANGA-COMPUTER",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/ARCHITECTURE_INTEGRATION_MATRIX.md"
+    },
+    {
+      "id": "GLOBAL-GITHUB-FAMILY-MAP",
+      "name": "Global GitHub Architecture Family Map",
+      "parent": "EXTERNAL-ARCHITECTURE-LINEAGES",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/GLOBAL_GITHUB_ARCHITECTURE_FAMILY_MAP.md"
+    },
+    {
+      "id": "VITRUVIUS-MODEL-BRIDGE",
+      "name": "Vitruvius Model Bridge — GPT/LLM/Neural Connector",
+      "status": "SPECIFIED",
+      "parent": "VITRUVIUS-INDEX",
+      "scope": "MODEL_ASSISTED_ARCHITECTURE",
+      "targets": [
+        "architecture extraction",
+        "lineage classification",
+        "relationship mapping",
+        "dependency mapping",
+        "translation experiments",
+        "composition proposals"
+      ],
+      "principle": "Models provide candidate observations and transformations; Vitruvius, Politeia, Rational Logic and Verification retain their distinct authorities."
     }
   ]
 }
