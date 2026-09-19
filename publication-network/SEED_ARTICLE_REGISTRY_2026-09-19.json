@@ -1,0 +1,48 @@
+{
+  "version": "0.1.0",
+  "status": "PROTOTYPED",
+  "source_of_truth": "github",
+  "publication_surface": "wix",
+  "site": "AI Drift Forensics",
+  "site_id": "0b4f46ec-69ca-49e5-907f-9478347074fe",
+  "editorial_state": "DRAFT",
+  "generated_at": "2026-09-19",
+  "articles": [
+    {
+      "publication_id": "WIX-AIDF-001",
+      "title": "AI Drift Forensics: From Point Errors to Behavioral Drift",
+      "status": "DRAFT",
+      "wix_post_id": "526e0855-d748-4c02-88e2-3c485a13d9ea"
+    },
+    {
+      "publication_id": "WIX-AIDF-002",
+      "title": "Definition Drift, Premise Drift, and Inference Drift",
+      "status": "DRAFT",
+      "wix_post_id": "1be36c3f-b9f0-4a72-bf70-608f046fbaba"
+    },
+    {
+      "publication_id": "WIX-AIDF-003",
+      "title": "Model → Answer → Evaluation → Correction → Criterion Change",
+      "status": "DRAFT",
+      "wix_post_id": "0ad0cef9-7b47-4e9a-a87a-c4f658f22434"
+    },
+    {
+      "publication_id": "WIX-AIDF-004",
+      "title": "Evidence Preservation for AI Behavior Investigations",
+      "status": "DRAFT",
+      "wix_post_id": "eb25c0ea-1fd4-4c4d-9038-86054971969a"
+    },
+    {
+      "publication_id": "WIX-AIDF-005",
+      "title": "Why a Probabilistic Model Should Not Be the Sole Judge of Itself",
+      "status": "DRAFT",
+      "wix_post_id": "62411773-2a6b-41c3-b00f-3e0fc0f833b4"
+    }
+  ],
+  "integrity": {
+    "publish_without_review": false,
+    "canonical_source_required": true,
+    "preserve_research_status": true,
+    "no_claim_of_3000_existing_articles": true
+  }
+}
