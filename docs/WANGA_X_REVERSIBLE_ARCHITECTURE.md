@@ -6,25 +6,37 @@ The system does not begin with a fixed computational architecture and force chan
 
 ## Core loop
 
-```text
+```
+HUMAN / SYSTEM DISCOVERY
+        ↓
 REQUIREMENT
-    ↓
+        ↓
 REASON / SPECIFY COMPUTATION
-    ↓
+        ↓
 ARCHITECTURE BLUEPRINT
-    ↓
+        ↓
 FRAME-BY-FRAME MATERIALIZATION
-    ↓
+        ↓
 EXECUTION
-    ↓
+        ↓
 OBSERVE / VERIFY
-    ↓
+        ↓
 NEW OR CHANGED REQUIREMENT
-    ↓
+        ↓
 NEW BLUEPRINT
-    ↓
+        ↓
 REBUILD / RECOMPOSE / REPLACE
 ```
+
+## Human discovery is an input trigger
+
+A human researcher may identify a missing architectural assumption or mechanism during sustained work, including through a dream or other internal discovery process.
+
+WANGA-X does not classify the origin as evidence. It records the researcher's explicit report as a **Discovery Trigger**, converts it into a testable hypothesis, and routes it through the normal evidence and verification pipeline.
+
+`DISCOVERY -> HYPOTHESIS -> REQUIREMENT CHANGE -> BLUEPRINT -> BUILD -> TEST -> VERIFY`
+
+The system does not encode the proposition that a dream is true. It encodes the operational fact that a researcher has identified a candidate change worth formalizing and testing.
 
 ## Architecture as an editable construction timeline
 
@@ -34,7 +46,7 @@ Each frame records the architectural state reached at that point. A frame can be
 
 Conceptually:
 
-```text
+```
 F0 → F1 → F2 → F3 → F4 → ARCHITECTURE-A
           ↑
         PAUSE
@@ -54,12 +66,12 @@ The film analogy is intentional: the construction process is a sequence of edita
 
 ## Reversible construction primitives
 
-The research architecture should expose explicit operations:
-
+- **DISCOVER** — record a human-identified candidate insight or requirement change.
 - **PAUSE** — stop materialization at a defined frame.
 - **SNAPSHOT** — preserve the exact architectural state.
 - **INSPECT** — evaluate the state and its evidence.
 - **ROLLBACK** — restore a previous verified state.
+- **FORMALIZE** — convert a discovery into a testable hypothesis and explicit requirements.
 - **EDIT** — modify the requirement, Blueprint, or selected architectural components.
 - **RECOMPOSE** — assemble a revised architecture from reusable compatible parts.
 - **REBUILD** — materialize the revised Blueprint.
@@ -72,7 +84,7 @@ Reversibility is part of the construction model itself. The system does not mere
 
 The resulting abstraction is:
 
-**Requirement → Architecture State Sequence → Executable Architecture**
+**Discovery/Requirement → Architecture State Sequence → Executable Architecture**
 
 rather than:
 
@@ -82,7 +94,8 @@ rather than:
 
 WANGA-X is intended to become the architectural principle connecting:
 
-- Rational Logic — determines and constrains computational requirements.
+- Human Discovery Input — supplies candidate research changes.
+- Rational Logic — formalizes and constrains computational requirements.
 - Neural Thinking Machine — explores and reasons over candidate computational structures.
 - Model Fabric — supplies models and computational resources.
 - Evidence / Provenance — preserves construction and execution state.
@@ -99,14 +112,13 @@ It does not claim that the complete mechanism has already been implemented or ex
 
 The next technical milestone is a minimal virtual-processor prototype demonstrating:
 
-1. requirement input;
-2. Blueprint generation;
-3. frame-based architecture materialization;
-4. pause/snapshot;
-5. rollback;
-6. requirement change;
-7. revised Blueprint;
-8. replacement or recomposition;
-9. independent verification of the resulting architecture.
-
-Performance targets remain experimental until measured.
+1. discovery/requirement input;
+2. hypothesis formalization;
+3. Blueprint generation;
+4. frame-based architecture materialization;
+5. pause/snapshot;
+6. rollback;
+7. requirement change;
+8. revised Blueprint;
+9. replacement or recomposition;
+10. independent verification of the resulting architecture.
