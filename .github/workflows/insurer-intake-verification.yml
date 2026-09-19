@@ -46,6 +46,20 @@ jobs:
           assert all(c["state"] in allowed for c in data["cases"])
           print("INSURER_QUEUE_FIXTURE=PASS")
           PY
+      - name: Ten-prospect intake scenario
+        run: |
+          output=$(PYTHONPATH=. python tools/run_insurer_intake_demo.py)
+          python - <<'PY' "$output"
+          import json, sys
+          data=json.loads(sys.argv[1])
+          states=[x["status"] for x in data["results"]]
+          assert states.count("REPLAY") == 2
+          assert states.count("QUEUED_FOR_REPLAY") == 5
+          assert states.count("NEEDS_EVIDENCE") == 1
+          assert states.count("PENDING_CLIENT_ACCESS") == 1
+          assert states.count("OUT_OF_SCOPE") == 1
+          print("TEN_PROSPECT_INTAKE=PASS")
+          PY
       - name: Synthetic replay
         run: python tools/replay_known_risk.py
       - name: Verify replay output
