@@ -54,12 +54,12 @@ jobs:
           python - <<'PY' "$output"
           import json, sys
           data=json.loads(sys.argv[1])
-          states=[x["status"] for x in data["results"]]
-          assert states.count("REPLAY") == 2
-          assert states.count("QUEUED_FOR_REPLAY") == 5
-          assert states.count("NEEDS_EVIDENCE") == 1
-          assert states.count("PENDING_CLIENT_ACCESS") == 1
-          assert states.count("OUT_OF_SCOPE") == 1
+          results=data["results"]
+          assert sum(x["execution_state"] == "REPLAY" for x in results) == 2
+          assert sum(x["execution_state"] == "QUEUED" for x in results) == 5
+          assert sum(x["intake_status"] == "NEEDS_EVIDENCE" for x in results) == 1
+          assert sum(x["intake_status"] == "PENDING_CLIENT_ACCESS" for x in results) == 1
+          assert sum(x["intake_status"] == "OUT_OF_SCOPE" for x in results) == 1
           print("TEN_PROSPECT_INTAKE=PASS")
           PY
       - name: Synthetic replay
