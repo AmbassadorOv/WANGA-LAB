@@ -1,0 +1,216 @@
+{
+  "version": 1,
+  "status": "ACTIVE_BUILD",
+  "project": "WANGA-LAB",
+  "repository": "AmbassadorOv/WANGA-LAB",
+  "build_branch": "autobuild/architecture-construction",
+  "main_branch": "main",
+  "review_policy": "review-at-end",
+  "source_history_policy": {
+    "preserve_existing_branches": true,
+    "delete_branches": false,
+    "disable_branches": false,
+    "rewrite_history": false,
+    "direct_main_changes": false
+  },
+  "architecture": {
+    "core_flow": [
+      "WANGA OS",
+      "Work Manager / Orchestrator",
+      "Model Fabric",
+      "Digital Model Agents",
+      "Providers / Runtimes",
+      "Evidence / Drift Forensics",
+      "Verification",
+      "Neural Thinking Machine"
+    ],
+    "ntm_role": "high-level cognitive CPU and escalation/verification layer",
+    "wix_role": "architecture evidence and publication/external integration surface",
+    "gag_boundary": "GAG remains distinct from WANGA; integration only through explicit interfaces",
+    "rational_logic_role": "planned first-class formal reasoning layer; not yet implemented or formalized; next-month primary work",
+    "integrated_planes": {
+      "operational": [
+        "WANGA OS",
+        "Global Work Manager",
+        "Model Fabric",
+        "Digital Model Agents",
+        "Providers / Runtimes"
+      ],
+      "epistemic_verification": [
+        "Evidence",
+        "Drift Forensics",
+        "Verification",
+        "Rational Logic"
+      ],
+      "cognitive": [
+        "Rational Logic",
+        "Neural Thinking Machine"
+      ],
+      "memory": [
+        "Work Memory",
+        "provenance",
+        "ChatGPT bridge events"
+      ],
+      "publication": [
+        "Wix"
+      ]
+    }
+  },
+  "model_fabric": {
+    "target_model_slots": 5000,
+    "allocated_slots": 5000,
+    "connected_slots": 0,
+    "verified_slots": 0,
+    "slot_semantics": "architectural identity, not a live endpoint",
+    "lifecycle": [
+      "DISCOVER",
+      "CLASSIFY",
+      "ASSIGN_GENERAL_ROLE",
+      "ASSIGN_PRIVATE_ROLES",
+      "ADAPTER_BIND",
+      "CAPABILITY_PROBE",
+      "POLICY_BIND",
+      "REGISTER",
+      "HEALTH_CHECK",
+      "ENABLE"
+    ]
+  },
+  "autonomy": {
+    "requested_mode": "no manual intervention during construction; final review/fine-tuning after build",
+    "current_automation": "event-driven deterministic builders; persistent bounded loop pending",
+    "external_provider_credentials_in_registry": false
+  },
+  "wix": {
+    "inventory_contexts": 21,
+    "full_content_audit": false,
+    "github_is_source_of_code_contracts": true
+  },
+  "external_agent_pattern_integration": {
+    "status": "IMPLEMENTED_PATTERN_LEVEL",
+    "profile": "docs/EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md",
+    "adopted": [
+      "explicit graph task dependencies",
+      "bounded agent handoffs",
+      "pre-execution guardrails",
+      "durable checkpoint/resume metadata",
+      "trace identifiers",
+      "bounded evaluator-optimizer loop",
+      "review interrupt state"
+    ],
+    "source_frameworks": [
+      "OpenAI Agents SDK",
+      "Google ADK",
+      "Microsoft AutoGen",
+      "LangGraph"
+    ],
+    "implementation_policy": "pattern-level integration; no third-party source copied; no framework becomes global orchestrator"
+  },
+  "completed": {
+    "MODEL_AGENT_ARCHITECTURE_V1.md": "Digital Model Agent architecture and NTM boundary defined",
+    "MODEL_FAMILY_REGISTRY.yml": "25 model families allocated to exactly 5,000 target slots",
+    "MODEL_AGENT_REGISTRY.schema.json": "registry contract created",
+    "model_agent_allocator.py": "deterministic 5,000-slot scaffold generator created",
+    "model-agent-fabric-builder.yml": "serialized concurrency with architecture builder",
+    "ARCHITECTURE_BUILD_MANIFEST.yml": "ordered source integration manifest created",
+    "WIX_ARCHITECTURE_SNAPSHOT.json": "21 Wix contexts captured as architecture evidence",
+    "WORK_MEMORY_PROTOCOL_V1.md": "durable work-memory rules and authority boundaries",
+    "WORK_MEMORY_STATE.json": "persistent current-state checkpoint",
+    "MODEL_DISCOVERY_AND_BINDING_V1.md": "discovery/binding lifecycle and failure semantics",
+    "MODEL_CANDIDATE_REGISTRY.schema.json": "machine-readable candidate contract",
+    "MODEL_ADAPTER_CONTRACT_V1.md": "provider/runtime adapter boundary",
+    "MODEL_CAPABILITY_PROBE_V1.md": "bounded capability and health verification contract",
+    "NTM_MODEL_AGENT_ENVELOPE.schema.json": "bounded handoff contract to NTM",
+    "WANGA_GLOBAL_WORK_MANAGER_V2.md": "repository-wide supervisory control-plane contract extending the existing Work Manager / Orchestrator",
+    "GLOBAL_WORK_MANAGER.schema.json": "machine-readable global task contract",
+    "global_work_manager.py": "deterministic work planner with graph/checkpoint/guardrail/handoff/evaluator controls",
+    "test_global_work_manager.py": "planner and external-pattern integration tests",
+    "global-work-manager.yml": "serialized GitHub Actions planning/validation workflow",
+    "CHATGPT_BRIDGE_PROTOCOL_V1.md": "GitHub-to-ChatGPT significant-update handoff protocol; no automatic persistent memory",
+    "CHATGPT_BRIDGE.schema.json": "machine-readable bridge event contract",
+    "chatgpt_bridge.py": "deterministic S1/S2/S3 significance gate",
+    "test_chatgpt_bridge.py": "bridge significance tests",
+    "EXTERNAL_AGENT_PATTERN_INTEGRATION_V1.md": "open-source agent architecture pattern integration record",
+    "ARCHITECTURE_AGENT_CONTRACT_V1.md": "three bounded architecture-agent roles and authority boundaries",
+    "ARCHITECTURE_DISCOVERY_REGISTRY.json": "machine-readable discovery candidate registry",
+    "github_architecture_scout.py": "controlled public-GitHub candidate discovery with license metadata",
+    "architecture-discovery.yml": "serialized scheduled discovery workflow",
+    "test_architecture_discovery.py": "discovery contract tests",
+    "ARCHITECTURE_DISCOVERY_PROGRAM_V1.md": "three bounded architecture scouts, discovery lifecycle and investor boundary",
+    "ARCHITECTURE_PATTERN_MATRIX_V1.md": "pattern comparison and acceptance matrix",
+    "ARCHITECTURE_DISCOVERY_QUERIES_V1.yml": "declared public GitHub discovery domains"
+  },
+  "verified_limits": {
+    "live_model_connections": false,
+    "provider_discovery": false,
+    "capability_probe": false,
+    "adapter_runtime": false,
+    "ntm_runtime_binding": false,
+    "persistent_autonomous_loop": false,
+    "full_wix_content_audit": false,
+    "global_work_manager_runtime": "workflow execution pending",
+    "global_work_manager_merge_to_main": false,
+    "chatgpt_bridge_runtime": "implemented on autobuild/architecture-construction; scheduled execution not yet verified",
+    "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
+  },
+  "next_actions": [
+    "Run three architecture-scout tracks, classify public GitHub patterns, verify licenses, and produce adaptation proposals before next-month Rational Logic publication.",
+    "run and verify the first architecture-discovery workflow cycle",
+    "read and classify discovered repositories with license evidence before proposing adaptations",
+    "build the Architecture Pattern Matrix from verified discovery records",
+    "formalize Rational Logic as the primary next-month reasoning layer without creating a second global orchestrator",
+    "verify hourly global manager and ChatGPT bridge execution",
+    "connect bridge inbox consumption to the existing ChatGPT/GitHub working flow",
+    "add real execution adapters only behind verified provider/runtime contracts",
+    "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
+  ],
+  "last_verification": {
+    "date": "2026-09-18",
+    "pr": 15,
+    "pr_state": "OPEN_DRAFT",
+    "main_merge": false,
+    "branches_deleted": false,
+    "source_history_rewritten": false,
+    "model_slots_allocated": 5000,
+    "model_slots_connected": 0,
+    "model_slots_verified": 0,
+    "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
+    "discovery_program": "implemented on autobuild/architecture-construction; runtime execution not yet verified",
+    "master_instructions_propagation": "manager and subordinate build workflows reference canonical master instructions; runtime execution pending"
+  },
+  "master_project_instructions": {
+    "path": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "status": "ACTIVE",
+    "inheritance": "GLOBAL_WORK_MANAGER_AND_ALL_SUBORDINATE_MANAGERS",
+    "priority_order": [
+      "P0_SYSTEM_INTEGRITY",
+      "P1_RATIONAL_LOGIC",
+      "P2_VERIFICATION",
+      "P3_NTM_RATIONAL_LOGIC_EVIDENCE",
+      "P4_MODEL_FABRIC",
+      "P5_PERSPECTIVE_LAYER",
+      "P6_COMMERCIALIZATION",
+      "P7_PRESENTATION"
+    ]
+  },
+  "architecture_discovery": {
+    "status": "ACTIVE_BUILD_PROGRAM",
+    "manager": "MGR-ARCH-DISCOVERY",
+    "scouts": [
+      "ARCH-01",
+      "ARCH-02",
+      "ARCH-03"
+    ],
+    "scope": "targeted public GitHub architecture discovery; not exhaustive",
+    "license_review_required": true,
+    "code_copying": false,
+    "control": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "artifacts": [
+      "docs/ARCHITECTURE_DISCOVERY_PROGRAM_V1.md",
+      "docs/ARCHITECTURE_DISCOVERY_REGISTRY.schema.json",
+      "docs/ARCHITECTURE_PATTERN_MATRIX_V1.md",
+      "docs/ARCHITECTURE_DISCOVERY_QUERIES_V1.yml",
+      ".github/workflows/architecture-discovery.yml"
+    ],
+    "next_phase": "Rational Logic formalization/publication next month"
+  }
+}

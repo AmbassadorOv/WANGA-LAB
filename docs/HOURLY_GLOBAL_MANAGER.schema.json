@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Hourly Global Manager Signal",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["cycle","actionable","task_count"],
+  "properties":{
+    "cycle":{"type":"string"},
+    "actionable":{"type":"boolean"},
+    "task_count":{"type":"integer","minimum":0}
+  }
+}

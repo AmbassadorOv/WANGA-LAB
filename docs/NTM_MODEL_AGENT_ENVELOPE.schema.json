@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA NTM Model Agent Envelope V1",
+  "type": "object",
+  "required": [
+    "version",
+    "task_id",
+    "model_agent_id",
+    "model_identity",
+    "capabilities",
+    "provenance",
+    "verification",
+    "status"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_identity": {
+      "type": "object",
+      "required": [
+        "provider_namespace",
+        "model_id"
+      ],
+      "properties": {
+        "provider_namespace": {
+          "type": "string"
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence_refs"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_RUN",
+            "PENDING",
+            "PASSED",
+            "FAILED",
+            "INCONCLUSIVE"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "drift_findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning_status": {
+      "type": "string"
+    },
+    "escalation_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "VERIFIED",
+        "BLOCKED",
+        "ESCALATE"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

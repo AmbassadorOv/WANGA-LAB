@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Digital Model Agent Registry V1",
+  "type": "object",
+  "required": ["version", "target_model_slots", "families"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "target_model_slots": {"type": "integer", "minimum": 1},
+    "families": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "general_role", "private_roles"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "provider": {"type": "string"},
+        "model_id": {"type": "string"},
+        "general_role": {"type": "string", "minLength": 1},
+        "private_roles": {"type": "array", "items": {"type": "string"}},
+        "adapter": {"type": "string"},
+        "status": {"type": "string", "enum": ["DISCOVERED", "CONFIGURED", "VERIFIED", "ENABLED", "BLOCKED", "REVIEW"]},
+        "verification_status": {"type": "string", "enum": ["NOT_RUN", "PENDING", "PASSED", "FAILED", "INCONCLUSIVE"]},
+        "provenance": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    }}
+  },
+  "additionalProperties": true
+}

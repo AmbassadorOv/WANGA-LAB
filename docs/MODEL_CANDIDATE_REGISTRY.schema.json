@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Model Candidate Registry V1",
+  "type": "object",
+  "required": [
+    "version",
+    "candidates"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "provider_namespace",
+          "model_id",
+          "declared_capabilities",
+          "provenance",
+          "adapter_id",
+          "verification_status"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provider_namespace": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "endpoint_class": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "declared_capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "modality": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "context_window": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "tool_support": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "discovery_timestamp": {
+            "type": "string"
+          },
+          "adapter_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verification_status": {
+            "enum": [
+              "NOT_RUN",
+              "PENDING",
+              "PASSED",
+              "FAILED",
+              "INCONCLUSIVE"
+            ]
+          },
+          "binding_status": {
+            "enum": [
+              "UNBOUND",
+              "CANDIDATE",
+              "CONFIGURED",
+              "VERIFIED",
+              "ENABLED",
+              "BLOCKED",
+              "REVIEW"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
