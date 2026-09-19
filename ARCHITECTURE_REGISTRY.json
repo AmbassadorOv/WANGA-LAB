@@ -222,6 +222,14 @@
       "scope": "INSTITUTIONAL",
       "status": "BUILDING",
       "source": "vitruvius/README.md"
+    },
+    {
+      "id": "EXTERNAL-ARCHITECTURE-LINEAGES",
+      "name": "External Architecture Lineage Integration",
+      "parent": "WANGA-COMPUTER",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/EXTERNAL_ARCHITECTURE_LINEAGE_INTEGRATION.md"
     }
   ]
 }
