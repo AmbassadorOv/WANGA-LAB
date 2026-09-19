@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "status": "SPECIFIED",
+  "source_of_truth": "GITHUB",
+  "surfaces": [
+    {"id":"github","role":"technical-research","status":"BUILT"},
+    {"id":"wix","role":"public-research-publication","status":"PROTOTYPED"},
+    {"id":"wordpress","role":"long-form-research-journal","status":"PLANNED"},
+    {"id":"webflow","role":"institutional-research-portal","status":"PLANNED"},
+    {"id":"vercel","role":"research-applications","status":"PLANNED"},
+    {"id":"lovable","role":"interactive-research-experiences","status":"PLANNED"}
+  ],
+  "article_target": 3000,
+  "article_target_status": "PLANNED",
+  "integrity": {
+    "canonical_source_required": true,
+    "source_revision_required": true,
+    "content_hash_required": true,
+    "quality_gate_required": true,
+    "duplicate_publication_without_distinct_purpose": false
+  }
+}
