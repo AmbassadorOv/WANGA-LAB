@@ -1,0 +1,16 @@
+{
+  "scenario": "TEN_SYNTHETIC_INSURER_RETURNS",
+  "active_limit": 2,
+  "records": [
+    {"case_ref":"SYNTH-INS-001","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-002","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-003","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b"}},
+    {"case_ref":"SYNTH-INS-004","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","client_access_required":true},
+    {"case_ref":"SYNTH-INS-005","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","out_of_scope":true},
+    {"case_ref":"SYNTH-INS-006","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-007","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-008","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-009","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}},
+    {"case_ref":"SYNTH-INS-010","business_domain":"banking-exposure","system_model":"synthetic-model","claimed_or_observed_drift":"reported behavior change","requested_deliverable":"triage","evidence":{"baseline":"b","outputs":"o","provenance":"p"}}
+  ]
+}
