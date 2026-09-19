@@ -1,30 +1,63 @@
 # Open PR Architecture Triage — 2026-09-19
 
-Purpose: classify open WANGA-LAB pull requests by architectural responsibility before integration.
+This record classifies the repository's PR history by architectural responsibility and records the disposition of the open work reviewed during the 2026-09-19 integration pass.
 
-## Integration groups
+## Integrated groups
 
-| Group | Responsibility | PRs | Disposition |
-|---|---|---|---|
-| Governance / Control Plane | operating contract, governance, continuity | #12, #26, #13 | #12/#13 merged; #26 selectively integrated as #37; original #26 superseded |
-| Runtime / NTM | executable runtime and verification | #28, #19 | #28 merged; #19 superseded |
-| Publication | GitHub/Wix/WordPress/publication layers | #29, #30, #31 | merged |
-| Research Composition | external research synthesis and candidate discovery | #32 | merged as research-status material |
-| AI Drift / Global Network | regional observations, queue, evidence publication | #9, #14 | secure clean integration prepared separately |
-| Standards | governance/drift evidence candidate standard | #11 | merged; research specification only |
-| Epistemic Reasoning | explicit-state reasoning frontier | #7 | merged |
-| Dynamic Architecture | requirement-driven reversible architecture | #27 | retain as research specification pending conflict cleanup |
-| Global Work Manager / Architecture Automation | repository-wide builder, model fabric, manager hierarchy | #15, #18 | retain for decomposition; do not merge wholesale |
-| Legacy ARK / Experimental | older large ARK, SL, virtual compute and ontology branches | #3, #5, #6 | retain as historical/experimental source; not core integration |
+| Group | Responsibility | Source PR | Result |
+|---|---|---:|---|
+| Repository Governance | operating contract, evidence discipline, hygiene | #13, #12 | MERGED |
+| Governance Engine | continuity, governance object, audit kernel | #26 → #37 | CLEAN INTEGRATION MERGED |
+| Runtime / NTM | executable runtime and verification | #28 | MERGED |
+| Epistemic Reasoning | explicit-state reasoning frontier | #7 | MERGED |
+| Governance Standards | candidate drift/governance standard | #11 | MERGED / RESEARCH SPECIFICATION |
+| Publication Network | GitHub/Wix/WordPress/publication contracts | #31 | MERGED |
+| Research Composition | 172-hour composition map and candidate-discovery topology | #32 | MERGED / RESEARCH STATUS |
+| Copernicus Corpus | 100 research drafts | #29 | MERGED / RESEARCH DRAFT |
+| Copernicus Publication Layer | source-controlled static publication stack | #30 | MERGED |
+| Global Drift Network | observation, events, evidence, queue, regional collection | #9 + #14 → #38 | SECURE CLEAN INTEGRATION MERGED |
+| WANGA-X | reversible/dynamic architecture research | #27 → #39 | CLEAN RESEARCH INTEGRATION MERGED |
+| Vitruvius | research-driven indexing and work composition | #18 → #40 | CLEAN NON-MUTATING INTEGRATION MERGED |
+| Global Work Manager / Model Fabric | work manager, model agents, discovery, work memory, bridge contracts | #15 → #41 | CLEAN CONTRACT INTEGRATION MERGED |
+| Insurer Intake | intake, bounded queue, replay, oversight | #36 | MERGED |
+
+## Superseded source PRs
+
+The following PRs remain in GitHub history as source artifacts but are no longer active integration targets:
+
+- #33 — superseded by the separate AmbassadorOv/AmbassadorOv professional profile integration.
+- #26 — superseded by clean governance integration #37.
+- #19 — superseded by bounded executable runtime #28 and later queue/pipeline work.
+- #9 — superseded by secure clean Global Drift Network integration #38.
+- #14 — its security fix was incorporated into #38.
+- #27 — superseded by clean WANGA-X research integration #39.
+- #18 — superseded by non-mutating Vitruvius integration #40.
+- #15 — superseded/decomposed into the smaller verified integration #41 plus subsequent controlled automation.
+- #3, #5, #6 — retained as historical ARK / experimental source material; not core WANGA-LAB integration targets.
 
 ## Evidence rule
 
-Open PR status is not evidence of completion. Merge only after architecture ownership, security, tests, and duplication are checked.
+Merge state is not evidence of scientific validity.
 
-## Immediate order
+A merged specification remains a specification until implementation and verification establish otherwise. Synthetic replay verifies pipeline mechanics only; it does not establish a real client incident.
 
-1. Maintain the current main integrity baseline.
-2. Integrate secure Global Drift Network implementation.
-3. Close superseded profile/control-plane/runtime duplicates.
-4. Decompose #15/#18/#27 rather than merging large mixed-responsibility branches.
-5. Keep legacy ARK branches as historical experimental sources until an explicit migration is justified.
+## Current main architecture
+
+WANGA OS → Global Work Manager → Model Fabric / Digital Model Agents → Runtime → Evidence & Provenance → Drift Forensics → Verification → Research / Publication
+
+Specialized children connect through explicit interfaces:
+
+- Global Drift Network
+- WANGA-X / Copernicus research
+- Vitruvius research indexing
+- Insurer Intake / Forensic Case Pipeline
+- Governance and candidate standards
+- Publication network
+
+## Operational objective
+
+The repository should converge on fewer, clearer integration surfaces:
+
+**one responsibility → one canonical owner → explicit interface → evidence status → verification gate**
+
+Old branches remain preserved unless separately audited for archival deletion.
