@@ -140,3 +140,23 @@ The protected layer may retain:
 **implementation details · algorithms · mechanisms · proprietary technical material**
 
 This separation is intentional. The public system documents the evidence capability without publishing the protected reasoning implementation.
+## Vitruvius Global Architecture Processor
+
+The repository now contains the first executable layer of the Vitruvius architecture processor: a family taxonomy, an architecture-book data store, a GitHub repository scanner, and a scheduled GitHub Actions workflow for refreshing observed architecture records.
+
+```text
+GITHUB -> DISCOVER -> CLASSIFY -> LINEAGE -> VITRUVIUS
+       -> POLITEIA -> TRANSLATION -> RATIONAL LOGIC
+       -> DERIVATION -> VERIFICATION -> LINEAGE UPDATE
+```
+
+The current implementation is an observational indexer, not an automatic code-merger. External repositories remain independent source lineages; the processor records repository identity, default branch, family, WANGA target, evidence state and licensing-review state. Model-assisted GPT/LLM/neural extraction can be attached through the normalized Vitruvius Model Bridge without granting model output verification authority.
+
+Primary implementation files:
+- vitruvius/architecture_indexer.py
+- vitruvius/data/family_roots.json
+- vitruvius/data/architecture_book.json
+- .github/workflows/vitruvius-global-index.yml
+- vitruvius/MODEL_BRIDGE.md
+
+Architecture status: ACTIVE DEVELOPMENT / OBSERVATIONAL INDEX IMPLEMENTED. A global GitHub scan remains an expanding process rather than a claim of exhaustive coverage.
