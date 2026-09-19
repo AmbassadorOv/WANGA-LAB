@@ -198,6 +198,30 @@
       "scope": "INSTITUTIONAL",
       "status": "BUILDING",
       "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md"
+    },
+    {
+      "id": "WANGA-COMPUTER",
+      "name": "WANGA Computer Architecture",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/WANGA_COMPUTER_ARCHITECTURE.md"
+    },
+    {
+      "id": "LOGIC-TRANSLATION-ARCH",
+      "name": "Logic-to-Derivation Translation Architecture",
+      "parent": "WANGA-COMPUTER",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/LOGIC_TRANSLATION_ARCHITECTURE.md"
+    },
+    {
+      "id": "VITRUVIUS-INDEX",
+      "name": "Vitruvius Index / Orchestrator",
+      "parent": "WANGA-COMPUTER",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "vitruvius/README.md"
     }
   ]
 }
