@@ -23,7 +23,7 @@
   "groups": {
     "CORE": [
       "WANGA-LAB",
-      "eran-oved-awats"
+      "AmbassadorOv"
     ],
     "RESEARCH": [
       "AI231.meta.io",
@@ -54,7 +54,8 @@
       "extensions",
       "cookbook",
       "unetbootin",
-      "awesome-chatgpt-prompts"
+      "awesome-chatgpt-prompts",
+      "globalSpeed"
     ],
     "LEGACY_OR_EXPERIMENTAL": [
       "-from-Corsican-",
