@@ -90,7 +90,7 @@
     "GOVERNANCE_AND_INSTITUTIONAL": "institutional/governance concepts; preserve historical artifacts and provenance",
     "LEGACY_OR_EXPERIMENTAL": "retain, inventory and inspect before any archive/merge/rename",
     "UNKNOWN_REQUIRES_REVIEW": "manual architectural review",
-    "GOVERNANCE_RESEARCH_SOURCES": "historical/conceptual governance research sources; may inform the planned Institute for Global Algorithmic Neuro-Governance, but are not the Institute itself and do not establish institutional authority",
+    "GOVERNANCE_RESEARCH_SOURCES": "historical/conceptual governance research sources; may inform the planned Global Algorithmic Governance Institute, but are not the Institute itself and do not establish institutional authority",
     "PUBLICATION_IDENTITY": "public identity/publication surface; not canonical research implementation"
   }
 }
