@@ -62,6 +62,66 @@ The research direction documented here is the proposed unification of:
 
 This is recorded as a research hypothesis/design direction until implemented and experimentally verified.
 
+
+
+## Research foundations
+
+The initial implementation path will build on established research rather than recreate every mechanism from zero. WANGA-X will use four foundation families: High-Level Synthesis (HLS), Software-Defined Accelerators (SODA), requirement-to-architecture synthesis, and runtime/adaptive architecture.
+
+### HLS / XLS
+
+High-Level Synthesis provides the starting mechanism for translating high-level computation into generated hardware. Google XLS is a useful reference because it provides a central IR, multiple execution/simulation paths, and generation of synthesizable Verilog/SystemVerilog.
+
+WANGA-X extraction: **computation → intermediate representation → generated architecture → execution/verification**.
+
+### SODA
+
+SODA provides automated generation of specialized accelerators from high-level programming frameworks and design-space exploration. It is useful as a foundation for reusable components, specialization, synthesis, and optimization loops.
+
+WANGA-X extraction: **high-level computation → specialized architecture → design-space exploration → generated implementation**.
+
+### Requirement-to-Architecture research
+
+Recent LLM-based architecture research demonstrates mapping requirements to architectural decisions and candidate architectures. WANGA-X will use this as the starting point for requirement formalization and architectural candidate generation.
+
+WANGA-X extraction: **requirement → architectural constraints/choices → architecture candidate**.
+
+### Runtime adaptation
+
+Runtime/adaptive architecture research provides mechanisms for changing system structure when conditions change. WANGA-X extends the research question from runtime reconfiguration toward requirement-driven generation of a new computational Blueprint and architecture.
+
+WANGA-X extraction: **changed requirement → new computational specification → new Blueprint → new architecture**.
+
+### Unified dynamic layer
+
+These foundations are not treated as separate experiments. WANGA-X will investigate a common dynamic layer:
+
+```
+RATIONAL LOGIC
+      ↓
+COMPUTATIONAL REQUIREMENT
+      ↓
+ARCHITECTURE REASONING
+      ↓
+BLUEPRINT / IR
+      ↓
+MATERIALIZATION
+      ↓
+EXECUTION
+      ↓
+EVIDENCE / VERIFICATION
+      ↓
+CHANGED REQUIREMENT
+      ↓
+NEW BLUEPRINT
+      ↓
+RECOMPOSE / REBUILD / REPLACE
+```
+
+The first prototype remains virtual/software-defined. The goal is to demonstrate that the same computational requirement interface can produce different executable architectures and that a changed requirement can produce a new architecture while preserving explicit state, evidence, and verification boundaries.
+
+See `docs/WANGA_X_RESEARCH_FOUNDATIONS.md` for the source-family map and prototype plan.
+
 ## Performance principle
 
 A pre-materialized architecture may be available for rapid activation. If the required architecture is not already available, additional preparation/materialization latency is expected.
