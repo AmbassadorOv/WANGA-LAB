@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "program": "global-drift-network-whitepaper-30-day-evidence",
+  "timezone": "Asia/Jerusalem",
+  "schedule_version": "1.0.0",
+  "enabled": true,
+  "cadence": "daily",
+  "start_time": "19:00",
+  "max_runtime_minutes": 120,
+  "run_policy": {
+    "create_new_run_per_calendar_day": true,
+    "allow_retry": true,
+    "overwrite_previous_run": false,
+    "require_snapshot_before_execution": true,
+    "require_quality_gate_before_publication": true
+  },
+  "baseline": {
+    "day": 0,
+    "immutable": true,
+    "comparison_mode": "baseline_and_previous_run"
+  }
+}

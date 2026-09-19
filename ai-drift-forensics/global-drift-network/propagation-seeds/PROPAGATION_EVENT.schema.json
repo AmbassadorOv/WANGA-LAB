@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.org/schemas/propagation-seeds/propagation-event-v1.json",
+  "title": "Propagation Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "seed_ids",
+    "observed_at",
+    "points",
+    "signature",
+    "baseline_ref",
+    "evidence_refs",
+    "confidence"
+  ],
+  "properties": {
+    "event_id": {"type": "string"},
+    "seed_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "points": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "signature": {"type": "string"},
+    "baseline_ref": {"type": "string"},
+    "persistence": {"type": ["string", "null"]},
+    "return_or_reversal": {"type": ["string", "null"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "inconclusive"]},
+    "causal_claim": {"type": "string", "enum": ["none", "hypothesis_only", "supported"]}
+  }
+}

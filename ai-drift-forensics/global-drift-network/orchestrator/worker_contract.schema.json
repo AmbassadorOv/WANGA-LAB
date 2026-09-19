@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "worker-contract.schema.json",
+  "title": "Global Drift Network Worker Contract",
+  "type": "object",
+  "required": ["task_id", "run_id", "worker", "input_snapshot_id", "attempt"],
+  "properties": {
+    "task_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "worker": {"type": "string", "enum": ["observation", "relationship", "verification", "publication"]},
+    "input_snapshot_id": {"type": "string", "minLength": 1},
+    "attempt": {"type": "integer", "minimum": 1},
+    "payload": {"type": "object"}
+  },
+  "additionalProperties": false
+}

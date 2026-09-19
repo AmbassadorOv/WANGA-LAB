@@ -1,0 +1,41 @@
+name: Global Drift Daily Evidence Run
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 19:00 Asia/Jerusalem is represented in UTC here. Review DST handling
+    # before relying on the scheduled trigger as the production clock.
+    - cron: '0 16 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: global-drift-daily-run
+  cancel-in-progress: false
+
+jobs:
+  create-run-record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Create run and initial snapshot
+        run: |
+          python ai-drift-forensics/global-drift-network/orchestrator/daily_run.py \
+            --output artifacts/daily-run
+
+      - name: Upload run record
+        uses: actions/upload-artifact@v4
+        with:
+          name: global-drift-daily-run-${{ github.run_id }}
+          path: artifacts/daily-run/
+          if-no-files-found: error
+          retention-days: 90

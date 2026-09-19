@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "status": "configured_pilot",
+  "cadence_minutes": 15,
+  "event_fast_mode_minutes": 5,
+  "nodes": [
+    {"id":"REG-US","region":"US","languages":["en"]},
+    {"id":"REG-EU","region":"Europe","languages":["en","de","fr"]},
+    {"id":"REG-IL-ME","region":"Israel-Middle-East","languages":["he","en","ar"]},
+    {"id":"REG-SA","region":"South-Asia","languages":["en","hi"]},
+    {"id":"REG-EA","region":"East-Asia","languages":["en","ja","ko","zh"]},
+    {"id":"REG-LATAM","region":"Latin-America","languages":["es","pt","en"]},
+    {"id":"REG-OCEANIA","region":"Oceania","languages":["en"]},
+    {"id":"REG-AFRICA","region":"Africa","languages":["en","fr","ar"]}
+  ],
+  "logical_agents_per_node": ["Scout","Normalizer","Baseline","Drift Detector","Temporal Analyst","Geospatial Analyst","Language Analyst","Surface Graph Analyst","Verification","Attribution"],
+  "event_sources": ["provider_status","model_release","service_incident","public_event_feed"],
+  "data_policy": {"personal_content": false,"api_keys_in_git": false,"synthetic_observations": false},
+  "global_index": {"enabled": true,"mode":"candidate_only","minimum_independent_nodes":3}
+}

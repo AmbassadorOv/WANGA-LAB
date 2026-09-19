@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Global Drift Network Daily Run Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "run_date", "protocol_version", "code_commit", "baseline_id", "status"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "run_date": {"type": "string", "format": "date"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "protocol_version": {"type": "string"},
+    "code_commit": {"type": "string"},
+    "configuration_hash": {"type": ["string", "null"]},
+    "baseline_id": {"type": "string"},
+    "task_ids": {"type": "array", "items": {"type": "string"}},
+    "observation_ids": {"type": "array", "items": {"type": "string"}},
+    "analysis_ids": {"type": "array", "items": {"type": "string"}},
+    "verification_ids": {"type": "array", "items": {"type": "string"}},
+    "snapshot_id": {"type": ["string", "null"]},
+    "status": {"enum": ["CREATED", "SNAPSHOTTED", "OBSERVED", "ANALYZED", "VERIFIED", "GATED", "COMPLETED", "BLOCKED", "RETRY_PENDING", "FAILED"]},
+    "errors": {"type": "array", "items": {"type": "string"}}
+  }
+}
