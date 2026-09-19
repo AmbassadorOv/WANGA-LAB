@@ -29,3 +29,5 @@ jobs:
           path: |
             vitruvius/VITRUVIUS_INDEX.json
             vitruvius/VITRUVIUS_WORK_QUEUE.json
+            vitruvius/ARCHITECTURE_GRAPH.json
+            vitruvius/ARCHITECTURE_RELATIONSHIP_REGISTRY.json
