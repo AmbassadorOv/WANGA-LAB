@@ -65,3 +65,18 @@ An older version is a historical reference point, not automatically the current 
 - `logic_repair_engine`
 - `verification_gate`
 - `architect_review_interface`
+
+
+## Dynamic architecture research foundation
+
+NTM architecture reasoning is now explicitly connected to the WANGA-X research foundation. The initial architecture-generation path will build on four established research families: HLS, specialized accelerator synthesis (including SODA), requirement-to-architecture synthesis, and runtime/adaptive architecture.
+
+The NTM role is to reason over these mechanisms and generate candidate computational structures; it does not itself constitute the materializer.
+
+`RATIONAL LOGIC -> REQUIREMENT -> NTM ARCHITECTURE REASONING -> BLUEPRINT / IR -> MATERIALIZER -> EXECUTION -> EVIDENCE -> VERIFICATION`
+
+When requirements change, the NTM can produce a new candidate rather than assuming that the existing architecture must remain fixed:
+
+`CHANGED REQUIREMENT -> NEW ARCHITECTURE CANDIDATE -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
+
+The research foundations and prototype boundary are documented in docs/WANGA_X_RESEARCH_FOUNDATIONS.md.
