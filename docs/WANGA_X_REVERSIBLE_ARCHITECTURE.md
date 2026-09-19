@@ -1,4 +1,4 @@
-# WANGA-X — Requirement-Driven, Reversible Computational Architecture
+# WANGA-X — Requirement-Driven, Evolving Dynamic Computational Architecture
 
 WANGA-X defines the computational architecture as a requirement-derived and time-addressable object.
 
@@ -64,7 +64,7 @@ F0 → F1 → F2 → F3 → F4 → ARCHITECTURE-A
 
 The film analogy is intentional: the construction process is a sequence of editable computational states. Stopping at a frame permits inspection and, where required, a change of the construction trajectory rather than forcing completion of an obsolete architecture.
 
-## Reversible construction primitives
+## Dynamic construction primitives
 
 - **DISCOVER** — record a human-identified candidate insight or requirement change.
 - **PAUSE** — stop materialization at a defined frame.
@@ -80,7 +80,7 @@ The film analogy is intentional: the construction process is a sequence of edita
 
 ## Why this is architectural, not an auxiliary layer
 
-Reversibility is part of the construction model itself. The system does not merely execute a static architecture and keep external logs about it. The architecture-generation process has a state history that can be traversed, inspected, corrected, and continued.
+Evolution during work is part of the construction model itself. The system does not merely execute a static architecture and keep external logs about it. The architecture-generation process has a state history that can be traversed, inspected, corrected, and continued.
 
 The resulting abstraction is:
 
