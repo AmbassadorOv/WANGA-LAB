@@ -1,7 +1,7 @@
 # WANGA-LAB — Canonical Global Architecture Registry
 
 Status: ARCHITECTURE BASELINE
-Version: 0.2.0
+Version: 0.2.1
 
 ## Purpose
 
@@ -101,12 +101,18 @@ GLOBAL SCIENCE NETWORK
 │   ├── Collaboration
 │   └── Publication Portal
 │
-└── J. FUTURE / PRIVATE / EXPERIMENTAL EXTENSIONS
-    ├── Private research spaces
-    ├── Domain-specific networks
-    ├── New compute architectures
-    ├── Proprietary services
-    └── Optional future economic / digital-asset architecture
+├── J. FUTURE / PRIVATE / EXPERIMENTAL EXTENSIONS
+│   ├── Private research spaces
+│   ├── Domain-specific networks
+│   ├── New compute architectures
+│   ├── Proprietary services
+│   └── Optional future economic / digital-asset architecture
+│
+└── K. LINEAGE KNOWLEDGE & GOVERNANCE
+    ├── Research Evolution Architecture
+    ├── Architecture Family Lineage
+    ├── WANGA Lineage Tree
+    └── WANGA Politeia
 ```
 
 ## Existing repository architectures
