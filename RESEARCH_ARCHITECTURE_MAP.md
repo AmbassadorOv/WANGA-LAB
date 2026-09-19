@@ -2,6 +2,16 @@
 
 This repository is the computational workspace for a broader research architecture. A researcher contributes within a specialized domain; connections between domains are explicit and evidence-based.
 
+## Institutional service interface
+
+A primary commercial application of the architecture is an independent evidence and forensic-analysis service for insurance companies and institutional risk holders that have material exposure to banks and other critical financial infrastructure.
+
+The service interface is:
+
+**Operational AI / systemic change → evidence preservation → reconstruction → dependency analysis → exposure assessment → verification → insurer/risk-holder decision support**
+
+This is a technical evidence layer, not an insurance policy, underwriting decision, financial guarantee, or regulatory certification. The architecture supports the customer's own risk, governance, claims, audit, and resilience processes; the applicable legal and regulatory classification must be established before deployment.
+
 ## Researcher Types
 
 | Researcher type | Architectural node | Typical contribution | Suitable funding class |
@@ -48,7 +58,7 @@ Suggested repository family:
 - `research-library` — sources, datasets, annotations and evidence.
 - `research-convergence` — cross-domain interfaces and integration records.
 
-The actual GitHub account currently exposes `AmbassadorOv/WANGA-LAB`; additional repositories can be created later as the research separates into stable modules.
+The GitHub account identity is intended to be `eran-oved-awats`. The repository currently remains under the existing GitHub owner namespace until the account-level username change is completed.
 
 ## Integration Rule
 

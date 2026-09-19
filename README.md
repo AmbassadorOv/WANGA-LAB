@@ -2,6 +2,12 @@
 
 This repository contains the Imperial Audit evidence-integrity layer. The evidence layer records exactly which inputs produced an evidence package and whether the package can be reproduced.
 
+## Service scope
+
+WANGA-LAB / Drift Forensics is intended to provide independent technical evidence, AI-drift analysis, model-behavior analysis, provenance reconstruction, and systemic-exposure assessment to insurance companies and institutional risk holders with material exposure to banks and other critical financial infrastructure.
+
+The service is an evidence and forensic-analysis layer. It does not itself provide insurance coverage, underwriting, a financial guarantee, solvency assurance, or a regulated insurance product. Commercial and regulatory classification must be reviewed for the applicable jurisdiction before customer use.
+
 ## Components
 
 - deterministic S1/S2/S3 + MASTER SHA-256 chain
