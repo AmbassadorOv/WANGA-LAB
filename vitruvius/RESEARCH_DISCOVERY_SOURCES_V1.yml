@@ -1,0 +1,56 @@
+version: "1.0"
+status: TARGET_ARCHITECTURE
+purpose: >
+  Define a scalable discovery layer for research records. Discovery sources
+  are indexes and provenance inputs, not authorities on scientific truth.
+
+source_roles:
+  scholarly_index:
+    purpose: discover scholarly works and metadata
+    examples: [OpenAlex]
+  knowledge_graph:
+    purpose: discover entities, relationships, identifiers, and scholarly links
+    examples: [Wikidata]
+  local_corpus:
+    purpose: discover WANGA-LAB research assets and historical artifacts
+    examples: [GitHub]
+  publication_surface:
+    purpose: locate published research artifacts and provenance
+    examples: [Wix]
+
+processing:
+  - discover
+  - normalize
+  - deduplicate
+  - classify
+  - cluster
+  - relate
+  - map_to_capabilities
+  - map_to_perspectives
+  - map_to_collaboration
+  - map_to_model_requirements
+  - attach_evidence
+  - verify
+  - promote
+
+scale_policy:
+  unit_of_processing: research_record
+  architecture_unit: cluster_or_capability
+  model_unit: model_agent_requirement
+  no_fixed_corpus_limit: true
+  incremental_batches: true
+  idempotent_processing: true
+
+epistemic_rules:
+  - discovery_metadata_is_not_evidence_of_truth
+  - classification_is_not_verification
+  - cluster_membership_is_not_claim_validation
+  - preserve_source_provenance
+  - preserve_uncertainty
+  - never_promote_unverified_claims_to_verified_knowledge
+
+wikipedia_policy:
+  role: discovery_and_context
+  authority: non_authoritative
+  preferred_graph_source: Wikidata
+  scholarly_metadata_source: OpenAlex
