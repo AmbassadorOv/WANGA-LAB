@@ -6,7 +6,6 @@ from __future__ import annotations
 import json
 import os
 import re
-import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -52,11 +51,12 @@ def github_get(path: str, token: str) -> Any:
         return json.load(resp)
 
 def discover_branches(repo: str, token: str) -> list[dict[str, Any]]:
+    owner, name = repo.split("/", 1)
     page = 1
     branches: list[dict[str, Any]] = []
     while True:
         data = github_get(
-            f"/repos/{urllib.parse.quote(repo, safe='')}/branches?per_page=100&page={page}",
+            f"/repos/{owner}/{name}/branches?per_page=100&page={page}",
             token,
         )
         if not data:
