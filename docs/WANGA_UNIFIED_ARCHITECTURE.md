@@ -88,6 +88,85 @@ WANGA Architecture of Architectures
 
 Formal integration is a future step that depends on the completion and authorized use of that separate project.
 
+
+## Derivative Layer — Commercialization Without Selling the Core
+
+The **derivative layer** is an additional architectural slide placed over the WANGA Copernicus core. It is part of the unified architecture, but it is not the protected foundational core itself.
+
+The distinction is structural:
+
+```
+WANGA COPERNICUS
+Unified Architecture of Architectures
+        │
+        ├── Human / Science / Education / Society
+        ├── Institutions / Law / Economics
+        ├── Technology / AI / Computation
+        ├── Evidence / Forensics / Verification
+        │
+        └── Dynamic Relational Core
+                    │
+                    ↓
+          Rational Logic dependency
+          Separate protected project
+                    │
+                    ↓
+             DERIVATIVE LAYER
+          ─────────────────────
+          Software
+          Systems
+          Applications
+          Verification tools
+          Decision-support systems
+          AI implementations
+          Forensic services
+          Domain-specific technologies
+                    │
+                    ↓
+             Commercial Layer
+```
+
+The derivative layer exists so that the protected foundational IP does not have to become the commercial product itself.
+
+The underlying principle is:
+
+**Core → capability → implementation → derivative → application → service/product**
+
+The core can therefore remain separately protected while authorized derivatives carry the operational and commercial value into specific domains.
+
+This is not merely a legal separation; it is an architectural separation. The derivative is allowed to expose an implementation of a capability without exposing the complete foundational reasoning architecture from which that capability originated.
+
+Accordingly:
+
+- the protected core is not treated as a directly marketed product;
+- the derivative layer is the interface between foundational research and deployable systems;
+- different derivatives can be created for different requirements without changing the protected core;
+- derivatives may be commercialized, licensed, implemented, or delivered as services subject to the applicable IP and legal structure;
+- the existence of a derivative does not imply disclosure of the protected core;
+- WANGA Copernicus can therefore evolve as a unified architecture while preserving a distinct boundary around foundational IP.
+
+### The slide principle
+
+The derivative layer is deliberately represented as **another transparent slide over the same architecture**, rather than as a separate system beside it.
+
+Thus:
+
+```
+[ WANGA COPERNICUS CORE ]
+          ↓
+[ PROTECTED FOUNDATIONAL CAPABILITY ]
+          ↓
+[ DERIVATIVE SLIDE ]
+          ↓
+[ DEPLOYABLE IMPLEMENTATION ]
+          ↓
+[ APPLICATION / SERVICE ]
+```
+
+A change in requirements can generate a new derivative without requiring the sale, disclosure, or replacement of the foundational core.
+
+This preserves the distinction between **what generates the capability** and **what is commercially delivered from that capability**.
+
 ## WANGA-X relationship
 
 WANGA-X is the computational expression of this principle:
