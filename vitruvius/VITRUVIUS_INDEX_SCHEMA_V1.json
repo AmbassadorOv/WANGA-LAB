@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vitruvius Research-System Index",
+  "type": "object",
+  "required": ["version", "generated_at", "nodes", "edges"],
+  "properties": {
+    "version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "source"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"enum": ["cognitive_capability", "research", "perspective", "scientist_group", "model_agent", "artifact", "evidence", "verification"]},
+          "source": {"type": "string"},
+          "domain": {"type": "string"},
+          "status": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "relation", "to"],
+        "properties": {
+          "from": {"type": "string"},
+          "relation": {"type": "string"},
+          "to": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
