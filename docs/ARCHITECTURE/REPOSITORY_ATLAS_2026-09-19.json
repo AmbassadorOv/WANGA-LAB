@@ -29,7 +29,6 @@
       "AI231.meta.io",
       "Nanomathematics",
       "MNM",
-      "Qualia",
       "-logicl-neural-order"
     ],
     "AI_INFRA": [
@@ -57,15 +56,6 @@
       "unetbootin",
       "awesome-chatgpt-prompts"
     ],
-    "GOVERNANCE_AND_INSTITUTIONAL": [
-      "World-Party-Federation-Branches-managers",
-      "think-thank-you-of-cyber-Department",
-      "TTTTproject-un.govt",
-      "TTTT-0.0.0.0.1",
-      "ARK-KERNEL-OVERSIGHT",
-      "vqbshtfsprojects.org",
-      "https-AmbassadorOv.io"
-    ],
     "LEGACY_OR_EXPERIMENTAL": [
       "-from-Corsican-",
       "fluffy-parakeet",
@@ -76,9 +66,21 @@
       "-",
       "-artificial-y",
       "GOOGLE_API_KEY",
-      "test-notebook-links"
+      "test-notebook-links",
+      "Qualia"
     ],
-    "UNKNOWN_REQUIRES_REVIEW": []
+    "UNKNOWN_REQUIRES_REVIEW": [],
+    "GOVERNANCE_RESEARCH_SOURCES": [
+      "World-Party-Federation-Branches-managers",
+      "think-thank-you-of-cyber-Department",
+      "TTTTproject-un.govt",
+      "TTTT-0.0.0.0.1",
+      "ARK-KERNEL-OVERSIGHT",
+      "vqbshtfsprojects.org"
+    ],
+    "PUBLICATION_IDENTITY": [
+      "https-AmbassadorOv.io"
+    ]
   },
   "handling": {
     "CORE": "authoritative architecture and public identity",
@@ -87,6 +89,8 @@
     "SOURCE_UPSTREAM": "forks/vendor/upstream mirrors; do not rewrite as original research",
     "GOVERNANCE_AND_INSTITUTIONAL": "institutional/governance concepts; preserve historical artifacts and provenance",
     "LEGACY_OR_EXPERIMENTAL": "retain, inventory and inspect before any archive/merge/rename",
-    "UNKNOWN_REQUIRES_REVIEW": "manual architectural review"
+    "UNKNOWN_REQUIRES_REVIEW": "manual architectural review",
+    "GOVERNANCE_RESEARCH_SOURCES": "historical/conceptual governance research sources; may inform the planned Institute for Global Algorithmic Neuro-Governance, but are not the Institute itself and do not establish institutional authority",
+    "PUBLICATION_IDENTITY": "public identity/publication surface; not canonical research implementation"
   }
 }
