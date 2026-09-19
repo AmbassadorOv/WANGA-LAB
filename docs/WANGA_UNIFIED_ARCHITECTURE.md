@@ -207,3 +207,71 @@ The architecture is therefore a system capable of **reconfiguring relationships 
 ## Research status
 
 This document defines the conceptual architecture and records the Rational Logic dependency as a separate protected-IP project. It does not claim that the Rational Logic core currently exists, is publicly accessible, or has been empirically validated or fully implemented.
+
+
+## Comparative Research Program — Ramchal / Rashash / Requirement-Derived Order
+
+This section records a research hypothesis, not a historical claim of direct influence.
+
+The working comparison is between two distinct developments of the Lurianic corpus:
+
+- **Ramchal (Moshe Chaim Luzzatto):** a systematic interpretive architecture that reorganizes Lurianic concepts into a broader account of order, governance, manifestation, and relations between levels of reality.
+- **Rashash (Shalom Sharabi):** a highly specialized internal development of the Lurianic system, especially the structure of kavvanot and the detailed operational relations of the sefirotic system.
+
+The hypothesis is not that these systems are identical, nor that either author intended a scientific theory. The hypothesis is that they may provide two different structural descriptions that can be abstracted without collapsing their original meanings.
+
+### Circle / Line research abstraction
+
+The Ramchal material examined in *Adir BaMarom* contains explicit discussion of **igulim** and **yosher/kav**, including the organization of the reshimu in circular form and the kav as a distinct ordered configuration. Modern scholarship likewise identifies igulim and yosher as two systems of sefirotic organization: circular/nested versus an ordered configuration with directional relations.
+
+For WANGA research purposes, the abstraction is:
+
+Dynamic possibility space → internal relation → derived order
+
+The circle is therefore not identified with chaos itself. It represents a bounded relational domain in which a configuration can exist. The line/kav represents an ordered relation operating within that domain.
+
+### Material / formal hypothesis
+
+A separate philosophical hypothesis proposes a comparison in which the Ramchal and Rashash systems are treated as complementary research poles analogous to **material and formal determination**. This is a WANGA research translation, not a claim that Ramchal or Rashash themselves used these exact categories to describe their own systems.
+
+The hypothesis is deliberately external to Kabbalistic proof:
+
+Source texts → structural abstraction → formal model → scientific test
+
+The scientific stage must be capable of falsifying the abstraction. No empirical confirmation is claimed at this stage.
+
+### Methodological boundary
+
+This project does not claim:
+
+- that Rashash was attempting to describe Einsteinian physics;
+- that Ramchal or Rashash intended modern science;
+- that Einstein inherited Kabbalistic concepts;
+- that a historical chain of transmission from Ramchal/Rashash to Einstein has been demonstrated.
+
+The research question is narrower and testable:
+
+> Can two distinct structural readings of the Lurianic corpus be abstracted into a formal relation between domain, internal order, material determination, and formal determination, and does that relation correspond to independently observable structure in science?
+
+A historical transmission claim, if pursued, must be established separately through documentary evidence.
+
+### Einstein comparison boundary
+
+Einstein is used only as a later scientific comparison point in the research program. His documented early environment included independent study, mathematics and natural science, family exposure to electrical engineering, and philosophical/scientific reading; these facts do not establish any Kabbalistic lineage.
+
+The relevant comparative question is therefore about **structural form of reasoning**, not biography by analogy.
+
+### Research specialization statement
+
+The WANGA research program specializes in:
+
+- requirement-derived architecture;
+- structural analysis of inherited systems;
+- separation of framework from inference;
+- dynamic relations between architectures;
+- evidence-preserving reconstruction;
+- AI/model drift forensics;
+- formalization of conceptual architectures into testable models;
+- comparative analysis of scientific, philosophical, institutional, and computational structures.
+
+The researcher profile must describe actual research activity and must not invent academic degrees, appointments, publications, or years of professional experience. Verified credentials can be added separately when documented.
