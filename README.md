@@ -4,6 +4,16 @@ WANGA-LAB is the systems architecture and evidence-integrity layer for **AI drif
 
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
+## WANGA and Rational Logic
+
+WANGA is treated in this research as a distinct computing architecture, not simply as a wrapper around a language model.
+
+Within WANGA:
+
+**Rational Logic = the canonical logic and reasoning layer**
+
+This is a statement about system architecture. It does not claim separate physical hardware. The public repository documents the relationship between the system and its logic layer; deeper formal details and proprietary implementation remain outside the public disclosure boundary.
+
 ## Core distinction
 
 WANGA-LAB is not primarily an AI engine.
