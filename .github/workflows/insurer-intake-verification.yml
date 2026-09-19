@@ -1,0 +1,55 @@
+name: Insurer Intake and Synthetic Replay Verification
+
+on:
+  push:
+    paths:
+      - "tools/insurer_intake.py"
+      - "tools/replay_known_risk.py"
+      - "tests/test_insurer_intake.py"
+      - "artifacts/drift-known-risk-001/**"
+      - ".github/workflows/insurer-intake-verification.yml"
+  pull_request:
+    paths:
+      - "tools/insurer_intake.py"
+      - "tools/replay_known_risk.py"
+      - "tests/test_insurer_intake.py"
+      - "artifacts/drift-known-risk-001/**"
+      - ".github/workflows/insurer-intake-verification.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test runner
+        run: python -m pip install --upgrade pip pytest
+      - name: Syntax check
+        run: python -m compileall -q tools tests
+      - name: Intake tests
+        run: PYTHONPATH=. python -m pytest -q tests/test_insurer_intake.py
+      - name: Synthetic replay
+        run: python tools/replay_known_risk.py
+      - name: Verify replay output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("artifacts/drift-known-risk-001/outputs/replay-result.json")
+          data = json.loads(p.read_text())
+          assert data["case_ref"] == "CASE_REF_2026_DRIFT_KNOWN_RISK_001"
+          assert data["fixture"] == "synthetic"
+          assert data["deviation_detected"] is True
+          assert len(data["baseline_sha256"]) == 64
+          assert len(data["observed_sha256"]) == 64
+          print("INSURER_INTAKE_REPLAY=PASS")
+          PY
+      - name: Upload replay result
+        uses: actions/upload-artifact@v4
+        with:
+          name: insurer-intake-replay
+          path: artifacts/drift-known-risk-001/outputs/replay-result.json
+          retention-days: 14
