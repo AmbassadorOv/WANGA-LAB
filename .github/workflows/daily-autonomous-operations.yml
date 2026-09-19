@@ -1,0 +1,32 @@
+name: Daily Autonomous Operations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "11 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  operations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax check
+        run: python -m compileall -q scripts tools tests
+      - name: Operations tests
+        run: |
+          python -m pip install --upgrade pip pytest
+          PYTHONPATH=. python -m pytest -q tests/test_daily_operations_report.py tests/test_insurer_intake.py tests/test_insurer_case_queue.py tests/test_insurer_pipeline.py tests/test_insurer_oversight.py tests/test_insurer_intake_cli.py
+      - name: Generate daily report
+        run: python scripts/daily_operations_report.py > daily-operations-report.json
+      - name: Upload daily operations report
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-operations-report
+          path: daily-operations-report.json
+          retention-days: 14
