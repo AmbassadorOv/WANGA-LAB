@@ -1,6 +1,6 @@
 # WANGA-LAB — Global Architecture Roadmap
 
-Version: 0.2.0
+Version: 0.2.1
 Status: planning baseline
 
 ## Phase 0 — Foundation already present
@@ -15,6 +15,25 @@ The Global Drift Network already defines a 12-role logical agent model, a 4-work
 2. Keep `ARCHITECTURE_REGISTRY.json` as the machine-readable registry.
 3. Require every new architecture to declare parent, scope, status, identifiers, dependencies, interfaces, and validation state.
 4. Link every specialized specification back to the canonical registry.
+
+## Phase 1A — Lineage knowledge and governance
+
+Treat lineage management as a first-class architecture, not as administrative metadata.
+
+Build and maintain:
+
+1. Research Evolution Architecture
+2. Architecture Family Lineage
+3. WANGA Lineage Tree
+4. WANGA Politeia
+
+The Politeia layer converts lineage history, integration events, validation results, and descendant outcomes into reusable knowledge for future architecture composition.
+
+The architecture prediction loop is:
+
+`composition request → lineage inspection → compatibility knowledge → prediction → validation → integration → descendant → new lineage knowledge`
+
+Every governance revision is itself a lineage event.
 
 ## Phase 2 — Build the shared scientific object model
 
