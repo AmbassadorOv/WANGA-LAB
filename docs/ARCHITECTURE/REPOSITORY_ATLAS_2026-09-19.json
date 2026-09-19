@@ -2,10 +2,28 @@
   "version": "2026-09-19",
   "authority": "WANGA-LAB",
   "rule": "Preserve evidence; classify before moving; no destructive rewrite by automation.",
+  "identity": {
+    "intended_github_username": "eran-oved-awats",
+    "current_github_owner_namespace": "AmbassadorOv",
+    "status": "ACCOUNT_USERNAME_CHANGE_PENDING"
+  },
+  "service_interface": {
+    "primary_customer_class": "insurance companies and institutional risk holders",
+    "exposure_focus": "banks and other critical financial infrastructure",
+    "service_layer": [
+      "AI drift forensics",
+      "evidence preservation",
+      "reconstruction",
+      "dependency analysis",
+      "systemic exposure assessment",
+      "independent verification"
+    ],
+    "boundary": "technical evidence and decision-support layer; not insurance underwriting, coverage, brokerage, or financial guarantee"
+  },
   "groups": {
     "CORE": [
       "WANGA-LAB",
-      "AmbassadorOv"
+      "eran-oved-awats"
     ],
     "RESEARCH": [
       "AI231.meta.io",
