@@ -19,6 +19,8 @@ jobs:
           python-version: "3.x"
       - name: Build neural architecture topology
         run: python scripts/wanga_neural_architecture_network.py --write --source VITRUVIUS --payload '{"event":"architecture_cycle"}'
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest
       - name: Test neural architecture network
         run: python -m pytest tests/test_wanga_neural_architecture_network.py
       - uses: actions/upload-artifact@v4
