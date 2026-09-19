@@ -1,0 +1,29 @@
+name: Vitruvius Three-Family Branch Tree
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  classify-and-fold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Classify all branches
+        run: python scripts/vitruvius_three_family_branch_tree.py
+      - name: Test classification
+        run: python -m pytest tests/test_vitruvius_three_family_branch_tree.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: three-family-branch-tree
+          path: vitruvius/THREE_FAMILY_BRANCH_TREE_V1.json

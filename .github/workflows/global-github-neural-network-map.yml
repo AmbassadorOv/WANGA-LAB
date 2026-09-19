@@ -1,0 +1,25 @@
+name: Global GitHub Neural Network Map
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 * * * *"
+permissions:
+  contents: read
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python scripts/vitruvius_three_family_branch_tree.py
+      - run: python scripts/vitruvius_branch_fabric.py --write
+      - run: python scripts/vitruvius_global_github_neural_network.py
+      - run: python -m pytest tests/test_vitruvius_three_family_branch_tree.py tests/test_wanga_neural_branch_folding.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: global-github-neural-network-map
+          path: vitruvius/GLOBAL_GITHUB_NEURAL_NETWORK_MAP_V1.json

@@ -1,0 +1,304 @@
+{
+  "version": "1.0.0",
+  "engine": "VITRUVIUS_TEN_ARCHITECTURE_FAMILY_MAPPER",
+  "root_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+  "source_files": [
+    "GLOBAL_ARCHITECTURE_REGISTRY.md",
+    "docs/ARCHITECTURE_INTEGRATION_INDEX.md",
+    "docs/WANGA_GLOBAL_WORK_MANAGER_V2.md",
+    "docs/MODEL_AGENT_ARCHITECTURE_V1.md",
+    "docs/WANGA_X_REVERSIBLE_ARCHITECTURE.md",
+    "docs/ARCHITECTURE/WANGA_POLITEIA.md",
+    "docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md",
+    "ai-drift-forensics/global-drift-network/neural-network-research-core/WANGA_OS_ARCHITECTURE_V1.md",
+    "wanga-research-groups/neural-thinking-machine/NEURAL_OS_ARCHITECTURE_V1.md",
+    "docs/ARCHITECTURE/ARCHITECTURE_TO_RESEARCH_MATRIX.md"
+  ],
+  "family_roots": {
+    "COMPUTATIONAL_NEURAL": {
+      "children": [
+        "WANGA OS",
+        "Global Work Manager",
+        "Model Fabric",
+        "Digital Model Agents",
+        "Neural OS",
+        "NTM",
+        "Rational Logic",
+        "WANGA-X",
+        "Compute Fabric",
+        "Execution Fabric"
+      ],
+      "neural_role": "state, routing, computation, execution, reasoning"
+    },
+    "EVIDENCE_GOVERNANCE": {
+      "children": [
+        "Evidence & Provenance",
+        "Drift Forensics",
+        "Verification",
+        "WANGA Politeia",
+        "Lineage Tree",
+        "Architecture Family Lineage",
+        "Governance Control"
+      ],
+      "neural_role": "provenance, constraints, validation, lineage, authority boundaries"
+    },
+    "PUBLICATION_RESEARCH": {
+      "children": [
+        "Research Architecture",
+        "Research Composition",
+        "Publication Layer",
+        "Architecture-to-Research Matrix",
+        "Scientific Commons"
+      ],
+      "neural_role": "research discovery, synthesis, publication, external knowledge interfaces"
+    }
+  },
+  "governance": {
+    "P0": [
+      "Integrity",
+      "Repository Hygiene",
+      "Evidence-State Taxonomy",
+      "Verification Boundaries"
+    ],
+    "P1": [
+      "Rational Logic",
+      "NTM",
+      "Execution Contracts",
+      "Global Work Manager"
+    ],
+    "P2": [
+      "Evidence",
+      "Provenance",
+      "Drift Forensics",
+      "Verification"
+    ],
+    "P3": [
+      "Operational Intake",
+      "Case Triage",
+      "Bounded Queues"
+    ],
+    "P4": [
+      "Research Composition",
+      "WANGA-X",
+      "Copernicus",
+      "Vitruvius"
+    ],
+    "P5": [
+      "Governance Standards",
+      "Interoperability",
+      "Standards Registry"
+    ],
+    "P6": [
+      "Publication",
+      "Publication Network",
+      "Public Evidence Interfaces"
+    ],
+    "P7": [
+      "Presentation",
+      "Downstream Web Surfaces"
+    ]
+  },
+  "architecture_bindings": [
+    {
+      "source": "GLOBAL_ARCHITECTURE_REGISTRY.md",
+      "root": "PUBLICATION_RESEARCH",
+      "children": [
+        "Scientific Commons",
+        "Research Architecture",
+        "Global Drift Network",
+        "Research Execution Fabric",
+        "Compute Fabric",
+        "Knowledge & Publication",
+        "Institutional Network",
+        "Lineage Knowledge & Governance"
+      ],
+      "governance": [
+        "P0",
+        "P2",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "source": "docs/ARCHITECTURE_INTEGRATION_INDEX.md",
+      "root": "EVIDENCE_GOVERNANCE",
+      "children": [
+        "Integrity/Governance",
+        "Rational Logic/NTM/Execution",
+        "Evidence/Forensics",
+        "Operational Intake",
+        "Research Composition",
+        "Governance Standards",
+        "Publication"
+      ],
+      "governance": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "source": "docs/WANGA_GLOBAL_WORK_MANAGER_V2.md",
+      "root": "COMPUTATIONAL_NEURAL",
+      "children": [
+        "Global Work Manager",
+        "OS/Runtime Manager",
+        "Model Fabric Manager",
+        "Digital Model Agent Manager",
+        "Drift Forensics Manager",
+        "Evidence Manager",
+        "NTM Routing Manager",
+        "Governance Interface Manager",
+        "Publication Manager",
+        "Work Memory Manager"
+      ],
+      "governance": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "source": "docs/MODEL_AGENT_ARCHITECTURE_V1.md",
+      "root": "COMPUTATIONAL_NEURAL",
+      "children": [
+        "Model Fabric",
+        "Digital Model Agents",
+        "Providers/Runtimes",
+        "Evidence/Drift",
+        "Rational Logic",
+        "NTM"
+      ],
+      "governance": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "source": "docs/WANGA_X_REVERSIBLE_ARCHITECTURE.md",
+      "root": "COMPUTATIONAL_NEURAL",
+      "children": [
+        "Fixed Architecture",
+        "Workload",
+        "Adaptation",
+        "Rational Logic",
+        "NTM",
+        "Lineage/Recovery"
+      ],
+      "governance": [
+        "P1",
+        "P4",
+        "P0"
+      ]
+    },
+    {
+      "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md",
+      "root": "EVIDENCE_GOVERNANCE",
+      "children": [
+        "Lineage Governance",
+        "Compatibility Knowledge",
+        "Governance Decision Records",
+        "Recursive Constitutional Rule",
+        "Governance Drift Detection"
+      ],
+      "governance": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "source": "docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md",
+      "root": "EVIDENCE_GOVERNANCE",
+      "children": [
+        "Lineage Nodes",
+        "Development Events",
+        "Recursive Genealogy",
+        "Architecture Integration",
+        "Provenance"
+      ],
+      "governance": [
+        "P0",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "source": "ai-drift-forensics/global-drift-network/neural-network-research-core/WANGA_OS_ARCHITECTURE_V1.md",
+      "root": "EVIDENCE_GOVERNANCE",
+      "children": [
+        "Research Kernel",
+        "Sensor Fabric",
+        "Observation Bus",
+        "Representation Layer",
+        "State/Transition Engine",
+        "Evaluation",
+        "Drift",
+        "Evidence Commons",
+        "Orchestration",
+        "Architect Interface"
+      ],
+      "governance": [
+        "P0",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "source": "wanga-research-groups/neural-thinking-machine/NEURAL_OS_ARCHITECTURE_V1.md",
+      "root": "COMPUTATIONAL_NEURAL",
+      "children": [
+        "Machine Layer",
+        "Neural OS",
+        "Event/State Bus",
+        "NTM",
+        "Decision/Command Bus",
+        "System Directives",
+        "Typed State Updates",
+        "Context Binding",
+        "Verification"
+      ],
+      "governance": [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "source": "docs/ARCHITECTURE/ARCHITECTURE_TO_RESEARCH_MATRIX.md",
+      "root": "PUBLICATION_RESEARCH",
+      "children": [
+        "Global Work Manager",
+        "Model Fabric",
+        "Digital Model Agents",
+        "Evidence/Provenance",
+        "Drift Forensics",
+        "Rational Logic",
+        "NTM",
+        "Perspective Layer",
+        "Publication Layer",
+        "Governance Layer"
+      ],
+      "governance": [
+        "P1",
+        "P2",
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "wrapping_rule": "Every architecture node receives root_family -> child_family -> governance_layers -> neural_endpoint -> global_network bindings.",
+  "promotion_rule": "The neural map is a topology/coordination layer; it does not promote PLANNED or EXPERIMENTAL architecture into VERIFIED status."
+}

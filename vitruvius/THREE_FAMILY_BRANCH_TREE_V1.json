@@ -1,0 +1,1485 @@
+{
+  "engine": "VITRUVIAN_THREE_FAMILY_BRANCH_TREE",
+  "source": "AmbassadorOv/WANGA-LAB GitHub branches API",
+  "retrieved": "2026-09-19",
+  "branch_count": 86,
+  "families": {
+    "COMPUTATIONAL_NEURAL": 35,
+    "EVIDENCE_GOVERNANCE": 43,
+    "PUBLICATION_RESEARCH": 8
+  },
+  "subfamilies": {
+    "ARCHITECTURE_SYSTEMS": 27,
+    "NEURAL_COMPUTATION": 4,
+    "GOVERNANCE_CONTROL": 10,
+    "EVIDENCE_DRIFT": 31,
+    "PUBLICATION": 3,
+    "RESEARCH_COMPOSITION": 5,
+    "ASSURANCE_SERVICES": 2,
+    "RUNTIME_FABRIC": 4
+  },
+  "nodes": [
+    {
+      "branch_id": "BRANCH-d7566fd1",
+      "branch": "agent/architecture/wanga-computer-architecture",
+      "commit_sha": "20c8d5e27725234d520b0637ec215f05a8471057",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-64cc4909",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-7a0a9710",
+      "branch": "agent/autonomous-poc/ntm-e2e-core",
+      "commit_sha": "2b67c492e9b45719464dedbc4ce9fee14e87f6a1",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "NEURAL_COMPUTATION",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-b1651730",
+      "neural_endpoint": "NEURAL-ENDPOINT-99e953d6",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-39471b3e",
+      "branch": "agent/codex/fractal-github-neural-network",
+      "commit_sha": "982fdc7b208a82715f4655717ce54f93fb0edaf2",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "NEURAL_COMPUTATION",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-b1651730",
+      "neural_endpoint": "NEURAL-ENDPOINT-31f2e6b6",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-acae4122",
+      "branch": "agent/codex/neural-architecture-network",
+      "commit_sha": "0a3899db6b6208f40e77f33d9a456b7e2a02da2e",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "NEURAL_COMPUTATION",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-b1651730",
+      "neural_endpoint": "NEURAL-ENDPOINT-1a802d91",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-da2d96dc",
+      "branch": "agent/codex/vitruvian-scale-dual-architecture",
+      "commit_sha": "6bda20b6590f10773d1828736af12cec9131d9cb",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-abdbbce3",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-59e1bd27",
+      "branch": "agent/codex/vitruvius-architecture-graph-automation",
+      "commit_sha": "0a0943f97725262930ddf3313ddde4233ae294d7",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-a23e145",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-883e0c3",
+      "branch": "agent/codex/wanga-global-architecture",
+      "commit_sha": "a62d3a91d72ce02b0c38a9d8a3a04bdeaf7dd312",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-98e375d2",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-5af27e67",
+      "branch": "agent/codex-002/control-plane/governance-hardening",
+      "commit_sha": "165e69a4736b0d09266e381a6ac5611527dc33cd",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-6feaef15",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b647c9a0",
+      "branch": "agent/codex-002/control-plane/repository-hygiene-ci",
+      "commit_sha": "a2de083b366a953d3f0425f71e7db1206783b9f6",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-516cbc64",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-85d508ed",
+      "branch": "agent/codex-002/control-plane-governance-hardening",
+      "commit_sha": "165e69a4736b0d09266e381a6ac5611527dc33cd",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-80145e75",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-fff9bbc2",
+      "branch": "agent/codex-002/control-plane-mvp",
+      "commit_sha": "d930f9a67d13def05ca440608bc87af4096c31cc",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-8774b178",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-64b221c7",
+      "branch": "agent/codex-002/drift-network-secret-hardening",
+      "commit_sha": "549b2cdf0981cc7e7390c53bb664102732096222",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-9661bf59",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-cba472ef",
+      "branch": "agent/codex-002/repository-hygiene-ci",
+      "commit_sha": "a2de083b366a953d3f0425f71e7db1206783b9f6",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-7963e7ee",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-9913d170",
+      "branch": "agent/codex-002/vitruvius-automation-engine",
+      "commit_sha": "110ba271164a4a0b813c0bfff06b86b21ec86370",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-9c0359f6",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-eca164f0",
+      "branch": "agent/copernicus/static-blog-platform",
+      "commit_sha": "06595bae90ae43984efadad8b1140e0ce67513fd",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "PUBLICATION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-6b44c085",
+      "neural_endpoint": "NEURAL-ENDPOINT-3965c62e",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-e767bb7d",
+      "branch": "agent/eran-oved-awats/align-repository-inventory",
+      "commit_sha": "ca108a828c2bff600a9eac67bc7025bc2f3fd899",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-bb4dfe74",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-389c5678",
+      "branch": "agent/eran-oved-awats/compiled-research-lineage",
+      "commit_sha": "336f745bb5ba5f53d52632d6fa637b65963e404e",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "RESEARCH_COMPOSITION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-98f5d99d",
+      "neural_endpoint": "NEURAL-ENDPOINT-59e770ef",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b25411e4",
+      "branch": "agent/eran-oved-awats/daily-autonomous-operations",
+      "commit_sha": "21bbf82b6f1ce8d0f33d6caefc67ecd74ae4ada3",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-2cbcbca6",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-8c69d9c",
+      "branch": "agent/eran-oved-awats/fix-repository-atlas-governance-key",
+      "commit_sha": "2d923896fe84e5896014fe1527e59e36d256373b",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-cef5bb90",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-4ad08aa3",
+      "branch": "agent/eran-oved-awats/gdn-secure-clean",
+      "commit_sha": "45a97e8bda3d2ee75ae3fcb1343002d649addb51",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-1e5aa080",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-ba070dbe",
+      "branch": "agent/eran-oved-awats/governance-clean-integration",
+      "commit_sha": "7d5d6621bf9f8c4d2b4f88515396e69faeffd353",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-8eb7748d",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-7f35f69c",
+      "branch": "agent/eran-oved-awats/institute-name-standardization",
+      "commit_sha": "97a38cc82409a464dcfa6f126e820666f5b7e529",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "RESEARCH_COMPOSITION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-98f5d99d",
+      "neural_endpoint": "NEURAL-ENDPOINT-62226e91",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-a3183d76",
+      "branch": "agent/eran-oved-awats/insurance-service-and-identity",
+      "commit_sha": "63181c3c57a0b954d9aa14a635a00ff1cb8058b5",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "ASSURANCE_SERVICES",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-6fdc9771",
+      "neural_endpoint": "NEURAL-ENDPOINT-224e7aa7",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-5e16eb1a",
+      "branch": "agent/eran-oved-awats/insurer-intake-readiness",
+      "commit_sha": "849f3fb2674b1adad1e0094d986dfec272bd852d",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "ASSURANCE_SERVICES",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-6fdc9771",
+      "neural_endpoint": "NEURAL-ENDPOINT-75c7da48",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b1d8d196",
+      "branch": "agent/eran-oved-awats/public-evidence-infrastructure-model",
+      "commit_sha": "6683eea1284ec769f998281302e9a8d78bfd35ac",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-f001bd85",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-2cf93994",
+      "branch": "agent/eran-oved-awats/verify-known-risk-001",
+      "commit_sha": "c0d829c4bce8c909aa697f7af093b5bc55e45e48",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-d5d273e7",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-a6dfaca",
+      "branch": "agent/eran-oved-awats/vitruvius-clean",
+      "commit_sha": "777dea73d369bce6511df466e88bc08252d6eae7",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-bf69e75c",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-88ecc653",
+      "branch": "agent/eran-oved-awats/wanga-native-rational-logic",
+      "commit_sha": "bed60d970729f4d301a89b7f1c586469aaebb978",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-3c3bc11d",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-e7253419",
+      "branch": "agent/eran-oved-awats/wanga-x-clean",
+      "commit_sha": "0eeee7a28cc3985f2cd61ad1aa1bb5eb2bf31bc3",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "RESEARCH_COMPOSITION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-98f5d99d",
+      "neural_endpoint": "NEURAL-ENDPOINT-1ae3c91c",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-bca3538d",
+      "branch": "agent/eran-oved-awats/work-manager-model-fabric-clean",
+      "commit_sha": "b187c419e17c09ac9a588d3b0c43b85f30983064",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-e8c655ff",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-69551fe2",
+      "branch": "agent/profile/homepage-2026-09-19",
+      "commit_sha": "9ed008c994c79302dc50a41b4ff978b1dc3c631f",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "PUBLICATION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-6b44c085",
+      "neural_endpoint": "NEURAL-ENDPOINT-32a9cdd7",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-4dd76143",
+      "branch": "agent/publication/systemic-drift-prevention-2026-09-19",
+      "commit_sha": "88ed7f4e44b281a1c091506fdc96acacd27090ba",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-cb28e561",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-62788e1d",
+      "branch": "agent/publication-network/bootstrap",
+      "commit_sha": "05030d9a58894060710e71c48f24052008d703e6",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "PUBLICATION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-6b44c085",
+      "neural_endpoint": "NEURAL-ENDPOINT-dd50db15",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-23c1f868",
+      "branch": "agent/research/composition-fractals-2026-09-19",
+      "commit_sha": "6665afd945c816e7e5d73a54adbb188075b2b503",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "RESEARCH_COMPOSITION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-98f5d99d",
+      "neural_endpoint": "NEURAL-ENDPOINT-7e2d8bb7",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-45a7cd3a",
+      "branch": "agent/wanga-copernicus/system-100-articles",
+      "commit_sha": "8c6104a1da18fa8ad53af5742f5feb0486902351",
+      "family": "PUBLICATION_RESEARCH",
+      "subfamily": "RESEARCH_COMPOSITION",
+      "family_id": "FAMILY-5649d113",
+      "subfamily_id": "SUBFAMILY-98f5d99d",
+      "neural_endpoint": "NEURAL-ENDPOINT-29ebbf84",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-6e8b58e1",
+      "branch": "agent/wanga-x/reversible-architecture-timeline",
+      "commit_sha": "b588ccd17a6d2af0fbae3148cd06c2a32b369349",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-c526c864",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-579bd8ee",
+      "branch": "agent/wanga-x/unified-architecture",
+      "commit_sha": "42d5e1d53dc234be6667dd15bf3c20ec4404d45c",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-7fee4961",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-79716566",
+      "branch": "autobuild/architecture-construction",
+      "commit_sha": "62f3fd135caff541c761d73345889f758377ee25",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-9c67620d",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-723de6fa",
+      "branch": "codex/algorithmic-governance-standard-v0-1",
+      "commit_sha": "5b759d12b43da77cef4d277ff058f6bd934f76d5",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-74b0cbfc",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-fe3e2b3c",
+      "branch": "distributed-evidence-network",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-d31ebc8b",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-c87ba755",
+      "branch": "distributed-evidence-network-2",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-24e730f8",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-5e16746c",
+      "branch": "distributed-evidence-network-3",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-57f443f5",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b011db33",
+      "branch": "distributed-evidence-network-4",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-6818ddb8",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-447b13ea",
+      "branch": "distributed-evidence-network-5",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-82b8652b",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-a98d98f1",
+      "branch": "distributed-evidence-network-6",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-dd3d5b5a",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-31d0aad1",
+      "branch": "distributed-evidence-network-active",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-17fd9ba1",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-24330976",
+      "branch": "distributed-evidence-network-dev",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-4b1cb682",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-47daabe7",
+      "branch": "distributed-evidence-network-final",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-53fd6201",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-90415e7d",
+      "branch": "distributed-evidence-network-impl",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-ee302963",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-dfe0d15d",
+      "branch": "distributed-evidence-network-live",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-8eb663b5",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-2742aaac",
+      "branch": "distributed-evidence-network-main",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-b0e354fb",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-de3314ce",
+      "branch": "distributed-evidence-network-ready",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-479e0100",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-7b4b2953",
+      "branch": "distributed-evidence-network-v2",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-15dabd1e",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-5f24168a",
+      "branch": "distributed-evidence-network-v3",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-d9b82899",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-3bd57775",
+      "branch": "distributed-evidence-network-v4",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-d3706ec",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b5add20c",
+      "branch": "distributed-evidence-network-v5",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-6e1dd5cb",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-6347e5b0",
+      "branch": "distributed-evidence-network-work",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-dff8f5be",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-4633dd5f",
+      "branch": "distributed-evidence-network-x",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-60bc2c47",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-4c974550",
+      "branch": "drift/global-network/distributed-evidence",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-86432d9b",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-31f1e1b0",
+      "branch": "drift/global-network/evidence-infrastructure",
+      "commit_sha": "fd8063c60fce8e27c49a0a5eb53736aeb011ceb5",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-3e76d6b5",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-e8ee4946",
+      "branch": "drift/global-network/secret-hardening",
+      "commit_sha": "549b2cdf0981cc7e7390c53bb664102732096222",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-97d7140e",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-95d7576f",
+      "branch": "drift/global-network/whitepaper-pipeline",
+      "commit_sha": "7a81c324df3a01824ed5aabe2c02a02da16ec10c",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-2b11d363",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-123c98a3",
+      "branch": "feat/ark-sl-compiler-runtime-binding-6185253793362141196",
+      "commit_sha": "f3e2010aeb682af9e59ac9dc1cb8c856e7d14035",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "RUNTIME_FABRIC",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-8f2887fb",
+      "neural_endpoint": "NEURAL-ENDPOINT-a16ce6d0",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-c344343d",
+      "branch": "feature/butterfly-effect-tracking",
+      "commit_sha": "6148bcbe00fc890e25aa06b2523c0ecd5cdc2803",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-e51feb86",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-7f149832",
+      "branch": "feature/epistemic-frontier-baseline",
+      "commit_sha": "40c42fcc88986f42523567c2378edf726086fbf6",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-b6668640",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-9aaf5967",
+      "branch": "feature/global-drift-whitepaper-pipeline",
+      "commit_sha": "7a81c324df3a01824ed5aabe2c02a02da16ec10c",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-f3f229cc",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-427b10dd",
+      "branch": "governance/algorithmic-governance/standard-v0-1",
+      "commit_sha": "5b759d12b43da77cef4d277ff058f6bd934f76d5",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-9f060586",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-4a977928",
+      "branch": "jules-11016927793168577821-b6767505",
+      "commit_sha": "8e13cd471b084951cd9e094aab7f1b3da277a9a7",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-e9952771",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b2b07323",
+      "branch": "jules-14645773145571184025-42db8e24",
+      "commit_sha": "d9ba3cd72f0a039d4dbfe4717be2cbad188a3013",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-b9bbd57f",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-a0b9bbeb",
+      "branch": "jules-16755109129419681351-0b3755ec",
+      "commit_sha": "d33f7396acc7717081b81136679afc4fb6121f0e",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-ac8ffc5b",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-c935f370",
+      "branch": "jules-2742570839290368558-84513077",
+      "commit_sha": "e37067ec3ce9ff14228a3235cad92741bb4f944c",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-fdb85f60",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-407f9de",
+      "branch": "jules-93324678969383236-63b1c010",
+      "commit_sha": "e8830d2d61d7c10aee702bb4d896e6312f3e9a8a",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-1ea87e5f",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-ef54b9b0",
+      "branch": "legacy/audit/distributed-evidence-tmp-check",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-32115361",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-ec277c71",
+      "branch": "legacy/stale/control-plane-mvp",
+      "commit_sha": "d930f9a67d13def05ca440608bc87af4096c31cc",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-24b54861",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-90b9926d",
+      "branch": "legacy/superseded/jules-11016927793168577821-b6767505",
+      "commit_sha": "8e13cd471b084951cd9e094aab7f1b3da277a9a7",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-5ae67951",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-3b5af7c2",
+      "branch": "legacy/superseded/jules-14645773145571184025-42db8e24",
+      "commit_sha": "d9ba3cd72f0a039d4dbfe4717be2cbad188a3013",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-905e2585",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-ead47ad5",
+      "branch": "legacy/unclassified/jules-93324678969383236-63b1c010",
+      "commit_sha": "e8830d2d61d7c10aee702bb4d896e6312f3e9a8a",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-13d0d1ed",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-30625cec",
+      "branch": "main",
+      "commit_sha": "443d65748e9707768ca3e0c334e8302f7b7aab81",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-5f8fb7f7",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-9911912c",
+      "branch": "poc-autonomous-build",
+      "commit_sha": "6e1d2735bfe05981ec82bf92501da001a3f82643",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "NEURAL_COMPUTATION",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-b1651730",
+      "neural_endpoint": "NEURAL-ENDPOINT-8cd888a9",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-b5b43a5f",
+      "branch": "research/epistemic-frontier/baseline",
+      "commit_sha": "40c42fcc88986f42523567c2378edf726086fbf6",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-a1284ec0",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-8baa1de0",
+      "branch": "runtime/ark/autonomous-knowledge-connector",
+      "commit_sha": "dc6444094240b48d0eb0b3842a3fc1c03ab03ee0",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "RUNTIME_FABRIC",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-8f2887fb",
+      "neural_endpoint": "NEURAL-ENDPOINT-dfad604c",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-86eb4fb5",
+      "branch": "runtime/ark-sl/compiler-runtime-binding",
+      "commit_sha": "8e0784cde6929f528267ab089bff89265f174de1",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "RUNTIME_FABRIC",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-8f2887fb",
+      "neural_endpoint": "NEURAL-ENDPOINT-ef8416b6",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-7340256c",
+      "branch": "runtime/nano/virtual-gpu-fabric",
+      "commit_sha": "b0059c381acf9f4298f22f6de18acf77daae72ee",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "RUNTIME_FABRIC",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-8f2887fb",
+      "neural_endpoint": "NEURAL-ENDPOINT-3c823b24",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-84b88658",
+      "branch": "tmp-check",
+      "commit_sha": "3e09771e56b4a160d39261619e3049b67aff7d31",
+      "family": "COMPUTATIONAL_NEURAL",
+      "subfamily": "ARCHITECTURE_SYSTEMS",
+      "family_id": "FAMILY-9807af01",
+      "subfamily_id": "SUBFAMILY-3cde00f1",
+      "neural_endpoint": "NEURAL-ENDPOINT-8a30a41",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-c9b260a9",
+      "branch": "wanga-governance-system-v1",
+      "commit_sha": "50f817d2de5dbd28751e2f6664401943b96840cc",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "GOVERNANCE_CONTROL",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-52783d31",
+      "neural_endpoint": "NEURAL-ENDPOINT-fb8802d0",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    },
+    {
+      "branch_id": "BRANCH-a334d5d",
+      "branch": "whitepaper-evidence-infrastructure",
+      "commit_sha": "fd8063c60fce8e27c49a0a5eb53736aeb011ceb5",
+      "family": "EVIDENCE_GOVERNANCE",
+      "subfamily": "EVIDENCE_DRIFT",
+      "family_id": "FAMILY-d659e49d",
+      "subfamily_id": "SUBFAMILY-641a29d6",
+      "neural_endpoint": "NEURAL-ENDPOINT-d0fd3b68",
+      "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+      "relations": [
+        "BELONGS_TO_FAMILY",
+        "BELONGS_TO_SUBFAMILY",
+        "WRAPPED_BY_NEURAL_ENDPOINT",
+        "FOLDS_INTO_GLOBAL_NETWORK"
+      ]
+    }
+  ]
+}

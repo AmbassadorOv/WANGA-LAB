@@ -1,0 +1,33 @@
+name: Vitruvius Fractal GitHub Neural Network
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  fractal-network:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Build recursive global topology
+        run: |
+          python scripts/vitruvius_connector_engine.py --write --min-score 6
+          python scripts/vitruvius_fractal_recursive_network.py
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Test recursive network
+        run: python -m pytest tests/test_vitruvius_fractal_recursive_network.py tests/test_wanga_neural_architecture_network.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-fractal-neural-network
+          path: |
+            vitruvius/CONNECTOR_DISCOVERY_REPORT.json
+            vitruvius/GITHUB_FRACTAL_NEURAL_NETWORK.json

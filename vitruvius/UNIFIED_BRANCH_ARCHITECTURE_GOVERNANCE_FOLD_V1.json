@@ -1,0 +1,98 @@
+{
+  "engine": "VITRUVIUS_UNIFIED_BRANCH_ARCHITECTURE_GOVERNANCE_FOLD",
+  "retrieved": "2026-09-19",
+  "real_branch_count": 86,
+  "architecture_file_count": 10,
+  "branch_family_counts": {
+    "COMPUTATIONAL_NEURAL": 35,
+    "EVIDENCE_GOVERNANCE": 43,
+    "PUBLICATION_RESEARCH": 8
+  },
+  "architecture_roots": {
+    "COMPUTATIONAL_NEURAL": {
+      "children": [
+        "WANGA OS",
+        "Global Work Manager",
+        "Model Fabric",
+        "Digital Model Agents",
+        "Neural OS",
+        "NTM",
+        "Rational Logic",
+        "WANGA-X",
+        "Compute Fabric",
+        "Execution Fabric"
+      ],
+      "neural_role": "state, routing, computation, execution, reasoning"
+    },
+    "EVIDENCE_GOVERNANCE": {
+      "children": [
+        "Evidence & Provenance",
+        "Drift Forensics",
+        "Verification",
+        "WANGA Politeia",
+        "Lineage Tree",
+        "Architecture Family Lineage",
+        "Governance Control"
+      ],
+      "neural_role": "provenance, constraints, validation, lineage, authority boundaries"
+    },
+    "PUBLICATION_RESEARCH": {
+      "children": [
+        "Research Architecture",
+        "Research Composition",
+        "Publication Layer",
+        "Architecture-to-Research Matrix",
+        "Scientific Commons"
+      ],
+      "neural_role": "research discovery, synthesis, publication, external knowledge interfaces"
+    }
+  },
+  "governance": {
+    "P0": [
+      "Integrity",
+      "Repository Hygiene",
+      "Evidence-State Taxonomy",
+      "Verification Boundaries"
+    ],
+    "P1": [
+      "Rational Logic",
+      "NTM",
+      "Execution Contracts",
+      "Global Work Manager"
+    ],
+    "P2": [
+      "Evidence",
+      "Provenance",
+      "Drift Forensics",
+      "Verification"
+    ],
+    "P3": [
+      "Operational Intake",
+      "Case Triage",
+      "Bounded Queues"
+    ],
+    "P4": [
+      "Research Composition",
+      "WANGA-X",
+      "Copernicus",
+      "Vitruvius"
+    ],
+    "P5": [
+      "Governance Standards",
+      "Interoperability",
+      "Standards Registry"
+    ],
+    "P6": [
+      "Publication",
+      "Publication Network",
+      "Public Evidence Interfaces"
+    ],
+    "P7": [
+      "Presentation",
+      "Downstream Web Surfaces"
+    ]
+  },
+  "fold_rule": "branch -> three-family tree -> architecture root/descendant -> governance -> neural endpoint -> global network",
+  "global_network": "WANGA-GLOBAL-NEURAL-NETWORK",
+  "status": "MAPPING_LAYER"
+}
