@@ -42,9 +42,11 @@ External timestamping or anchoring is not treated as complete until actual proof
 
 **CASE_REF_2026_DRIFT_KNOWN_RISK_001**
 
-Current evidence status: **PLANNED**
+Current evidence status: **VERIFIED**
 
-The canonical case package provides the structure for:
+[Open the verified synthetic case package](artifacts/drift-known-risk-001/README.md)
+
+The canonical case package demonstrates a repository-level, deterministic criterion-drift finding and provides the structure for:
 
 - case metadata and scope;
 - evidence inventory and hashes;
