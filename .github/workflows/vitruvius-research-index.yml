@@ -1,6 +1,7 @@
 name: Vitruvius Research Index
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "17 2 * * *"
