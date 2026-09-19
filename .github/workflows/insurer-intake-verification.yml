@@ -82,9 +82,27 @@ jobs:
           assert len(data["observed_sha256"]) == 64
           print("INSURER_INTAKE_REPLAY=PASS")
           PY
-      - name: Upload replay result
+      - name: Independent repository recheck
+        run: python tools/verify_known_risk.py
+
+      - name: Verify independent recheck result
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("artifacts/drift-known-risk-001/verification/verification-result.json")
+          data = json.loads(p.read_text())
+          assert data["verification_status"] == "VERIFIED"
+          assert data["all_required_checks_passed"] is True
+          assert data["third_party_audit"] is False
+          print("KNOWN_RISK_INDEPENDENT_RECHECK=PASS")
+          PY
+
+      - name: Upload replay and verification results
         uses: actions/upload-artifact@v4
         with:
           name: insurer-intake-replay
-          path: artifacts/drift-known-risk-001/outputs/replay-result.json
+          path: |
+            artifacts/drift-known-risk-001/outputs/replay-result.json
+            artifacts/drift-known-risk-001/verification/verification-result.json
           retention-days: 14
