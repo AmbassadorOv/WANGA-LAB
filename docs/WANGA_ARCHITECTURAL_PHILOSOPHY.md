@@ -166,7 +166,7 @@ The objective is for people and institutions to choose an architecture because i
 
 ## Global institutional purpose
 
-The Global Institute for Algorithmic Governance is defined as a non-political, non-partisan architectural institute. It is not a government, political party, or political authority, and it does not determine political outcomes.
+The Global Algorithmic Governance Institute is defined as a non-political, non-partisan architectural institute. It is not a government, political party, or political authority, and it does not determine political outcomes.
 
 Its role is to develop and maintain architectural standards, evidence structures, interfaces, continuity mechanisms, and resilience models that can support governments and institutions.
 
