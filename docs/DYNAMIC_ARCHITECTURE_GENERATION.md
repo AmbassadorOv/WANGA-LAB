@@ -6,25 +6,29 @@ WANGA-LAB treats computational architecture as a dynamically materializable obje
 
 A computation request may determine the architecture required to execute that computation.
 
+For the neural-computational paradigm of WANGA-X, the causal chain is more specific:
+
+```
+USER QUERY / SYSTEM REQUEST
+            ↓
+      REQUIREMENT
+            ↓
+REQUIRED NEURAL COMPUTATION
+            ↓
+NEURAL COMPUTATIONAL STRUCTURE
+            ↓
+         BLUEPRINT
+            ↓
+     NEURAL COMPUTER
+            ↓
+        EXECUTION
+```
+
+The key architectural assumption is that the Blueprint is derived from the neural computation required by the user's request. The architecture is therefore not the starting constraint around which the computation must fit.
+
 A human discovery may also reveal that the current requirement or architecture assumption is incomplete. That discovery becomes a research trigger, not evidence.
 
 The central architecture representation is a **Blueprint**. The Blueprint is not merely documentation: it is intended to be the representation from which an executable architecture can be materialized.
-
-```
-HUMAN / SYSTEM DISCOVERY
-      ↓
-REQUIREMENT
-      ↓
-ARCHITECTURE BLUEPRINT
-      ↓
-ARCHITECTURE MATERIALIZATION
-      ↓
-EXECUTION
-      ↓
-NEW COMPUTE REQUIREMENT
-      ↓
-NEW BLUEPRINT / NEW ARCHITECTURE
-```
 
 When a suitable architecture already exists, the system may materialize that architecture. When no suitable architecture exists, the target architecture may be constructed from compatible architectural parts and then materialized for execution.
 
@@ -52,17 +56,15 @@ The architecture may therefore be replaced rather than merely modified in place.
 
 ## Existing technology vs. WANGA-LAB research direction
 
-Related technologies already exist in areas such as hardware description, high-level synthesis, runtime reconfiguration, virtual processors, programmable accelerators, and dynamic execution systems.
+Related technologies already exist in areas such as hardware description, high-level synthesis, runtime reconfiguration, virtual processors, programmable accelerators, dynamic execution systems, and dynamic neural networks.
 
 WANGA-LAB does **not** claim that these underlying technologies were invented here.
 
-The research direction documented here is the proposed unification of:
+The WANGA-X research direction is the proposed unification of:
 
-**human/system discovery → requirement formalization → compute-demand-driven Blueprint generation → architecture materialization → architecture replacement**, including the possibility of assembling a new architecture from reusable parts of existing architectures.
+**user/system request → requirement → required neural computation → Blueprint generation → neural-computer materialization → execution**, with changed requirements capable of producing a new computational structure and Blueprint.
 
 This is recorded as a research hypothesis/design direction until implemented and experimentally verified.
-
-
 
 ## Research foundations
 
@@ -80,47 +82,49 @@ SODA provides automated generation of specialized accelerators from high-level p
 
 WANGA-X extraction: **high-level computation → specialized architecture → design-space exploration → generated implementation**.
 
-### Requirement-to-Architecture research
+### Requirement-to-Architecture synthesis
 
-Recent LLM-based architecture research demonstrates mapping requirements to architectural decisions and candidate architectures. WANGA-X will use this as the starting point for requirement formalization and architectural candidate generation.
+Recent architecture research investigates mapping requirements to architectural decisions and candidate architectures.
 
-WANGA-X extraction: **requirement → architectural constraints/choices → architecture candidate**.
+WANGA-X extraction: **requirement → required computation → architectural constraints/choices → Blueprint candidate**.
 
 ### Runtime adaptation
 
-Runtime/adaptive architecture research provides mechanisms for changing system structure when conditions change. WANGA-X extends the research question from runtime reconfiguration toward requirement-driven generation of a new computational Blueprint and architecture.
+Runtime/adaptive architecture research provides mechanisms for changing system structure when conditions change. WANGA-X extends the research question toward changed requirement → new neural computation → new Blueprint → new architecture.
 
 WANGA-X extraction: **changed requirement → new computational specification → new Blueprint → new architecture**.
 
 ### Unified dynamic layer
 
-These foundations are not treated as separate experiments. WANGA-X will investigate a common dynamic layer:
-
 ```
-RATIONAL LOGIC
-      ↓
-COMPUTATIONAL REQUIREMENT
-      ↓
-ARCHITECTURE REASONING
-      ↓
-BLUEPRINT / IR
-      ↓
-MATERIALIZATION
-      ↓
-EXECUTION
-      ↓
-EVIDENCE / VERIFICATION
-      ↓
-CHANGED REQUIREMENT
-      ↓
-NEW BLUEPRINT
-      ↓
+USER QUERY / SYSTEM REQUEST
+             ↓
+       RATIONAL LOGIC
+             ↓
+REQUIRED NEURAL COMPUTATION
+             ↓
+ ARCHITECTURE REASONING
+             ↓
+      BLUEPRINT / IR
+             ↓
+       MATERIALIZATION
+             ↓
+      NEURAL COMPUTER
+             ↓
+          EXECUTION
+             ↓
+     EVIDENCE / VERIFY
+             ↓
+     REQUIREMENT CHANGE
+             ↓
+  NEW NEURAL COMPUTATION
+             ↓
+       NEW BLUEPRINT
+             ↓
 RECOMPOSE / REBUILD / REPLACE
 ```
 
-The first prototype remains virtual/software-defined. The goal is to demonstrate that the same computational requirement interface can produce different executable architectures and that a changed requirement can produce a new architecture while preserving explicit state, evidence, and verification boundaries.
-
-See `docs/WANGA_X_RESEARCH_FOUNDATIONS.md` for the source-family map and prototype plan.
+See `docs/WANGA_X_NEURAL_COMPUTATION_PARADIGM.md` for the core thesis and `docs/WANGA_X_RESEARCH_FOUNDATIONS.md` for the source-family map and prototype plan.
 
 ## Performance principle
 
@@ -135,4 +139,4 @@ No fixed latency claim is made at this stage. Performance targets are experiment
 - **Prior-art relationship:** related technologies identified; exact system-level novelty requires dedicated research.
 - **Implementation:** not yet claimed as complete.
 - **Verification:** not yet established.
-- **Research priority:** architecture generation, dynamic materialization, and reversible change.
+- **Research priority:** neural computation derivation, Blueprint generation, dynamic materialization, and controlled architecture change.
