@@ -1,0 +1,50 @@
+name: Vitruvius Branch Architecture Orchestrator
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "47 2 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vitruvius-branch-architecture
+  cancel-in-progress: false
+
+jobs:
+  orchestrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout WANGA-LAB
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build Vitruvius research index
+        run: python scripts/vitruvius_automation_engine.py --write
+
+      - name: Run Vitruvius research tests
+        run: |
+          python -m pip install --upgrade pip pytest
+          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py
+
+      - name: Census and plan branch architecture
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/vitruvius_branch_architecture_orchestrator.py
+
+      - name: Upload Vitruvius architecture state
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitruvius-branch-architecture-state
+          path: |
+            vitruvius/VITRUVIUS_INDEX.json
+            vitruvius/VITRUVIUS_WORK_QUEUE.json
+            vitruvius/ARCHITECTURE_BRANCH_CAPACITY.json
