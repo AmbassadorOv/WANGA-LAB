@@ -19,7 +19,7 @@ This record classifies the repository's PR history by architectural responsibili
 | WANGA-X | reversible/dynamic architecture research | #27 → #39 | CLEAN RESEARCH INTEGRATION MERGED |
 | Vitruvius | research-driven indexing and work composition | #18 → #40 | CLEAN NON-MUTATING INTEGRATION MERGED |
 | Global Work Manager / Model Fabric | work manager, model agents, discovery, work memory, bridge contracts | #15 → #41 | CLEAN CONTRACT INTEGRATION MERGED |
-| Insurer Intake | intake, bounded queue, replay, oversight | #36 | MERGED |
+| Insurer Intake | intake, bounded queue, replay, oversight, daily operations | #36, #42 | MERGED |
 
 ## Superseded source PRs
 
@@ -32,7 +32,7 @@ The following PRs remain in GitHub history as source artifacts but are no longer
 - #14 — its security fix was incorporated into #38.
 - #27 — superseded by clean WANGA-X research integration #39.
 - #18 — superseded by non-mutating Vitruvius integration #40.
-- #15 — superseded/decomposed into the smaller verified integration #41 plus subsequent controlled automation.
+- #15 — superseded/decomposed into clean contract integration #41 plus subsequent controlled automation.
 - #3, #5, #6 — retained as historical ARK / experimental source material; not core WANGA-LAB integration targets.
 
 ## Evidence rule
@@ -61,3 +61,10 @@ The repository should converge on fewer, clearer integration surfaces:
 **one responsibility → one canonical owner → explicit interface → evidence status → verification gate**
 
 Old branches remain preserved unless separately audited for archival deletion.
+
+
+## Final queue state — 2026-09-19
+
+Open pull requests: **0**
+
+The repository is no longer carrying unresolved integration PRs from this review pass. Superseded branches remain preserved as historical source unless separately audited for archival cleanup.
