@@ -1,0 +1,153 @@
+{
+  "version": "1.0.0",
+  "engine": "VITRUVIUS_BRANCH_FABRIC",
+  "purpose": "Scalable recursive branch-to-neural topology without materializing millions of Git refs.",
+  "seed_branch_count": 57,
+  "seed_source": "WANGA-LAB branch search on 2026-09-19",
+  "expansion": {
+    "children_per_seed_branch": 2048,
+    "micro_children_per_expanded_branch": 32,
+    "first_recursive_layer": "seed -> 2048 branch nodes",
+    "second_recursive_layer": "each expanded branch -> 32 micro-branch nodes",
+    "generated_branch_nodes": 3852345,
+    "minimum_target": 1048576
+  },
+  "materialization_policy": {
+    "default": "logical_virtual_branch_nodes",
+    "materialize_git_refs": "only when explicitly authorized and selected",
+    "reason": "avoid repository/ref explosion while preserving deterministic addressability"
+  },
+  "neural_binding": {
+    "one_neural_endpoint_per_branch_node": true,
+    "global_folding": "all branch-local neural endpoints fold into the existing WANGA Neural Architecture Network"
+  },
+  "seed_branches": [
+    "agent/codex/fractal-github-neural-network",
+    "agent/codex/neural-architecture-network",
+    "agent/codex-002/drift-network-secret-hardening",
+    "agent/publication-network/bootstrap",
+    "distributed-evidence-network",
+    "distributed-evidence-network-2",
+    "distributed-evidence-network-3",
+    "distributed-evidence-network-4",
+    "distributed-evidence-network-5",
+    "distributed-evidence-network-6",
+    "distributed-evidence-network-active",
+    "distributed-evidence-network-dev",
+    "distributed-evidence-network-final",
+    "distributed-evidence-network-impl",
+    "distributed-evidence-network-live",
+    "distributed-evidence-network-main",
+    "distributed-evidence-network-ready",
+    "distributed-evidence-network-v2",
+    "distributed-evidence-network-v3",
+    "distributed-evidence-network-v4",
+    "distributed-evidence-network-v5",
+    "distributed-evidence-network-work",
+    "distributed-evidence-network-x",
+    "drift/global-network/distributed-evidence",
+    "drift/global-network/evidence-infrastructure",
+    "drift/global-network/secret-hardening",
+    "drift/global-network/whitepaper-pipeline",
+    "agent/architecture/wanga-computer-architecture",
+    "agent/autonomous-poc/ntm-e2e-core",
+    "agent/codex/vitruvius-architecture-graph-automation",
+    "agent/codex/wanga-global-architecture",
+    "agent/codex-002/control-plane/governance-hardening",
+    "agent/codex-002/control-plane/repository-hygiene-ci",
+    "agent/codex-002/control-plane-mvp",
+    "agent/codex-002/vitruvius-automation-engine",
+    "agent/copernicus/static-blog-platform",
+    "agent/eran-oved-awats/align-repository-inventory",
+    "agent/eran-oved-awats/compiled-research-lineage",
+    "agent/eran-oved-awats/daily-autonomous-operations",
+    "agent/eran-oved-awats/fix-repository-atlas-governance-key",
+    "agent/eran-oved-awats/gdn-secure-clean",
+    "agent/eran-oved-awats/governance-clean-integration",
+    "agent/eran-oved-awats/institute-name-standardization",
+    "agent/eran-oved-awats/insurance-service-and-identity",
+    "agent/eran-oved-awats/insurer-intake-readiness",
+    "agent/eran-oved-awats/public-evidence-infrastructure-model",
+    "agent/eran-oved-awats/verify-known-risk-001",
+    "agent/eran-oved-awats/vitruvius-clean",
+    "agent/eran-oved-awats/wanga-native-rational-logic",
+    "agent/eran-oved-awats/wanga-x-clean",
+    "agent/work-manager-model-fabric-clean",
+    "agent/profile/homepage-2026-09-19",
+    "agent/publication/systemic-drift-prevention-2026-09-19",
+    "agent/research/composition-fractals-2026-09-19",
+    "agent/wanga-copernicus/system-100-articles",
+    "agent/wanga-x/reversible-architecture-timeline",
+    "agent/wanga-x/unified-architecture"
+  ],
+  "external_neural_research_seeds": [
+    {
+      "repository": "pyg-team/pytorch_geometric",
+      "focus": [
+        "GNN",
+        "message passing"
+      ]
+    },
+    {
+      "repository": "google-deepmind/graph_nets",
+      "focus": [
+        "graph neural networks",
+        "message passing"
+      ]
+    },
+    {
+      "repository": "pyt-team/TopoModelX",
+      "focus": [
+        "topological deep learning",
+        "message passing"
+      ]
+    },
+    {
+      "repository": "neurreps/awesome-neural-geometry",
+      "focus": [
+        "neural geometry",
+        "graph/topological methods"
+      ]
+    },
+    {
+      "repository": "xuqiongkai/GraphBasedRNN",
+      "focus": [
+        "graph-based recurrent neural network"
+      ]
+    },
+    {
+      "repository": "GUR9000/UG-RNN_TF",
+      "focus": [
+        "recursive graph neural network"
+      ]
+    },
+    {
+      "repository": "phython96/GNAS-MP",
+      "focus": [
+        "graph NAS",
+        "message passing"
+      ]
+    },
+    {
+      "repository": "mhnnunes/nas_gnn",
+      "focus": [
+        "neural architecture search",
+        "GNN"
+      ]
+    },
+    {
+      "repository": "lucidrains/adjacent-attention-network",
+      "focus": [
+        "adjacent attention",
+        "neural routing"
+      ]
+    },
+    {
+      "repository": "automl/SVGe",
+      "focus": [
+        "neural architecture search",
+        "graph representations"
+      ]
+    }
+  ]
+}
