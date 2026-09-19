@@ -1,0 +1,299 @@
+{
+  "version": "1.0.0",
+  "system": "WANGA_ARCHITECTURE_GRAPH",
+  "authority": "VITRUVIUS",
+  "promotion_rule": "Vitruvius discovers and proposes relationships; verification determines promotion.",
+  "architectures": [
+    {
+      "id": "WANGA-GLOBAL",
+      "name": "WANGA Global Computational Architecture",
+      "role": "umbrella computational architecture",
+      "status": "TARGET_ARCHITECTURE",
+      "branch_patterns": [
+        "agent/codex/wanga-global-architecture"
+      ]
+    },
+    {
+      "id": "WANGA-OS",
+      "name": "WANGA OS",
+      "role": "operating architecture for controlled computational work",
+      "status": "SPECIFIED",
+      "branch_patterns": [
+        "agent/wanga/*",
+        "agent/codex/wanga-*"
+      ]
+    },
+    {
+      "id": "GLOBAL-WORK-MANAGER",
+      "name": "Global Work Manager",
+      "role": "global task planning, ordering, state and handoff authority",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "agent/codex/*control-plane*",
+        "agent/wanga/*manager*"
+      ]
+    },
+    {
+      "id": "MODEL-FABRIC",
+      "name": "Model Fabric",
+      "role": "model slots, providers, runtimes, capabilities, health and policy",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "runtime/*",
+        "agent/*model*"
+      ]
+    },
+    {
+      "id": "TRANSLATION-ARCH",
+      "name": "Translation Architecture",
+      "role": "representation and semantic/structural translation",
+      "status": "SPECIFIED",
+      "branch_patterns": [
+        "runtime/*",
+        "research/*"
+      ]
+    },
+    {
+      "id": "VITRUVIUS",
+      "name": "Vitruvius Architecture Intelligence",
+      "role": "architecture discovery, normalization, classification and relationship mapping",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "agent/codex/vitruvius-*",
+        "research/*architecture*"
+      ]
+    },
+    {
+      "id": "DIGITAL-MODEL-AGENTS",
+      "name": "Digital Model Agents",
+      "role": "bounded workers for discovery, analysis, testing and execution",
+      "status": "SPECIFIED",
+      "branch_patterns": [
+        "agent/*",
+        "runtime/*"
+      ]
+    },
+    {
+      "id": "EVIDENCE-PROVENANCE",
+      "name": "Evidence & Provenance",
+      "role": "artifact identity, provenance, hashes, replay and evidence state",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "drift/*evidence*",
+        "runtime/*evidence*"
+      ]
+    },
+    {
+      "id": "DRIFT-FORENSICS",
+      "name": "Drift Forensics & Verification",
+      "role": "behavioral change detection, reconstruction and independent verification",
+      "status": "EXISTING",
+      "branch_patterns": [
+        "drift/*",
+        "agent/*drift*"
+      ]
+    },
+    {
+      "id": "RATIONAL-LOGIC",
+      "name": "Rational Logic",
+      "role": "canonical protected logic/reasoning layer",
+      "status": "PROTECTED",
+      "branch_patterns": [
+        "agent/eran-oved-awats/wanga-native-rational-logic"
+      ]
+    },
+    {
+      "id": "NTM",
+      "name": "Neural Thinking Machine",
+      "role": "inference-time structured search, memory and re-evaluation research layer",
+      "status": "RESEARCH",
+      "branch_patterns": [
+        "research/*",
+        "agent/*ntm*"
+      ]
+    },
+    {
+      "id": "WORK-MEMORY",
+      "name": "Work Memory",
+      "role": "persistent task, assumption, evidence and verification state",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "agent/*memory*",
+        "runtime/*"
+      ]
+    },
+    {
+      "id": "GOVERNANCE",
+      "name": "WANGA Politeia / Governance Interface",
+      "role": "governance-facing interfaces and controlled publication",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "governance/*",
+        "agent/*governance*"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "REL-0001",
+      "source": "WANGA-GLOBAL",
+      "target": "WANGA-OS",
+      "relation_types": [
+        "contains",
+        "execution"
+      ]
+    },
+    {
+      "id": "REL-0002",
+      "source": "WANGA-OS",
+      "target": "GLOBAL-WORK-MANAGER",
+      "relation_types": [
+        "coordinates",
+        "depends_on"
+      ]
+    },
+    {
+      "id": "REL-0003",
+      "source": "GLOBAL-WORK-MANAGER",
+      "target": "MODEL-FABRIC",
+      "relation_types": [
+        "routes_work",
+        "depends_on"
+      ]
+    },
+    {
+      "id": "REL-0004",
+      "source": "MODEL-FABRIC",
+      "target": "DIGITAL-MODEL-AGENTS",
+      "relation_types": [
+        "enables",
+        "contracts"
+      ]
+    },
+    {
+      "id": "REL-0005",
+      "source": "TRANSLATION-ARCH",
+      "target": "MODEL-FABRIC",
+      "relation_types": [
+        "interface",
+        "semantic_constraint"
+      ]
+    },
+    {
+      "id": "REL-0006",
+      "source": "VITRUVIUS",
+      "target": "WANGA-GLOBAL",
+      "relation_types": [
+        "indexes",
+        "discovers_relationships"
+      ]
+    },
+    {
+      "id": "REL-0007",
+      "source": "VITRUVIUS",
+      "target": "GLOBAL-WORK-MANAGER",
+      "relation_types": [
+        "impact_analysis",
+        "work_routing"
+      ]
+    },
+    {
+      "id": "REL-0008",
+      "source": "VITRUVIUS",
+      "target": "MODEL-FABRIC",
+      "relation_types": [
+        "architecture_mapping",
+        "capability_mapping"
+      ]
+    },
+    {
+      "id": "REL-0009",
+      "source": "DIGITAL-MODEL-AGENTS",
+      "target": "EVIDENCE-PROVENANCE",
+      "relation_types": [
+        "produces_artifacts",
+        "requires_provenance"
+      ]
+    },
+    {
+      "id": "REL-0010",
+      "source": "EVIDENCE-PROVENANCE",
+      "target": "DRIFT-FORENSICS",
+      "relation_types": [
+        "evidence_input",
+        "reconstruction"
+      ]
+    },
+    {
+      "id": "REL-0011",
+      "source": "DRIFT-FORENSICS",
+      "target": "RATIONAL-LOGIC",
+      "relation_types": [
+        "verification_support",
+        "causal_analysis"
+      ]
+    },
+    {
+      "id": "REL-0012",
+      "source": "RATIONAL-LOGIC",
+      "target": "NTM",
+      "relation_types": [
+        "complementary_reasoning",
+        "re_evaluation"
+      ]
+    },
+    {
+      "id": "REL-0013",
+      "source": "GLOBAL-WORK-MANAGER",
+      "target": "WORK-MEMORY",
+      "relation_types": [
+        "state_management",
+        "checkpointing"
+      ]
+    },
+    {
+      "id": "REL-0014",
+      "source": "WORK-MEMORY",
+      "target": "EVIDENCE-PROVENANCE",
+      "relation_types": [
+        "state_lineage",
+        "reconstruction"
+      ]
+    },
+    {
+      "id": "REL-0015",
+      "source": "DRIFT-FORENSICS",
+      "target": "GOVERNANCE",
+      "relation_types": [
+        "risk_interface",
+        "publication_input"
+      ]
+    },
+    {
+      "id": "REL-0016",
+      "source": "VITRUVIUS",
+      "target": "DRIFT-FORENSICS",
+      "relation_types": [
+        "dependency_mapping",
+        "architecture_impact"
+      ]
+    },
+    {
+      "id": "REL-0017",
+      "source": "VITRUVIUS",
+      "target": "RATIONAL-LOGIC",
+      "relation_types": [
+        "boundary_mapping"
+      ]
+    },
+    {
+      "id": "REL-0018",
+      "source": "VITRUVIUS",
+      "target": "NTM",
+      "relation_types": [
+        "research_mapping",
+        "capability_mapping"
+      ]
+    }
+  ]
+}
