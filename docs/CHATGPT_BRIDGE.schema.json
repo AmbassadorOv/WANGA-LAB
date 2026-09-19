@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA ChatGPT Bridge Event V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "event_id",
+    "generated_at",
+    "significance",
+    "summary",
+    "changed_dimensions",
+    "evidence_refs",
+    "verification_status",
+    "memory_proposal",
+    "memory_reason",
+    "recommended_next_action"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "significance": {
+      "enum": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "changed_dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_status": {
+      "enum": [
+        "VERIFIED",
+        "PARTIAL",
+        "PENDING",
+        "BLOCKED",
+        "CONFLICT"
+      ]
+    },
+    "memory_proposal": {
+      "type": "boolean"
+    },
+    "memory_reason": {
+      "type": "string"
+    },
+    "recommended_next_action": {
+      "type": "string"
+    }
+  }
+}

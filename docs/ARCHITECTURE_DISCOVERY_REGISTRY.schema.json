@@ -1,0 +1,28 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"WANGA Architecture Discovery Registry",
+  "type":"object",
+  "required":["version","master_project_instructions","search_policy","agents","records"],
+  "properties":{
+    "version":{"const":"1.0.0"},
+    "master_project_instructions":{"const":"docs/MASTER_PROJECT_INSTRUCTIONS_V1.md"},
+    "search_policy":{"type":"object","required":["scope","exhaustive_claim_allowed","license_check_required"],"properties":{
+      "scope":{"type":"string"},
+      "exhaustive_claim_allowed":{"const":false},
+      "license_check_required":{"const":true}
+    }},
+    "agents":{"type":"array","items":{"type":"string"}},
+    "records":{"type":"array","items":{"type":"object","required":["record_id","agent_id","repository","status"],"properties":{
+      "record_id":{"type":"string"},
+      "agent_id":{"type":"string"},
+      "repository":{"type":"string"},
+      "commit_or_tag":{"type":["string","null"]},
+      "license":{"type":["string","null"]},
+      "status":{"enum":["DISCOVERED","READ","LICENSE_REVIEW","CLASSIFIED","PATTERN_EXTRACTED","PROPOSED","VERIFIED","REJECTED","CONFLICT"]},
+      "pattern":{"type":["string","null"]},
+      "evidence_refs":{"type":"array","items":{"type":"string"}},
+      "adaptation_proposal":{"type":["string","null"]},
+      "verification_status":{"enum":["NOT_RUN","PENDING","PASSED","FAILED"]}
+    }}}
+  }
+}

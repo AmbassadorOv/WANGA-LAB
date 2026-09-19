@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-09-18T00:00:00Z",
+  "source": "Wix site context audit + architecture registry",
+  "rule": "Wix is publication/integration evidence; GitHub remains source of code, schemas, workflows and architecture contracts.",
+  "sites": [
+    {
+      "name": "AI Drift Forensics",
+      "site_id": "0b4f46ec-69ca-49e5-907f-9478347074fe",
+      "role": "drift-forensics-publication",
+      "status": "draft"
+    },
+    {
+      "name": "Ai Drift Hub",
+      "site_id": "cb19d892-06bd-497b-98e8-6030a773b5c6",
+      "role": "drift-navigation",
+      "status": "draft"
+    },
+    {
+      "name": "Ai Drift Research Hu",
+      "site_id": "ca5d3c3c-0e86-4ce4-accd-243209709e8e",
+      "role": "research-publication",
+      "status": "published"
+    },
+    {
+      "name": "Operational Ai Drift",
+      "site_id": "68a0d490-594f-4b7c-a6d8-58fff94ec741",
+      "role": "operational-drift",
+      "status": "published"
+    },
+    {
+      "name": "Operational Ai Dri 1",
+      "site_id": "a5976827-acd3-4876-963d-77b103a21cd6",
+      "role": "operational-drift",
+      "status": "draft"
+    },
+    {
+      "name": "Operational Ai Dri 2",
+      "site_id": "4bb81f8d-7e4f-487c-8f09-45ee19a4641d",
+      "role": "operational-drift",
+      "status": "draft"
+    },
+    {
+      "name": "Operational Ai Dri 3",
+      "site_id": "7d917dc4-ef14-43b0-b4ad-6466ad5d196b",
+      "role": "operational-drift",
+      "status": "draft"
+    },
+    {
+      "name": "Operational Ai Dri 4",
+      "site_id": "dbcbe570-be5f-4342-9c62-145afc0175dd",
+      "role": "operational-drift",
+      "status": "draft"
+    },
+    {
+      "name": "Operational Ai Dri 5",
+      "site_id": "904dbb95-4968-4578-a771-14af2b23c93f",
+      "role": "operational-drift",
+      "status": "draft"
+    },
+    {
+      "name": "International Ai For",
+      "site_id": "6a7ab984-d02d-48fa-a36c-3f2686426265",
+      "role": "international-publication",
+      "status": "published"
+    },
+    {
+      "name": "Superpositional Logic",
+      "site_id": "9093f2c4-6c8e-4f2f-892d-aa0781b4cc80",
+      "role": "superpositional-logic-research",
+      "status": "draft"
+    },
+    {
+      "name": "Research Core",
+      "site_id": "cee6b0d4-dd5b-477f-9b5e-6f7f9107d63a",
+      "role": "ark-research",
+      "status": "published"
+    },
+    {
+      "name": "My Site 1",
+      "site_id": "4e019bee-60ed-4466-a572-ed8997f96183",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 2",
+      "site_id": "14791d12-c6ba-4f2a-bf58-cfe910051d71",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 3",
+      "site_id": "78aaa0db-f3fb-429e-a56b-463af6d34adb",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 4",
+      "site_id": "abf9f092-3fad-4394-ae23-5ff8fe19acd4",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 5",
+      "site_id": "05c70aaa-5561-4e92-8227-6a87349a8b1a",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 6",
+      "site_id": "47b595c7-e774-4567-be95-a377d5cf7261",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 7",
+      "site_id": "c4181fc1-7ebc-4bbb-9969-143f7336b623",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 8",
+      "site_id": "d0492afa-396f-487b-b3fb-28415bb10b87",
+      "role": "unclassified",
+      "status": "draft"
+    },
+    {
+      "name": "My Site 9",
+      "site_id": "fbd05c38-cdbe-4f17-b1f9-17545860a2da",
+      "role": "unclassified",
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+version: 1
+master_project_instructions: docs/MASTER_PROJECT_INSTRUCTIONS_V1.md
+agents:
+  ARCH-01:
+    domains:
+      - agent orchestration
+      - workflow engines
+      - distributed control planes
+      - state machines
+      - model routing
+  ARCH-02:
+    domains:
+      - multi-agent systems
+      - agent memory
+      - planning
+      - tool use
+      - evaluation
+      - context systems
+  ARCH-03:
+    domains:
+      - verification
+      - provenance
+      - observability
+      - runtime infrastructure
+      - security
+      - open-source licensing
+search_policy:
+  exhaustive: false
+  public_repositories_only: true
+  license_review_required: true
+  code_copying: prohibited
