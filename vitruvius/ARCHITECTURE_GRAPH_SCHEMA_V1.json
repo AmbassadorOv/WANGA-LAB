@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Vitruvius Architecture Graph",
+  "type": "object",
+  "required": [
+    "version",
+    "generated_at",
+    "authority",
+    "nodes",
+    "relationships"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "authority": {
+      "const": "VITRUVIUS"
+    },
+    "nodes": {
+      "type": "array"
+    },
+    "relationships": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}
