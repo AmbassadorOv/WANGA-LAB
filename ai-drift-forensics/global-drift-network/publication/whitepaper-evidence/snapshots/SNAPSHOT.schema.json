@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Global Drift Network State Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["snapshot_id", "run_id", "created_at", "schema_version", "content_hash", "state"],
+  "properties": {
+    "snapshot_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "parent_snapshot_id": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "schema_version": {"type": "string"},
+    "content_hash": {"type": "string"},
+    "event_ids": {"type": "array", "items": {"type": "string"}},
+    "state": {"type": "object"}
+  }
+}

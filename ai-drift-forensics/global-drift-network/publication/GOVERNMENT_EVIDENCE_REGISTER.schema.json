@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "government-evidence-register.schema.json",
+  "title": "Government Evidence Register",
+  "type": "object",
+  "required": ["evidence_id", "record_type", "status", "source", "provenance", "verification"],
+  "properties": {
+    "evidence_id": {"type": "string", "pattern": "^EVD-[A-Z0-9-]+$"},
+    "record_type": {"type": "string", "enum": ["OBSERVATION", "DATASET", "DOCUMENT", "MODEL_OUTPUT", "TEST_RESULT", "EXTERNAL_SOURCE"]},
+    "status": {"type": "string", "enum": ["COLLECTED", "VALIDATED", "REVIEW", "REJECTED", "SUPERSEDED"]},
+    "source": {
+      "type": "object",
+      "required": ["source_id", "source_type"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "source_type": {"type": "string"},
+        "locator": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["run_id", "snapshot_id", "method_version"],
+      "properties": {
+        "run_id": {"type": "string"},
+        "snapshot_id": {"type": "string"},
+        "method_version": {"type": "string"},
+        "collected_at": {"type": "string", "format": "date-time"},
+        "content_hash": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"type": "string", "enum": ["UNVERIFIED", "PARTIALLY_VERIFIED", "VERIFIED", "DISPUTED"]},
+        "verified_by": {"type": "string"},
+        "verified_at": {"type": "string", "format": "date-time"},
+        "verification_method": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

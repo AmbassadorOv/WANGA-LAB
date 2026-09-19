@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Global Drift Network Wave Record V1",
+  "type": "object",
+  "required": ["wave_id", "experiment_id", "phase", "timestamp", "anchor", "measurement", "provenance"],
+  "properties": {
+    "wave_id": {"type": "string", "pattern": "^WAV-[A-Z0-9-]+$"},
+    "experiment_id": {"type": "string"},
+    "phase": {"type": "string", "enum": ["BASELINE", "OUTBOUND", "PROPAGATION", "RETURN", "DECAY", "CONTROL"]},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "anchor": {
+      "type": "object",
+      "required": ["anchor_id", "anchor_type"],
+      "properties": {
+        "anchor_id": {"type": "string"},
+        "anchor_type": {"type": "string"},
+        "source_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "measurement": {
+      "type": "object",
+      "required": ["amplitude"],
+      "properties": {
+        "amplitude": {"type": "number"},
+        "onset_time": {"type": ["string", "null"], "format": "date-time"},
+        "peak_time": {"type": ["string", "null"], "format": "date-time"},
+        "peak_amplitude": {"type": ["number", "null"]},
+        "energy": {"type": ["number", "null"], "minimum": 0},
+        "persistence_minutes": {"type": ["number", "null"], "minimum": 0},
+        "rise_rate": {"type": ["number", "null"]},
+        "decay_rate": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "propagation": {
+      "type": "object",
+      "properties": {
+        "parent_wave_id": {"type": ["string", "null"]},
+        "propagation_lag_minutes": {"type": ["number", "null"]},
+        "attenuation_ratio": {"type": ["number", "null"]},
+        "amplification_ratio": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "return_relationship": {
+      "type": "object",
+      "properties": {
+        "paired_wave_id": {"type": ["string", "null"]},
+        "outbound_return_ratio": {"type": ["number", "null"]},
+        "waveform_similarity": {"type": ["number", "null"]},
+        "temporal_compression_ratio": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "network": {
+      "type": "object",
+      "properties": {
+        "network_coverage": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "cross_language_lag_minutes": {"type": ["number", "null"]},
+        "independent_node_agreement": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["snapshot_id", "method_version"],
+      "properties": {
+        "snapshot_id": {"type": "string"},
+        "method_version": {"type": "string"},
+        "output_hash": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

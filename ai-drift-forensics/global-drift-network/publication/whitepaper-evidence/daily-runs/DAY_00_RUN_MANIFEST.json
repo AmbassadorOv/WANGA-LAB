@@ -1,0 +1,17 @@
+{
+  "run_id": "DAY-00-BASELINE",
+  "run_type": "baseline",
+  "status": "PLANNED",
+  "program": "global-drift-network-whitepaper-30-day-evidence",
+  "timezone": "Asia/Jerusalem",
+  "baseline_id": "BASELINE-001",
+  "protocol_version": "1.0.0",
+  "control_set_version": "UNASSIGNED",
+  "target_scope": [],
+  "sources": [],
+  "observations": [],
+  "evidence_ids": [],
+  "snapshot_id": null,
+  "quality_gate": "PENDING",
+  "notes": "Template only. Populate with actual measurements and metadata during Day 0 execution."
+}

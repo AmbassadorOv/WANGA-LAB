@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "status": "configured_pilot",
+  "metrics": {
+    "EII": {
+      "name": "Event Impact Index",
+      "type": "event_aligned_delta",
+      "definition": "Normalized distance between the event-window observation vector and the pre-event baseline vector.",
+      "formula": "EII(t)=D(X_t,B)/S",
+      "required_inputs": ["observation_vector", "baseline_vector", "distance_method", "normalization_scale"],
+      "report_components": true,
+      "causal_interpretation": "none_without_controlled_evidence"
+    },
+    "PNI": {
+      "name": "Propagation Network Impact",
+      "type": "network_propagation_profile",
+      "components": [
+        "affected_node_coverage",
+        "cross_language_coverage",
+        "cross_region_coverage",
+        "time_to_change",
+        "persistence",
+        "independent_node_agreement"
+      ],
+      "report_components_separately": true,
+      "composite_allowed": "only_after_method_validation"
+    }
+  },
+  "event_window_minutes": [-15, -5, 0, 1, 5, 10, 20, 30, 60],
+  "fixed_probe_families": [
+    "factual_consistency",
+    "reasoning",
+    "ambiguity",
+    "instruction_following",
+    "uncertainty",
+    "refusal_boundary"
+  ],
+  "quality_controls": {
+    "unaffected_control_preferred": true,
+    "minimum_independent_nodes_for_global_candidate": 3,
+    "coverage_report_required": true,
+    "uncertainty_report_required": true,
+    "synthetic_observations_allowed": false
+  }
+}
