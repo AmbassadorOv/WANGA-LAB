@@ -247,6 +247,22 @@
       "scope": "PUBLIC",
       "status": "SPECIFIED",
       "source": "docs/ARCHITECTURE/GLOBAL_GITHUB_ARCHITECTURE_FAMILY_MAP.md"
+    },
+    {
+      "id": "VITRUVIUS-MODEL-BRIDGE",
+      "name": "Vitruvius Model Bridge — GPT/LLM/Neural Connector",
+      "status": "SPECIFIED",
+      "parent": "VITRUVIUS-INDEX",
+      "scope": "MODEL_ASSISTED_ARCHITECTURE",
+      "targets": [
+        "architecture extraction",
+        "lineage classification",
+        "relationship mapping",
+        "dependency mapping",
+        "translation experiments",
+        "composition proposals"
+      ],
+      "principle": "Models provide candidate observations and transformations; Vitruvius, Politeia, Rational Logic and Verification retain their distinct authorities."
     }
   ]
 }
