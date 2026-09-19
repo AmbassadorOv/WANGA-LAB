@@ -193,3 +193,54 @@ The `architect` and `blueprint_reasoner` nodes may generate multiple candidates.
 `CHANGED REQUIREMENT -> REASON -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
 
 The materializer remains a separate execution boundary. NTM reasoning proposes and verifies; the materializer constructs the selected virtual architecture.
+
+
+# Neural Thinking Machine — Multi-Model Orchestration V1
+
+Status: DESIGN / EXPERIMENTAL
+
+## WANGA-X architecture-generation route
+
+Architecture generation is a first-class NTM reasoning route. The route begins with the user's query or system request and explicitly derives the required neural computation before Blueprint generation:
+
+```
+USER QUERY / SYSTEM REQUEST
+            ↓
+        REQUIREMENT
+            ↓
+REQUIRED NEURAL COMPUTATION
+            ↓
+NTM ARCHITECTURE REASONING
+            ↓
+         BLUEPRINT / IR
+            ↓
+       MATERIALIZATION
+            ↓
+      NEURAL COMPUTER
+            ↓
+         EXECUTION
+            ↓
+     EVIDENCE / VERIFICATION
+```
+
+The neural_computation_deriver determines what neural computation is required by the requirement. The architect and blueprint_reasoner then generate and compare candidate computational structures and Blueprints.
+
+The Blueprint is the representation from which the selected neural computer is materialized. The NTM reasons and verifies; the materializer constructs the selected virtual architecture.
+
+## Dynamic neural-system evolution
+
+A changed requirement does not automatically mean that the existing neural architecture must remain fixed.
+
+`CHANGED REQUIREMENT -> NEW REQUIRED NEURAL COMPUTATION -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
+
+The evolved system may change architecture, topology, modules, connections, routing, parameters/weights, computational resources, and state representation as required by the new computation.
+
+## Existing orchestration remains
+
+The NTM continues to use bounded specialized roles, provider-neutral model adapters, cross-review, evidence preservation, disagreement preservation, and verification gates. This WANGA-X route changes what the architecting process receives as its primary determinant: the required neural computation derived from the user's request.
+
+## Research status
+
+The WANGA-X route is a research architecture. Existing dynamic-neural and architecture-generation mechanisms provide foundations; the integrated query → neural computation → Blueprint → neural computer loop remains subject to implementation and experimental verification.
+
+See `docs/WANGA_X_NEURAL_COMPUTATION_PARADIGM.md` for the core thesis.
