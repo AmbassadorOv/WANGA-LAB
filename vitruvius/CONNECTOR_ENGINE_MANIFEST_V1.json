@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "engine": "VITRUVIUS_CONNECTOR_ENGINE",
+  "purpose": "Discover architecture-compatible GitHub artifacts and prepare bounded integration proposals.",
+  "integration_policy": {
+    "discover": true,
+    "copy": "allowlisted_only",
+    "create_branch": true,
+    "create_pull_request": true,
+    "auto_merge": false,
+    "auto_verify": false,
+    "protected_implementation_copy": false
+  },
+  "architectures": [
+    {"id":"WANGA-OS","keywords":["wanga-os","wanga os"],"file_patterns":["*wanga*os*","docs/*os*"],"search_queries":["WANGA OS"]},
+    {"id":"GLOBAL-WORK-MANAGER","keywords":["work-manager","work_manager","global work manager"],"file_patterns":["*work*manager*"],"search_queries":["global work manager"]},
+    {"id":"MODEL-FABRIC","keywords":["model-fabric","model fabric","runtime"],"file_patterns":["*model*fabric*","runtime/*"],"search_queries":["model fabric runtime"]},
+    {"id":"TRANSLATION-ARCH","keywords":["translation","translator"],"file_patterns":["*translation*","*translator*"],"search_queries":["translation architecture"]},
+    {"id":"VITRUVIUS","keywords":["vitruvius","architecture graph"],"file_patterns":["*vitruvius*","*architecture*graph*"],"search_queries":["Vitruvius architecture graph"]},
+    {"id":"DIGITAL-MODEL-AGENTS","keywords":["digital model agent","model agent"],"file_patterns":["*agent*","agents/*"],"search_queries":["digital model agents"]},
+    {"id":"EVIDENCE-PROVENANCE","keywords":["evidence","provenance"],"file_patterns":["*evidence*","*provenance*"],"search_queries":["evidence provenance architecture"]},
+    {"id":"DRIFT-FORENSICS","keywords":["drift forensics","drift"],"file_patterns":["*drift*","drift/*"],"search_queries":["AI drift forensics"]},
+    {"id":"NTM","keywords":["neural thinking machine","ntm"],"file_patterns":["*ntm*"],"search_queries":["neural thinking machine"]},
+    {"id":"WORK-MEMORY","keywords":["work memory","work-memory"],"file_patterns":["*memory*"],"search_queries":["work memory architecture"]},
+    {"id":"GOVERNANCE","keywords":["governance","politeia"],"file_patterns":["*governance*","*politeia*"],"search_queries":["WANGA governance Politeia"]}
+  ]
+}

@@ -5,6 +5,27 @@
   "promotion_rule": "Vitruvius discovers and proposes relationships; verification determines promotion.",
   "architectures": [
     {
+      "id": "VITRUVIAN-SCALE",
+      "name": "Vitruvian Scale Architecture",
+      "role": "upper architecture for recursive architecture-family classification, relationship discovery, composition and impact mapping",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "agent/codex/vitruvius-*",
+        "research/*architecture*"
+      ]
+    },
+    {
+      "id": "DIGITAL-ENGINE",
+      "name": "Digital Engine Architecture",
+      "role": "lower execution architecture wrapping work control, translation, model fabric, agents, evidence, verification, memory and governance interfaces",
+      "status": "BUILDING",
+      "branch_patterns": [
+        "agent/*",
+        "runtime/*",
+        "drift/*"
+      ]
+    },
+    {
       "id": "WANGA-GLOBAL",
       "name": "WANGA Global Computational Architecture",
       "role": "umbrella computational architecture",
@@ -294,6 +315,119 @@
         "research_mapping",
         "capability_mapping"
       ]
+    },
+    {
+      "id": "REL-0019",
+      "source": "VITRUVIAN-SCALE",
+      "target": "DIGITAL-ENGINE",
+      "relation_types": [
+        "upper_architecture",
+        "classifies",
+        "routes_relationships"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0020",
+      "source": "VITRUVIAN-SCALE",
+      "target": "VITRUVIUS",
+      "relation_types": [
+        "contains_engine",
+        "architecture_discovery",
+        "relationship_discovery"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0021",
+      "source": "VITRUVIUS",
+      "target": "DIGITAL-ENGINE",
+      "relation_types": [
+        "maps_to",
+        "impact_analysis",
+        "execution_routing"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0022",
+      "source": "VITRUVIAN-SCALE",
+      "target": "WANGA-GLOBAL",
+      "relation_types": [
+        "composes",
+        "global_architecture_frame"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0023",
+      "source": "DIGITAL-ENGINE",
+      "target": "WANGA-OS",
+      "relation_types": [
+        "execution_layer",
+        "implements"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0024",
+      "source": "DIGITAL-ENGINE",
+      "target": "MODEL-FABRIC",
+      "relation_types": [
+        "execution_layer",
+        "implements"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0025",
+      "source": "DIGITAL-ENGINE",
+      "target": "EVIDENCE-PROVENANCE",
+      "relation_types": [
+        "execution_layer",
+        "implements"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0026",
+      "source": "DIGITAL-ENGINE",
+      "target": "DRIFT-FORENSICS",
+      "relation_types": [
+        "execution_layer",
+        "implements"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0027",
+      "source": "VITRUVIAN-SCALE",
+      "target": "RATIONAL-LOGIC",
+      "relation_types": [
+        "protected_boundary",
+        "relationship_mapping"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0028",
+      "source": "VITRUVIAN-SCALE",
+      "target": "NTM",
+      "relation_types": [
+        "family_mapping",
+        "capability_mapping"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "REL-0029",
+      "source": "VITRUVIAN-SCALE",
+      "target": "WORK-MEMORY",
+      "relation_types": [
+        "lineage_mapping",
+        "state_relationships"
+      ],
+      "status": "CANDIDATE"
     }
   ]
 }
