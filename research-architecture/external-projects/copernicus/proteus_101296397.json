@@ -1,0 +1,92 @@
+{
+  "record_type": "external_research_project",
+  "source_system": "European Commission CORDIS",
+  "source_url": "https://cordis.europa.eu/project/id/101296397",
+  "retrieved_at": "2026-09-19",
+  "project": {
+    "acronym": "PROTEUS",
+    "title": "The Copernicus Agent for Next-Generation Environmental Intelligence",
+    "grant_agreement_id": "101296397",
+    "doi": "10.3030/101296397",
+    "signature_date": "2026-05-20",
+    "start_date": "2026-09-01",
+    "end_date": "2030-02-28",
+    "duration_months": 42,
+    "programme": "HORIZON.2.4 - Digital, Industry and Space",
+    "topic": "HORIZON-CL4-2025-02-SPACE-45 - Supporting the AI/ML digital transition of Copernicus Services",
+    "funding_scheme": "HORIZON-RIA",
+    "total_eu_contribution_eur": 11828156.26,
+    "coordinator": {
+      "name": "ETHNICON METSOVION POLYTECHNION",
+      "country": "Greece",
+      "net_eu_contribution_eur": 996500.00
+    }
+  },
+  "technical_scope": {
+    "copernicus_agent": true,
+    "multimodal_foundation_models": true,
+    "hybrid_ai_physics": true,
+    "causal_reasoning": true,
+    "agentic_orchestration": true,
+    "interactive_knowledge_infrastructure": true,
+    "forecasts_and_scenarios": true,
+    "transparent_traceable_outputs": true,
+    "adaptive_workflows": true,
+    "explainable_trustworthy_responsible_ai": true,
+    "interoperability_with_destination_earth": true
+  },
+  "demonstration_domains": [
+    "climate-induced migration",
+    "agricultural stress",
+    "air quality",
+    "water security",
+    "transboundary risks"
+  ],
+  "keywords": [
+    "Copernicus",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Foundation Models",
+    "Hybrid AI-Physics Models",
+    "Causal Reasoning",
+    "Agentic Workflows",
+    "Environmental Intelligence",
+    "Digital Twin Earth",
+    "Responsible AI"
+  ],
+  "participants": [
+    {"name":"TECHNISCHE UNIVERSITAET MUENCHEN","country":"Germany","net_eu_contribution_eur":1422275.00},
+    {"name":"TECHNISCHE UNIVERSITAT BERLIN","country":"Germany","net_eu_contribution_eur":958000.00},
+    {"name":"ETHNIKO KAI KAPODISTRIAKO PANEPISTIMIO ATHINON","country":"Greece","net_eu_contribution_eur":656125.00},
+    {"name":"WAGENINGEN UNIVERSITY","country":"Netherlands","net_eu_contribution_eur":701889.39},
+    {"name":"ARISTOTELIO PANEPISTIMIO THESSALONIKIS","country":"Greece","net_eu_contribution_eur":586750.00},
+    {"name":"HELMHOLTZ-ZENTRUM DRESDEN-ROSSENDORF EV","country":"Germany","net_eu_contribution_eur":618000.00},
+    {"name":"CDXi solutions I.K.E.","country":"Greece","net_eu_contribution_eur":864875.00},
+    {"name":"DRAXIS RESEARCH VENTURES ASTIKI MI KERDOSKOPIKI ETAIRIA","country":"Greece","net_eu_contribution_eur":671750.00},
+    {"name":"SERCO CZECH REPUBLIC SRO","country":"Czechia","net_eu_contribution_eur":568000.00},
+    {"name":"NVIDIA GmbH","country":"Germany","net_eu_contribution_eur":900262.50},
+    {"name":"ENGINEERING - INGEGNERIA INFORMATICA SPA","country":"Italy","net_eu_contribution_eur":726250.00},
+    {"name":"SUNDOSOFT CO. LTD.","country":"South Korea","net_eu_contribution_eur":318375.00},
+    {"name":"EVENFLOW","country":"Belgium","net_eu_contribution_eur":392000.00},
+    {"name":"EUROPEAN UNION SATELLITE CENTRE","country":"Spain","net_eu_contribution_eur":592879.37},
+    {"name":"AUTORITA' DI BACINO DISTRETTUALE DELLE ALPI ORIENTALI","country":"Italy","net_eu_contribution_eur":358812.50},
+    {"name":"RURAL RESEARCH INSTITUTE KOREA RURAL COMMUNITY CORPORATION","country":"South Korea","net_eu_contribution_eur":106875.00},
+    {"name":"AGENCIJA ZA RURALNI RAZVOJ ZADARSKEZUPANIJE AGRRA","country":"Croatia","net_eu_contribution_eur":183250.00},
+    {"name":"AUTORITA' DI BACINO DISTRETTUALE DEL FIUME PO","country":"Italy","net_eu_contribution_eur":205287.50}
+  ],
+  "wanga_integration": {
+    "status": "OBSERVED_EXTERNAL_PROJECT",
+    "use": [
+      "research_graph node",
+      "external_ai_research intelligence",
+      "agentic_architecture comparison",
+      "traceability and evidence monitoring",
+      "future drift-observation target"
+    ],
+    "not_claimed": [
+      "no claim that PROTEUS uses WANGA",
+      "no claim of collaboration or technical integration",
+      "no claim that PROTEUS has operational drift telemetry"
+    ]
+  }
+}
