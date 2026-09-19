@@ -1,10 +1,12 @@
 case_ref: CASE_REF_2026_DRIFT_KNOWN_RISK_001
-status: PLANNED
-evidence_status: PLANNED
+status: VERIFIED
+evidence_status: VERIFIED
+fixture_type: SYNTHETIC
 client: null
-subject: controlled_ai_drift_forensic_evaluation
-baseline: pending
-replay: pending
-verification: pending
+subject: controlled_criterion_drift_forensic_evaluation
+baseline: preserved
+replay: DETERMINISTIC
+verification: REPOSITORY_LEVEL_INDEPENDENT_RECHECK
 external_timestamp: pending
 external_anchor: pending
+scope_note: This is a controlled research fixture, not a client investigation or external finding.
