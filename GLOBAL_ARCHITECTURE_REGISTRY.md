@@ -125,6 +125,10 @@ GLOBAL SCIENCE NETWORK
 | Daily Science Publication Pipeline | `DAILY_SCIENCE_PUBLICATION_PIPELINE.md` | EXISTING | F |
 | Researcher / Experiment Issue Interfaces | `.github/ISSUE_TEMPLATE/` | EXISTING | A/B |
 | ARK Kernel | `ark_kernel.py` | EXISTING EXPERIMENTAL | E / J |
+| Research Evolution Architecture | `docs/ARCHITECTURE/RESEARCH_EVOLUTION_ARCHITECTURE.md` | EXISTING | K Lineage Knowledge & Governance |
+| Architecture Family Lineage | `docs/ARCHITECTURE/ARCHITECTURE_FAMILY_LINEAGE.md` | EXISTING | K Lineage Knowledge & Governance |
+| WANGA Lineage Tree | `docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md` | EXISTING | K Lineage Knowledge & Governance |
+| WANGA Politeia | `docs/ARCHITECTURE/WANGA_POLITEIA.md` | BUILDING | K Lineage Knowledge & Governance |
 
 ## Existing research-domain architectures
 
