@@ -9,7 +9,7 @@ title: WANGA Copernicus Research
 
 This is the source-controlled research publication layer of WANGA Copernicus. The archive is organized around a simple research operation: identify the frame, inspect its boundary, preserve evidence, and reconstruct the problem when the boundary no longer explains the observed system.
 
-[Research Index](/research-index/)
+[Research Index](/research-index/)\n## Featured Research\n\n[From Prediction to Prevention: Copernican Systems Thinking, WANGA, and the Forensics of Systemic Drift](/articles/copernicus/2026/09/19/from-prediction-to-prevention-copernican-systems-thinking-wanga-systemic-drift/)\n\nThis paper connects the Copernican observational frame, WANGA operational architecture, and Drift Forensics into a prevention-oriented research program.\n
 
 [GitHub source](https://github.com/AmbassadorOv/WANGA-LAB)
 
