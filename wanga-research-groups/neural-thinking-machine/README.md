@@ -2,7 +2,7 @@
 
 Status: INITIAL / EXPERIMENTAL
 
-The Neural Thinking Machine (NTM) is the primary cognitive CPU of WANGA. It is not an ordinary research group, model runtime, or autonomous authority. It is the anchored high-level reasoning layer that receives bounded system state, evidence, version history, structural relations, drift findings, and formally represented research hypotheses; performs higher-order logical analysis; and returns verified findings, repair candidates, architecture candidates, or escalation requests.
+The Neural Thinking Machine (NTM) is the primary cognitive CPU of WANGA. It is the high-level reasoning layer that receives bounded system state, evidence, version history, structural relations, drift findings, and formally represented research hypotheses; performs higher-order logical analysis; and returns verified findings, repair candidates, architecture candidates, or escalation requests.
 
 ## Core role
 
@@ -10,10 +10,11 @@ The Neural Thinking Machine (NTM) is the primary cognitive CPU of WANGA. It is n
 - Cross-version comparison and architectural change analysis.
 - Historical intent recovery when the current architecture is unclear or blocked.
 - Formalization of human research discoveries into testable hypotheses.
-- Exploration of candidate computational architectures under WANGA-X.
+- Derivation and exploration of required neural computations under WANGA-X.
+- Exploration of candidate computational architectures.
 - Coordination of specialized drift analysis.
-- Detection of logical conflicts, structural inconsistencies, and unresolved transitions.
-- Return of findings to the originating subsystem with provenance.
+- Detection of logical conflicts and structural inconsistencies.
+- Return of findings with provenance.
 
 ## Human discovery boundary
 
@@ -21,21 +22,25 @@ A researcher can introduce a **Discovery Trigger**. This may originate during or
 
 The NTM does not need to explain or validate the origin. It must:
 
-`DISCOVERY -> HYPOTHESIS -> REQUIREMENT -> ARCHITECTURE CANDIDATE -> EXPERIMENT -> EVIDENCE -> VERIFY`
+`DISCOVERY -> HYPOTHESIS -> REQUIREMENT -> REQUIRED NEURAL COMPUTATION -> ARCHITECTURE CANDIDATE -> BLUEPRINT -> EXPERIMENT -> EVIDENCE -> VERIFY`
 
 A discovery is therefore an input to reasoning, not evidence of the resulting claim.
+
+## WANGA-X core route
+
+The NTM participates in the central causal chain:
+
+`USER QUERY / SYSTEM REQUEST -> REQUIREMENT -> REQUIRED NEURAL COMPUTATION -> NTM ARCHITECTURE REASONING -> BLUEPRINT / IR -> MATERIALIZER -> NEURAL COMPUTER -> EXECUTION -> EVIDENCE -> VERIFICATION`
+
+The NTM does not replace the materializer. Its role is to reason about what neural computation is required and what computational structures can implement it.
 
 ## System position
 
 `WANGA OS -> Neural Thinking Machine -> Research / Runtime / Network subsystems -> Evidence -> Neural Thinking Machine`
 
-Under WANGA-X, the architectural path may become:
-
-`DISCOVERY/REQUIREMENT -> NTM -> BLUEPRINT -> MATERIALIZER -> EXECUTION -> EVIDENCE -> VERIFICATION -> NTM`
-
 ## Operating principle
 
-`OBSERVE -> REPRESENT -> COMPARE -> REASON -> DETECT CONFLICT -> PROPOSE REPAIR/ARCHITECTURE -> VERIFY -> RETURN`
+`OBSERVE -> REPRESENT -> COMPARE -> REASON -> DETECT CONFLICT -> DERIVE REQUIRED COMPUTATION -> PROPOSE ARCHITECTURE / BLUEPRINT -> VERIFY -> RETURN`
 
 A proposed repair or architecture is not automatically authoritative. Facts, observations, historical artifacts, hypotheses, and proposed changes remain distinct.
 
@@ -44,8 +49,6 @@ A proposed repair or architecture is not automatically authoritative. Facts, obs
 This architecture is an initial version. It must preserve earlier designs and research artifacts. When the current state is ambiguous or a research path becomes blocked:
 
 `LOCATE_ORIGINAL -> READ_ORIGINAL -> COMPARE_WITH_CURRENT -> RECOVER_INTENT -> TEST -> VERIFY`
-
-An older version is a historical reference point, not automatically the current truth and not disposable merely because a newer version exists.
 
 ## Planned internal components
 
@@ -56,6 +59,7 @@ An older version is a historical reference point, not automatically the current 
 - `intent_recovery_engine`
 - `discovery_formalizer`
 - `requirement_deriver`
+- `neural_computation_deriver`
 - `blueprint_reasoner`
 - `architecture_candidate_engine`
 - `letter_token_state`
@@ -66,17 +70,18 @@ An older version is a historical reference point, not automatically the current 
 - `verification_gate`
 - `architect_review_interface`
 
-
 ## Dynamic architecture research foundation
 
-NTM architecture reasoning is now explicitly connected to the WANGA-X research foundation. The initial architecture-generation path will build on four established research families: HLS, specialized accelerator synthesis (including SODA), requirement-to-architecture synthesis, and runtime/adaptive architecture.
+NTM architecture reasoning is connected to WANGA-X research foundations including HLS, specialized accelerator synthesis, requirement-to-architecture synthesis, dynamic neural networks, neural architecture search, generated parameters, structural neural transformation, conditional computation, hardware-aware neural design, and runtime/adaptive architecture.
 
-The NTM role is to reason over these mechanisms and generate candidate computational structures; it does not itself constitute the materializer.
+The central WANGA-X distinction is:
 
-`RATIONAL LOGIC -> REQUIREMENT -> NTM ARCHITECTURE REASONING -> BLUEPRINT / IR -> MATERIALIZER -> EXECUTION -> EVIDENCE -> VERIFICATION`
+**Existing dynamic-neural direction:** an existing neural system adapts its structure or parameters.
 
-When requirements change, the NTM can produce a new candidate rather than assuming that the existing architecture must remain fixed:
+**WANGA-X research direction:** the user's query determines the required neural computation; the required neural computation determines the Blueprint; the Blueprint determines the neural computer.
 
-`CHANGED REQUIREMENT -> NEW ARCHITECTURE CANDIDATE -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
+When requirements change:
 
-The research foundations and prototype boundary are documented in docs/WANGA_X_RESEARCH_FOUNDATIONS.md.
+`CHANGED REQUIREMENT -> NEW REQUIRED NEURAL COMPUTATION -> NEW BLUEPRINT -> RECOMPOSE / REBUILD / REPLACE`
+
+The research foundations and prototype boundary are documented in `docs/WANGA_X_NEURAL_COMPUTATION_PARADIGM.md` and `docs/WANGA_X_RESEARCH_FOUNDATIONS.md`.
