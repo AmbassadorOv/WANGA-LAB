@@ -217,11 +217,12 @@
     },
     {
       "id": "VITRUVIUS-INDEX",
-      "name": "Vitruvius Index / Orchestrator",
+      "name": "Vitruvius — Dynamic Architecture Intelligence Layer",
       "parent": "WANGA-COMPUTER",
-      "scope": "INSTITUTIONAL",
-      "status": "BUILDING",
-      "source": "vitruvius/README.md"
+      "scope": "ARCHITECTURE_INTELLIGENCE",
+      "status": "SPECIFIED",
+      "source": "vitruvius/README.md",
+      "description": "Dynamic measurement, relationship mapping, dependency resolution, lineage mapping, architecture composition and coordination layer."
     },
     {
       "id": "EXTERNAL-ARCHITECTURE-LINEAGES",
