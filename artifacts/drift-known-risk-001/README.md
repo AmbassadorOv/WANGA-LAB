@@ -2,45 +2,79 @@
 
 ## Evidence Status
 
-**Current state:** PLANNED
+**Current state: VERIFIED**
 
-This directory is the canonical template for the first empirical AI-drift forensic case.
+This is a controlled synthetic AI-drift forensic case package.
 
-A planned artifact is not evidence of a completed client investigation.
-
-## Objective
-
-Demonstrate a reproducible path from supplied evidence to drift observation, replay, analysis, and verification.
+It demonstrates a reproducible **criterion-drift** finding while holding the model output constant.
 
 ## Case identity
 
 - Case reference: `CASE_REF_2026_DRIFT_KNOWN_RISK_001`
-- Subject: controlled AI-drift forensic evaluation
-- Client: not assigned
-- Confidentiality: to be defined per case
-- Status: PLANNED
+- Fixture type: SYNTHETIC
+- Subject: controlled criterion-drift forensic evaluation
+- Client: none
+- Verification scope: repository-level independent recheck
+- External timestamp: PENDING
+- External anchor: PENDING
 
-## Required package
+## Finding
 
-- `case.yaml` — case metadata and scope
-- `evidence-manifest.json` — supplied evidence inventory and hashes
-- `replay/` — deterministic replay inputs and instructions
-- `outputs/` — replay outputs and normalized observations
-- `verification/` — verification results and integrity checks
+The same synthetic model output is evaluated against two preserved criteria:
+
+**Baseline:** `criterion-v1`, threshold `0.80` → `REJECT`
+
+**Observed:** `criterion-v2`, threshold `0.60` → `ACCEPT`
+
+The model output remains unchanged:
+
+- score: `0.75`
+- answer class: `ACCEPT_CANDIDATE`
+
+Therefore the replay establishes:
+
+- `deviation_detected = true`
+- `drift_type = CRITERION_DRIFT`
+- `model_output_changed = false`
+- `criterion_changed = true`
+
+## Evidence package
+
+- `case.yaml` — case scope and status
+- `replay/inputs.json` — frozen synthetic replay input
+- `evidence-manifest.json` — SHA-256 inventory of the evidence package
+- `outputs/replay-result.json` — deterministic replay result
+- `analysis.md` — forensic interpretation and limitations
+- `verification/CHECKLIST.md` — verification gates
+- `verification/verification-result.json` — repository-level independent recheck
+- `tools/replay_known_risk.py` — deterministic replay procedure
+- `tools/verify_known_risk.py` — separate verification procedure
 
 ## Verification rule
 
-The case may be marked **VERIFIED** only after the defined replay and evidence-integrity checks succeed.
+**VERIFIED** means the defined synthetic replay and repository integrity gates passed.
 
-External timestamping or anchoring must remain UNKNOWN/PENDING until actual external proof is received and independently checked.
+It does **not** mean:
 
-## Non-claims
+- third-party audit;
+- legal admissibility;
+- regulatory certification;
+- insurance underwriting authority;
+- commercial performance validation;
+- a completed client engagement.
 
-This artifact does not by itself establish:
-- regulatory certification
-- insurance underwriting authority
-- legal admissibility in a particular proceeding
-- commercial performance
-- a completed client engagement
+External timestamping and anchoring remain **PENDING** because no external proof is part of this fixture.
 
-Those claims require separate evidence and, where applicable, legal or contractual review.
+## Research significance
+
+The fixture isolates one important forensic question:
+
+> Can an apparent behavioral change be explained by a change in the evaluation criterion rather than by a change in the model output?
+
+Within this controlled case, the answer is yes.
+
+The result supports the broader research distinction between **point error** and **criterion drift** and motivates preservation of evaluation criteria alongside model outputs.
+
+## Limitations
+
+This is a deterministic synthetic fixture. It demonstrates the evidence and replay procedure, not drift in a deployed production model.
