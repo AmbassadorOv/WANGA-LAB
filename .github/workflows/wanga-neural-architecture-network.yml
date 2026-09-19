@@ -1,0 +1,27 @@
+name: WANGA Neural Architecture Network
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  network:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Build neural architecture topology
+        run: python scripts/wanga_neural_architecture_network.py --write --source VITRUVIUS --payload '{"event":"architecture_cycle"}'
+      - name: Test neural architecture network
+        run: python -m pytest tests/test_wanga_neural_architecture_network.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wanga-neural-architecture-network-state
+          path: vitruvius/NEURAL_ARCHITECTURE_NETWORK_STATE.json

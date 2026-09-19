@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Neural Architecture Network State",
+  "type": "object",
+  "required": [
+    "engine",
+    "topology"
+  ],
+  "properties": {
+    "engine": {
+      "const": "WANGA_NEURAL_ARCHITECTURE_NETWORK"
+    },
+    "topology": {
+      "type": "object",
+      "required": [
+        "node_count",
+        "edge_count",
+        "nodes",
+        "edges"
+      ]
+    }
+  }
+}
