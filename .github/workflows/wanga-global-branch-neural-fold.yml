@@ -1,0 +1,31 @@
+name: WANGA Global Branch-Neural Folding
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "27 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  fold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Build logical branch fabric
+        run: python scripts/vitruvius_branch_fabric.py --write
+      - name: Fold every branch endpoint into the global neural network
+        run: python scripts/wanga_neural_branch_folding.py
+      - name: Test fabric and folding
+        run: python -m pytest tests/test_vitruvius_branch_fabric.py tests/test_wanga_neural_branch_folding.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wanga-global-branch-neural-fold
+          path: |
+            vitruvius/GITHUB_BRANCH_FABRIC_STATE.json
+            vitruvius/NEURAL_BRANCH_FOLD_STATE.json
