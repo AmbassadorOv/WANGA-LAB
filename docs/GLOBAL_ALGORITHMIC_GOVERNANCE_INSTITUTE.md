@@ -1,8 +1,8 @@
-# Global Institute for Algorithmic Governance
+# Global Algorithmic Governance Institute
 
 ## Purpose
 
-The Global Institute for Algorithmic Governance is a non-political, non-partisan architectural institute. It is not a political party, government, or political authority. It does not determine political outcomes.
+The Global Algorithmic Governance Institute is a non-political, non-partisan architectural institute. It is not a political party, government, or political authority. It does not determine political outcomes.
 
 Its purpose is to develop an Architecture of Architectures that organizes and connects scientific, economic, social, institutional, algorithmic, computational, evidence, and resilience systems.
 
