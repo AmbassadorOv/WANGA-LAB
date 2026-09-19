@@ -19,6 +19,8 @@ jobs:
           python-version: "3.x"
       - name: Build scalable logical branch fabric
         run: python scripts/vitruvius_branch_fabric.py --write
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest
       - name: Test branch fabric
         run: python -m pytest tests/test_vitruvius_branch_fabric.py
       - uses: actions/upload-artifact@v4
