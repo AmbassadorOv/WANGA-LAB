@@ -70,16 +70,16 @@
       "Qualia"
     ],
     "UNKNOWN_REQUIRES_REVIEW": [],
-    "GOVERNANCE_RESEARCH_SOURCES": [
+    "PUBLICATION_IDENTITY": [
+      "https-AmbassadorOv.io"
+    ],
+    "GOVERNANCE_AND_INSTITUTIONAL": [
       "World-Party-Federation-Branches-managers",
       "think-thank-you-of-cyber-Department",
       "TTTTproject-un.govt",
       "TTTT-0.0.0.0.1",
       "ARK-KERNEL-OVERSIGHT",
       "vqbshtfsprojects.org"
-    ],
-    "PUBLICATION_IDENTITY": [
-      "https-AmbassadorOv.io"
     ]
   },
   "handling": {
@@ -87,10 +87,9 @@
     "RESEARCH": "research artifacts and scientific compositions",
     "AI_INFRA": "reusable execution/infrastructure components",
     "SOURCE_UPSTREAM": "forks/vendor/upstream mirrors; do not rewrite as original research",
-    "GOVERNANCE_AND_INSTITUTIONAL": "institutional/governance concepts; preserve historical artifacts and provenance",
+    "GOVERNANCE_AND_INSTITUTIONAL": "institutional/governance concepts and historical research sources; preserve provenance and keep them distinct from any current formal institutional authority",
     "LEGACY_OR_EXPERIMENTAL": "retain, inventory and inspect before any archive/merge/rename",
     "UNKNOWN_REQUIRES_REVIEW": "manual architectural review",
-    "GOVERNANCE_RESEARCH_SOURCES": "historical/conceptual governance research sources; may inform the planned Global Algorithmic Governance Institute, but are not the Institute itself and do not establish institutional authority",
     "PUBLICATION_IDENTITY": "public identity/publication surface; not canonical research implementation"
   }
 }
