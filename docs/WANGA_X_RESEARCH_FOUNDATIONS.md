@@ -4,154 +4,210 @@ Status: RESEARCH FOUNDATION / DESIGN
 
 ## Purpose
 
-WANGA-X will not begin by inventing every mechanism from first principles. It will use established research directions as technical starting points and add a dynamic architectural layer that connects them into one requirement-driven construction loop.
+WANGA-X uses established research directions as technical starting points and connects them through a requirement-driven neural-computation loop.
 
-The initial foundation is organized around four research families:
+The central thesis is:
 
-1. High-Level Synthesis (HLS)
-2. Software-Defined Accelerators (SODA)
-3. Requirement-to-Architecture synthesis
-4. Runtime / adaptive architecture
+```
+USER QUERY / SYSTEM REQUEST
+            ↓
+      REQUIREMENT
+            ↓
+REQUIRED NEURAL COMPUTATION
+            ↓
+NEURAL COMPUTATIONAL STRUCTURE
+            ↓
+         BLUEPRINT
+            ↓
+     NEURAL COMPUTER
+            ↓
+        EXECUTION
+```
 
-The objective is not to claim that any of these projects already implement WANGA-X. They provide reusable starting mechanisms.
+The important intermediate object is **required neural computation**. The research question is not merely which existing neural architecture best fits a task, but what neural computation is required by the query, and how that computation determines the Blueprint from which the neural computer is materialized.
 
 ## Research foundation A — High-Level Synthesis
 
 HLS demonstrates a direct path from high-level algorithmic descriptions to generated hardware designs.
 
-Google XLS is particularly useful as a starting reference because it provides a high-level hardware synthesis toolchain, a central IR, simulation/execution paths, and generation of synthesizable Verilog/SystemVerilog.
+Google XLS provides a high-level hardware synthesis toolchain, a central IR, simulation/execution paths, and generation of synthesizable Verilog/SystemVerilog.
 
-WANGA-X research extraction:
+WANGA-X extraction:
 
 `COMPUTATION DESCRIPTION → IR → GENERATED ARCHITECTURE → EXECUTION / VERIFICATION`
-
-Potential reuse:
-- intermediate representation;
-- graph/dataflow representation;
-- lowering pipeline;
-- generated architecture;
-- execution at multiple abstraction levels;
-- formal/correctness checking.
 
 ## Research foundation B — SODA
 
 SODA demonstrates automated generation of specialized accelerators from high-level programming frameworks and supports design-space exploration.
 
-WANGA-X research extraction:
+WANGA-X extraction:
 
 `HIGH-LEVEL COMPUTATION → SPECIALIZED ARCHITECTURE → DESIGN-SPACE EXPLORATION → GENERATED IMPLEMENTATION`
 
-Potential reuse:
-- architecture templates;
-- reusable hardware components;
-- automated synthesis;
-- design-space exploration;
-- optimization loops;
-- modular composition.
-
 ## Research foundation C — Requirement-to-Architecture synthesis
 
-Recent LLM-based software-architecture research investigates mapping requirements to architectural decisions and alternatives.
+Architecture research investigates mapping requirements to architectural decisions and candidate architectures.
 
-ARLO, for example, maps architecturally relevant natural-language requirements to architectural choices and uses optimization to select among alternatives.
+WANGA-X extraction:
 
-WANGA-X research extraction:
+`REQUIREMENT → REQUIRED COMPUTATION → ARCHITECTURAL CONSTRAINTS / CHOICES → BLUEPRINT CANDIDATE`
 
-`REQUIREMENT → ARCHITECTURAL CONSTRAINTS / CHOICES → ARCHITECTURE CANDIDATE`
+## Research foundation D — Dynamic Neural Networks
 
-Potential reuse:
-- requirement formalization;
-- architectural decision representation;
-- traceability from requirement to architectural choice;
-- candidate comparison;
-- constraint-based selection.
+Dynamic Neural Network research establishes mechanisms in which neural-network structure or parameters can change rather than remaining completely fixed.
 
-## Research foundation D — Runtime architectural adaptation
+WANGA-X uses this as a foundation but changes the starting point:
 
-Adaptive architecture research provides mechanisms for changing system structure when runtime conditions or requirements change.
+`EXISTING NEURAL SYSTEM → ADAPT STRUCTURE / PARAMETERS`
 
-WANGA-X research extraction:
+versus the WANGA-X research hypothesis:
 
-`OBSERVE → DETECT CHANGE → RECONFIGURE / RECOMPOSE`
+`USER QUERY → REQUIRED NEURAL COMPUTATION → BLUEPRINT → NEURAL SYSTEM`
 
-The WANGA-X research question extends this:
+The evolving system may change topology, modules, connections, routing, parameters/weights, resource allocation, and state representation as required by the derived computation.
+
+## Research foundation E — Neural Architecture Search
+
+NAS demonstrates automated generation/search of neural architectures.
+
+WANGA-X extraction:
+
+`REQUIRED NEURAL COMPUTATION → ARCHITECTURE SEARCH / REASONING → BLUEPRINT CANDIDATE`
+
+The open research question is whether the required computation can become the primary determinant of the Blueprint rather than merely selecting a model from a predefined architecture search space.
+
+## Research foundation F — HyperNetworks and generated parameters
+
+HyperNetworks demonstrate that one neural network can generate parameters/weights for another network.
+
+WANGA-X relevance:
+
+`REQUIRED COMPUTATION → PARAMETER GENERATION]
+
+This supports treating weights/parameters as potentially generated objects rather than permanently fixed artifacts.
+
+## Research foundation G — Network Morphism and structural transformation
+
+Network Morphism and related structural-transformation research demonstrate transformations between neural architectures while preserving or reusing learned behavior.
+
+WANGA-X relevance:
+
+`NEURAL SYSTEM_A → STRUCTURAL TRANSFORMATION → NEURAL SYSTEM_B]
+
+This provides a foundation for controlled evolution of an existing computational structure.
+
+## Research foundation H — Conditional computation
+
+Conditional computation and related routing methods allow different parts of a neural system to be activated according to the required computation.
+
+WANGA-X relevance:
+
+`INPUT / REQUIREMENT → COMPUTATIONAL PATH SELECTION]
+
+WANGA-X extends the question from selecting paths inside an existing network toward determining what computational structure should exist when the requirement itself changes.
+
+## Research foundation I — Hardware-aware neural architecture
+
+Hardware-aware NAS and neural/hardware co-design connect neural architecture choices with hardware constraints.
+
+WANGA-X relevance:
+
+`NEURAL COMPUTATION → NEURAL STRUCTURE ↔ COMPUTATIONAL RESOURCES]
+
+This is a bridge between neural-system generation and computational-architecture generation.
+
+## Research foundation J — Runtime / adaptive architecture
+
+Runtime and adaptive architecture research provides mechanisms for changing system structure when conditions change.
+
+WANGA-X extraction:
 
 `CHANGED REQUIREMENT → NEW COMPUTATIONAL SPECIFICATION → NEW BLUEPRINT → NEW ARCHITECTURE`
 
-The target is not merely parameter adaptation. The architecture itself becomes a generated object that can be replaced or recomposed.
+## Unified WANGA-X layer
 
-## Dynamic synthesis layer
-
-WANGA-X places a common dynamic layer over these research directions:
+The research foundations are connected through one causal chain:
 
 ```
-                RATIONAL LOGIC
-                     ↓
-          COMPUTATIONAL REQUIREMENT
-                     ↓
-             ARCHITECTURE REASONING
-                     ↓
-              BLUEPRINT / IR
-                     ↓
-       ┌─────────────┼─────────────┐
-       ↓             ↓             ↓
-     HLS/SODA    SOFTWARE       VIRTUAL
-     MATERIAL.   ARCHITECTURE   MATERIALIZER
-       ↓             ↓             ↓
-       └─────────────┼─────────────┘
-                     ↓
-                 EXECUTION
-                     ↓
-             EVIDENCE / VERIFY
-                     ↓
-             REQUIREMENT CHANGE
-                     ↓
-              NEW BLUEPRINT
-                     ↓
-       RECOMPOSE / REBUILD / REPLACE
+USER QUERY / SYSTEM REQUEST
+             ↓
+        RATIONAL LOGIC
+             ↓
+          REQUIREMENT
+             ↓
+REQUIRED NEURAL COMPUTATION
+             ↓
+    NTM ARCHITECTURE REASONING
+             ↓
+         BLUEPRINT / IR
+             ↓
+        MATERIALIZATION
+             ↓
+       NEURAL COMPUTER
+             ↓
+          EXECUTION
+             ↓
+     EVIDENCE / VERIFICATION
+             ↓
+     CHANGED REQUIREMENT
+             ↓
+ NEW REQUIRED NEURAL COMPUTATION
+             ↓
+       NEW BLUEPRINT
+             ↓
+RECOMPOSE / REBUILD / REPLACE
 ```
 
-The central research hypothesis is that these capabilities can be unified around a persistent Blueprint/IR and a controlled architecture-state sequence.
+## Core research proposition
+
+The proposed architectural paradigm is:
+
+> **The user's query determines the required neural computation; the required neural computation determines the Blueprint; and the Blueprint determines the neural computer that performs the computation.**
+
+This is the central WANGA-X architectural thesis.
 
 ## Architecture-state model
 
-Each generated architecture is treated as a versioned computational state:
+Each generated neural system is treated as a versioned computational state:
 
-`A0 → A1 → A2 → ... → An`
+`N0 → N1 → N2 → ... → Nn`
 
-A requirement change produces a new candidate trajectory:
+where each state may contain:
 
-`Ak → Requirement' → Blueprint' → Ak+1'`
+`Architecture + Topology + Modules + Connections + Routing + Weights/Parameters + Resources + State`
 
-The system must preserve enough state to inspect, compare, verify, and, when necessary, restore a previously verified state.
+A changed requirement can produce:
 
-Rollback is a mechanism. The architectural principle is **evolving dynamic architecture**.
+`Nk → Requirement' → Neural Computation' → Blueprint' → Nk+1`
 
 ## First prototype
 
-The first prototype should remain virtual/software-defined rather than attempting physical hardware reconfiguration.
+The first prototype should remain virtual/software-defined.
 
 Minimum experiment:
 
-1. define two materially different computational requirements;
-2. express each requirement in a common representation;
-3. generate at least two architecture Blueprints;
-4. materialize each as an executable graph;
-5. execute identical test inputs;
-6. measure correctness and cost;
-7. change the requirement;
-8. generate a new Blueprint;
-9. recompose or replace the architecture;
-10. verify the new architecture independently.
+1. define multiple materially different user/system queries;
+2. derive explicit requirements;
+3. derive the required neural computation for each requirement;
+4. generate corresponding computational structures;
+5. generate a Blueprint for each structure;
+6. materialize each Blueprint as an executable neural-computational graph;
+7. execute controlled test inputs;
+8. measure correctness and computational cost;
+9. change the query/requirement;
+10. derive the new neural computation;
+11. generate a new Blueprint;
+12. recompose, rebuild, or replace the neural system;
+13. independently verify the resulting state.
 
 ## Research boundary
 
-The existing technologies establish important individual capabilities. They do not, by themselves, establish the complete WANGA-X loop.
+Existing research establishes important individual capabilities. This document records the proposed integration and causal ordering as the WANGA-X research hypothesis.
 
-Therefore this repository must distinguish:
+The repository must distinguish:
 
 - **Existing foundation** — published or implemented technologies;
-- **WANGA-X integration hypothesis** — proposed combination;
+- **WANGA-X paradigm** — the proposed requirement → neural computation → Blueprint relationship;
 - **Prototype** — implemented experimental mechanism;
 - **Verification** — experimentally demonstrated behavior.
 
