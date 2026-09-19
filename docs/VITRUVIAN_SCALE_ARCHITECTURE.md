@@ -36,3 +36,13 @@ DISCOVERED → CANDIDATE → MAPPED → IMPLEMENTED → TESTED → VERIFIED
 4. A relationship may be direct, inherited, transitive, interface-based, evidence-based or governance-based.
 5. Historical architecture is preserved rather than silently discarded.
 6. Protected Rational Logic implementation remains outside the public graph.
+
+## Atomic scale
+
+The Vitruvian Scale is recursive down to the **family atom** level. A family atom is the smallest declared architectural concept that remains independently addressable in the relationship graph. An atom may belong to multiple root families, producing explicit cross-family bridges rather than forcing a false single-family classification.
+
+Atomic path:
+
+ARCHITECTURE → FAMILY → SUBFAMILY → FAMILY ATOM → SUBATOM → NEURAL ATOM ENDPOINT → GLOBAL NETWORK
+
+Governance is attached at the atom boundary through P0-P7 mappings. This lets a descendant inherit the controls relevant to its function while retaining its own lineage and verification state.

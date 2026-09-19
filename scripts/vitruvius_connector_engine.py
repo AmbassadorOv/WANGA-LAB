@@ -13,9 +13,11 @@ import argparse, base64, fnmatch, json, os, re
 from dataclasses import dataclass
 from urllib.parse import quote
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 API = "https://api.github.com"
 PROTECTED = ("rational-logic", "rational_logic", "wanga-native-rational-logic")
+RATE_LIMITED_QUERIES: list[str] = []
 
 
 @dataclass
@@ -44,7 +46,13 @@ def get_json(path: str, token: str):
 
 def search_code(query: str, token: str, per_page: int = 30):
     q = quote(query)
-    return get_json(f"/search/code?q={q}&per_page={per_page}", token).get("items", [])
+    try:
+        return get_json(f"/search/code?q={q}&per_page={per_page}", token).get("items", [])
+    except HTTPError as exc:
+        if exc.code == 429:
+            RATE_LIMITED_QUERIES.append(query)
+            return []
+        raise
 
 
 def get_file(repo: str, path: str, ref: str, token: str):
@@ -129,6 +137,7 @@ def main():
         "target_branch": args.target_branch,
         "candidate_count": len(candidates),
         "candidates": [c.__dict__ for c in candidates],
+        "discovery_warnings": {"code_search_rate_limited": sorted(set(RATE_LIMITED_QUERIES))},
         "rules": {
             "auto_merge": False,
             "protected_implementation_copy": False,

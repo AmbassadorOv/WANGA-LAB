@@ -4,6 +4,60 @@ WANGA-LAB is the systems architecture and evidence-integrity layer for **AI drif
 
 **Architecture navigation:** [WANGA Global Computational Architecture](docs/WANGA_GLOBAL_COMPUTATIONAL_ARCHITECTURE.md) · [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
+
+## Vitruvian Atomic Architecture — the computer we are building
+
+The current WANGA concept is larger than GitHub. GitHub is one **evidence-bearing implementation surface**, not the final home of the architecture.
+
+The central idea is a **Vitruvian Atomic Architecture**: Vitruvius continuously decomposes the system from architecture → family → subfamily → child → family atom → subatom, then discovers relationships between atoms even when the same atom belongs to multiple families. Each atom carries lineage, governance, evidence state and a deterministic neural endpoint, and the resulting relationships fold into a global computational network.
+
+The intended computer is therefore not organized as a flat repository tree. It is organized as a **recursive, multi-family architecture graph** in which computation, evidence, governance, research and publication can intersect at atomic level.
+
+GitHub currently provides the source-control and evidence surface for this work. A future platform layer may provide the larger persistent graph and orchestration substrate. Current candidates include graph-computing infrastructure such as Apache TinkerPop, property-graph/knowledge-graph platforms such as Neo4j, and standards-based RDF/SHACL representations. TinkerPop explicitly supports graph databases and graph analytics; Neo4j provides node/relationship traversal and knowledge-graph capabilities; W3C RDF/SHACL provides a standards-based representation and constraint-validation layer. These are **candidate building blocks, not a final platform selection**. citeturn0search1turn0search8turn0search5
+
+The architectural requirement is platform-independent: the substrate must preserve recursive hierarchy, multi-family membership, cross-family atom bridges, provenance, governance constraints, verification state, and machine-traversable relationships. W3C's Web of Things work is another useful interoperability reference because its Thing Description model is designed to describe entities and their interfaces in a machine-readable form and to support integration across heterogeneous systems. citeturn0search0turn0search4
+
+**Conceptual target:** GitHub and other external systems become connected surfaces feeding the Vitruvian graph; they are not the graph itself.
+
+```
+                         WANGA COMPUTATIONAL ARCHITECTURE
+                                      │
+                              VITRUVIUS ENGINE
+                                      │
+                 ┌────────────────────┼────────────────────┐
+                 ▼                    ▼                    ▼
+          FAMILY ATOMS          CROSS-FAMILY          GOVERNANCE
+                 │               RELATIONSHIPS             │
+                 └────────────────────┼────────────────────┘
+                                      ▼
+                           GLOBAL COMPUTATIONAL GRAPH
+                                      │
+                    ┌─────────────────┼─────────────────┐
+                    ▼                 ▼                 ▼
+                 GitHub          Research/Data       Future Platforms
+                    │                 │                 │
+                    └─────────────────┴─────────────────┘
+                                      │
+                                      ▼
+                              WANGA COMPUTING SYSTEM
+```
+
+## What I am building — WANGA Neural Algorithmic Governance Computer
+
+I am developing **WANGA as a proposed new neural computer architecture for algorithmic governance**: a recursive computational system designed to organize computation, reasoning, evidence, verification, provenance, and governance as one machine-traversable architecture.
+
+At its architectural core is the **Vitruvian Architecture Engine**. It converts heterogeneous systems from repository-level structures into a recursive architecture graph:
+
+**Architecture → Family → Subfamily → Child → Family Atom → Subatom → Neural Endpoint → Global Computational Graph**
+
+The defining property is that an atomic component does not have to belong to only one family. Vitruvius can discover cross-family relationships and construct a larger computational topology around them. Governance, provenance, lineage, evidence state, and verification constraints are attached at the atomic level.
+
+The resulting system is intended as a **neural algorithmic-governance computer**, not merely as a GitHub automation tool or an LLM wrapper.
+
+GitHub is currently one implementation and evidence surface. The intended architecture is platform-independent and is designed ultimately to operate on a persistent graph and orchestration substrate capable of connecting repositories, research data, computational agents, evidence systems, governance controls, and external platforms.
+
+In practical terms, my work is the design and construction of the architecture that can turn a collection of separate computational systems into a **recursive, governed, evidence-aware neural computing network**.
+
 ## WANGA and Rational Logic
 
 WANGA is treated in this research as a distinct computing architecture, not simply as a wrapper around a language model.

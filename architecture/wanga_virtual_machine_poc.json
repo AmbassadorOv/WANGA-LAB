@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1.0-poc",
+  "name": "WANGA Virtual Computer",
+  "status": "PROTOTYPE_ARCHITECTURE",
+  "purpose": "Logical virtualization of the proposed WANGA neural algorithmic-governance computer over existing computational substrates.",
+  "layers": [
+    [
+      "L0",
+      "External Substrate",
+      "github,cloud,model_api,data,research"
+    ],
+    [
+      "L1",
+      "Ingress",
+      "discover_and_normalize_authorized_sources"
+    ],
+    [
+      "L2",
+      "Vitruvius",
+      "recursive_architecture_decomposition"
+    ],
+    [
+      "L3",
+      "Atomic Graph",
+      "family_atom_subatom_relationship_graph"
+    ],
+    [
+      "L4",
+      "Neural Endpoints",
+      "addressable_computational_nodes"
+    ],
+    [
+      "L5",
+      "Evidence and Provenance",
+      "lineage_evidence_verification_state"
+    ],
+    [
+      "L6",
+      "Rational Logic Boundary",
+      "protected_verification_boundary"
+    ],
+    [
+      "L7",
+      "Politeia Governance",
+      "policy_constraints_and_state_transitions"
+    ],
+    [
+      "L8",
+      "AMNE Runtime",
+      "proposed_coordination_and_execution_runtime"
+    ],
+    [
+      "L9",
+      "Physical Target",
+      "future_dedicated_hardware"
+    ]
+  ],
+  "node_model": {
+    "required": [
+      "atom_id",
+      "source",
+      "family_membership",
+      "parent",
+      "provenance",
+      "evidence_state",
+      "verification_state"
+    ],
+    "optional": [
+      "children",
+      "cross_family_relations",
+      "neural_endpoint",
+      "governance",
+      "runtime_capabilities"
+    ]
+  },
+  "verification_states": [
+    "DISCOVERED",
+    "SPECIFIED",
+    "IMPLEMENTED",
+    "TESTED",
+    "VERIFIED"
+  ],
+  "governance_layers": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7"
+  ],
+  "design_constraints": {
+    "multi_family_atoms": true,
+    "recursive_decomposition": true,
+    "cross_family_bridges": true,
+    "provenance_required": true,
+    "verification_state_required": true,
+    "physical_hardware_claim": false,
+    "quantum_integration_verified": false,
+    "ten_millisecond_heartbeat_verified": false
+  }
+}

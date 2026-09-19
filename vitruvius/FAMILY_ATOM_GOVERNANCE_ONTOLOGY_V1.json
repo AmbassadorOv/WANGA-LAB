@@ -1,0 +1,696 @@
+{
+  "version": "1.0.0",
+  "root_families": {
+    "COMPUTATIONAL_NEURAL": "computation, control, models, agents, runtime, reasoning and execution",
+    "EVIDENCE_GOVERNANCE": "evidence, provenance, verification, drift, lineage, governance and assurance",
+    "PUBLICATION_RESEARCH": "research, composition, knowledge, publication and external scientific interfaces"
+  },
+  "governance_layers": {
+    "P0": [
+      "Integrity",
+      "Repository Hygiene",
+      "Evidence-State Taxonomy",
+      "Verification Boundaries"
+    ],
+    "P1": [
+      "Rational Logic",
+      "NTM",
+      "Execution Contracts",
+      "Global Work Manager"
+    ],
+    "P2": [
+      "Evidence",
+      "Provenance",
+      "Drift Forensics",
+      "Verification"
+    ],
+    "P3": [
+      "Operational Intake",
+      "Case Triage",
+      "Bounded Queues"
+    ],
+    "P4": [
+      "Research Composition",
+      "WANGA-X",
+      "Copernicus",
+      "Vitruvius"
+    ],
+    "P5": [
+      "Governance Standards",
+      "Interoperability",
+      "Standards Registry"
+    ],
+    "P6": [
+      "Publication",
+      "Publication Network",
+      "Public Evidence Interfaces"
+    ],
+    "P7": [
+      "Presentation",
+      "Downstream Web Surfaces"
+    ]
+  },
+  "atoms": [
+    [
+      "rational_logic",
+      [
+        "Rational Logic",
+        "structured reasoning"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P1"
+      ]
+    ],
+    [
+      "ntm",
+      [
+        "Neural Thinking Machine",
+        "NTM"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "model_fabric",
+      [
+        "Model Fabric"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "digital_model_agent",
+      [
+        "Digital Model Agent",
+        "Digital Model Agents",
+        "DMA"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "runtime",
+      [
+        "Runtime",
+        "Providers / Runtimes",
+        "Provider / Runtime"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P1",
+        "P4"
+      ]
+    ],
+    [
+      "compute",
+      [
+        "Compute Fabric",
+        "Research Compute Nodes",
+        "Scientific Jobs"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P1",
+        "P4"
+      ]
+    ],
+    [
+      "execution",
+      [
+        "Execution",
+        "Execution Fabric",
+        "execution policy"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P0",
+        "P1"
+      ]
+    ],
+    [
+      "work_manager",
+      [
+        "Global Work Manager",
+        "Work Manager",
+        "orchestrator",
+        "orchestration"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P0",
+        "P1",
+        "P3"
+      ]
+    ],
+    [
+      "task_queue",
+      [
+        "Persistent Task Queue",
+        "task queues",
+        "bounded concurrency queue",
+        "Bounded Queues"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P3"
+      ]
+    ],
+    [
+      "work_memory",
+      [
+        "Work Memory",
+        "persistent task queue",
+        "state snapshots"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "translation",
+      [
+        "Translation Architecture",
+        "translation",
+        "Representation Layer"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P1",
+        "P4"
+      ]
+    ],
+    [
+      "architecture",
+      [
+        "Architecture",
+        "architecture blueprint"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P4",
+        "P5"
+      ]
+    ],
+    [
+      "state",
+      [
+        "State",
+        "STATE/TRANSITION ENGINE",
+        "state updates",
+        "Typed State Updates"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "transition",
+      [
+        "Transition",
+        "STATE/TRANSITION ENGINE",
+        "transitions"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "sensor",
+      [
+        "Sensor Fabric",
+        "controlled probes"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P3"
+      ]
+    ],
+    [
+      "observation",
+      [
+        "Observation Bus",
+        "observation"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2"
+      ]
+    ],
+    [
+      "representation",
+      [
+        "Representation Layer",
+        "representations",
+        "normalized representations"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P1",
+        "P2"
+      ]
+    ],
+    [
+      "evaluation",
+      [
+        "Evaluation Engine",
+        "evaluation",
+        "quality gate"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P2",
+        "P4"
+      ]
+    ],
+    [
+      "drift",
+      [
+        "Drift Engine",
+        "Drift Forensics",
+        "drift detection",
+        "criterion drift"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P0",
+        "P2"
+      ]
+    ],
+    [
+      "early_warning",
+      [
+        "Early-Warning Engine",
+        "trigger detection",
+        "anomaly"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P3"
+      ]
+    ],
+    [
+      "network_propagation",
+      [
+        "Network / Propagation Engine",
+        "network/propagation",
+        "propagation"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "EVIDENCE_GOVERNANCE",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    ],
+    [
+      "evidence",
+      [
+        "Evidence",
+        "Evidence Commons",
+        "Evidence Manager",
+        "evidence packages"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P2",
+        "P3"
+      ]
+    ],
+    [
+      "provenance",
+      [
+        "Provenance",
+        "provenance-bearing",
+        "lineage"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P0",
+        "P2",
+        "P4"
+      ]
+    ],
+    [
+      "verification",
+      [
+        "Verification",
+        "verification gates",
+        "Verification Boundaries",
+        "replay"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P2"
+      ]
+    ],
+    [
+      "integrity_hash",
+      [
+        "SHA-256",
+        "integrity",
+        "immutable snapshots",
+        "canonical representation"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P2"
+      ]
+    ],
+    [
+      "audit",
+      [
+        "Audit Events",
+        "audit records",
+        "audit"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P0",
+        "P2"
+      ]
+    ],
+    [
+      "lineage",
+      [
+        "Lineage Tree",
+        "Lineage Governance",
+        "genealogy",
+        "lineage knowledge"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P0",
+        "P2",
+        "P4"
+      ]
+    ],
+    [
+      "governance",
+      [
+        "Governance",
+        "WANGA Politeia",
+        "Governance Standards",
+        "Governance Control"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P0",
+        "P5"
+      ]
+    ],
+    [
+      "control_plane",
+      [
+        "Control Plane",
+        "Scientific Control Plane",
+        "control-plane"
+      ],
+      [
+        "EVIDENCE_GOVERNANCE",
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P0",
+        "P1",
+        "P3"
+      ]
+    ],
+    [
+      "research_question",
+      [
+        "Research Questions",
+        "research question"
+      ],
+      [
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P4",
+        "P6"
+      ]
+    ],
+    [
+      "method",
+      [
+        "Methods",
+        "method"
+      ],
+      [
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P4"
+      ]
+    ],
+    [
+      "experiment",
+      [
+        "Experiments",
+        "experiment"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P4"
+      ]
+    ],
+    [
+      "dataset",
+      [
+        "Data / Datasets",
+        "dataset"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P4"
+      ]
+    ],
+    [
+      "finding_claim",
+      [
+        "Findings / Claims",
+        "finding",
+        "claim"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P6"
+      ]
+    ],
+    [
+      "publication",
+      [
+        "Publications",
+        "Publication Layer",
+        "publication network",
+        "Daily Science Publication"
+      ],
+      [
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P6",
+        "P7"
+      ]
+    ],
+    [
+      "knowledge_graph",
+      [
+        "Knowledge Graph",
+        "whole-system model",
+        "knowledge architecture"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    ],
+    [
+      "scientific_commons",
+      [
+        "Scientific Commons",
+        "Evidence Commons"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "EVIDENCE_GOVERNANCE"
+      ],
+      [
+        "P2",
+        "P6"
+      ]
+    ],
+    [
+      "perspective",
+      [
+        "Perspective Layer",
+        "perspectives"
+      ],
+      [
+        "PUBLICATION_RESEARCH",
+        "COMPUTATIONAL_NEURAL"
+      ],
+      [
+        "P4",
+        "P6"
+      ]
+    ],
+    [
+      "wanga_x",
+      [
+        "WANGA-X",
+        "Requirement-Driven",
+        "Reversible Computational Architecture"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P1",
+        "P4"
+      ]
+    ],
+    [
+      "vitruvius",
+      [
+        "Vitruvius",
+        "Vitruvian Scale Architecture",
+        "architecture discovery"
+      ],
+      [
+        "COMPUTATIONAL_NEURAL",
+        "PUBLICATION_RESEARCH"
+      ],
+      [
+        "P0",
+        "P4",
+        "P5"
+      ]
+    ]
+  ],
+  "source_files": [
+    "GLOBAL_ARCHITECTURE_REGISTRY.md",
+    "docs/ARCHITECTURE_INTEGRATION_INDEX.md",
+    "docs/WANGA_GLOBAL_WORK_MANAGER_V2.md",
+    "docs/MODEL_AGENT_ARCHITECTURE_V1.md",
+    "docs/WANGA_X_REVERSIBLE_ARCHITECTURE.md",
+    "docs/ARCHITECTURE/WANGA_POLITEIA.md",
+    "docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md",
+    "ai-drift-forensics/global-drift-network/neural-network-research-core/WANGA_OS_ARCHITECTURE_V1.md",
+    "wanga-research-groups/neural-thinking-machine/NEURAL_OS_ARCHITECTURE_V1.md",
+    "docs/ARCHITECTURE/ARCHITECTURE_TO_RESEARCH_MATRIX.md"
+  ]
+}

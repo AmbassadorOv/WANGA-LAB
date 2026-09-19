@@ -1,6 +1,9 @@
 name: Vitruvius Fractal GitHub Neural Network
 
 on:
+  push:
+    branches:
+      - "agent/**"
   pull_request:
   workflow_dispatch:
   schedule:
@@ -16,8 +19,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
       - name: Build recursive global topology
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/vitruvius_connector_engine.py --write --min-score 6
           python scripts/vitruvius_fractal_recursive_network.py
