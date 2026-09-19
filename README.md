@@ -26,6 +26,26 @@ The system under examination may be internal, external, proprietary, open-source
 
 The purpose is to establish what happened, preserve relevant evidence, reconstruct the event, and verify the resulting finding without treating the evaluated model as the sole authority on its own correction or validity.
 
+## WANGA Computer Architecture
+
+The current architecture baseline composes the existing WANGA structures into a unified computational architecture:
+
+**Lineage Knowledge → WANGA Politeia → Translation Architecture → Rational Logic → Derivation → Drift / Error Verification → Evidence / Provenance**
+
+`Vitruvius Index / Orchestrator` provides the architecture-index and coordination layer across these subsystems.
+
+The central design rule is:
+
+> Logic is the reference point. Models and model compositions are selected according to their demonstrated ability to translate that logic into derivations under defined constraints.
+
+See:
+- [WANGA Computer Architecture](docs/ARCHITECTURE/WANGA_COMPUTER_ARCHITECTURE.md)
+- [Logic-to-Derivation Translation Architecture](docs/ARCHITECTURE/LOGIC_TRANSLATION_ARCHITECTURE.md)
+- [Vitruvius Index / Orchestrator](vitruvius/README.md)
+- [WANGA Politeia](docs/ARCHITECTURE/WANGA_POLITEIA.md)
+
+The architecture also distinguishes materially constrained computation from higher-level digital orchestration. This is a systems model for future research, not a claim that a steam-engine-like physical computer has already been implemented.
+
 ## Service scope
 
 WANGA-LAB / Drift Forensics is intended to provide independent technical evidence, AI-drift analysis, model-behavior analysis, provenance reconstruction, and systemic-exposure assessment to insurance companies and institutional risk holders with material exposure to banks and other critical financial infrastructure.
@@ -57,7 +77,6 @@ Current evidence status: **VERIFIED**
 [Open the verified synthetic case package](artifacts/drift-known-risk-001/README.md)
 
 The canonical case package demonstrates a repository-level, deterministic criterion-drift finding and provides the structure for:
-
 - case metadata and scope;
 - evidence inventory and hashes;
 - replay inputs and instructions;
@@ -81,7 +100,6 @@ Research distinguishes point error from changes in definition, premise, inferenc
 ## Implemented evidence infrastructure
 
 The repository contains implemented evidence-integrity and workflow components, including:
-
 - canonical representations;
 - SHA-256 integrity chains;
 - contract/hash binding;
