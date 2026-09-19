@@ -5,7 +5,7 @@
 The connected GitHub account exposes the following repositories to the integration at this stage:
 
 ### CORE
-- AmbassadorOv
+- eran-oved-awats (intended GitHub account identity)
 - WANGA-LAB
 
 ### RESEARCH
@@ -60,6 +60,12 @@ The connected GitHub account exposes the following repositories to the integrati
 - -artificial-y
 - GOOGLE_API_KEY
 - test-notebook-links
+
+## Service interface
+
+The commercial target includes insurance companies and institutional risk holders with material exposure to banks and other critical financial infrastructure. WANGA-LAB supplies the technical evidence, drift-forensics, reconstruction, dependency-analysis, and verification layer that can support their own risk and governance processes.
+
+This service boundary must remain separate from regulated insurance underwriting, coverage, brokerage, or financial guarantees.
 
 ## Rebuild strategy
 
