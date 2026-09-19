@@ -1,6 +1,9 @@
 name: WANGA Global Branch-Neural Folding
 
 on:
+  push:
+    branches:
+      - "agent/**"
   pull_request:
   workflow_dispatch:
   schedule:
