@@ -1,0 +1,74 @@
+name: WANGA Virtualization POC
+
+on:
+  push:
+    branches:
+      - "agent/**"
+  pull_request:
+    paths:
+      - "scripts/wanga_virtualization_poc.py"
+      - "architecture/wanga_virtual_machine_poc.json"
+      - ".github/workflows/wanga-virtualization-poc.yml"
+
+jobs:
+  validate-virtualization:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run WANGA virtualization POC
+        run: |
+          python scripts/wanga_virtualization_poc.py > wanga_virtualization_output.json
+          cat wanga_virtualization_output.json
+
+      - name: Validate end-to-end graph invariants
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          output = json.loads(Path("wanga_virtualization_output.json").read_text())
+          assert output["machine"] == "WANGA Virtual Computer"
+          assert output["schema_version"] == "0.1.0-poc"
+
+          nodes = output["nodes"]
+          edges = output["edges"]
+          assert len(nodes) >= 2, "expected at least two atoms"
+
+          ids = {n["atom_id"] for n in nodes}
+          assert any(len(n.get("family_membership", [])) >= 2 for n in nodes), "multi-family atom missing"
+
+          for node in nodes:
+              aid = node["atom_id"]
+              expected = "neural://" + hashlib.sha256(aid.encode()).hexdigest()[:32]
+              assert node["neural_endpoint"] == expected, f"non-deterministic endpoint for {aid}"
+              assert "family_membership" in node and node["family_membership"]
+              assert "evidence_state" in node
+              assert "verification_state" in node
+
+          assert any(e["type"] == "MEMBER_OF" for e in edges), "MEMBER_OF edge missing"
+          assert any(e["type"] == "CROSS_FAMILY" for e in edges), "CROSS_FAMILY edge missing"
+          assert any(e["type"] == "CHILD_OF" for e in edges), "CHILD_OF edge missing"
+
+          for edge in edges:
+              assert edge["source"] in ids, f"unknown edge source: {edge}"
+              if edge["type"] != "MEMBER_OF":
+                  assert edge["target"] in ids, f"unknown graph target: {edge}"
+
+          print("WANGA virtualization POC: PASS")
+          print(f"atoms={len(nodes)} edges={len(edges)}")
+          print("verified chain: atom -> multi-family -> cross-family -> endpoint -> evidence/verification -> graph")
+          PY
+
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wanga-virtualization-poc-output
+          path: wanga_virtualization_output.json
