@@ -4,7 +4,7 @@
 
 WANGA is one architecture of architectures, not a collection of independent architectures.
 
-The layers are composed like transparent slides: each layer preserves its own function while becoming part of a single operational structure. The active relationships between layers are not permanently fixed.
+The layers are composed like transparent slides: each layer preserves its own function while becoming part of a single operational structure. The active relationships between architectural layers are not permanently fixed.
 
 ## Core principle
 
@@ -12,7 +12,7 @@ WANGA begins from requirement, not inherited structure:
 
 Problem / Need → Requirement → Possibility → Required Structure → System
 
-The architecture is therefore dynamic because its **core is dynamic** and because relationships between architectural layers may change during operation.
+The architecture is dynamic because its **core is dynamic**: the relationships between architectural layers can change during operation as requirements, constraints, evidence, and system conditions change.
 
 ## Unified model
 
@@ -22,14 +22,14 @@ Human Requirement
 → Required Structure
 → Architecture of Architectures
 → Domain Architectures
-→ Operational Relationships
+→ Dynamic Operational Relationships
 → Execution
 → Evidence / Observation
 → Learning
 → Requirement Change
 → Reconfiguration
 
-### Domain layers
+### Domain architectures
 
 - Human potential and freedom
 - Philosophy / conceptual framework
@@ -51,15 +51,13 @@ These are not a fixed hierarchy. Their **interfaces, dependencies, authority, in
 
 ## Overlay principle
 
-Each architecture is a semantic layer over the others:
+Each architecture is a semantic layer over the others, like transparent architectural slides being placed over one another. The combined layers form one operational architecture while retaining their distinct functions.
 
-Layer A + Layer B + Layer C + ... = one operational architecture
+A change in one layer can therefore change the required relationships of other layers without requiring the whole system to remain a permanently fixed hierarchy.
 
-A change in one layer can therefore change the required relationships of other layers without requiring the entire system to be treated as a permanently fixed hierarchy.
+## Dynamic relational core
 
-## Dynamic core
-
-The dynamic core performs:
+The dynamic core operates on relationships as well as structures. It can perform:
 
 1. requirement identification
 2. structural analysis
@@ -72,7 +70,23 @@ The dynamic core performs:
 9. learning
 10. reconfiguration
 
-The key variable is not only the architecture itself, but the **relationship graph between architectures**.
+The key variable is therefore not only the architecture itself, but the **relationship graph between architectures**.
+
+## Rational Logic — separate foundational project
+
+WANGA is intended to be managed through a dedicated **Rational Logic** capability responsible for reasoning over requirements, constraints, evidence, structures, and relationships across the unified architecture.
+
+The Rational Logic core is **not part of this WANGA implementation** and is not claimed here as an existing or completed component. Its development is a separate project and will be completed in that project rather than recreated or embedded here prematurely.
+
+The special Rational Logic intellectual property is intentionally treated as a distinct, protected IP asset. It is not designed as a generally accessible product or as an IP asset to be sold directly. **Its derived technologies, implementations, applications, and other legitimate derivatives may constitute the commercial layer.**
+
+WANGA therefore records the future dependency without exposing or claiming the existence of the underlying proprietary core:
+
+WANGA Architecture of Architectures
+→ Rational Logic capability (separate project / protected IP)
+→ management of requirements, constraints, evidence and dynamic relationships
+
+Formal integration is a future step that depends on the completion and authorized use of that separate project.
 
 ## WANGA-X relationship
 
@@ -109,8 +123,8 @@ What changes is the **configuration of relationships**, not the abandonment of c
 
 WANGA = Requirements + Possibility + Derived Structures + Dynamic Relationships + Execution + Evidence + Learning
 
-The architecture is therefore a system capable of **architecting its own relationships in response to changing requirements**.
+The architecture is therefore a system capable of **reconfiguring relationships between architectures in response to changing requirements**, while preserving defined invariants.
 
 ## Research status
 
-This document defines the conceptual architecture. It does not claim that every mechanism described here has already been empirically validated or fully implemented.
+This document defines the conceptual architecture and records the Rational Logic dependency as a separate protected-IP project. It does not claim that the Rational Logic core currently exists, is publicly accessible, or has been empirically validated or fully implemented.
