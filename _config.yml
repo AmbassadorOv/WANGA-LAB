@@ -1,0 +1,13 @@
+title: "WANGA Copernicus Research"
+description: "Source-controlled research archive for the WANGA Copernicus project."
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: /articles/:categories/:year/:month/:day/:title/
+collections:
+  research:
+    output: true
+    permalink: /research/:path/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
