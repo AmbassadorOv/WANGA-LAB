@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA System Governance Object",
+  "type": "object",
+  "required": ["id", "type", "status", "source_refs", "links"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "type": {"type": "string", "enum": ["asset","claimant","document","transaction","insurance","risk_transfer","institution","verification","dependency","continuity","audit"]},
+    "status": {"type": "string", "enum": ["UNKNOWN","DECLARED","PARTIALLY_VERIFIED","VERIFIED","CHANGED","CONTESTED","EXPIRED"]},
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "links": {"type": "array", "items": {"type": "object","required": ["relation","target"],"properties": {"relation":{"type":"string"},"target":{"type":"string"}},"additionalProperties":false}},
+    "verification_refs": {"type": "array", "items": {"type": "string"}},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}
