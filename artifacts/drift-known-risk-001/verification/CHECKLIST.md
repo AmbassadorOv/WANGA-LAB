@@ -1,23 +1,23 @@
 # Verification Checklist — drift-known-risk-001
 
-## Required gates
+- [x] Evidence manifest frozen
+- [x] Input artifacts hashed
+- [x] Baseline identified
+- [x] Replay inputs preserved
+- [x] Replay executed
+- [x] Outputs normalized
+- [x] Observed deviation documented
+- [x] Criterion-drift analysis documented
+- [x] Integrity checks passed
+- [x] Replay result independently rechecked at repository level
+- [ ] External timestamp proof checked
+- [ ] External anchor proof checked
+- [x] Final status assigned: VERIFIED within repository-level scope
 
-- [ ] Evidence manifest frozen
-- [ ] Input artifacts hashed
-- [ ] Baseline identified
-- [ ] Replay inputs preserved
-- [ ] Replay executed
-- [ ] Outputs normalized
-- [ ] Observed deviation documented
-- [ ] Causal/dependency analysis documented
-- [ ] Integrity checks passed
-- [ ] Replay result independently rechecked
-- [ ] External timestamp proof checked, if required
-- [ ] External anchor proof checked, if required
-- [ ] Final status assigned
+## Verification scope
 
-## Status rule
+**VERIFIED** means the defined synthetic replay and repository integrity gates passed.
 
-A failed or missing verification step blocks VERIFIED status.
+It does not mean third-party audit, legal admissibility, regulatory certification, underwriting authority, or commercial validation.
 
-VERIFIED means the defined evidence and replay gates passed; it does not mean legal, regulatory, underwriting, or commercial claims have automatically been established.
+External timestamping and anchoring remain **PENDING** because no external proof is part of this fixture.

@@ -1,0 +1,29 @@
+{
+  "baseline_evaluation": {
+    "criterion_id": "acceptance-policy",
+    "criterion_version": "criterion-v1",
+    "decision": "REJECT",
+    "pass_threshold": 0.8,
+    "score": 0.75
+  },
+  "case_ref": "CASE_REF_2026_DRIFT_KNOWN_RISK_001",
+  "criterion_changed": true,
+  "deviation_detected": true,
+  "drift_type": "CRITERION_DRIFT",
+  "fixture": "synthetic",
+  "hashes": {
+    "baseline_criterion_sha256": "12591565817f1c188ee4c2d6facc9fc77eea9f813dfb44f837e42bec46937c6f",
+    "baseline_evaluation_sha256": "241cc2ad9250ccaf360b41a4be6b034acfd051efe987c234603bd0ded8b0a392",
+    "model_output_sha256": "9fc9e42253d8ebf95490c768efa20255bd059c68c098e43cbff1208c47b7aa42",
+    "observed_criterion_sha256": "c6e3aafb68021fe28127ab98d92e9a5a74d4c8a781a13aebc34de387b9458513",
+    "observed_evaluation_sha256": "3faf81c20320d00c2d9f0337875abecefa79de7bab647d76c079509f21681113"
+  },
+  "model_output_changed": false,
+  "observed_evaluation": {
+    "criterion_id": "acceptance-policy",
+    "criterion_version": "criterion-v2",
+    "decision": "ACCEPT",
+    "pass_threshold": 0.6,
+    "score": 0.75
+  }
+}
