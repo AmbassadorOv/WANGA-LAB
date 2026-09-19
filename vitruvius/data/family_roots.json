@@ -1,0 +1,94 @@
+{
+  "version": "0.1.0",
+  "families": [
+    {
+      "id": "NEURAL",
+      "subfamilies": [
+        "FOUNDATION",
+        "TRANSFORMER",
+        "NEURO_SYMBOLIC",
+        "REINFORCEMENT",
+        "VECTOR_SYMBOLIC"
+      ],
+      "wanga_targets": [
+        "MODEL_FABRIC",
+        "NTM",
+        "TRANSLATION",
+        "COMPUTATIONAL_ENGINE"
+      ]
+    },
+    {
+      "id": "LOGIC",
+      "subfamilies": [
+        "FORMAL_REASONING",
+        "THEOREM_PROVING",
+        "SYMBOLIC_REASONING",
+        "CONSTRAINT_SOLVING"
+      ],
+      "wanga_targets": [
+        "RATIONAL_LOGIC_BOUNDARY",
+        "TRANSLATION",
+        "VERIFICATION"
+      ]
+    },
+    {
+      "id": "SYSTEMS",
+      "subfamilies": [
+        "DISTRIBUTED",
+        "CLOUD",
+        "SYSTEM_ARCHITECTURE",
+        "ACCELERATED_COMPUTE"
+      ],
+      "wanga_targets": [
+        "COMPUTATIONAL_ENGINE",
+        "WANGA_OS",
+        "VITRUVIUS"
+      ]
+    },
+    {
+      "id": "GOVERNANCE",
+      "subfamilies": [
+        "AI_GOVERNANCE",
+        "POLICY",
+        "CONTROL_PLANE",
+        "SAFETY_GOVERNANCE"
+      ],
+      "wanga_targets": [
+        "POLITEIA",
+        "WANGA_OS",
+        "VITRUVIUS"
+      ]
+    },
+    {
+      "id": "MEMORY",
+      "subfamilies": [
+        "KNOWLEDGE_GRAPH",
+        "VECTOR_DATABASE",
+        "SEMANTIC_MEMORY",
+        "MODEL_REGISTRY",
+        "PROVENANCE"
+      ],
+      "wanga_targets": [
+        "LINEAGE_KNOWLEDGE",
+        "WORK_MEMORY",
+        "EVIDENCE_PROVENANCE",
+        "MODEL_FABRIC"
+      ]
+    },
+    {
+      "id": "ORCHESTRATION",
+      "subfamilies": [
+        "MULTI_AGENT",
+        "WORKFLOW",
+        "RUNTIME",
+        "EXECUTION_CONTROL"
+      ],
+      "wanga_targets": [
+        "WANGA_OS",
+        "DIGITAL_MODEL_AGENTS",
+        "NTM",
+        "VITRUVIUS"
+      ]
+    }
+  ]
+}
