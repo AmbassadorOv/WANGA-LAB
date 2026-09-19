@@ -1,6 +1,20 @@
-# WANGA-LAB — Imperial Audit Evidence Layer
+# WANGA-LAB — Independent AI Evidence, Drift Forensics & Verification
 
-This repository contains the Imperial Audit evidence-integrity layer. The evidence layer records exactly which inputs produced an evidence package and whether the package can be reproduced.
+WANGA-LAB is the systems architecture and evidence-integrity layer for **AI drift forensics, provenance preservation, reconstruction, and independent verification**.
+
+**Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
+
+## Core distinction
+
+WANGA-LAB is not primarily an AI engine.
+
+Its public role is to provide an **independent evidence layer around AI systems**:
+
+**Evidence Protocol → Drift Artifact → Verification Chain → Governance Interface**
+
+The system under examination may be internal, external, proprietary, open-source, or supplied by another organization.
+
+The purpose is to establish what happened, preserve relevant evidence, reconstruct the event, and verify the resulting finding without treating the evaluated model as the sole authority on its own correction or validity.
 
 ## Service scope
 
@@ -8,27 +22,91 @@ WANGA-LAB / Drift Forensics is intended to provide independent technical evidenc
 
 The service is an evidence and forensic-analysis layer. It does not itself provide insurance coverage, underwriting, a financial guarantee, solvency assurance, or a regulated insurance product. Commercial and regulatory classification must be reviewed for the applicable jurisdiction before customer use.
 
-## Components
+## Architectural chain
 
-- deterministic S1/S2/S3 + MASTER SHA-256 chain
-- canonical JSON output
-- contract SHA-256 binding
-- RFC 3161 timestamp adapter using OpenSSL
-- OpenTimestamps/Bitcoin anchor manifest
-- integrity tests proving that changed input invalidates the chain
-- GitHub Actions verification on push and pull request
-- Israeli legal-review and notary submission templates
+**WANGA OS → Global Work Manager → Model Fabric → Digital Model Agents → Providers / Runtimes → Evidence & Provenance → Drift Forensics & Verification → Rational Logic ↔ Neural Thinking Machine → Work Memory**
 
-## Legal status
+Rational Logic is a protected reasoning component in this architecture. Its implementation is intentionally outside the public research corpus. See the protected-IP boundary documentation above.
 
-Software cannot make a commercial product legally proven by itself. Hashes, timestamps, blockchain anchors, electronic signatures and notarization address different evidentiary questions. Contract enforceability, regulatory classification, arbitration, payment/refund terms and financial representations require transaction-specific legal review.
+## Evidence and verification
 
-The Israeli Electronic Signature Law recognizes qualifying electronic signatures and provides statutory evidentiary effects; the exact signing method therefore matters.
+A representative verification chain is:
 
-The Israeli insurance-supervision law is in force, so calling a service consulting does not by itself determine its regulatory classification.
+**Canonical Representation → SHA-256 Integrity → Timestamp Evidence → Deterministic Replay → Comparison → Verification Result**
 
-## Verification
+The exact mechanism set depends on the case. Hashes, timestamps, anchors, signatures, replay and verification answer different evidentiary questions and must not be treated as interchangeable.
 
-Run `python -m pytest -q`.
+External timestamping or anchoring is not treated as complete until actual proof is received and checked.
 
-RFC 3161 output must be retained together with the certificate material needed for independent verification. External anchoring is not treated as complete until an actual receipt/proof is received and verified.
+## Current empirical fixture
+
+**CASE_REF_2026_DRIFT_KNOWN_RISK_001**
+
+Current evidence status: **PLANNED**
+
+The canonical case package provides the structure for:
+
+- case metadata and scope;
+- evidence inventory and hashes;
+- replay inputs and instructions;
+- normalized outputs;
+- verification and integrity checks.
+
+A planned fixture is not represented as a completed client investigation, legal finding, regulatory certification, underwriting decision, or commercial performance result.
+
+## Drift forensics
+
+The central research sequence is:
+
+**Baseline → Observation → Drift Detection → Evidence Preservation → Reconstruction → Causal / Dependency Analysis → Attribution → Risk Quantification → Intervention → Verification**
+
+The evaluation chain is:
+
+**Model → Answer → Evaluation → Correction → Criterion Change → Re-evaluation**
+
+Research distinguishes point error from changes in definition, premise, inference, criteria, question fidelity, evidence/source fidelity, terminology, and response trajectory.
+
+## Implemented evidence infrastructure
+
+The repository contains implemented evidence-integrity and workflow components, including:
+
+- canonical representations;
+- SHA-256 integrity chains;
+- contract/hash binding;
+- timestamp adapters;
+- verification tests;
+- deterministic replay fixtures;
+- CI-based verification workflows;
+- insurer-intake triage and controlled case-queue mechanisms.
+
+Implementation existence does not by itself establish external verification.
+
+## Operating discipline
+
+The preferred engineering sequence is:
+
+**READ → CLAIM → IMPLEMENT → TEST → VERIFY → COMMIT → PR → REVIEW**
+
+No component is treated as complete merely because code exists.
+
+Evidence states remain explicit:
+
+**BUILT · SPECIFIED · PROTOTYPED · TESTED · VERIFIED · PLANNED · HYPOTHETICAL**
+
+## Legal and governance boundary
+
+Software and cryptographic evidence mechanisms do not automatically establish legal admissibility, regulatory status, underwriting authority, or contractual enforceability.
+
+WANGA-LAB therefore keeps technical evidence, governance research, legal review, institutional authority, and protected intellectual property as distinct layers.
+
+## Public / protected model
+
+The public research layer documents:
+
+**methodology · architecture · provenance · drift analysis · verification interfaces · reproducible evidence artifacts**
+
+The protected layer may retain:
+
+**implementation details · algorithms · mechanisms · proprietary technical material**
+
+This separation is intentional. The public system documents the evidence capability without publishing the protected reasoning implementation.
