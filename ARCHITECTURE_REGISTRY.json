@@ -238,6 +238,14 @@
       "scope": "PUBLIC",
       "status": "SPECIFIED",
       "source": "docs/ARCHITECTURE/ARCHITECTURE_INTEGRATION_MATRIX.md"
+    },
+    {
+      "id": "GLOBAL-GITHUB-FAMILY-MAP",
+      "name": "Global GitHub Architecture Family Map",
+      "parent": "EXTERNAL-ARCHITECTURE-LINEAGES",
+      "scope": "PUBLIC",
+      "status": "SPECIFIED",
+      "source": "docs/ARCHITECTURE/GLOBAL_GITHUB_ARCHITECTURE_FAMILY_MAP.md"
     }
   ]
 }
