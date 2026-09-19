@@ -1,28 +1,203 @@
 {
-  "schema_version": "0.2.1",
+  "schema_version": "0.2.2",
   "architecture_root": "GLOBAL-SCIENCE-NETWORK",
   "repository": "AmbassadorOv/WANGA-LAB",
   "architectures": [
-    {"id":"GLOBAL-SCIENCE-NETWORK","name":"Global Science Network","parent":null,"scope":"PUBLIC","status":"PLANNED"},
-    {"id":"SCI-COMMONS","name":"Scientific Commons","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"PLANNED"},
-    {"id":"RESEARCH-ARCH","name":"Research Architecture","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"EXISTING","source":"RESEARCH_ARCHITECTURE_MAP.md"},
-    {"id":"AI-DRIFT-FORENSICS","name":"AI Drift Forensics","parent":"GLOBAL-DRIFT-NETWORK","scope":"SERVICE","status":"EXISTING","source":"ai-drift-forensics/"},
-    {"id":"GLOBAL-DRIFT-NETWORK","name":"Global Drift Network","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"BUILDING","source":"ai-drift-forensics/global-drift-network/"},
-    {"id":"INTERNATIONAL-DRIFT-PROPAGATION","name":"International Drift Propagation","parent":"GLOBAL-DRIFT-NETWORK","scope":"PUBLIC","status":"BUILDING","source":"ai-drift-forensics/global-drift-network/international-drift-propagation/"},
-    {"id":"EVIDENCE-COMMONS","name":"Evidence Commons","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"BUILDING","source":"publication/GOVERNMENT_EVIDENCE_REGISTER.schema.json"},
-    {"id":"EXECUTION-FABRIC","name":"Research Execution Fabric","parent":"GLOBAL-SCIENCE-NETWORK","scope":"INSTITUTIONAL","status":"BUILDING","source":"ai-drift-forensics/global-drift-network/orchestrator/"},
-    {"id":"QUALITY-GATE","name":"Scientific Quality Gate","parent":"EXECUTION-FABRIC","scope":"INSTITUTIONAL","status":"EXISTING","source":"ai-drift-forensics/global-drift-network/orchestrator/QUALITY_GATE.md"},
-    {"id":"KNOWLEDGE-PUBLICATION","name":"Knowledge and Publication","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"PLANNED"},
-    {"id":"GOV-DOCUMENT-CONTROL","name":"Government Document Control","parent":"KNOWLEDGE-PUBLICATION","scope":"INSTITUTIONAL","status":"EXISTING","source":"ai-drift-forensics/global-drift-network/publication/GOVERNMENT_DOCUMENT_CONTROL.md"},
-    {"id":"FUNDING-COLLABORATION","name":"Funding and Collaboration","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"PLANNED"},
-    {"id":"INSTITUTIONAL-NETWORK","name":"Institutional Research Network","parent":"GLOBAL-SCIENCE-NETWORK","scope":"INSTITUTIONAL","status":"FUTURE"},
-    {"id":"PUBLIC-TOWN-SQUARE","name":"Scientific Town Square","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PUBLIC","status":"PLANNED"},
-    {"id":"COMPUTE-FABRIC","name":"Research Compute Fabric","parent":"GLOBAL-SCIENCE-NETWORK","scope":"INSTITUTIONAL","status":"BUILDING"},
-    {"id":"ARK-KERNEL","name":"ARK Kernel","parent":"COMPUTE-FABRIC","scope":"EXPERIMENTAL","status":"EXISTING","source":"ark_kernel.py"},
-    {"id":"GSRC","name":"Global Scientific Research Computer","parent":"COMPUTE-FABRIC","scope":"EXPERIMENTAL","status":"CONCEPT"},
-    {"id":"QUANTIC-OS","name":"Quantic OS","parent":"COMPUTE-FABRIC","scope":"EXPERIMENTAL","status":"CONCEPT"},
-    {"id":"AI231-EAQP","name":"AI²³¹ / EAQP Research Stack","parent":"COMPUTE-FABRIC","scope":"EXPERIMENTAL","status":"CONCEPT"},
-    {"id":"FUTURE-PRIVATE","name":"Private / Specialized Extensions","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PRIVATE","status":"FUTURE"},
-    {"id":"FUTURE-ECONOMIC","name":"Optional Future Economic / Digital Asset Layer","parent":"GLOBAL-SCIENCE-NETWORK","scope":"PRIVATE","status":"FUTURE"}
+    {
+      "id": "GLOBAL-SCIENCE-NETWORK",
+      "name": "Global Science Network",
+      "parent": null,
+      "scope": "PUBLIC",
+      "status": "PLANNED"
+    },
+    {
+      "id": "SCI-COMMONS",
+      "name": "Scientific Commons",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "PLANNED"
+    },
+    {
+      "id": "RESEARCH-ARCH",
+      "name": "Research Architecture",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "EXISTING",
+      "source": "RESEARCH_ARCHITECTURE_MAP.md"
+    },
+    {
+      "id": "AI-DRIFT-FORENSICS",
+      "name": "AI Drift Forensics",
+      "parent": "GLOBAL-DRIFT-NETWORK",
+      "scope": "SERVICE",
+      "status": "EXISTING",
+      "source": "ai-drift-forensics/"
+    },
+    {
+      "id": "GLOBAL-DRIFT-NETWORK",
+      "name": "Global Drift Network",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "BUILDING",
+      "source": "ai-drift-forensics/global-drift-network/"
+    },
+    {
+      "id": "INTERNATIONAL-DRIFT-PROPAGATION",
+      "name": "International Drift Propagation",
+      "parent": "GLOBAL-DRIFT-NETWORK",
+      "scope": "PUBLIC",
+      "status": "BUILDING",
+      "source": "ai-drift-forensics/global-drift-network/international-drift-propagation/"
+    },
+    {
+      "id": "EVIDENCE-COMMONS",
+      "name": "Evidence Commons",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "BUILDING",
+      "source": "publication/GOVERNMENT_EVIDENCE_REGISTER.schema.json"
+    },
+    {
+      "id": "EXECUTION-FABRIC",
+      "name": "Research Execution Fabric",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "ai-drift-forensics/global-drift-network/orchestrator/"
+    },
+    {
+      "id": "QUALITY-GATE",
+      "name": "Scientific Quality Gate",
+      "parent": "EXECUTION-FABRIC",
+      "scope": "INSTITUTIONAL",
+      "status": "EXISTING",
+      "source": "ai-drift-forensics/global-drift-network/orchestrator/QUALITY_GATE.md"
+    },
+    {
+      "id": "KNOWLEDGE-PUBLICATION",
+      "name": "Knowledge and Publication",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GOV-DOCUMENT-CONTROL",
+      "name": "Government Document Control",
+      "parent": "KNOWLEDGE-PUBLICATION",
+      "scope": "INSTITUTIONAL",
+      "status": "EXISTING",
+      "source": "ai-drift-forensics/global-drift-network/publication/GOVERNMENT_DOCUMENT_CONTROL.md"
+    },
+    {
+      "id": "FUNDING-COLLABORATION",
+      "name": "Funding and Collaboration",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "PLANNED"
+    },
+    {
+      "id": "INSTITUTIONAL-NETWORK",
+      "name": "Institutional Research Network",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "FUTURE"
+    },
+    {
+      "id": "PUBLIC-TOWN-SQUARE",
+      "name": "Scientific Town Square",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PUBLIC",
+      "status": "PLANNED"
+    },
+    {
+      "id": "COMPUTE-FABRIC",
+      "name": "Research Compute Fabric",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING"
+    },
+    {
+      "id": "ARK-KERNEL",
+      "name": "ARK Kernel",
+      "parent": "COMPUTE-FABRIC",
+      "scope": "EXPERIMENTAL",
+      "status": "EXISTING",
+      "source": "ark_kernel.py"
+    },
+    {
+      "id": "GSRC",
+      "name": "Global Scientific Research Computer",
+      "parent": "COMPUTE-FABRIC",
+      "scope": "EXPERIMENTAL",
+      "status": "CONCEPT"
+    },
+    {
+      "id": "QUANTIC-OS",
+      "name": "Quantic OS",
+      "parent": "COMPUTE-FABRIC",
+      "scope": "EXPERIMENTAL",
+      "status": "CONCEPT"
+    },
+    {
+      "id": "AI231-EAQP",
+      "name": "AI²³¹ / EAQP Research Stack",
+      "parent": "COMPUTE-FABRIC",
+      "scope": "EXPERIMENTAL",
+      "status": "CONCEPT"
+    },
+    {
+      "id": "FUTURE-PRIVATE",
+      "name": "Private / Specialized Extensions",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PRIVATE",
+      "status": "FUTURE"
+    },
+    {
+      "id": "FUTURE-ECONOMIC",
+      "name": "Optional Future Economic / Digital Asset Layer",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "PRIVATE",
+      "status": "FUTURE"
+    },
+    {
+      "id": "LINEAGE-KNOWLEDGE-GOVERNANCE",
+      "name": "Lineage Knowledge and Governance",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md"
+    },
+    {
+      "id": "RESEARCH-EVOLUTION-ARCH",
+      "name": "Research Evolution Architecture",
+      "parent": "LINEAGE-KNOWLEDGE-GOVERNANCE",
+      "scope": "INSTITUTIONAL",
+      "status": "EXISTING",
+      "source": "docs/ARCHITECTURE/RESEARCH_EVOLUTION_ARCHITECTURE.md"
+    },
+    {
+      "id": "ARCHITECTURE-FAMILY-LINEAGE",
+      "name": "Architecture Family Lineage",
+      "parent": "LINEAGE-KNOWLEDGE-GOVERNANCE",
+      "scope": "INSTITUTIONAL",
+      "status": "EXISTING",
+      "source": "docs/ARCHITECTURE/ARCHITECTURE_FAMILY_LINEAGE.md"
+    },
+    {
+      "id": "WANGA-LINEAGE-TREE",
+      "name": "WANGA Lineage Tree",
+      "parent": "LINEAGE-KNOWLEDGE-GOVERNANCE",
+      "scope": "INSTITUTIONAL",
+      "status": "EXISTING",
+      "source": "docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md"
+    },
+    {
+      "id": "WANGA-POLITEIA",
+      "name": "WANGA Politeia",
+      "parent": "LINEAGE-KNOWLEDGE-GOVERNANCE",
+      "scope": "INSTITUTIONAL",
+      "status": "BUILDING",
+      "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md"
+    }
   ]
 }
