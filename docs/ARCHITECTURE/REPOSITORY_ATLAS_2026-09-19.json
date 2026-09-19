@@ -1,0 +1,74 @@
+{
+  "version": "2026-09-19",
+  "authority": "WANGA-LAB",
+  "rule": "Preserve evidence; classify before moving; no destructive rewrite by automation.",
+  "groups": {
+    "CORE": [
+      "WANGA-LAB",
+      "AmbassadorOv"
+    ],
+    "RESEARCH": [
+      "AI231.meta.io",
+      "Nanomathematics",
+      "MNM",
+      "Qualia",
+      "-logicl-neural-order"
+    ],
+    "AI_INFRA": [
+      "ai-agent-terraform",
+      "multi-agent-orchestator",
+      "skills",
+      "chatgpt-scientific-publications-extension",
+      "python-genai",
+      "openai_tiktoken"
+    ],
+    "SOURCE_UPSTREAM": [
+      "mujoco",
+      "mermaid",
+      "mediapipe",
+      "desktop",
+      "eslint",
+      "googleapis",
+      "docs",
+      "generative-ai-docs",
+      "vscode-docs",
+      "vscode-azure-blockchain-ethereum",
+      "platform-samples",
+      "extensions",
+      "cookbook",
+      "unetbootin",
+      "awesome-chatgpt-prompts"
+    ],
+    "GOVERNANCE_AND_INSTITUTIONAL": [
+      "World-Party-Federation-Branches-managers",
+      "think-thank-you-of-cyber-Department",
+      "TTTTproject-un.govt",
+      "TTTT-0.0.0.0.1",
+      "ARK-KERNEL-OVERSIGHT",
+      "vqbshtfsprojects.org",
+      "https-AmbassadorOv.io"
+    ],
+    "LEGACY_OR_EXPERIMENTAL": [
+      "-from-Corsican-",
+      "fluffy-parakeet",
+      "branches-",
+      "stunning-octo-garbanzo",
+      "glowing-octo-waddle",
+      "O-Ms",
+      "-",
+      "-artificial-y",
+      "GOOGLE_API_KEY",
+      "test-notebook-links"
+    ],
+    "UNKNOWN_REQUIRES_REVIEW": []
+  },
+  "handling": {
+    "CORE": "authoritative architecture and public identity",
+    "RESEARCH": "research artifacts and scientific compositions",
+    "AI_INFRA": "reusable execution/infrastructure components",
+    "SOURCE_UPSTREAM": "forks/vendor/upstream mirrors; do not rewrite as original research",
+    "GOVERNANCE_AND_INSTITUTIONAL": "institutional/governance concepts; preserve historical artifacts and provenance",
+    "LEGACY_OR_EXPERIMENTAL": "retain, inventory and inspect before any archive/merge/rename",
+    "UNKNOWN_REQUIRES_REVIEW": "manual architectural review"
+  }
+}
