@@ -27,13 +27,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run Vitruvius tests
+        run: |
+          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py tests/test_vitruvius_branch_orchestrator.py
+
       - name: Build Vitruvius research index
         run: python scripts/vitruvius_automation_engine.py --write
-
-      - name: Run Vitruvius research tests
-        run: |
-          python -m pip install --upgrade pip pytest
-          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py
 
       - name: Census and plan branch architecture
         env:
