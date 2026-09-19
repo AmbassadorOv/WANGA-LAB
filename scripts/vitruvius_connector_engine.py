@@ -110,6 +110,8 @@ def main():
     ap.add_argument("--target-repo", default=os.getenv("GITHUB_REPOSITORY", "AmbassadorOv/WANGA-LAB"))
     ap.add_argument("--target-branch", default=os.getenv("GITHUB_BASE_REF", "main"))
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--integrate", action="append", default=[], help="repo:path:target_path:architecture_id")
+    ap.add_argument("--integration-branch", default="", help="Base branch for integration proposals")
     args = ap.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN")
@@ -143,10 +145,37 @@ def main():
         print(json.dumps(report, indent=2, ensure_ascii=False))
         return
 
-    # Integration is intentionally proposal-first. The next stage consumes this report
-    # and creates bounded PRs only after explicit allowlisting.
+    integrations = []
+    for spec in args.integrate:
+        parts = spec.split(":", 3)
+        if len(parts) != 4:
+            raise SystemExit("Integration format: repo:path:target_path:architecture_id")
+        src_repo, src_path, target_path, arch_id = parts
+        if protected(src_path) or protected(target_path):
+            raise SystemExit("Protected implementation cannot be copied")
+        repo_meta = get_json(f"/repos/{src_repo}", token)
+        src_ref = repo_meta["default_branch"]
+        source = get_file(src_repo, src_path, src_ref, token)
+        if not isinstance(source, dict) or "content" not in source:
+            raise SystemExit(f"Source file not readable: {src_repo}:{src_path}")
+        content = base64.b64decode(source["content"]).decode("utf-8")
+        base = args.integration_branch or args.target_branch
+        suffix = re.sub(r"[^a-z0-9-]+", "-", f"{arch_id}-{src_repo.split('/')[-1]}-{src_path.split('/')[-1]}".lower()).strip("-")
+        head = f"agent/vitruvius/integrate-{suffix}"[:120]
+        base_ref = get_json(f"/repos/{args.target_repo}/git/ref/heads/{quote(base, safe='')}", token)
+        base_sha = base_ref["object"]["sha"]
+        api(f"/repos/{args.target_repo}/git/refs", token, "POST", {"ref": f"refs/heads/{head}", "sha": base_sha})
+        blob = api(f"/repos/{args.target_repo}/git/blobs", token, "POST", {"content": base64.b64encode(content.encode()).decode(), "encoding": "base64"})
+        base_tree = get_json(f"/repos/{args.target_repo}/git/commits/{base_sha}", token)["tree"]["sha"]
+        tree = api(f"/repos/{args.target_repo}/git/trees", token, "POST", {"base_tree": base_tree, "tree": [{"path": target_path, "mode": "100644", "type": "blob", "sha": blob["sha"]}]})
+        commit = api(f"/repos/{args.target_repo}/git/commits", token, "POST", {"message": f"vitruvius: integrate {src_repo}:{src_path}", "tree": tree["sha"], "parents": [base_sha]})
+        api(f"/repos/{args.target_repo}/git/refs/heads/{quote(head, safe='')}", token, "PATCH", {"sha": commit["sha"], "force": False})
+        pr = api(f"/repos/{args.target_repo}/pulls", token, "POST", {"title": f"vitruvius: integrate {arch_id} artifact", "head": head, "base": base, "body": f"Vitruvius integration proposal. Source: {src_repo}:{src_path}. Target architecture: {arch_id}. Target path: {target_path}. Requires review and verification; no automatic merge."})
+        integrations.append({"source":f"{src_repo}:{src_path}","target":target_path,"architecture":arch_id,"branch":head,"pull_request":pr.get("html_url"),"status":"PROPOSED"})
+    report["integrations"] = integrations
+    with open("vitruvius/CONNECTOR_DISCOVERY_REPORT.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
     print(json.dumps(report, indent=2, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
