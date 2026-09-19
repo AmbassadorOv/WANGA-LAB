@@ -1,8 +1,9 @@
-import importlib.util
+import sys
 from pathlib import Path
+
 ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location("fabric",ROOT/"scripts/vitruvius_branch_fabric.py")
-m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+sys.path.insert(0, str(ROOT / "scripts"))
+import vitruvius_branch_fabric as m
 
 def test_fabric_exceeds_one_million_nodes():
     c=m.counts(57,2048,32)

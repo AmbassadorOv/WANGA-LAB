@@ -1,11 +1,10 @@
 import json
+import sys
 from pathlib import Path
-import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location("nan", ROOT / "scripts" / "wanga_neural_architecture_network.py")
-nan = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(nan)
+sys.path.insert(0, str(ROOT / "scripts"))
+import wanga_neural_architecture_network as nan
 
 def test_network_loads_manifest():
     manifest = json.loads((ROOT / "vitruvius" / "ARCHITECTURE_GRAPH_MANIFEST_V1.json").read_text())
