@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.2",
+  "schema_version": "0.2.3",
   "architecture_root": "GLOBAL-SCIENCE-NETWORK",
   "repository": "AmbassadorOv/WANGA-LAB",
   "architectures": [
@@ -198,6 +198,31 @@
       "scope": "INSTITUTIONAL",
       "status": "BUILDING",
       "source": "docs/ARCHITECTURE/WANGA_POLITEIA.md"
+    },
+    {
+      "id": "VITRUVIUS-ORCHESTRATOR",
+      "name": "Vitruvius Orchestrator",
+      "parent": "GLOBAL-SCIENCE-NETWORK",
+      "scope": "INSTITUTIONAL",
+      "status": "SPECIFICATION",
+      "source": "docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.md",
+      "position": "META-ARCHITECTURE_BEFORE_RATIONAL_LOGIC"
+    },
+    {
+      "id": "VITRUVIUS-LOGIC-SELECTION-BOUNDARY",
+      "name": "Vitruvius Logic Selection Boundary",
+      "parent": "VITRUVIUS-ORCHESTRATOR",
+      "scope": "INSTITUTIONAL",
+      "status": "SPECIFICATION",
+      "source": "docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.ASCII.txt"
+    },
+    {
+      "id": "VITRUVIUS-CANDIDATE-MODEL-SPACE",
+      "name": "Vitruvius Candidate Model Space",
+      "parent": "VITRUVIUS-ORCHESTRATOR",
+      "scope": "INSTITUTIONAL",
+      "status": "SPECIFICATION",
+      "source": "docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.md"
     }
   ]
 }
