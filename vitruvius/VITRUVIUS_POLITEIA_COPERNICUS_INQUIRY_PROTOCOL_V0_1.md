@@ -44,21 +44,21 @@ Entry status:
 
 Only ACCEPTED permits progression to the five-generation review.
 
-## 3. Five-Generation Stability Review
+## 3. Recursive Five-Generation Stability Review
 
-After the entry gate is ACCEPTED, Vitruvius evaluates five successive lineage generations.
+After the entry gate is ACCEPTED, Vitruvius does not perform a single linear five-generation check. The check is recursive across the lineage graph.
 
-Canonical sequence:
+Every accepted lineage node becomes the root of its own backward review. For each node, its parent/ancestor links are expanded and each resulting node must itself satisfy the same entry/stability condition, subject to the defined five-generation depth.
 
-ENTRY
-→ GENERATION 1
-→ GENERATION 2
-→ GENERATION 3
-→ GENERATION 4
-→ GENERATION 5
-→ LINEAGE STABILITY RESULT
+Canonical rule:
 
-For every generation, record:
+`NODE[n] → PARENTS[n-1] → PARENTS[n-2] → ... → GENERATION[n-5]`
+
+and, recursively, every discovered parent node is itself evaluated under the same five-generation rule.
+
+Thus, a generation does not merely contribute one record. Each discovered ancestor creates a new verification path extending five generations backward. The resulting structure is a branching lineage graph rather than a single five-row chain.
+
+For every generation/node, record:
 
 - identity;
 - lineage relation;
@@ -98,8 +98,8 @@ LINEAGE_STABILITY_VERIFIED
 only when all of the following are true:
 
 1. ALGORITHMIC_HISTORY_OPINION = ACCEPTED;
-2. five generations are explicitly identified or their absence is recorded as a blocking condition;
-3. each required generation has a STABLE result;
+2. every required parent/ancestor branch is explicitly identified, or its absence is recorded as a blocking condition;
+3. every required node in the recursive five-generation scope has a STABLE result;
 4. provenance exists for the lineage relations;
 5. evidence is preserved and traceable;
 6. no unresolved material conflict invalidates the conclusion.
@@ -180,7 +180,9 @@ The following are protocol failures:
 - SILENT_LINEAGE_LINK — relationship inserted without an explicit evidence record;
 - HISTORY_COLLAPSE — algorithmic history and current behavior treated as the same claim;
 - STABILITY_BY_IMPRESSION — stability assigned without a defined evidence basis;
-- GENERATION_SKIP — a required generation bypassed without recording the reason;
+- GENERATION_SKIP — a required generation or ancestor branch bypassed without recording the reason;
+- BRANCH_COLLAPSE — multiple ancestor branches incorrectly reduced to a single representative;
+- RECURSION_TRUNCATION — a required five-generation backward check stopped prematurely;
 - UNKNOWN_FILLED_BY_INFERENCE — missing evidence replaced by model completion;
 - CONFLICT_SUPPRESSION — contradictory evidence omitted;
 - PREDICTION_AS_FACT — predicted relationship represented as verified history;
@@ -195,7 +197,9 @@ Every completed inquiry should preserve:
 - question;
 - entity_id;
 - entry_status;
-- generation_results[1..5];
+- generation_results[recursive_five_generation_scope];
+- lineage_graph;
+- ancestor_branch_results;
 - source_refs;
 - evidence_refs;
 - provenance_refs;
@@ -213,8 +217,8 @@ The operational order is:
 
 ALGORITHM HISTORY REVIEW
 → ENTRY DECISION
-→ FIVE-GENERATION REVIEW
-→ STABILITY TESTING
+→ RECURSIVE FIVE-GENERATION LINEAGE EXPANSION
+→ PER-NODE STABILITY TESTING
 → EVIDENCE VERIFICATION
 → LINEAGE DETERMINATION
 → POLITEIA / COPERNICUS KNOWLEDGE UPDATE
