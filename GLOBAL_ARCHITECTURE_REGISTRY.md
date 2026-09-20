@@ -12,6 +12,14 @@ This is the repository-level registry for the complete research ecosystem repres
 ```text
 GLOBAL SCIENCE NETWORK
 │
+├── M. META-ARCHITECTURE / VITRUVIUS
+│   ├── Vitruvius Orchestrator
+│   ├── Whole-Architecture Composition View
+│   ├── Lineage-to-Model Selection
+│   ├── Compatibility / Composition Knowledge
+│   ├── Governance Handoff
+│   └── Logic Selection Boundary
+│
 ├── A. SCIENTIFIC COMMONS
 │   ├── Researcher Identity
 │   ├── Institutions / Laboratories
@@ -135,6 +143,7 @@ GLOBAL SCIENCE NETWORK
 | Architecture Family Lineage | `docs/ARCHITECTURE/ARCHITECTURE_FAMILY_LINEAGE.md` | EXISTING | K Lineage Knowledge & Governance |
 | WANGA Lineage Tree | `docs/ARCHITECTURE/WANGA_LINEAGE_TREE.md` | EXISTING | K Lineage Knowledge & Governance |
 | WANGA Politeia | `docs/ARCHITECTURE/WANGA_POLITEIA.md` | BUILDING | K Lineage Knowledge & Governance |
+| Vitruvius Orchestrator | `docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.md`, `docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.ASCII.txt` | SPECIFICATION | M Meta-Architecture / Vitruvius |
 
 ## Existing research-domain architectures
 
