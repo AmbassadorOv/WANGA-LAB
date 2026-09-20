@@ -1,159 +1,175 @@
-WANGA / VITRUVIUS — HIGHEST ARCHITECTURAL ORCHESTRATION
-=====================================================================
+WANGA / VITRUVIUS — CONSTITUTIONAL META-ARCHITECTURE
+==========================================================================
 
-GLOBAL SCIENCE / WANGA ARCHITECTURE
-│
-├── RESEARCH + KNOWLEDGE LAYERS
-│   ├── Researchers / Institutions
-│   ├── Research Programs / Questions
-│   ├── Methods
-│   ├── Evidence / Findings / Claims
-│   ├── Experiments / Verification
-│   └── Research Evolution
-│
-├── ARCHITECTURE FAMILIES
-│   ├── Domain Architectures
-│   ├── System Architectures
-│   ├── Component Architectures
-│   ├── Model Families
-│   └── Architectural Descendants
-│
-├── WANGA LINEAGE SYSTEM
-│   ├── Idea Lineages
-│   ├── Research Lineages
-│   ├── Method Lineages
-│   ├── Evidence Lineages
-│   ├── Architecture Lineages
-│   ├── Artifact / Experiment Lineages
-│   └── Recursive Descendants
-│
-├── LINEAGE MARRIAGE / INTEGRATION
-│   ├── Lineage A
-│   ├── Lineage B
-│   ├── Integration Event
-│   ├── Inherited Elements
-│   ├── New Elements
-│   ├── Compatibility / Conflict Record
-│   └── New Descendant Lineage
-│
-├── WANGA POLITEIA
-│   ├── Lineage Memory
-│   ├── Whole-System Knowledge
-│   ├── Compatibility Knowledge
-│   ├── Governance Context
-│   └── Architecture Composition Context
-│
-└── VITRUVIUS ORCHESTRATION LAYER          <=== META-ARCHITECTURE
-    │
-    ├── 1. WHOLE ARCHITECTURE VIEW
-    │      └── unified view of all active families + lineages
-    │
-    ├── 2. LINEAGE RECONSTRUCTION
-    │      └── origin → development → descendants → current state
-    │
-    ├── 3. ARCHITECTURE FAMILY RECONSTRUCTION
-    │      └── ancestry / branches / merges / superseded forms
-    │
-    ├── 4. KNOWLEDGE SYNTHESIS
-    │      └── facts + constraints + compatibility + prior outcomes
-    │
-    ├── 5. CANDIDATE MODEL SPACE
-    │      └── candidate models drawn from documented lineages
-    │
-    ├── 6. COMPATIBILITY / COMPOSITION SPACE
-    │      ├── compatible
-    │      ├── conditionally compatible
-    │      ├── incompatible
-    │      └── unknown
-    │
-    ├── 7. MODEL SELECTION FOR LOGIC
-    │      └── choose candidate structures for the rational-logic layer
-    │
-    ├── 8. GOVERNANCE MODEL SET
-    │      └── selected models become functional governors / "state managers"
-    │
-    └── 9. LOGIC HANDOFF BOUNDARY
-           │
-           ▼
-    RATIONAL LOGIC MODEL LAYER
-           │
-           ├── selected rational models
-           ├── logic constraints
-           ├── consistency requirements
-           └── protected rational core
-                    │
-                    ▼
-             NEURAL / ALGORITHMIC
-             GOVERNANCE EXECUTION
+                         GLOBAL SCIENCE / WANGA
+                                  |
+        +-------------------------+--------------------------+
+        |                         |                          |
+        v                         v                          v
+ RESEARCH + KNOWLEDGE      ARCHITECTURE FAMILIES      RESEARCH GROUPS
+        |                         |                          |
+        |                         |              +-----------+-----------+
+        |                         |              |     |     |     |     |
+        |                         |              v     v     v     v     v
+        |                         |           NEURAL  OS  RUNTIME NODE MEMORY
+        |                         |              |     |     |     |     |
+        |                         |              +-----+-----+-----+-----+
+        |                         |                            |
+        +-------------------------+----------------------------+
+                                  |
+                                  v
+                         WANGA LINEAGE SYSTEM
+                                  |
+             +--------------------+--------------------+
+             |                    |                    |
+             v                    v                    v
+        IDEA LINEAGE       RESEARCH LINEAGE     ARCHITECTURE LINEAGE
+             |                    |                    |
+             +--------------------+--------------------+
+                                  |
+                                  v
+                    LINEAGE MARRIAGE / INTEGRATION
+                                  |
+                 +----------------+----------------+
+                 |                |                |
+                 v                v                v
+             inherited        introduced      compatibility
+             elements         elements        / conflicts
+                 |                |                |
+                 +----------------+----------------+
+                                  |
+                                  v
+                          NEW DESCENDANT LINEAGE
+                                  |
+                                  v
+                         WANGA POLITEIA
+             +------------------+-------------------+
+             |                  |                   |
+             v                  v                   v
+      lineage memory     whole-system view    governance context
+             |                  |                   |
+             +------------------+-------------------+
+                                  |
+                                  v
+                   VITRUVIUS ORCHESTRATION LAYER
+                         <== META-ARCHITECTURE ==>
+                                  |
+        +-------------------------+--------------------------+
+        |            |             |             |            |
+        v            v             v             v            v
+   whole-view   reconstruction  synthesis   candidate-space compatibility
+        |            |             |             |            |
+        +------------+-------------+-------------+------------+
+                                  |
+                                  v
+                       MODEL SELECTION BOUNDARY
+                                  |
+                                  v
+                         LOGIC HANDOFF RECORD
+                                  |
+                                  v
+                       RATIONAL LOGIC MODEL LAYER
+                                  |
+                                  v
+                    NEURAL / ALGORITHMIC GOVERNANCE
+                                  |
+                                  v
+                         VALIDATION / OBSERVATION
+                                  |
+                                  v
+                         NEW KNOWLEDGE / EVIDENCE
+                                  |
+                                  v
+                           NEW LINEAGE EVENT
+                                  |
+                                  +---------------------> VITRUVIUS
+                                                          (recursive)
 
-=====================================================================
-CORE FLOW
+==========================================================================
 
-LINEAGES
-   ↓
-LINEAGE KNOWLEDGE
-   ↓
-POLITEIA / WHOLE-SYSTEM GOVERNANCE
-   ↓
-VITRUVIUS
-   ↓
-MODEL CANDIDATE SPACE
-   ↓
-COMPATIBILITY + COMPOSITION KNOWLEDGE
-   ↓
-MODEL SELECTION
-   ↓
-LOGIC HANDOFF
-   ↓
-RATIONAL LOGIC CORE
-   ↓
-GOVERNANCE / REASONING
-
-=====================================================================
-RECURSIVE RETURN
-
-RATIONAL-LOGIC RESULT
-   ↓
-VALIDATION / OBSERVATION
-   ↓
-NEW KNOWLEDGE
-   ↓
-NEW LINEAGE EVENT
-   ↓
-NEW DESCENDANT
-   ↓
-UPDATED VITRUVIUS WHOLE-SYSTEM VIEW
-   ↺
-
-=====================================================================
-VITRUVIUS POSITION
-
-VITRUVIUS IS NOT:
-- the rational logic itself
+VITRUVIUS DOES NOT EQUAL:
+- Rational Logic
 - a single reasoning model
-- a replacement for provenance
-- a substitute for validation
-- a source of invented ancestry
+- evidence itself
+- provenance itself
+- proof of correctness
+- an authority that converts prediction into fact
 
-VITRUVIUS IS:
-- the highest orchestration layer for architectural/model selection
-- the bridge from accumulated lineage knowledge to logic-model selection
-- the keeper of the whole architectural composition context
-- the layer that preserves the distinction between lineage, knowledge,
-  prediction, composition, and verified result
-- the parent boundary immediately above the rational-logic model layer
+VITRUVIUS EQUALS:
+- whole-architecture orchestration context
+- lineage-aware architecture reconstruction
+- candidate model space
+- compatibility/composition context
+- documented model-selection boundary
+- recursive architectural continuity
 
-=====================================================================
-LINK MAP PLACEHOLDERS
+==========================================================================
 
-Every major node should later receive:
-[ARCHITECTURE_LINK]
-[LINEAGE_LINK]
-[SOURCE_LINK]
-[EVIDENCE_LINK]
-[ARTIFACT_LINK]
-[VALIDATION_LINK]
-[DESCENDANT_LINK]
+BRANCH ATTACHMENT POINTS
 
-The ASCII structure is intentionally stable so links can be attached later
-without changing the conceptual hierarchy.
+BRANCH
+  |
+  +--> RESEARCH GROUP
+  |
+  +--> ASSET
+  |
+  +--> LINEAGE
+  |
+  +--> ARCHITECTURE FAMILY
+  |
+  +--> INTEGRATION EVENT
+  |
+  +--> RESEARCH QUESTION
+             |
+             v
+        VITRUVIUS LINK MAP
+             |
+             v
+      GLOBAL ARCHITECTURE REGISTRY
+
+RULE:
+GitHub existence != architectural membership.
+Architectural membership requires an explicit registry relationship.
+
+==========================================================================
+
+EVIDENCE STATES
+
+FACT / SOURCE
+    |
+OBSERVATION
+    |
+INTERPRETATION
+    |
+PREDICTION
+    |
+COMPOSITION CANDIDATE
+    |
+VALIDATION
+    |
+PROMOTED KNOWLEDGE
+
+No transition may silently collapse these categories.
+
+==========================================================================
+
+CANONICAL FLOW
+
+SOURCE
+ -> RESEARCH
+ -> IDEA
+ -> FORMULATION
+ -> ARTIFACT / MODEL
+ -> ARCHITECTURE FAMILY
+ -> LINEAGE
+ -> INTEGRATION
+ -> DESCENDANT
+ -> POLITEIA
+ -> VITRUVIUS
+ -> MODEL SELECTION
+ -> LOGIC HANDOFF
+ -> RATIONAL LOGIC
+ -> VALIDATION
+ -> NEW LINEAGE
+
+==========================================================================
