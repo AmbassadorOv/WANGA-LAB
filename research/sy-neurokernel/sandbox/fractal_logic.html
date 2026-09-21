@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SY-NeuroKernel — Fractal Logic Sandbox</title>
+  <style>
+    body { font-family: system-ui,sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display:grid; grid-template-columns:repeat(22,1fr); gap:4px; }
+    .cell { border:1px solid #bbb; padding:8px 2px; text-align:center; border-radius:4px; }
+    button { padding:.6rem .9rem; margin:.25rem; }
+    pre { white-space:pre-wrap; background:#f5f5f5; padding:1rem; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h1>SY-NeuroKernel — Fractal Logic Sandbox</h1>
+  <p>22 addresses → 231 symmetric gates → contraction/expansion → structured dialogue state.</p>
+  <div id="cells" class="grid"></div>
+  <p>
+    <button id="contract">Pulse: contract</button>
+    <button id="expand">Pulse: expand</button>
+    <button id="reset">Reset</button>
+  </p>
+  <pre id="output"></pre>
+
+<script>
+const N = 22;
+const gates = [];
+for (let a = 0; a < N; a++) for (let b = a + 1; b < N; b++) gates.push([a,b]);
+
+let state = Array.from({length:N}, (_,i) => Math.sin(i + 1));
+const cells = document.getElementById("cells");
+const output = document.getElementById("output");
+
+function render() {
+  cells.replaceChildren();
+  state.forEach((v,i) => {
+    const el = document.createElement("div");
+    el.className = "cell";
+    el.textContent = (i+1) + ": " + v.toFixed(2);
+    cells.appendChild(el);
+  });
+  const center = state.reduce((a,b)=>a+b,0)/N;
+  output.textContent = JSON.stringify({
+    addresses: N,
+    unordered_gates: gates.length,
+    center,
+    state,
+    message: {
+      kind: "NEURAL_DIALOGUE_STATE",
+      provenance: "GENERATED_MESSAGE"
+    }
+  }, null, 2);
+}
+
+function transform(contraction, expansion) {
+  const center = state.reduce((a,b)=>a+b,0)/N;
+  state = state.map(v => center + (v-center)*(1-contraction));
+  const gain = 1 + expansion;
+  state = state.map(v => center + (v-center)*gain);
+  render();
+}
+
+document.getElementById("contract").onclick = () => transform(.25,0);
+document.getElementById("expand").onclick = () => transform(0,.25);
+document.getElementById("reset").onclick = () => {
+  state = Array.from({length:N}, (_,i) => Math.sin(i + 1));
+  render();
+};
+render();
+</script>
+</body>
+</html>
