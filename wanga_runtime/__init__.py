@@ -5,6 +5,21 @@ from .algorithmic_genealogy import (
     GatePolicy,
     GenealogyArtifact,
 )
+from .linguistic_evidence_mesh import (
+    DerivationEdge,
+    EvidenceAuditorAgent,
+    LexicalEvidence,
+    LexicographerAgent,
+    LogicPhilologistAgent,
+    LogicRelation,
+    MediaWikiAdapter,
+    MorphologistAgent,
+    NationalLibraryIsraelAdapter,
+    OpenLibraryAdapter,
+    SemanticistAgent,
+    SefariaAdapter,
+    SourceRecord,
+)
 
 __all__ = [
     "WangaRuntime",
@@ -14,4 +29,17 @@ __all__ = [
     "GateDecision",
     "GatePolicy",
     "GenealogyArtifact",
+    "DerivationEdge",
+    "EvidenceAuditorAgent",
+    "LexicalEvidence",
+    "LexicographerAgent",
+    "LogicPhilologistAgent",
+    "LogicRelation",
+    "MediaWikiAdapter",
+    "MorphologistAgent",
+    "NationalLibraryIsraelAdapter",
+    "OpenLibraryAdapter",
+    "SemanticistAgent",
+    "SefariaAdapter",
+    "SourceRecord",
 ]
