@@ -235,3 +235,12 @@ Every new architecture added to WANGA-LAB must declare:
 - `validation_state`
 
 This makes the architecture extensible without allowing new names to become disconnected systems.
+
+
+## Application Surface — Vitruvius Architect
+
+The first UI prototype for the Vitruvius meta-architecture is located at:
+
+`apps/vitruvius-architect/`
+
+It presents lineage trees, architecture families, WANGA Politeia, model selection, the Rational Logic boundary, architecture components, and provenance state. It is a PROTOTYPED artifact and is not yet runtime-verified.
