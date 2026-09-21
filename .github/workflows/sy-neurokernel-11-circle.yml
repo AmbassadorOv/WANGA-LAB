@@ -1,0 +1,20 @@
+name: SY-NeuroKernel 11-circle dimension test
+
+on:
+  push:
+    branches:
+      - feature/sy-neurokernel-11-circle-dimension
+  pull_request:
+    paths:
+      - research/sy-neurokernel/dimensions/**
+
+jobs:
+  dimension-invariants:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run 11-circle invariant test
+        run: python research/sy-neurokernel/dimensions/test_eleven_circle_dimension.py
