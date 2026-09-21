@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.1.0",
+  "status": "PROTOTYPED",
+  "basis": "user-supplied structural table in conversation",
+  "claim_boundary": "This registry preserves the claimed 11-circle dimensional grouping without asserting historical, theological, or semantic interpretation.",
+  "dimensions": [
+    {
+      "dimension_id": 1,
+      "source_row": 1,
+      "circle": true
+    },
+    {
+      "dimension_id": 2,
+      "source_row": 3,
+      "circle": true
+    },
+    {
+      "dimension_id": 3,
+      "source_row": 5,
+      "circle": true
+    },
+    {
+      "dimension_id": 4,
+      "source_row": 7,
+      "circle": true
+    },
+    {
+      "dimension_id": 5,
+      "source_row": 9,
+      "circle": true
+    },
+    {
+      "dimension_id": 6,
+      "source_row": 11,
+      "circle": true
+    },
+    {
+      "dimension_id": 7,
+      "source_row": 13,
+      "circle": true
+    },
+    {
+      "dimension_id": 8,
+      "source_row": 15,
+      "circle": true
+    },
+    {
+      "dimension_id": 9,
+      "source_row": 17,
+      "circle": true
+    },
+    {
+      "dimension_id": 10,
+      "source_row": 19,
+      "circle": true
+    },
+    {
+      "dimension_id": 11,
+      "source_row": 21,
+      "circle": true
+    }
+  ],
+  "invariants": {
+    "dimension_count": 11,
+    "source_rows": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "row_parity": "odd",
+    "neural_layer_may_not_create_dimensions": true
+  }
+}
