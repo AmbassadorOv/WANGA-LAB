@@ -33,7 +33,7 @@ class OperatorDecl:
     parents: tuple[str, ...]
     payload: str = ""
 
-@dataclass(frozen=True)
+_CALL = re.compile(r"^([A-Za-z_][\\w-]*)\\((.*)\\)$")
 class TNRLProgram:
     sources: tuple[SourceRecord, ...] = ()
     terms: tuple[TermDecl, ...] = ()
