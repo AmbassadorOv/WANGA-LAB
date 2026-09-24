@@ -1,12 +1,20 @@
 {
-  "version": 1,
+  "version": 2,
   "max_layers_per_run": 2,
   "max_total_layers": 24,
   "max_nodes_per_layer": 32,
   "max_edges_per_layer": 96,
   "promotion_threshold": 0.70,
-  "require_test_pass": true,
   "allow_recursive_layer_generation": true,
+  "agent_governance": {
+    "max_active_agents": 24,
+    "default_ontology_credits": 100,
+    "min_ontology_credits_per_action": 1,
+    "require_scope_match": true,
+    "require_provenance": true,
+    "conflict_policy": "lease_then_arbitrate",
+    "no_cross_agent_state_write": true
+  },
   "model": {
     "provider_env": "MODEL_API_BASE",
     "key_env": "MODEL_API_KEY",
