@@ -1,38 +1,31 @@
-# Thinking Machine Bootstrap
+# WANGA Thinking Machine — Agent Governor
 
-This directory is a minimal runtime for a recursively generated AI computation network.
+The runtime is now a governor/trainer, not merely a layer generator.
 
-## Objective
+## Core rule
 
-The runtime does **not** let a language model execute arbitrary self-generated code. Each iteration produces a versioned **layer specification**. A layer is admitted only after schema validation and deterministic structural tests.
+Agents do not receive unrestricted authority. Each agent receives an internal ONTO_CREDIT: a non-monetary ontology permit bound to agent identity, ontology scope, iteration, and a bounded credit budget.
 
-Pipeline:
+The token is a coordination and grounding primitive, not a financial currency.
 
-`task → planner → layer proposal → validation → activation → next iteration`
+## Anti-collision rules
 
-The scheduled GitHub Actions workflow runs the loop periodically and commits accepted layer specifications.
+1. One agent = one declared ontology scope.
+2. An agent cannot write another agent's state.
+3. Proposed actions require provenance.
+4. Scope mismatch is rejected.
+5. Conflicts use lease_then_arbitrate.
+6. The governor may create, modify, retire, or refuse agents.
+7. Increasing agent count is not itself a success criterion.
 
-## Runtime model
+## Training loop
 
-- `config.json` — bounded generation parameters.
-- `runtime.py` — proposal, validation, scoring, promotion and state management.
-- `layers/` — accepted generated layer specifications.
-- `state/` — current runtime state.
-- `.github/workflows/thinking-machine.yml` — scheduled execution.
+observe → receive ontology credit → propose → validate → coordinate → execute later → record provenance → retain/retire
 
-## Required secret
+The current bootstrap still produces specifications rather than arbitrary executable code. That boundary remains intentional.
 
-Set `MODEL_API_KEY` in the repository Actions secrets.
+## Scale path
 
-Optional variables:
+1 governor → 10 agents → 100 agents → 1,000 agents
 
-- `MODEL_API_BASE` — OpenAI-compatible endpoint.
-- `MODEL_NAME` — model identifier.
-
-The runtime can therefore be connected to whichever model provider is selected later without changing the architecture.
-
-## Important boundary
-
-The first bootstrap intentionally generates **architecture/data specifications, not executable source code**. This makes recursive generation observable and reversible.
-
-Once the generated layer structure is empirically useful, a separate builder can translate an accepted specification into executable components.
+Scaling occurs only after governance and provenance checks, rather than by blindly spawning agents.
