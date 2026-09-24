@@ -1,0 +1,47 @@
+name: Thinking Machine Recursive Builder
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: thinking-machine-recursive-builder
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate and validate next layers
+        env:
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+          MODEL_API_BASE: ${{ vars.MODEL_API_BASE }}
+          MODEL_NAME: ${{ vars.MODEL_NAME }}
+        run: |
+          python thinking-machine/runtime.py
+
+      - name: Commit accepted layers
+        run: |
+          git config user.name "thinking-machine-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add thinking-machine/layers thinking-machine/state/state.json
+          if git diff --cached --quiet; then
+            echo "No accepted changes."
+            exit 0
+          fi
+          git commit -m "thinking-machine: promote generated layer"
+          git push
