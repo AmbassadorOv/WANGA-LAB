@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "name": "WANGA-SY-NEUROKERNEL integration manifest",
+  "status": "CONFIGURATION_ONLY",
+  "components": {
+    "model": {
+      "provider": "Anthropic-compatible model endpoint",
+      "secret": "ANTHROPIC_API_KEY",
+      "status": "REQUIRES_SECRET_AND_ENDPOINT"
+    },
+    "github": {
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "role": "source_control_and_workflow",
+      "status": "CONNECTED_TO_BOOTSTRAP_BRANCH"
+    },
+    "supabase": {
+      "secrets": ["SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"],
+      "tables": ["agent_registry", "topological_nodes", "topological_edges", "drift_xray_logs"],
+      "status": "SCHEMA_NOT_YET_CONNECTED"
+    },
+    "gcp": {
+      "secrets": ["GCP_SERVICE_ACCOUNT"],
+      "services": ["Pub/Sub", "Secret Manager", "Cloud Run"],
+      "status": "NOT_YET_CONNECTED"
+    }
+  },
+  "governance": {
+    "agent_identity": true,
+    "ontology_scope": true,
+    "ontology_credit": true,
+    "provenance_required": true,
+    "cross_agent_state_write": false,
+    "conflict_policy": "lease_then_arbitrate",
+    "arbitrary_model_generated_code": false
+  },
+  "topology": {
+    "declared_node_count": 22,
+    "possible_undirected_pairs": 231,
+    "policy": "declared_topology_is_constraint_registry_not_proof_of_validity"
+  },
+  "important_correction": {
+    "statement": "The 231 pair count is combinatorial capacity, not evidence that all 231 relations are valid.",
+    "action": "Each relation requires provenance and validation before activation."
+  }
+}
