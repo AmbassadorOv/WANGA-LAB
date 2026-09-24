@@ -1,23 +1,29 @@
 {
-  "version": 2,
+  "version": 3,
   "max_layers_per_run": 2,
   "max_total_layers": 24,
-  "max_nodes_per_layer": 32,
-  "max_edges_per_layer": 96,
   "promotion_threshold": 0.70,
-  "allow_recursive_layer_generation": true,
   "agent_governance": {
+    "max_registered_agents": 1000,
     "max_active_agents": 24,
     "default_ontology_credits": 100,
     "min_ontology_credits_per_action": 1,
     "require_scope_match": true,
     "require_provenance": true,
     "conflict_policy": "lease_then_arbitrate",
-    "no_cross_agent_state_write": true
+    "no_cross_agent_state_write": true,
+    "external_ai_gateway": {
+      "enabled": true,
+      "require_ontology_credit": true,
+      "require_provenance": true,
+      "require_structural_weight": true,
+      "default_communication_credits": 10
+    }
   },
   "model": {
-    "provider_env": "MODEL_API_BASE",
-    "key_env": "MODEL_API_KEY",
-    "name_env": "MODEL_NAME"
+    "provider": "anthropic",
+    "api_base_env": "ANTHROPIC_BASE_URL",
+    "key_env": "ANTHROPIC_API_KEY",
+    "model_env": "ANTHROPIC_MODEL"
   }
 }
