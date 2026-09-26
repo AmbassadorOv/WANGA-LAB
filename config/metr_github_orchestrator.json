@@ -1,0 +1,157 @@
+{
+  "version": "0.1",
+  "architecture": "Metr GitHub Orchestrator",
+  "source_policy": {
+    "url_is_source_node": true,
+    "url_is_not_credential": true,
+    "preserve_provenance": true
+  },
+  "sources": [
+    {
+      "id": "L008",
+      "name": "think-thank-you-of-cyber-Department",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "type": "repository"
+    },
+    {
+      "id": "L010",
+      "name": "WANGA-LAB",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "type": "repository"
+    },
+    {
+      "id": "L001",
+      "name": "GitHub Developer Settings",
+      "url": "https://github.com/settings/developers",
+      "type": "configuration"
+    },
+    {
+      "id": "L002",
+      "name": "GlobalWorldParty packages",
+      "url": "https://github.com/globalworldparty-web?tab=packages",
+      "type": "organization"
+    },
+    {
+      "id": "L003",
+      "name": "GlobalWorldParty projects",
+      "url": "https://github.com/globalworldparty-web?tab=projects",
+      "type": "organization"
+    },
+    {
+      "id": "L004",
+      "name": "GlobalWorldParty repositories",
+      "url": "https://github.com/globalworldparty-web?tab=repositories",
+      "type": "organization"
+    },
+    {
+      "id": "L005",
+      "name": "GitHub new repository",
+      "url": "https://github.com/new",
+      "type": "action"
+    },
+    {
+      "id": "L006",
+      "name": "GitHub organizations settings",
+      "url": "https://github.com/settings/organizations",
+      "type": "configuration"
+    },
+    {
+      "id": "L007",
+      "name": "Quadruple-Multilevel-projection-project",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project",
+      "type": "organization"
+    },
+    {
+      "id": "L009",
+      "name": "Think Thank You branches",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department/branches",
+      "type": "branches"
+    },
+    {
+      "id": "L011",
+      "name": "GitHub team documentation",
+      "url": "https://docs.github.com/en/organizations/organizing-members-into-teams/adding-organization-members-to-a-team",
+      "type": "documentation"
+    },
+    {
+      "id": "L012",
+      "name": "GitHub invitation documentation",
+      "url": "https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization",
+      "type": "documentation"
+    },
+    {
+      "id": "L013",
+      "name": "Quadruple organization tracking URL",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project?utm_source=chatgpt.com",
+      "type": "organization"
+    }
+  ],
+  "participant_model": {
+    "parent": {
+      "id": "P0",
+      "key": "SUPPLIED_PARTICIPANT_NAME",
+      "label": "שם המשתתף המסופק",
+      "definition_status": "externally_supplied"
+    },
+    "children": [
+      {
+        "id": "P1",
+        "key": "MINI_PARTICIPANT_01",
+        "label": "מיני-משתתף 1"
+      },
+      {
+        "id": "P2",
+        "key": "MINI_PARTICIPANT_02",
+        "label": "מיני-משתתף 2"
+      },
+      {
+        "id": "P3",
+        "key": "MINI_PARTICIPANT_03",
+        "label": "מיני-משתתף 3"
+      },
+      {
+        "id": "P4",
+        "key": "MINI_PARTICIPANT_04",
+        "label": "מיני-משתתף 4"
+      },
+      {
+        "id": "P5",
+        "key": "MINI_PARTICIPANT_05",
+        "label": "מיני-משתתף 5"
+      },
+      {
+        "id": "P6",
+        "key": "MINI_PARTICIPANT_06",
+        "label": "מיני-משתתף 6"
+      }
+    ]
+  },
+  "signal_pipeline": [
+    "github_source",
+    "repository_resolver",
+    "signal_bus",
+    "mini_participant_router",
+    "supplied_participant_aggregator",
+    "evidence_provenance",
+    "neural_interface",
+    "feedback_drift_record"
+  ],
+  "signal_contract": {
+    "source_id": "string",
+    "source_url": "string",
+    "repository": "string|null",
+    "timestamp": "ISO-8601",
+    "operation": "string",
+    "content_hash": "sha256|string|null",
+    "participant_id": "P1..P6|P0",
+    "signal_type": "string",
+    "payload": "structured object",
+    "provenance_preserved": true
+  },
+  "constraints": [
+    "Do not invent the semantic value of the supplied participant name.",
+    "Do not treat GitHub URLs as credentials.",
+    "Do not overwrite source records.",
+    "Neural processing consumes structured signals; it does not replace provenance."
+  ]
+}
